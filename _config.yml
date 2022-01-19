@@ -29,7 +29,6 @@ kramdown:
   math_engine: null
   smart_quotes: [lsquo,rsquo,ldquo,rdquo]
   syntax_highlighter: rouge
-  footnote_prefix: "fnpre-"
 
 sass:
   style: compressed
