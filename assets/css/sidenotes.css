@@ -44,7 +44,7 @@ div.content {
     z-index: 2;
 }
 
-a.footnote-ref.highlighted {
+a.footnote.highlighted {
   color: red;
 }
 
