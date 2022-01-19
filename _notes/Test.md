@@ -20,17 +20,15 @@ Term
 Second Term
 :  Definition after an empty line.
 
-Now, let's check out regular footnotes.[^fn] And to see then the difference between a margin note[[Very marginal indeed::rmn]] in this text.
+Now, let's check out regular footnotes.[^fn] And to see then the difference between a margin note in this text.
 
 [^fn]: This is the text of the footnote
 
-And now, let's see the differencewith a right side note[[Very marginal indeed::rsn]] in this text.
+Let's do another footnote test<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> for the automatic positioning.
 
 > And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
 
 No a quote anymore, but let's ==highlight== something.
-
-Let's do another footnote test<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> for the anchor.
 
 
 >> Double quote
