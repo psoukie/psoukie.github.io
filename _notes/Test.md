@@ -8,7 +8,9 @@ date: 2022-01-18
 
 First paragraph.
 
-Second paragraph. Limit.
+Second paragraph. Limit.[^custom]
+
+[^custom]: Custom footnote text.
 
 ## Heading 2
 
