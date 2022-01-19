@@ -1,0 +1,65 @@
+title: Soukie’s Place
+name: Pavel Soukenik
+user_description: Starting a digital garden
+notes_url: https://soukie.net
+profile_pic: /assets/img/profile.jpg
+favicon: /assets/img/favicon.png
+copyright_name: MIT
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: https://soukie.net # the base hostname & protocol for your site, e.g. http://example.com
+encoding: utf-8
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-toc
+  - jekyll-relative-links
+
+relative_links:
+  enabled:     true
+  collections: true
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: null
+  smart_quotes: [lsquo,rsquo,ldquo,rdquo]
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+collections:
+    notes:
+      output: true
+      permalink: /:title
+
+toc:
+  max_level: 3
+
+feed:
+  excerpt_only: true
+  path: /blog.atom
+  collections:
+    notes:
+      excerpt_only: true
+      path: "/feed.xml"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /posts/:title
+      content-type: post
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: post
+      content-type: notes
