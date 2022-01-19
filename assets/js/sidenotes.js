@@ -56,10 +56,10 @@ function updateTargetCounterpart() {
     /*  Identify new target counterpart, if any.
         */
     var counterpart;
-    if (location.hash.match(/#sn:/)) {
-        counterpart = document.querySelector("#fnref:" + location.hash.substr(4));
+    if (location.hash.match(/#sn\\:/)) {
+        counterpart = document.querySelector("#fnref\\:" + location.hash.substr(4));
     } else if (location.hash.match(/#fnref:/) && GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
-        counterpart = document.querySelector("#sn:" + location.hash.substr(7));
+        counterpart = document.querySelector("#sn\\:" + location.hash.substr(7));
     }
     /*  If a target counterpart exists, mark it as such.
         */
@@ -84,7 +84,7 @@ function isOnScreen(element) {
 function realignHashIfNeeded() {
     GWLog("realignHashIfNeeded");
 
-    if (location.hash.match(/#sn:/) || location.hash.match(/#fnref:/))
+    if (location.hash.match(/#sn\\:/) || location.hash.match(/#fnref:/))
         realignHash();
 }
 function realignHash() {
@@ -297,7 +297,7 @@ function revealTarget() {
         itself; if the target is a sidenote, expand collapsed blocks to reveal
         the citation reference.
         */
-    let targetInText = location.hash.match(/#sn:/) ?
+    let targetInText = location.hash.match(/#sn\\:/) ?
                        document.querySelector("#fnref:" + location.hash.substr(4)) :
                        target;
     expandCollapseBlocksToReveal(targetInText);
@@ -361,9 +361,9 @@ function updateFootnoteReferenceLinks() {
     for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
         let fnref = GW.sidenotes.footnoteRefs[i];
         if (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
-            fnref.href = "#sn:" + (i + 1);
+            fnref.href = "#sn\\:" + (i + 1);
         } else {
-            fnref.href = "#fn:" + (i + 1);
+            fnref.href = "#fn\\:" + (i + 1);
         }
     }
 }
@@ -725,7 +725,7 @@ function constructSidenotes() {
         //  Create the sidenote outer containing block...
         let sidenote = document.createElement("div");
         sidenote.classList.add("sidenote");
-        sidenote.id = "sn:" + (i + 1);
+        sidenote.id = "sn\\:" + (i + 1);
         //  Wrap the contents of the footnote in two wrapper divs...
         let referencedFootnote = document.querySelector(GW.sidenotes.footnoteRefs[i].hash);
         sidenote.innerHTML = "<div class='sidenote-outer-wrapper'><div class='sidenote-inner-wrapper'>" +
@@ -744,7 +744,7 @@ function constructSidenotes() {
     for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
         let sidenoteSelfLink = document.createElement("a");
         sidenoteSelfLink.classList.add("sidenote-self-link");
-        sidenoteSelfLink.href = "#sn:" + (i + 1);
+        sidenoteSelfLink.href = "#sn\\:" + (i + 1);
         sidenoteSelfLink.textContent = (i + 1);
         GW.sidenotes.sidenoteDivs[i].appendChild(sidenoteSelfLink);
     }
@@ -768,7 +768,7 @@ function constructSidenotes() {
             if (decodeURIComponent(location.hash) == sidenote.id || event.target.tagName == "A") return;
 
             //  Preserve hash before changing it.
-            if (!(location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:")))
+            if (!(location.hash.hasPrefix("#sn\\:") || location.hash.hasPrefix("#fnref:")))
                 GW.sidenotes.hashBeforeSidenoteWasFocused = location.hash;
             setHashWithoutScrolling(encodeURIComponent(sidenote.id));
         });
@@ -877,12 +877,12 @@ function sidenotesSetup() {
         with the current mode (this will also cause the page to end up scrolled
         to the appropriate element - footnote or sidenote).
         */
-    if (location.hash.match(/#sn:/) &&
+    if (location.hash.match(/#sn\\:/) &&
         GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == true) {
-        location.hash = "#fn:" + location.hash.substr(4);
-    } else if (location.hash.match(/#fn:/) &&
+        location.hash = "#fn\\:" + location.hash.substr(4);
+    } else if (location.hash.match(/#fn\\:/) &&
         GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
-        location.hash = "#sn:" + location.hash.substr(4);
+        location.hash = "#sn\\:" + location.hash.substr(4);
     } else {
         /*  Otherwise, make sure that if a sidenote is targeted by the hash, it
             indeed ends up looking highlighted (this defeats a weird bug).
@@ -922,7 +922,7 @@ function sidenotesSetup() {
     /*  Save the hash, if need be (if it does NOT point to a sidenote or a
         footnote reference).
         */
-    GW.sidenotes.hashBeforeSidenoteWasFocused = (location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:")) ?
+    GW.sidenotes.hashBeforeSidenoteWasFocused = (location.hash.hasPrefix("#sn\\:") || location.hash.hasPrefix("#fnref:")) ?
                                                 "" : location.hash;
     /*  Add event listener to un-focus a sidenote (by resetting the hash) when
         then document is clicked anywhere but a sidenote or a link.
@@ -931,7 +931,7 @@ function sidenotesSetup() {
         GWLog("GW.sidenotes.bodyClicked");
 
         if (!(event.target.tagName == "A" || event.target.closest(".sidenote")) &&
-            (location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:"))) {
+            (location.hash.hasPrefix("#sn\\:") || location.hash.hasPrefix("#fnref\\:"))) {
             setHashWithoutScrolling(GW.sidenotes.hashBeforeSidenoteWasFocused);
         }
     });
