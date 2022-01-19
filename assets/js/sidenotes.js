@@ -645,8 +645,6 @@ Sidenotes = {
     }
 };
 
-GW.notificationCenter.fireEvent("Sidenotes.didLoad");
-
 /*  Update the margin note style, and add event listener to re-update it
     when the viewport width changes.
     */
