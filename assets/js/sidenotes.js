@@ -397,7 +397,6 @@ Sidenotes = {
         Sidenotes.sidenoteColumnLeft.style.visibility = "";
         Sidenotes.sidenoteColumnRight.style.visibility = "";
 
-        GW.notificationCenter.fireEvent("Sidenotes.sidenotePositionsDidUpdate");
     },
 
     /*  Destroys the HTML structure of the sidenotes.
