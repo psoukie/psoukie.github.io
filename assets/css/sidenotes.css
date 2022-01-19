@@ -34,6 +34,20 @@ div.content {
     padding: 2em 0 0;
 }
 
+.sidenote.highlighted, .sidenote:hover, .sidenote:target, .sidenote.targeted {
+    background-color: var(--GW-sidenote-highlight-background-color);
+    opacity: 1;
+}
+
+.sidenote.highlighted, .sidenote:hover {
+    color: red;
+    z-index: 2;
+}
+
+a.footnote-ref.highlighted {
+  color: red;
+}
+
 .sidenote-outer-wrapper {
     overflow: hidden;
     position: relative;
