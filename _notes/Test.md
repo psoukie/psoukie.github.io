@@ -24,7 +24,7 @@ Now, let's check out regular footnotes.[^fn] And to see then the difference betw
 
 [^fn]: This is the text of the footnote
 
-Let's do another footnote test<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> for the automatic positioning.
+Let's do another footnote test<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> for the automatic positioning. Test.
 
 > And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
 
