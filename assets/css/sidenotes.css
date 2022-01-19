@@ -2,6 +2,10 @@
 layout: stylesheet
 ---
 
+div.content {
+  position: relative;
+}
+
 #sidenote-column-left, #sidenote-column-right {
     position: absolute;
     max-width: var(--GW-sidenotes-max-width);
