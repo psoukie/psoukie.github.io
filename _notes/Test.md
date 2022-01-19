@@ -20,10 +20,6 @@ Term
 Second Term
 :  Definition after an empty line.
 
-Now, let's check out regular footnotes.[^fn] And to see then the difference between a margin note in this text.
-
-[^fn]: This is the text of the footnote
-
 Let's do another footnote test<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> for the automatic positioning. Test.
 
 > And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
@@ -51,5 +47,5 @@ and
 >  of this type of contraption.
 
 <ol>
-<li id="fn1" role="doc-endnote"><p>Example of a sidenote so I see how it gets formatted</p></li>
+<li id="fn1" role="doc-endnote"><p>Example of a sidenote so I see how it gets formatted. <a href="#fnref1" class="reversefootnote" role="doc-backlink">↩</a></p></li>
 </ol>
