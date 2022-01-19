@@ -468,8 +468,6 @@ Sidenotes = {
             sidenoteSelfLink.textContent = (i + 1);
             Sidenotes.sidenoteDivs[i].appendChild(sidenoteSelfLink);
         }
-
-        GW.notificationCenter.fireEvent("Sidenotes.sidenotesDidConstruct");
     },
 
     cleanup: () => {
@@ -485,8 +483,6 @@ Sidenotes = {
         /*  Remove sidenotes & auxiliaries from HTML.
             */
         Sidenotes.deconstructSidenotes();
-
-        GW.notificationCenter.fireEvent("Sidenotes.sidenotesDidDeconstruct");
     },
 
     /*  Q:  Why is this setup function so long and complex?
@@ -640,8 +636,6 @@ Sidenotes = {
         GW.notificationCenter.addHandlerForEvent("GW.contentDidLoad", Sidenotes.constructSidenotesWhenMainContentLoads = (info) => {
             Sidenotes.constructSidenotes();
         }, { phase: "<eventListeners", once: true, condition: (info) => info.isMainDocument });
-
-        GW.notificationCenter.fireEvent("Sidenotes.setupDidComplete");
     }
 };
 
