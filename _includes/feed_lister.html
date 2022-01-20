@@ -1,5 +1,5 @@
 {%- for item in site.notes -%}
-    {%- if item.season == {{ include.type }} -%}
+    {%- if item.season == {{ include.season }} -%}
     <article>
         {%- if item.status == "Ongoing" or item.status == "ongoing" -%}
           <ul>
