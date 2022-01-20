@@ -41,7 +41,7 @@ For the new incarnation of Soukie's Place, I'm contemplating using Microsoft [Fl
 
 [^msft]: This, of course, is a matter of taste and opinion, but I do feel Microsoft has proven they keep ahead of the curve -- a good example was their Metro design language which made, at the time, look Apple's skeuomorphic design look quite dated).
 
-See details about [this site's typography](soukies-place-typography.md) settings.
+See details about [this site's typography](soukies-place-typography) settings.
 
 ## Syntax
 

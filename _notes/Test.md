@@ -14,6 +14,12 @@ Second paragraph. Limit.[^custom]
 
 ## Heading 2
 
+### H3
+
+#### H4
+
+##### H5
+
 Text under heading 2. Trigger rebuild. And another note[^note] is here.
 
 [^note]: Explanation for the second one.
