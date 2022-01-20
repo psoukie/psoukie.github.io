@@ -14,7 +14,9 @@ Second paragraph. Limit.[^custom]
 
 ## Heading 2
 
-Text under heading 2. Trigger rebuild.
+Text under heading 2. Trigger rebuild. And another note[^note] is here.
+
+[^note]: Explanation for the second one.
 
 Term
 :  Definition immediate.

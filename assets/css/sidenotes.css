@@ -34,6 +34,15 @@ div.content {
     padding: 2em 0 0;
 }
 
+.sidenote::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    top: -13px;
+    left: -13px;
+}
+
 .sidenote.highlighted, .sidenote:hover, .sidenote:target, .sidenote.targeted {
     background-color: var(--GW-sidenote-highlight-background-color);
     opacity: 1;
