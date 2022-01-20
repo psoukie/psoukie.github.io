@@ -358,12 +358,15 @@ function updateSidenotesInCollapseBlocks() {
 function updateFootnoteReferenceLinks() {
     GWLog("updateFootnoteReferenceLinks");
 
+    let footnoteAnchors = Array.from(document.querySelectorAll("div.footnotes li#fn\\:*"));
+
     for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
         let fnref = GW.sidenotes.footnoteRefs[i];
         if (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false) {
             fnref.href = "#sn" + (i + 1);
         } else {
             fnref.href = "#fn" + (i + 1);
+            footnoteAnchors[i].id = "fn" + (i + 1);
         }
     }
 }
