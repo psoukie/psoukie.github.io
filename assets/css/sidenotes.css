@@ -58,6 +58,10 @@ div.content {
     z-index: 1;
 }
 
+.sidenote-inner-wrapper .reversefootnote {
+  display: none;
+}
+
 .sidenote.highlighted, .sidenote:hover, .sidenote:target, .sidenote.targeted {
     background-color: var(--GW-sidenote-highlight-background-color);
     opacity: 1;
