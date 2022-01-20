@@ -10,7 +10,6 @@ div.content {
     position: absolute;
     max-width: var(--GW-sidenotes-max-width);
     font-size: .85em;
-    z-index: 1;
     pointer-events: none;
 }
 
@@ -29,9 +28,8 @@ div.content {
     position: absolute;
     left: 0;
     width: 100%;
-    opacity: .85;
-    line-height: 1.5;
     padding: 2em 0 0;
+    transition: transform var(--transition);
 }
 
 .sidenote::after {
@@ -43,45 +41,49 @@ div.content {
     left: -13px;
 }
 
+.sidenote p {
+    color: var(--neutralSecondary);
+}
+
 .sidenote>.sidenote-self-link {
     font-weight: 600;
+    color: var(--neutralTertiary);
     position: absolute;
     top: 0;
-    border-style: dotted;
-    border-color: var(--GW-sidenote-self-link-border-color);
-    border-width: 1px 1px 0;
     width: 2em;
     height: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+}
+
+.sidenote.highlighted>.sidenote-self-link {
+    background-color: var(--themeLighter);
+    color: var(--neutralSecondary);
 }
 
 .sidenote-inner-wrapper .reversefootnote {
   display: none;
 }
 
-.sidenote.highlighted, .sidenote:hover, .sidenote:target, .sidenote.targeted {
-    background-color: var(--GW-sidenote-highlight-background-color);
-    opacity: 1;
+.sidenote-inner-wrapper p {
+  margin: 0;
 }
 
-.sidenote.highlighted, .sidenote:hover {
-    color: red;
-    z-index: 2;
+.sidenote.highlighted, .sidenote:target, .sidenote.targeted {
+  transform: translate(-1em, 0);
 }
 
 a.footnote.highlighted {
-  color: red;
+  color: var(--themePrimary);
+  background-color: var(--themeLighter);
 }
 
 .sidenote-outer-wrapper {
     overflow: hidden;
     position: relative;
-    z-index: 1;
-    border-style: dotted;
-    border-color: var(--GW-sidenote-border-color);
+    border-style: solid;
+    border-color: var(--neutralTertiaryAlt);
     border-width: 1px 0;
 }
 

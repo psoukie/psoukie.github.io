@@ -6,11 +6,40 @@
  * Theme: default
  */
 :root {
+  /* Theme colors */
+  --themeDarker: #02494c;
+  --themeDark: #026367;
+  --themeDarkAlt: #02767a;
+  --themePrimary: #038387;
+  --themeSecondary: #159196;
+  --themeTertiary: #4bb4b7;
+  --themeLight: #9bd9db;
+  --themeLighter: #c7ebec;
+  --themeLighterAlt: #f0fafa;
+  /* Foreground  */
+  --neutralBlack: #000000;
+  --neutralDark: #201f1e;
+  --neutralPrimary: #323130;
+  --neutralPrimaryAlt: #3b3a39;
+  --neutralSecondary: #605e5c;
+  --neutralTertiary: #a19f9d;
+  --neutralWhite: #ffffff;
+  /* Background */
+  --neutralTertiaryAlt: #c8c6c4;
+  --neutralDark: #201f1e;
+  --neutralQuaternaryAlt: #e1dfdd;
+  --neutralLight: #edebe9;
+  --neutralLighter: #f3f2f1;
+  --neutralLighterAlt: #faf9f8;
+  --accentBlue: #0078d4;
+
   --font-family: "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --line-height: 1.375;
   --font-weight: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
   --font-size: 16px;
   --border-radius: 0.25rem;
   --border-width: 1px;
@@ -139,7 +168,7 @@ h3,
 h4,
 h5,
 h6 {
-  --font-weight: 700;
+  --font-weight: var(--font-weight-semibold);
 }
 
 h1 {
@@ -197,25 +226,25 @@ samp {
 }
 
 kbd {
-  --font-weight: bolder;
+  --font-weight: --font-weight: var(--font-weight-semibold);
 }
 
 [data-theme=light],
 :root:not([data-theme=dark]) {
   color-scheme: light;
-  --background-color: #fff;
-  --color: #415462;
-  --h1-color: #1b2832;
-  --h2-color: #24333e;
-  --h3-color: #2c3d49;
-  --h4-color: #374956;
-  --h5-color: #415462;
-  --h6-color: #4d606d;
+  --background-color: var(--neutralWhite);
+  --color: var(--neutralPrimary);
+  --h1-color: var(--themePrimary);
+  --h2-color: var(--themeDarkAlt);
+  --h3-color: var(--themeDark);
+  --h4-color: var(--themeDarker);
+  --h5-color: var(--neutralPrimary);
+  --h6-color: var(--neutralPrimary);
   --muted-color: #73828c;
   --muted-border-color: #edf0f3;
-  --primary: #1095c1;
-  --primary-hover: #08769b;
-  --primary-focus: rgba(16, 149, 193, 0.125);
+  --primary: var(--themePrimary);
+  --primary-hover: var(--themeDarker);
+  --primary-focus: var(--themeSecondary); /* was rgba(16, 149, 193, 0.125); */
   --primary-inverse: #fff;
   --secondary: #596b78;
   --secondary-hover: #415462;
@@ -309,7 +338,7 @@ kbd {
     --muted-border-color: #1f2d38;
     --primary: #1095c1;
     --primary-hover: #1ab3e6;
-    --primary-focus: rgba(16, 149, 193, 0.25);
+    --primary-focus: rgba(16, 149, 193, 0.25)
     --primary-inverse: #fff;
     --secondary: #596b78;
     --secondary-hover: #73828c;
@@ -619,7 +648,7 @@ figure figcaption {
  */
 b,
 strong {
-  font-weight: bolder;
+  font-weight: --font-weight: var(--font-weight-bold);
 }
 
 sub,
@@ -887,10 +916,12 @@ del {
 
 ::-moz-selection {
   background-color: var(--primary-focus);
+  color: var(--neutralWhite);
 }
 
 ::selection {
   background-color: var(--primary-focus);
+  color: var(--neutralWhite);
 }
 
 /**
