@@ -358,7 +358,7 @@ function updateSidenotesInCollapseBlocks() {
 function updateFootnoteReferenceLinks() {
     GWLog("updateFootnoteReferenceLinks");
 
-    let footnoteAnchors = Array.from(document.querySelectorAll("div.footnotes li#fn\\:*"));
+    let footnoteAnchors = Array.from(document.querySelectorAll("div.footnotes li[id^='fn:']"));
 
     for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
         let fnref = GW.sidenotes.footnoteRefs[i];
