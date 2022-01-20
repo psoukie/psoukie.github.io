@@ -12,7 +12,7 @@
                 <ul style="padding-left: 20px; margin-top: 20px;" class="tags">
                     <li style="padding: 0 5px; border-radius: 10px;" class="tag">{{item.tags[0]}}</li>
                 </ul>
-                {% include 'helper.html' given=item %}
+
             {%- endif -%}
             <p class="feed-excerpt">{{ item.content | strip_html | strip | escape | truncate: 100}}</p>
             </a>
