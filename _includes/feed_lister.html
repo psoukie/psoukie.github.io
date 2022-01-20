@@ -1,0 +1,15 @@
+{%- for item in site.notes -%}
+    {%- if item.season == {{ include.type }} -%}
+    <article>
+        {%- if item.status == "Ongoing" or item.status == "ongoing" -%}
+          <ul>
+            <li><strong>Status: </strong>{{item.status | capitalize }}</li>
+            {% for tag in item.tags %}
+                <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        <a href="{{item.url}}"><h2>{{ item.title }}</h2></a>
+        <p>{{ item.content | markdownify | truncate: 100}}</p>
+    </article>
+    {%- endif -%}
+{%- endfor -%}
