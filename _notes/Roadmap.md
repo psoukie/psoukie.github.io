@@ -1,9 +1,9 @@
 ---
 title: Roadmap
-season: spring
+season: summer
 status: ongoing
 tags: test
-date: 2022-01-18
+date: 2022-01-19
 ---
 
 This is a note-to-self.
@@ -43,14 +43,14 @@ For the new incarnation of Soukie's Place, I'm contemplating using Microsoft [Fl
 
 I am planning the following transforms on Markdown syntax when rendering as HTML pages. These are motivated by an effort to keep the HTML semantically correct, and the need to generate specific styles I want without classes and without making Markdown source files broken when opened with a pure Markdown editor.
 
-- **Boxes**: Shaded blocks of text within the body. 
+- **Boxes**: Shaded blocks of text within the body.
 - **Factboxes**: Same as boxes but floated to the side within the margins of body if screen width allows.
-- 
+-
 
 | Component  | Markdown | Rendered HTML               |
 | ---------- | -------- | --------------------------- |
 | Box        | `> `     | `<div class="box">`         |
-| Factbox    | `>| `    | `<aside class="factbox">`   | 
+| Factbox    | `>| `    | `<aside class="factbox">`   |
 | Pull quote | `>> `    | `<aside class="pullquote">` |
 | Quotation  | `>>> `   | `<blockquote>`              |
 
@@ -67,10 +67,10 @@ Use the following:
 	<main>
 	  <article>
 	    <header>
-		
+
 		<footer>
 	<>
-	
+
 	<footer>
 ````
 

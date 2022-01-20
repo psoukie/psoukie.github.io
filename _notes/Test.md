@@ -1,6 +1,6 @@
 ---
 title: Test
-season: summer
+season: spring
 status: ongoing
 tags: test
 date: 2022-01-18

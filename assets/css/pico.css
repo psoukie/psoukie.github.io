@@ -2547,4 +2547,9 @@ textarea,
 a.perma {
   position: absolute;
   left: -2rem;
+  display: none;
+}
+
+[id]:hover > a.perma {
+    display: inline-block;
 }
