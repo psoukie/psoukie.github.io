@@ -11,7 +11,7 @@
         {% endfor %}
       </ul>
       <a href="{{item.url}}"><h2>{{ item.title }}</h2></a>
-      <p>{{ item.content | markdownify | truncate: 100}}</p>
+      <p>{{ item.content | markdownify | strip_html | truncate: 100}}</p>
     </article>
     {%- endif -%}
 {%- endfor -%}
