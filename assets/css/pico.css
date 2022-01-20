@@ -2540,3 +2540,11 @@ textarea,
     transition-duration: 0s !important;
   }
 }
+
+
+/* Custom additions */
+
+a.perma {
+  position: absolute;
+  left: -2rem;
+}

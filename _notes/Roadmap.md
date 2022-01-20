@@ -79,14 +79,14 @@ Use the following:
 
 So here is what I need to do:
 
-- [ ] Install Pico.css
+- [X] Install Pico.css
 - Build basic theme:
 	- [ ] header with no-JS menu
 	- [ ] index page of recent changes
-	- [ ] index page of tags
-	- [ ] index of categories
+	- [ ] tags page
+	- [ ] categories page(s) - borrow from cxogrow
 - [ ] Create Markdown conversions (fact boxes, pull quotes, image captions)
-- [ ] Build support for footnotes / sidenotes
+- [X] Build support for footnotes / sidenotes
 - Improvements and quality of life:
 	- [ ]  SEO
 	- [ ]  Search feature
