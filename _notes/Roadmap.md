@@ -14,7 +14,7 @@ Over the years, I either wrote the HTML, CSS and JavaScript for my websites eith
 
 I was intrigued by some recent developments in writing web pages, such as digital gardens, which has prompted me to go back and resurrect my website. This way, I could also move my more recent writing away from a proprietary, commercial site back to my own website.
 
-I started by by forking a _Notenote.link_ on GitHub, which is in turn a fork of _Simply Jekyll_ because I wanted something compatible with _Obsidian_. At the same time though, I am not crazy about the idiosyncratic syntax of _Simply Jekyll_ and also, to make things like images work smoothly, it is better to switch _Obsidian_ to use Markdown links for images and links instead of its own short syntax.
+At first, I experimented with _Notenote.link_, which is in turn a fork of _Simply Jekyll_, because I wanted something compatible with _Obsidian_. At the same time though, I am not crazy about the idiosyncratic syntax of _Simply Jekyll_ and also, to make things like images work smoothly, it is better to switch _Obsidian_ to use Markdown links for images and links instead of its own short syntax.
 
 ## Workflow
 
