@@ -2,8 +2,8 @@
 title: Roadmap
 season: summer
 status: ongoing
-tags: test, roadmap, internal
-date: 2022-01-19
+tags: [test, roadmap, internal]
+date: 2022-01-20
 ---
 
 This is a note-to-self.
@@ -20,7 +20,9 @@ At first, I experimented with _Notenote.link_, which is in turn a fork of _Simpl
 
 Taken together, I decided I would rather have my workflow be based on:
 
-pure Markdown --> GitHub Desktop --> GitHub Pages
+Markdown editor --> GitHub Desktop --> GitHub Pages[^local]
+
+[^local]: During the development of the website, I am building a local version using _Windows Linux Subsystem_ and _Jekyll_ in _Ubuntu_. 
 
 I can and will likely still use _Obsidian_ for the writing and checking of backlinks and what not. But I want the files to conform to simple Markdown syntax, which gives me the option to use any other Markdown editor (like _Typora_, or just _Atom_). And even though I have used more complex setups -- with Windows Linux Subsystem, GitHub and Netlify or Amazon Amplify -- for other websites, the ability to keep things simply on GitHub Pages is intriguing and suitable for a minimalist website. And once I get to GitHub, I want to keep things simple there too:
 
@@ -39,13 +41,14 @@ For the new incarnation of Soukie's Place, I'm contemplating using Microsoft [Fl
 
 [^msft]: This, of course, is a matter of taste and opinion, but I do feel Microsoft has proven they keep ahead of the curve -- a good example was their Metro design language which made, at the time, look Apple's skeuomorphic design look quite dated).
 
+See details about [this site's typography](soukies-place-typography.md) settings.
+
 ## Syntax
 
 I am planning the following transforms on Markdown syntax when rendering as HTML pages. These are motivated by an effort to keep the HTML semantically correct, and the need to generate specific styles I want without classes and without making Markdown source files broken when opened with a pure Markdown editor.
 
 - **Boxes**: Shaded blocks of text within the body.
 - **Factboxes**: Same as boxes but floated to the side within the margins of body if screen width allows.
--
 
 | Component  | Markdown | Rendered HTML               |
 | ---------- | -------- | --------------------------- |
