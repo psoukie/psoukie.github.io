@@ -326,7 +326,7 @@ function updateSidenotesInCollapseBlocks() {
         }
 
         //  Otherwise, move the sidenote back into the correct sidenote column.
-        let side = (i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight;
+        let side = GW.sidenotes.sidenoteColumnRight;
         //  What's the next sidenote?
         var nextSidenoteIndex = i + 2;
         while (nextSidenoteIndex < GW.sidenotes.footnoteRefs.length &&
@@ -484,7 +484,7 @@ function updateSidenotePositions() {
             continue;
 
         //  What side is this sidenote on?
-        let side = (i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight;
+        let side = GW.sidenotes.sidenoteColumnRight;
 
         //  Default position (vertically aligned with the footnote reference).
         sidenote.style.top = Math.round(((GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top) - side.getBoundingClientRect().top) + 4) + "px";
