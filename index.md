@@ -3,4 +3,4 @@ layout: default
 permalink: /
 ---
 
-{% include 'feed.html' %}
+{% include feed.html %}
