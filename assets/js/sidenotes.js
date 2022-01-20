@@ -734,7 +734,7 @@ function constructSidenotes() {
         //  Add the sidenote to the sidenotes array...
         GW.sidenotes.sidenoteDivs.push(sidenote);
         //  On which side should the sidenote go? Odd - right; even - left.
-        let side = (i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight;
+        let side = GW.sidenotes.sidenoteColumnRight;
         //  Inject the sidenote into the page.
         side.appendChild(sidenote);
     }
