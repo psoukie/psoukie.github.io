@@ -43,6 +43,21 @@ div.content {
     left: -13px;
 }
 
+.sidenote>.sidenote-self-link {
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    border-style: dotted;
+    border-color: var(--GW-sidenote-self-link-border-color);
+    border-width: 1px 1px 0;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
 .sidenote.highlighted, .sidenote:hover, .sidenote:target, .sidenote.targeted {
     background-color: var(--GW-sidenote-highlight-background-color);
     opacity: 1;

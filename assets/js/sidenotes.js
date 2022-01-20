@@ -530,7 +530,7 @@ function updateSidenotePositions() {
         if (sidenote.parentElement == GW.sidenotes.hiddenSidenoteStorage) continue;
 
         //  What side is this sidenote on?
-        let side = (i % 2) ? GW.sidenotes.sidenoteColumnLeft : GW.sidenotes.sidenoteColumnRight;
+        let side = GW.sidenotes.sidenoteColumnRight;
 
         /*  What points bound the vertical region within which this sidenote may
             be placed?
