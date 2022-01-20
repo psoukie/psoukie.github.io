@@ -2,15 +2,17 @@
 ---
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="TK description">
     <meta content="{{site.title}}" property="og:site_name"/>
     <meta content="{{site.user_description}}" property="og:description">
     <meta content="{{ site.url }}/about/" property="article:author">
-
     <script src="/assets/js/sidenotes.js" async></script>
-
     {%- if page.title -%}
     <meta content="{{ page.title }}" property="og:title">
     <meta content="article" property="og:type">
@@ -23,18 +25,16 @@
 
     <link rel="canonical" href="{{site.url}}{{page.url}}"/>
     <link rel="apple-touch-icon" href="{{site.profile_pic}}">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="icon" href="{{site.favicon}}" />
 
-    <link rel="icon" href="{{site.favicon}}" type="image/png" sizes="16x16"/>
     <link href="/assets/css/pico.css" rel="stylesheet" media="all" class="default"/>
     <link href="/assets/css/sidenotes.css" rel="stylesheet" media="all" class="default"/>
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
 
     <!--[if IE]>
         <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
     <![endif]-->
     <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
-
 </head>
 
 <body>
