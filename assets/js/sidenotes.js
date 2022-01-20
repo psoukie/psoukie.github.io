@@ -366,6 +366,7 @@ function updateFootnoteReferenceLinks() {
             fnref.href = "#sn" + (i + 1);
         } else {
             fnref.href = "#fn" + (i + 1);
+            console.log(footnoteAnchors[i], footnoteAnchors[i].id);
             footnoteAnchors[i].id = "fn" + (i + 1);
         }
     }
