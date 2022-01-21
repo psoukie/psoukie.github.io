@@ -8,12 +8,12 @@ div.content {
 
 #sidenote-column-right {
     position: absolute;
-    max-width: 15rem;
+    max-width: 10rem;
     font-size: var(--font-size-note);
     line-height: var(--line-height-narrow);
     pointer-events: none;
     height: 100%;
-    width: 15rem;
+    width: 10rem;
     top: 0;
     left: calc(100% + 3rem);
 }
@@ -30,6 +30,7 @@ div.content {
     transition: transform var(--transition);
 }
 
+/*
 .sidenote::after {
     content: "";
     position: absolute;
@@ -38,6 +39,7 @@ div.content {
     top: -13px;
     left: -13px;
 }
+*/
 
 .sidenote p {
     color: var(--neutralSecondary);
@@ -46,16 +48,20 @@ div.content {
 .sidenote>.sidenote-self-link {
     font-weight: 600;
     color: var(--neutralTertiary);
+    background-color: inherit;
     position: absolute;
     top: 0;
+    left: -.5em;
     width: 2em;
     height: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all var(--transition);
+    border-radius: 50%;
 }
 
-.sidenote.highlighted>.sidenote-self-link {
+.sidenote:target .sidenote-self-link, .sidenote.targeted .sidenote-self-link, .sidenote.highlighted>.sidenote-self-link {
     background-color: var(--themeLighter);
     color: var(--neutralSecondary);
 }
@@ -66,27 +72,41 @@ div.content {
 
 .sidenote-inner-wrapper p {
   margin: 0;
-  font-style: italic;
-}
-
-.sidenote.highlighted, .sidenote:target, .sidenote.targeted {
-  transform: translate(-.5em, 0);
+  font-size: var(--font-size-note);
 }
 
 a.footnote.highlighted {
-  color: var(--themePrimary);
+  color: var(--neutralSecondary);
+}
+
+a.footnote::before {
+  content: "";
+  display: block;
+  background-color: inherit;
+  position: absolute;
+  left: -.5em;
+  top: -.5em;
+  width: 1.6em;
+  height: 1.6em;
+  z-index: -1;
+  border-radius: 50%;
+  transition: background-color var(--transition);
+}
+
+a.footnote.targeted::before, a.footnote.highlighted::before {
   background-color: var(--themeLighter);
 }
 
 .sidenote-outer-wrapper {
     overflow: hidden;
     position: relative;
-    border-style: solid;
+}
+
+.sidenote.highlighted .sidenote-outer-wrapper {
     border-color: var(--neutralTertiaryAlt);
-    border-width: 1px 0;
 }
 
 .sidenote-inner-wrapper {
     position: relative;
-    margin: .5em 0;
+    margin-bottom: .5em;
 }
