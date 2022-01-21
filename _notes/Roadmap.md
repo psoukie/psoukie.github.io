@@ -22,7 +22,7 @@ Taken together, I decided I would rather have my workflow be based on:
 
 Markdown editor --> GitHub Desktop --> GitHub Pages[^local]
 
-[^local]: During the development of the website, I am building a local version using _Windows Linux Subsystem_ and _Jekyll_ in _Ubuntu_. 
+[^local]: During the development of the website, I am building a local version using _Windows Linux Subsystem_ and _Jekyll_ in _Ubuntu_.
 
 I can and will likely still use _Obsidian_ for the writing and checking of backlinks and what not. But I want the files to conform to simple Markdown syntax, which gives me the option to use any other Markdown editor (like _Typora_, or just _Atom_). And even though I have used more complex setups -- with Windows Linux Subsystem, GitHub and Netlify or Amazon Amplify -- for other websites, the ability to keep things simply on GitHub Pages is intriguing and suitable for a minimalist website. And once I get to GitHub, I want to keep things simple there too:
 
@@ -39,9 +39,11 @@ I have self-studied typography when I was a teenager, and my first job was at An
 
 For the new incarnation of Soukie's Place, I'm contemplating using Microsoft [Fluent](https://www.microsoft.com/design/fluent/) design language. The first reason is to acknowledge that I'm designing for the screen (and usually, physically, a very small screen) and should keep myself away from design principles that come from the printed world. The second reason is to borrow from someone who has done design for a long time, and done it well.[^msft]
 
-[^msft]: This, of course, is a matter of taste and opinion, but I do feel Microsoft has proven they keep ahead of the curve -- a good example was their Metro design language which made, at the time, look Apple's skeuomorphic design look quite dated).
+[^msft]: This, of course, is a matter of taste and opinion, but I do feel Microsoft has proven they keep ahead of the curve -- a good example was their Metro design language which made, at the time, look Apple's skeuomorphic design quite dated).
 
-See details about [this site's typography](soukies-place-typography) settings.
+See details about [this site's typography](soukies-place-typography) settings.[^del]
+
+[^del]: Just a note to test how it stacks.
 
 ## Syntax
 
@@ -52,9 +54,9 @@ I am planning the following transforms on Markdown syntax when rendering as HTML
 
 | Component  | Markdown | Rendered HTML               |
 | ---------- | -------- | --------------------------- |
-| Box        | `> `     | `<div class="box">`         |
-| Factbox    | `>| `    | `<aside class="factbox">`   |
-| Pull quote | `>> `    | `<aside class="pullquote">` |
+| Pull quote | `> `     | `<aside class="pullquote">` |
+| Box        | `>> `    | `<div class="box">`         |
+| Factbox    | `>= `    | `<aside class="factbox">`   |
 | Quotation  | `>>> `   | `<blockquote>`              |
 
 ## Page Structure
@@ -83,15 +85,19 @@ Use the following:
 So here is what I need to do:
 
 - [X] Install Pico.css
-- Build basic theme:
+- Build basic theme structure:
 	- [ ] header with no-JS menu
 	- [ ] index page of recent changes
 	- [ ] tags page
 	- [ ] categories page(s) - borrow from cxogrow
-- [ ] Create Markdown conversions (fact boxes, pull quotes, image captions)
+- [X] Theme colors and dynamic font size
+- [ ] CSS styles for my elements in Fluid design 
+- [X] Create Markdown conversions (fact boxes, pull quotes)
+- [ ] Markup conversion or formatting for image captions 
 - [X] Build support for footnotes / sidenotes
 - Improvements and quality of life:
 	- [ ]  SEO
 	- [ ]  Search feature
 	- [ ]  Feed
 	- [ ]  Comments
+	- [ ]  Improve footnotes.js
