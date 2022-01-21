@@ -19,18 +19,6 @@ function GWLog (string) {
     if (GW.loggingEnabled || localStorage.getItem("logging-enabled") == "true")
         console.log(string);
 }
-GW.enableLogging = (permanently = false) => {
-    if (permanently)
-        localStorage.setItem("logging-enabled", "true");
-    else
-        GW.loggingEnabled = true;
-};
-GW.disableLogging = (permanently = false) => {
-    if (permanently)
-        localStorage.removeItem("logging-enabled");
-    else
-        GW.loggingEnabled = false;
-};
 
 /***********/
 /* HELPERS */
@@ -443,7 +431,6 @@ function clearFootnotePopups() {
 /*  This function actually calculates and sets the positions of all sidenotes.
     */
 function updateSidenotePositions() {
-    console.log("updateSidenotePositions");
 
     /*  If we're in footnotes mode (i.e., the viewport is too narrow), then
         don't do anything.
