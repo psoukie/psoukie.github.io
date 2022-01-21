@@ -16,7 +16,6 @@ if (typeof window.GW == "undefined")
 /********************/
 
 function GWLog (string) {
-  console.log(string);
     if (GW.loggingEnabled || localStorage.getItem("logging-enabled") == "true")
         console.log(string);
 }
@@ -366,7 +365,6 @@ function updateFootnoteReferenceLinks() {
             fnref.href = "#sn" + (i + 1);
         } else {
             fnref.href = "#fn" + (i + 1);
-            console.log(footnoteAnchors[i], footnoteAnchors[i].id);
             footnoteAnchors[i].id = "fn" + (i + 1);
         }
     }
@@ -445,7 +443,7 @@ function clearFootnotePopups() {
 /*  This function actually calculates and sets the positions of all sidenotes.
     */
 function updateSidenotePositions() {
-    GWLog("updateSidenotePositions");
+    console.log("updateSidenotePositions");
 
     /*  If we're in footnotes mode (i.e., the viewport is too narrow), then
         don't do anything.
@@ -467,9 +465,9 @@ function updateSidenotePositions() {
         }
     }
     let offset = firstFullWidthBlock.offsetTop || 0;
-    if (GW.sidenotes.sidenoteColumnLeft.offsetTop < firstFullWidthBlock.offsetTop) {
-        GW.sidenotes.sidenoteColumnLeft.style.top = offset + "px";
-        GW.sidenotes.sidenoteColumnLeft.style.height = `calc(100% - ${offset}px)`;
+    if (GW.sidenotes.sidenoteColumnRight.offsetTop < firstFullWidthBlock.offsetTop) {
+        GW.sidenotes.sidenoteColumnRight.style.top = offset + "px";
+        GW.sidenotes.sidenoteColumnRight.style.height = `calc(100% - ${offset}px)`;
     }
 
     //  Update the disposition of sidenotes within collapse blocks.
@@ -694,7 +692,6 @@ function updateSidenotePositions() {
     }
 
     //  Show the sidenote columns.
-    GW.sidenotes.sidenoteColumnLeft.style.visibility = "";
     GW.sidenotes.sidenoteColumnRight.style.visibility = "";
 }
 
@@ -712,12 +709,10 @@ function constructSidenotes() {
 
     /*  Add the sidenote columns (removing them first if they already exist).
         */
-    if (GW.sidenotes.sidenoteColumnLeft) GW.sidenotes.sidenoteColumnLeft.remove();
     if (GW.sidenotes.sidenoteColumnRight) GW.sidenotes.sidenoteColumnRight.remove();
     markdownBody.insertAdjacentHTML("beforeend",
         "<div id='sidenote-column-left' class='footnotes' style='visibility:hidden'></div>" +
         "<div id='sidenote-column-right' class='footnotes' style='visibility:hidden'></div>");
-    GW.sidenotes.sidenoteColumnLeft = document.querySelector("#sidenote-column-left");
     GW.sidenotes.sidenoteColumnRight = document.querySelector("#sidenote-column-right");
 
     /*  Create and inject the sidenotes.

@@ -10,7 +10,5 @@ date: 2022-01-20
 
 ## Colors
 
-Theme primary color: \#005b70
-
-[Fluent UI Theme Designer (windows.net)](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html)
+The colors were derived using [Fluent UI Theme Designer (windows.net)](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html) from the theme's primary color \#038387.
 

@@ -6,21 +6,19 @@ div.content {
   position: relative;
 }
 
-#sidenote-column-left, #sidenote-column-right {
-    position: absolute;
-    max-width: var(--GW-sidenotes-max-width);
-    font-size: .85em;
-    pointer-events: none;
-}
-
 #sidenote-column-right {
+    position: absolute;
+    max-width: 17em;
+    font-size: var(--font-size-note);
+    line-height: var(--line-height-narrow);
+    pointer-events: none;
     height: 100%;
-    width: calc(50vw - (50% + 104px));
+    width: 17em;
     top: 0;
-    left: calc(100% + 60px);
+    left: calc(100% + 4rem);
 }
 
-#sidenote-column-left>*, #sidenote-column-right>* {
+#sidenote-column-right>* {
     pointer-events: auto;
 }
 
@@ -68,10 +66,11 @@ div.content {
 
 .sidenote-inner-wrapper p {
   margin: 0;
+  font-style: italic;
 }
 
 .sidenote.highlighted, .sidenote:target, .sidenote.targeted {
-  transform: translate(-1em, 0);
+  transform: translate(-.5em, 0);
 }
 
 a.footnote.highlighted {
