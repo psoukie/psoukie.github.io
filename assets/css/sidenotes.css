@@ -8,14 +8,14 @@ div.content {
 
 #sidenote-column-right {
     position: absolute;
-    max-width: 17em;
+    max-width: 15rem;
     font-size: var(--font-size-note);
     line-height: var(--line-height-narrow);
     pointer-events: none;
     height: 100%;
-    width: 17em;
+    width: 15rem;
     top: 0;
-    left: calc(100% + 4rem);
+    left: calc(100% + 3rem);
 }
 
 #sidenote-column-right>* {

@@ -148,7 +148,6 @@ function ridiculousWorkaroundsForBrowsersFromBizarroWorld() {
         sidenotesBrowserWorkaroundStyleBlock.innerHTML = `
             ${GW.firefoxTargetingSelector} {
                 @media only screen and (max-width: ${viewportWidthBreakpointInPixels}px) {
-                    #sidenote-column-left,
                     #sidenote-column-right {
                         display: none;
                     }
@@ -698,7 +697,6 @@ function constructSidenotes() {
         */
     if (GW.sidenotes.sidenoteColumnRight) GW.sidenotes.sidenoteColumnRight.remove();
     markdownBody.insertAdjacentHTML("beforeend",
-        "<div id='sidenote-column-left' class='footnotes' style='visibility:hidden'></div>" +
         "<div id='sidenote-column-right' class='footnotes' style='visibility:hidden'></div>");
     GW.sidenotes.sidenoteColumnRight = document.querySelector("#sidenote-column-right");
 
