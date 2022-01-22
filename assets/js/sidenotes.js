@@ -813,12 +813,12 @@ function sidenotesSetup() {
 
     /*  Add a resize listener so that sidenote positions are recalculated when
         the window is resized.
-        */
+
     window.addEventListener('resize', GW.sidenotes.windowResized = (event) => {
         GWLog("GW.sidenotes.windowResized");
 
         updateSidenotePositions();
-    });
+    }); */
     /*  Lay out the sidenotes as soon as the document is loaded.
         */
     if (document.readyState == "complete") {

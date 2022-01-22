@@ -99,7 +99,6 @@
     font-size: 22px;
   }
 }
-*/
 
 @media (min-width: 576px) {
   body > header,
@@ -2599,43 +2598,57 @@ textarea,
 
 /* Custom additions */
 
+body > main {
+  padding: 0 5vw;
+}
+
 main > header, div.content, #sidenote-column {
   position: relative;
-  display: inline-block;
   vertical-align: top;
 }
 
 div.content {
   width: auto;
-  max-width: 500px;
+  max-width: 650px;
 }
 
 main > header {
-  width: 200px;
+  width: 100%;
 }
 
 #sidenote-column {
+  display: none;
   position: absolute;
   width: 300px;
   font-size: var(--font-size-note);
   line-height: var(--line-height-narrow);
   pointer-events: none;
   height: 100%;
+  margin: 0 2em;
 }
 
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+  body > main {
+    padding: 0;
+    max-width: 650px;
+  }
+}
 @media (min-width: 992px) {
-  main.reading {
-      max-width: 47rem;
-      width: 47rem;
-      padding-right: 14rem;
+  body > main {
+    max-width: 1200px;
+  }
+  #sidenote-column {
+    display: inline-block;
+  }
+  div.content {
+    display: inline-block;
   }
 }
 
 @media (min-width: 1200px) {
-  main.reading {
-      max-width: 60rem;
-      width: 60rem;
-  }
 }
 
 a.perma {
