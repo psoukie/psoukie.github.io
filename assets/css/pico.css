@@ -2597,9 +2597,9 @@ textarea,
 
 
 /* Custom additions */
-
+/*
 body > main {
-  padding: 0 1em;
+  padding: 0 5vw;
 }
 
 main > header, div.content, #sidenote-column {
@@ -2687,3 +2687,4 @@ aside.pullquote {
 aside.pullquote p {
   color: var(--themeLight);
 }
+*/
