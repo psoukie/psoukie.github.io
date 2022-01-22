@@ -712,7 +712,7 @@ function constructSidenotes() {
         sidenote.id = "sn" + (i + 1);
         //  Wrap the contents of the footnote in two wrapper divs...
         let referencedFootnote = document.querySelector(GW.sidenotes.footnoteRefs[i].hash.replace(/:/, "\\:"));
-        sidenote.innerHTML = "<div class='sidenote-outer-wrapper'><div class='sidenote-inner-wrapper'>" +
+        sidenote.innerHTML = "<div class='sidenote-wrapper'>" +
                              (referencedFootnote ? referencedFootnote.innerHTML : "Loading sidenote contents, please waitâ€¦")
                              + "</div></div>";
         //  Add the sidenote to the sidenotes array...

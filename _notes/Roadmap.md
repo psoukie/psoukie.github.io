@@ -4,6 +4,7 @@ season: summer
 status: ongoing
 tags: [test, roadmap, internal]
 date: 2022-01-20
+toc: true
 ---
 
 This is a note-to-self.
@@ -65,18 +66,22 @@ Use the following:
 
 ````
 <html>
-
-  <body>
-    <header>
-      <nav>
-	<main>
-	  <article>
-	    <header>
-
-		<footer>
-	<>
-
+	<body>
+		<header>
+			<nav/>
+	  	</header>
+  		<main>
+			<header>
+				<meta />
+				<nav />
+			</header>
+			<article>
+				$content
+			</article>
+			<footer />
+   		</main>
 	<footer>
+</html>
 ````
 
 
@@ -84,20 +89,26 @@ Use the following:
 
 So here is what I need to do:
 
+### V.1
+
 - [X] Install Pico.css
 - Build basic theme structure:
 	- [ ] header with no-JS menu
-	- [ ] index page of recent changes
-	- [ ] tags page
-	- [ ] categories page(s) - borrow from cxogrow
+	- [ ] index page (list of articles / recent changes)
 - [X] Theme colors and dynamic font size
-- [ ] CSS styles for my elements in Fluid design 
+- [ ] CSS styles based on  Fluid design
 - [X] Create Markdown conversions (fact boxes, pull quotes)
-- [ ] Markup conversion or formatting for image captions 
+- [ ] Markup conversion or formatting for image captions
 - [X] Build support for footnotes / sidenotes
-- Improvements and quality of life:
-	- [ ]  SEO
-	- [ ]  Search feature
-	- [ ]  Feed
-	- [ ]  Comments
-	- [ ]  Improve footnotes.js
+- [ ]  Basic SEO
+- [ ]  Feed
+
+
+### V.2
+- [ ] Simplify and fix sidenotes.js
+- [ ] Tidy up CSS styles and ensure design compliance
+- [ ] Comments
+- [ ] Search feature
+- [ ] tags page
+- [ ] categories page(s) - borrow from cxogrow
+- [ ] Anonymized traffic tracking
