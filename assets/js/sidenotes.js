@@ -16,8 +16,7 @@ if (typeof window.GW == "undefined")
 /********************/
 
 function GWLog (string) {
-    if (GW.loggingEnabled || localStorage.getItem("logging-enabled") == "true")
-        console.log(string);
+  console.log(string);
 }
 
 /***********/
@@ -148,7 +147,7 @@ function ridiculousWorkaroundsForBrowsersFromBizarroWorld() {
         sidenotesBrowserWorkaroundStyleBlock.innerHTML = `
             ${GW.firefoxTargetingSelector} {
                 @media only screen and (max-width: ${viewportWidthBreakpointInPixels}px) {
-                    #sidenote-column-right {
+                    #sidenote-column {
                         display: none;
                     }
                 }
@@ -312,7 +311,7 @@ function updateSidenotesInCollapseBlocks() {
         }
 
         //  Otherwise, move the sidenote back into the correct sidenote column.
-        let side = GW.sidenotes.sidenoteColumnRight;
+        let side = GW.sidenotes.sidenoteColumn;
         //  What's the next sidenote?
         var nextSidenoteIndex = i + 2;
         while (nextSidenoteIndex < GW.sidenotes.footnoteRefs.length &&
@@ -451,11 +450,11 @@ function updateSidenotePositions() {
         }
     }
     let offset = firstFullWidthBlock.offsetTop || 0;
-    if (GW.sidenotes.sidenoteColumnRight.offsetTop < firstFullWidthBlock.offsetTop) {
-        GW.sidenotes.sidenoteColumnRight.style.top = offset + "px";
-        GW.sidenotes.sidenoteColumnRight.style.height = `calc(100% - ${offset}px)`;
+/*    if (GW.sidenotes.sidenoteColumn.offsetTop < firstFullWidthBlock.offsetTop) {
+        GW.sidenotes.sidenoteColumn.style.top = offset + "px";
+        GW.sidenotes.sidenoteColumn.style.height = `calc(100% - ${offset}px)`;
     }
-
+*/
     //  Update the disposition of sidenotes within collapse blocks.
     updateSidenotesInCollapseBlocks();
 
@@ -472,10 +471,10 @@ function updateSidenotePositions() {
             continue;
 
         //  What side is this sidenote on?
-        let side = GW.sidenotes.sidenoteColumnRight;
+        let side = GW.sidenotes.sidenoteColumn;
 
         //  Default position (vertically aligned with the footnote reference).
-        sidenote.style.top = Math.round(((GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top) - side.getBoundingClientRect().top) + 4) + "px";
+        sidenote.style.top = Math.round(((GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top) - side.getBoundingClientRect().top) ) + "px";
 
         /*  Mark sidenotes which are cut off vertically.
             */
@@ -487,7 +486,7 @@ function updateSidenotePositions() {
         sidenotes are excluded, by the presence of, e.g., a full-width table).
         */
     var proscribedVerticalRanges = [ ];
-    let rightColumnBoundingRect = GW.sidenotes.sidenoteColumnRight.getBoundingClientRect();
+    let rightColumnBoundingRect = GW.sidenotes.sidenoteColumn.getBoundingClientRect();
     /*  Examine all potentially overlapping elements (i.e., non-sidenote
         elements that may appear in, or extend into, the side columns).
         */
@@ -500,8 +499,8 @@ function updateSidenotePositions() {
     /*  The bottom of the right column is also a "proscribed vertical range".
         */
     proscribedVerticalRanges.push({
-        top:    GW.sidenotes.sidenoteColumnRight.clientHeight,
-        bottom: GW.sidenotes.sidenoteColumnRight.clientHeight
+        top:    GW.sidenotes.sidenoteColumn.clientHeight,
+        bottom: GW.sidenotes.sidenoteColumn.clientHeight
     });
 
     /*  Correct for overlap (both between sidenotes, and of sidenotes with
@@ -518,7 +517,7 @@ function updateSidenotePositions() {
         if (sidenote.parentElement == GW.sidenotes.hiddenSidenoteStorage) continue;
 
         //  What side is this sidenote on?
-        let side = GW.sidenotes.sidenoteColumnRight;
+        let side = GW.sidenotes.sidenoteColumn;
 
         /*  What points bound the vertical region within which this sidenote may
             be placed?
@@ -678,7 +677,7 @@ function updateSidenotePositions() {
     }
 
     //  Show the sidenote columns.
-    GW.sidenotes.sidenoteColumnRight.style.visibility = "";
+    GW.sidenotes.sidenoteColumn.style.visibility = "";
 }
 
 /*  Constructs the HTML structure, and associated listeners and auxiliaries,
@@ -695,10 +694,11 @@ function constructSidenotes() {
 
     /*  Add the sidenote columns (removing them first if they already exist).
         */
-    if (GW.sidenotes.sidenoteColumnRight) GW.sidenotes.sidenoteColumnRight.remove();
-    markdownBody.insertAdjacentHTML("beforeend",
-        "<div id='sidenote-column-right' class='footnotes' style='visibility:hidden'></div>");
-    GW.sidenotes.sidenoteColumnRight = document.querySelector("#sidenote-column-right");
+    if (GW.sidenotes.sidenoteColumn) GW.sidenotes.sidenoteColumn.remove();
+    markdownBody.parentNode.insertAdjacentHTML("beforeend",
+        "<div id='sidenote-column' class='footnotes' style='visibility:hidden'></div>");
+    GW.sidenotes.sidenoteColumn = document.querySelector("#sidenote-column");
+    GW.sidenotes.sidenoteColumn.style.height = markdownBody.clientHeight + "px";
 
     /*  Create and inject the sidenotes.
         */
@@ -718,7 +718,7 @@ function constructSidenotes() {
         //  Add the sidenote to the sidenotes array...
         GW.sidenotes.sidenoteDivs.push(sidenote);
         //  On which side should the sidenote go? Odd - right; even - left.
-        let side = GW.sidenotes.sidenoteColumnRight;
+        let side = GW.sidenotes.sidenoteColumn;
         //  Inject the sidenote into the page.
         side.appendChild(sidenote);
     }

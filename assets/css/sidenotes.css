@@ -2,23 +2,7 @@
 layout: stylesheet
 ---
 
-div.content {
-  position: relative;
-}
-
-#sidenote-column-right {
-    position: absolute;
-    max-width: 10rem;
-    font-size: var(--font-size-note);
-    line-height: var(--line-height-narrow);
-    pointer-events: none;
-    height: 100%;
-    width: 10rem;
-    top: 0;
-    left: calc(100% + 3rem);
-}
-
-#sidenote-column-right>* {
+#sidenote-column>* {
     pointer-events: auto;
 }
 

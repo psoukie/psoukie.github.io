@@ -2599,9 +2599,28 @@ textarea,
 
 /* Custom additions */
 
-.reading {
-  padding: 2rem;
-  max-width: 33rem;
+main > header, div.content, #sidenote-column {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+div.content {
+  width: auto;
+  max-width: 500px;
+}
+
+main > header {
+  width: 200px;
+}
+
+#sidenote-column {
+  position: absolute;
+  width: 300px;
+  font-size: var(--font-size-note);
+  line-height: var(--line-height-narrow);
+  pointer-events: none;
+  height: 100%;
 }
 
 @media (min-width: 992px) {
@@ -2616,15 +2635,6 @@ textarea,
   main.reading {
       max-width: 60rem;
       width: 60rem;
-  }
-  main > header {
-      width: 20%;
-      display: inline-block;
-      vertical-align: top;
-  }
-  div.content {
-      width: 70%;
-      display: inline-block;
   }
 }
 
