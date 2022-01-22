@@ -2599,7 +2599,7 @@ textarea,
 /* Custom additions */
 
 body > main {
-  padding: 0 5vw;
+  padding: 0 1em;
 }
 
 main > header, div.content, #sidenote-column {
