@@ -21,21 +21,13 @@ layout: syntax-subs
     <meta content="website" property="og:type">
     {%- endif -%}
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
-
     <title>{{site.title}}</title>
-
     <link rel="canonical" href="{{site.url}}{{page.url}}"/>
     <link rel="apple-touch-icon" href="{{site.profile_pic}}">
     <link rel="icon" href="{{site.favicon}}" />
 
-    <link href="/assets/css/pico.css" rel="stylesheet" media="all" class="default"/>
-    <link href="/assets/css/sidenotes.css" rel="stylesheet" media="all" class="default"/>
+    <link href="/assets/css/combined.css" rel="stylesheet" media="all" class="default"/>
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
-
-    <!--[if IE]>
-        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
-    <![endif]-->
-    <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
 </head>
 
 <body>
@@ -43,6 +35,9 @@ layout: syntax-subs
     {%- include header.html -%}
 
     <main class="container">
+      {%- if page.title -%}
+        <h1>{{page.title}}</h1>
+      {%- endif -%}
       <header>
         <ul>
           {%- if page.date -%}
@@ -63,10 +58,7 @@ layout: syntax-subs
         {%- endif -%}
       </header>
       <div class="content">
-        {%- if page.title -%}
-          <h1>{{page.title}}</h1>
-        {%- endif -%}
-        {{ content }}
+        {% include anchor_headings.html html=content anchorBody="#" anchorClass="perma" %}
       </div>
     </main>
 
@@ -75,5 +67,3 @@ layout: syntax-subs
 
 </body>
 </html>
-
-<script>for(let h of document.querySelectorAll('h2[id],h3[id],h4[id]'))h.innerHTML+=` <a href="#${h.id}" class="perma" aria-hidden="true">#</a>`</script>

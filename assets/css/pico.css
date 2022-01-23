@@ -2597,6 +2597,17 @@ textarea,
 
 
 /* Custom additions */
+
+a.perma {
+  position: absolute;
+  left: -2rem;
+  display: none;
+}
+
+[id]:hover > a.perma {
+    display: inline-block;
+}
+
 /*
 body > main {
   padding: 0 5vw;
@@ -2649,16 +2660,6 @@ main > header {
 }
 
 @media (min-width: 1200px) {
-}
-
-a.perma {
-  position: absolute;
-  left: -2rem;
-  display: none;
-}
-
-[id]:hover > a.perma {
-    display: inline-block;
 }
 
 aside.factbox {
