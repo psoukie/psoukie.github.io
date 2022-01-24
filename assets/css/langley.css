@@ -60,11 +60,10 @@
   --gutter: 2rem;
   --border-radius: 4px;
   --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
-   --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */ 
+   --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */
 }
 
 html, body {
-  overflow-x: hidden;
   background-color: var(--neutralLight);
 }
 
@@ -77,6 +76,7 @@ body {
   max-width: var(--body-width);
   padding: 0 var(--margin-mobile);
   margin: 0 auto;
+  box-shadow: var(--box-shadow-8);
 }
 
 body > header {
@@ -99,6 +99,7 @@ body > header > nav {
     padding: 0;
     width: fit-content;
     max-width: initial;
+    box-shadow: none;
   }
   body > header {
     margin: var(--gutter) var(--margin-desktop);
@@ -106,6 +107,7 @@ body > header > nav {
   main {
     display: grid;
     grid-template-columns: auto auto;
+    box-shadow: var(--box-shadow-8);
   }
   main > * {
     grid-column: 1;
