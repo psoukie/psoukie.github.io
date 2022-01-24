@@ -102,6 +102,7 @@ So here is what I need to do:
 - [X] Build support for footnotes / sidenotes
 - [ ]  Basic SEO
 - [ ]  Feed
+- [ ] Reverse default font style to serif
 
 
 ### V.2

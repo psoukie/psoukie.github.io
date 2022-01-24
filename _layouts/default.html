@@ -35,29 +35,37 @@ layout: syntax-subs
     {%- include header.html -%}
 
     <main class="container">
-      {%- if page.title -%}
-        <h1>{{page.title}}</h1>
-      {%- endif -%}
+      <figure>
+      </figure>
       <header>
         <ul>
           {%- if page.date -%}
-            <li>{{ page.date | date: "%B %d, %Y"}}</li>
+            <li><span>Published:</span> {{ page.date | date: "%B %d, %Y"}}</li>
+          {%- endif -%}
+          {%- if page.toc -%}
+            <li>
+              <nav>
+                <span>In this article</span>
+                {% include toc.html html=content %}
+              </nav>
+            </li>
           {%- endif -%}
           {%- if page.tags -%}
-            <ul class="tags">
-              {%- for tag in page.tags -%}
-                <li><a href="/tags/#{{ tag }}" class="tag">{{ tag }}</a></li>
-              {%- endfor -%}
-            </ul>
+            <li class="tag-list">
+              <span>Tagged with</span>
+              <ul>
+                {%- for tag in page.tags -%}
+                  <li><a href="/tags/#{{ tag }}" class="tag">{{ tag }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </li>
           {%- endif -%}
         </ul>
-        {%- if page.toc -%}
-          <nav>
-            {% include toc.html html=content %}
-          </nav>
-        {%- endif -%}
       </header>
       <div class="content">
+        {%- if page.title -%}
+          <h1>{{page.title}}</h1>
+        {%- endif -%}
         {% include anchor_headings.html html=content anchorBody="#" anchorClass="perma" %}
       </div>
     </main>
