@@ -43,6 +43,7 @@
   --neutralLighterAlt: #faf9f8;
   --accentBlue: #0078d4;
 
+/* Typography */
   --font-family-serif: "CrimsonEnglish", "Crimson Text", Garamond, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-sans: "Segoe UI", "Myriad", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -51,96 +52,100 @@
   --font-weight-bold: 700;
   --line-height: 1.3;
 
-  --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
+/* Layout */
+  --body-width: 550px;
+  --sidebar-width: 200px;
+  --margin-mobile: calc(1rem + ((1vw - 3.75px) * 10)); /* calculated to be dynamic starting at iPhone SE screen */
+  --margin-desktop: 4rem;
+  --gutter: 2rem;
   --border-radius: 4px;
+  --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
+   --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */ 
+}
+
+html, body {
+  overflow-x: hidden;
+  background-color: var(--neutralLight);
 }
 
 body {
   font-family: var(--font-family-sans);
   line-height: var(--line-height);
-  background-color: var(--neutralWhite);
   color: var(--neutralPrimary);
+  background-color: var(--neutralWhite);
   font-size: 16px;
-  display: grid;
-  grid-template-columns:
-    minmax(1em, 1fr) minmax(auto, 600px) minmax(1em, 1fr);
+  max-width: var(--body-width);
+  padding: 0 var(--margin-mobile);
+  margin: 0 auto;
 }
 
-body > * {
-  grid-column: 2;
-}
-
-main header nav, main header .tag-list, main header span {
-  display: none;
-}
-
-main > figure {
-  grid-column: 1 / -1;
-  grid-row: 1;
-}
-
-#sidenote-column {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  body {
-    grid-template-columns:
-      minmax(1em, 1fr) 900px minmax(1em, 1fr);
-  }
-  main {
-    display: grid;
-    grid-template-columns:
-      600px 60px 240px;
-  }
-  main > * {
-    grid-column: 1;
-  }
-  main > header {
-    grid-column: 3;
-    grid-row: 2;
-  }
-  main > #sidenote-column {
-    display: block;
-    grid-column: 3;
-    grid-row: 3 / 4;
-  }
-  main header nav {
-    display: block;
-  }
-  main header .tag-list {
-    display: list-item;
-  }
-  main header span {
-    display: inline;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    grid-template-columns:
-      minmax(1em, 1fr) 1100px minmax(1em, 1fr);
-  }
-  main {
-    display: grid;
-    grid-template-columns:
-      170px 30px 600px 60px 240px;
-  }
-  main > * {
-    grid-column: 3;
-  }
-  main > header {
-    grid-column: 1;
-  }
-  main > #sidenote-column {
-    grid-column: 5;
-    grid-row: 1 / 3;
-  }
+body > header {
+  margin: var(--gutter) 0;
 }
 
 body > header > nav {
   display: flex;
   justify-content: space-between;
+}
+
+/* Hide desktop-only elements*/
+
+#sidenote-column, main header nav, main header .tag-list, main header span {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+    width: fit-content;
+    max-width: initial;
+  }
+  body > header {
+    margin: var(--gutter) var(--margin-desktop);
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  main > * {
+    grid-column: 1;
+  }
+  div.content {
+    grid-row: 1 / 3;
+    width: var(--body-width);
+    padding-left: var(--margin-desktop);
+  }
+  main > header, main > #sidenote-column {
+    grid-column: 2;
+    width: var(--sidebar-width);
+    padding-left: var(--gutter);
+    padding-right: var(--margin-desktop);
+  }
+  /*  show desktop-only elements */
+  main > #sidenote-column { display: block;}
+  main header nav { display: block;}
+  main header .tag-list { display: list-item;}
+  main header span { display: inline;}
+}
+
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: auto auto auto;
+  }
+  main > * {
+    grid-column: 2;
+  }
+  div.content {
+    padding-left: 0;
+  }
+  main > header {
+    grid-column: 1;
+    padding-left: var(--margin-desktop);
+    padding-right: var(--gutter);
+  }
+  main > #sidenote-column {
+    grid-column: 3;
+  }
 }
 
 header ul {
