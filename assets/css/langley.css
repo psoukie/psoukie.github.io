@@ -89,6 +89,7 @@ main {
   background-color: var(--neutralWhite);
   max-width: var(--body-width);
   padding: var(--margin-mobile);
+  overflow: hidden;
   box-shadow: var(--box-shadow-8);
 }
 
