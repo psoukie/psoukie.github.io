@@ -1,6 +1,5 @@
 {% capture nl %}
 {% endcapture %}
-{% capture single-start %}<blockquote>{{nl}}{% endcapture%}
 {% capture double-start %}<blockquote>{{nl}}  <blockquote>{% endcapture%}
 {% capture double-end %}  </blockquote>{{nl}}</blockquote>{% endcapture%}
 {% capture triple-start %}<blockquote>{{nl}}  <blockquote>{{nl}}    <blockquote>{% endcapture%}
@@ -12,8 +11,8 @@
     | replace: triple-end, '</real-block>'
     | replace: double-start, '<div class="box">'
     | replace: double-end, '</div>'
-    | replace: pipe-start, '<aside class="factbox">'
-    | replace: single-start, '<aside class="pullquote">'
+    | replace: pipe-start, '<aside class="pullquote">'
+    | replace: '<blockquote>', '<aside class="factbox">'
     | replace: '</blockquote>', '</aside>'
 %}
 

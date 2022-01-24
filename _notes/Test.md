@@ -8,19 +8,19 @@ date: 2022-01-18
 
 First paragraph.
 
-> single sign
+>= This should be a pullquote using `>=`.
 
 Next
 
->> double sign
+>> This should be a box using `>>`.
 
 Next
 
->>> Triple sign
+>>> And a regular block quote requires three (`>>>`).
 
 Next
 
->= single with pipe
+> And with a special syntax (`>`), we get a factbox. But then it's unclear how to do a heading for it....
 
 Second paragraph. Limit.[^custom]
 
@@ -44,30 +44,29 @@ Term
 Second Term
 :  Definition after an empty line.
 
-> And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
+>>> And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
 
 No a quote anymore, but let's ==highlight== something.
 
+> # Factbox heading
+>
+> Factbox body text.
 
->> Double quote
+Normal text again.
 
->>> Triple quote
->>>
->>> continued...
-
-<aside markdown="1">
-
-	Paragraph
-
-	## Aside heading
-
-	Here's some **extra** content in an aside.
-
-</aside>
-
->> And a double quote.
-
-and
-
-> # Test
->  of this type of contraption.
+````
+<html>   <body>     <header>	  <nav/> thous otshu thu aoeuh 
+	</header>
+  	<main>
+	  <header>
+	    <meta />
+		<nav />
+	  </header>
+	  <article>
+	    $content
+	  </article>
+	  <footer />
+	</main>
+  <footer>
+</html>
+````
