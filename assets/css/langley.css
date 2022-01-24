@@ -296,30 +296,33 @@ aside.factbox {
   border-radius: var(--border-radius);
 }
 
+aside.pullquote {
+  display: block;
+  width: 66%;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 1rem 0 1rem auto;
+  text-align: right;
+  color: var(--themeSecondary);
+}
+
+aside.pullquote p {
+  margin: 0;
+}
+
 @media (min-width: 576px) {
-  aside.factbox {
+  aside.factbox, aside.pullquote {
     float: right;
     margin: .5rem 0 .5rem .5rem;
-    width: 33%;
+    width: 40%;
   }
 }
 
 div.box {
   padding: 1rem;
   margin: 1rem 0;
+  border-radius: var(--border-radius);
   background-color: var(--neutralLighter);
-}
-
-aside.pullquote {
-  display: block;
-  width: auto;
-  font-size: 1.5rem;
-  margin: 1rem auto;
-  text-align: center;
-}
-
-aside.pullquote p {
-  color: var(--themeLight);
 }
 
 ::-moz-selection {
