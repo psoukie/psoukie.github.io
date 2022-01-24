@@ -71,7 +71,6 @@ body {
   font-family: var(--font-family-sans);
   line-height: var(--line-height);
   color: var(--neutralPrimary);
-  background-color: var(--neutralWhite);
   font-size: 16px;
   max-width: var(--body-width);
   padding: 0 var(--margin-mobile);
@@ -86,6 +85,10 @@ body > header {
 body > header > nav {
   display: flex;
   justify-content: space-between;
+}
+
+main {
+  background-color: var(--neutralWhite);
 }
 
 /* Hide desktop-only elements*/
