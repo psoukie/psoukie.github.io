@@ -54,10 +54,10 @@
 
 /* Layout */
   --body-width: 550px;
-  --sidebar-width: 200px;
+  --sidebar-width: 180px;
   --margin-mobile: calc(1rem + ((1vw - 3.75px) * 10)); /* calculated to be dynamic starting at iPhone SE screen */
   --margin-desktop: 4rem;
-  --gutter: 2rem;
+  --gutter: 3rem;
   --border-radius: 4px; /* from MS Fluent UI for small items  */
   --border-radius-large: 8px; /* from MS Fluent UI for large items  */
   --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
@@ -90,6 +90,7 @@ body > header > nav {
 }
 
 main {
+  position: relative;
   background-color: var(--neutralWhite);
   max-width: var(--body-width);
   padding: var(--margin-mobile);
@@ -126,29 +127,32 @@ main {
     grid-column: 2;
     width: var(--sidebar-width);
     padding-left: var(--gutter);
-    padding-right: var(--margin-desktop);
+    padding-right: var(--gutter);
+  }
+  main > header span {
+    font-weight: 600;
+    text-transform: uppercase;
   }
   /*  show desktop-only elements */
   main > #sidenote-column { display: block;}
   main header nav { display: block;}
   main header .tag-list { display: list-item;}
-  main header span { display: inline;}
+  main header span { display: block;}
 }
 
 @media (min-width: 1200px) {
-  main {
-    grid-template-columns: auto auto auto;
-  }
-  main > * {
-    grid-column: 2;
-  }
-  div.content {
-    padding-left: 0;
+  main, body > header {
+    margin-left: calc(2rem + var(--gutter) + var(--sidebar-width));
   }
   main > header {
-    grid-column: 1;
-    padding-left: var(--margin-desktop);
-    padding-right: var(--gutter);
+    position: absolute;
+    grid-column: unset;
+    left: calc( (2rem + var(--gutter) + var(--sidebar-width)) * -1);
+    top: var(--margin-desktop);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--neutralLighterAlt);
+    box-shadow: var(--box-shadow-4);
   }
   main > #sidenote-column {
     grid-column: 3;
@@ -184,7 +188,6 @@ nav h1 {
 
 header, nav, h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-sans);
-  font-size: 16px;
 }
 
 /* Sidenotes section */
@@ -192,6 +195,8 @@ header, nav, h1, h2, h3, h4, h5, h6 {
 #sidenote-column {
   pointer-events: none;
   height: 100%;
+  font-size: .85em;
+  line-height: calc(.85*(var(--line-height)));
 }
 
 #sidenote-column>* {
@@ -201,7 +206,7 @@ header, nav, h1, h2, h3, h4, h5, h6 {
 .sidenote {
   position: absolute;
   padding: 2em 0 0;
-  width: 240px;
+  width: var(--sidebar-width);
 }
 
 .sidenote p {
@@ -344,7 +349,6 @@ pre, code, kbd {
   border-radius: var(--border-radius);
   background-color: var(--neutralLighterAlt);
   font-size: .85em;
-  border-radius: var(--border-radius);
 }
 
 pre {

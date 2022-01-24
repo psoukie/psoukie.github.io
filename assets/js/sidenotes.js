@@ -117,13 +117,12 @@ function setHashWithoutScrolling(newHash) {
     media queries, wrapped in a Firefox-specific CSS block.
     */
 function ridiculousWorkaroundsForBrowsersFromBizarroWorld() {
-    GWLog("ridiculousWorkaroundsForBrowsersFromBizarroWorld");
-
     GW.isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     if (!GW.isFirefox) {
         GW.sidenotes.viewportWidthBreakpointMediaQueryString = `(max-width: 176ch)`;
         GW.sidenotes.mobileViewportWidthBreakpointMediaQueryString = `(max-width: 65ch)`;
     } else {
+        GWLog("ridiculousWorkaroundsForBrowsersFromBizarroWorld");
         /*  This should match the "max-width" property of the "body" element.
             */
         GW.maxBodyWidthInCharacterUnits = 112;
@@ -442,14 +441,7 @@ function updateSidenotePositions() {
         fine; nothing really breaks as a result...
         */
     let markdownBody = document.querySelector("div.content");
-    var firstFullWidthBlock;
-    for (var block of markdownBody.children) {
-        if (block.clientWidth == markdownBody.clientWidth) {
-            firstFullWidthBlock = block;
-            break;
-        }
-    }
-    let offset = firstFullWidthBlock.offsetTop || 0;
+    let offset = markdownBody.offsetTop || 0;
 /*    if (GW.sidenotes.sidenoteColumn.offsetTop < firstFullWidthBlock.offsetTop) {
         GW.sidenotes.sidenoteColumn.style.top = offset + "px";
         GW.sidenotes.sidenoteColumn.style.height = `calc(100% - ${offset}px)`;
