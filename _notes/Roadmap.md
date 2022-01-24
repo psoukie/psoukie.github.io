@@ -1,15 +1,14 @@
 ---
 title: Roadmap
+tags: [roadmap]
 season: summer
 status: ongoing
-tags: [test, roadmap, internal]
 date: 2022-01-20
+updated: 2022-01-24
 toc: true
 ---
 
 This is a note-to-self.
-
-## The Why
 
 Over the years, I either wrote the HTML, CSS and JavaScript for my websites either completely from scratch, or -- on occasions when I used templates to start -- I nevertheless eventually went through every single line in each file and adjusted them to my needs.
 
@@ -66,21 +65,21 @@ Use the following:
 
 ````
 <html>
-	<body>
-		<header>
-			<nav/>
-	  	</header>
-  		<main>
-			<header>
-				<meta />
-				<nav />
-			</header>
-			<article>
-				$content
-			</article>
-			<footer />
-   		</main>
-	<footer>
+  <body>
+    <header>
+	  <nav/>
+	</header>
+  	<main>
+	  <header>
+	    <meta />
+		<nav />
+	  </header>
+	  <article>
+	    $content
+	  </article>
+	  <footer />
+	</main>
+  <footer>
 </html>
 ````
 
@@ -93,19 +92,18 @@ So here is what I need to do:
 
 - [X] Install Pico.css
 - Build basic theme structure:
-	- [ ] header with no-JS menu
-	- [ ] index page (list of articles / recent changes)
+	- [ ] basic header without menu
+	- [X] index page (list of articles / recent changes)
 - [X] Theme colors and dynamic font size
 - [ ] CSS styles based on  Fluid design
 - [X] Create Markdown conversions (fact boxes, pull quotes)
 - [ ] Markup conversion or formatting for image captions
 - [X] Build support for footnotes / sidenotes
-- [ ]  Basic SEO
-- [ ]  Feed
-- [ ] Reverse default font style to serif
 
 
 ### V.2
+- [ ] SEO
+- [ ] Feed
 - [ ] Simplify and fix sidenotes.js
 - [ ] Tidy up CSS styles and ensure design compliance
 - [ ] Comments
