@@ -72,14 +72,12 @@ body {
   line-height: var(--line-height);
   color: var(--neutralPrimary);
   font-size: 16px;
-  max-width: var(--body-width);
-  padding: 0 var(--margin-mobile);
+  width: fit-content;
   margin: 0 auto;
-  box-shadow: var(--box-shadow-8);
 }
 
 body > header {
-  margin: var(--gutter) 0;
+  margin: var(--gutter) var(--margin-mobile);
 }
 
 body > header > nav {
@@ -89,6 +87,9 @@ body > header > nav {
 
 main {
   background-color: var(--neutralWhite);
+  max-width: var(--body-width);
+  padding: var(--margin-mobile);
+  box-shadow: var(--box-shadow-8);
 }
 
 /* Hide desktop-only elements*/
@@ -98,17 +99,13 @@ main {
 }
 
 @media (min-width: 992px) {
-  body {
-    padding: 0;
-    width: fit-content;
-    max-width: initial;
-    box-shadow: none;
-  }
   body > header {
     margin: var(--gutter) var(--margin-desktop);
   }
   main {
     display: grid;
+    max-width: initial;
+    padding: var(--margin-desktop) 0;
     grid-template-columns: auto auto;
     box-shadow: var(--box-shadow-8);
   }
@@ -262,6 +259,8 @@ a.footnote.targeted::before, a.footnote.highlighted::before {
 .sidenote.highlighted .sidenote-outer-wrapper {
   border-color: var(--neutralTertiaryAlt);
 }
+
+/* Langley formatting */
 
 aside.factbox {
   box-shadow: var(--box-shadow-4);
