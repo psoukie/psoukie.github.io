@@ -60,7 +60,7 @@
   --gutter: 2rem;
   --border-radius: 4px;
   --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
-   --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */
+  --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */
 }
 
 html, body {
