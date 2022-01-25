@@ -1,5 +1,5 @@
 ---
-title: Test
+title: Test Page
 season: spring
 status: ongoing
 tags: test

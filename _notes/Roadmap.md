@@ -59,6 +59,8 @@ I am planning the following transforms on Markdown syntax when rendering as HTML
 | Factbox    | `>= `    | `<aside class="factbox">`   |
 | Quotation  | `>>> `   | `<blockquote>`              |
 
+Note: A 'box' immediately following the article's title (or title and strapline/subtitle) is formatted as a lede paragraph. 
+
 ## Page Structure
 
 Use the following:
