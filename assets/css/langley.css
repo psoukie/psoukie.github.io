@@ -109,7 +109,8 @@ main {
 
 @media (min-width: 992px) {
   body > header {
-    margin: var(--gutter) var(--margin-desktop);
+    margin: var(--gutter) auto;
+    padding: 0 var(--gutter) 0 var(--margin-desktop);
   }
   main {
     display: grid;
