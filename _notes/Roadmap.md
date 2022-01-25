@@ -59,7 +59,7 @@ I am planning the following transforms on Markdown syntax when rendering as HTML
 | Factbox    | `>= `    | `<aside class="factbox">`   |
 | Quotation  | `>>> `   | `<blockquote>`              |
 
-Note: A 'box' immediately following the article's title (or title and strapline/subtitle) is formatted as a lede paragraph. 
+Note: A 'box' immediately following the article's title (or title and strapline/subtitle) is formatted as a lede paragraph.
 
 ## Page Structure
 
@@ -101,6 +101,7 @@ So here is what I need to do:
 - [X] Create Markdown conversions (fact boxes, pull quotes)
 - [ ] Markup conversion or formatting for image captions
 - [X] Build support for footnotes / sidenotes
+- [ ] Fix bug footnotes when reloading
 
 
 ### V.2

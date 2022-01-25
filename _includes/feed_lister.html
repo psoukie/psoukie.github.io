@@ -1,13 +1,16 @@
 {%- for item in site.notes -%}
   {%- if item.season == include.season -%}
     <article>
+      {%- if item.image -%}
+        <figure>
+          <img src="\assets\img\{{ item.image }}" alt="featured image" />
+        </figure>
+      {%- endif -%}
+      <a href="{{item.url}}"><h2>{{ item.title | markdownify | strip_html }}</h2></a>
+      <p>{{ item.content | markdownify | strip_html | truncatewords: 50}}</p>
       <ul>
         <li>{{ item.tags | join: " &bull; " }}</li>
       </ul>
-      <a href="{{item.url}}"><h1>{{ item.title | markdownify | strip_html }}</h1></a>
-      <p>{{ item.content | markdownify | strip_html | truncatewords: 50}}</p>
     </article>
-
-<hr/>
   {%- endif -%}
 {%- endfor -%}
