@@ -119,7 +119,7 @@ function setHashWithoutScrolling(newHash) {
 function ridiculousWorkaroundsForBrowsersFromBizarroWorld() {
     GW.isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     if (!GW.isFirefox) {
-        GW.sidenotes.viewportWidthBreakpointMediaQueryString = `(max-width: 176ch)`;
+        GW.sidenotes.viewportWidthBreakpointMediaQueryString = `(max-width: 100ch)`;
         GW.sidenotes.mobileViewportWidthBreakpointMediaQueryString = `(max-width: 65ch)`;
     } else {
         GWLog("ridiculousWorkaroundsForBrowsersFromBizarroWorld");
@@ -363,7 +363,7 @@ function updateFootnoteEventListeners() {
 
     /*  Determine whether we are in sidenote mode or footnote mode.
         */
-    var sidenotesMode = (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == false);
+    var sidenotesMode = (window.innerWidth >= 992);
 
     if (sidenotesMode) {
         if (window.Footnotes) {
@@ -384,6 +384,7 @@ function updateFootnoteEventListeners() {
             });
             sidenote.addEventListener("mouseover", GW.sidenotes.sidenoteover = () => {
                 fnref.classList.toggle("highlighted", true);
+                console.log("HIGHLIGHTING");
             });
             sidenote.addEventListener("mouseout", GW.sidenotes.sidenoteout = () => {
                 fnref.classList.remove("highlighted");
@@ -430,9 +431,9 @@ function clearFootnotePopups() {
 function updateSidenotePositions() {
 
     /*  If we're in footnotes mode (i.e., the viewport is too narrow), then
-        don't do anything.
+        don't do anything. soukie TK this is based on breakpoint.
         */
-    if (GW.sidenotes.mediaQueries.viewportWidthBreakpoint.matches == true)
+    if (window.innerWidth < 992)
         return;
 
     /*  Position left sidenote column so top is flush with top of first

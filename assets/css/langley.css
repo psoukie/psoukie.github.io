@@ -63,6 +63,8 @@
   --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
   --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */
   --border: 1px solid var(--neutralLight);
+
+  --transition: 0.467s cubic-bezier(0.1,0.9,0.2,1);
 }
 
 html, body {
@@ -84,13 +86,14 @@ body > header {
   margin: var(--gutter) var(--margin-mobile);
 }
 
-body > header > nav {
+body > header > nav, article > ul {
   display: flex;
   justify-content: space-between;
 }
 
 main {
   position: relative;
+  z-index: 1;
   background-color: var(--neutralWhite);
   max-width: var(--body-width);
   padding: var(--margin-mobile);
@@ -134,7 +137,10 @@ main {
     text-transform: uppercase;
   }
   /*  show desktop-only elements */
-  main > #sidenote-column { display: block;}
+  main > #sidenote-column {
+    display: block;
+    position: relative;
+  }
   main header nav { display: block;}
   main header .tag-list { display: list-item;}
   main header span { display: block;}
@@ -159,7 +165,7 @@ main {
   }
 }
 
-header ul {
+header ul, article > ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -188,6 +194,10 @@ nav h1 {
 
 header, nav, h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-sans);
+}
+
+header {
+  font-size: .85em;
 }
 
 /* Sidenotes section */
@@ -225,7 +235,7 @@ header, nav, h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all var(--transition);
+  transition: color var(--transition), background-color var(--transition);
   border-radius: 50%;
 }
 
@@ -294,6 +304,10 @@ h3 { color: var(--themeDark); }
 h4 { color: var(--themeDarker); }
 h5, h6 { color: var(--neutralPrimary); }
 
+h1 {
+  margin-top: 0;
+}
+
 aside.factbox {
   box-shadow: var(--box-shadow-4);
   padding: .5rem;
@@ -338,6 +352,20 @@ div.box {
 ::selection {
   background-color: var(--themeSecondary);
   color: var(--neutralWhite);
+}
+
+a {
+  transition: color var(--transition);
+}
+
+ul, ol {
+  padding-left: 1em;
+}
+
+article > ul {
+  font-family: var(--font-family-sans);
+  font-size: .85em;
+  margin-bottom: 1rem;
 }
 
 pre {

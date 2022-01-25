@@ -1,16 +1,13 @@
 {%- for item in site.notes -%}
-    {%- if item.season == include.season -%}
+  {%- if item.season == include.season -%}
     <article>
       <ul>
-        {%- if item.status -%}
-          <li><strong>Status: </strong>{{item.status | capitalize }}</li>
-        {%- endif -%}
-        {% for tag in item.tags %}
-          <li>{{ tag }}</li>
-        {% endfor %}
+        <li>{{ item.tags | join: " &bull; " }}</li>
       </ul>
-      <a href="{{item.url}}"><h2>{{ item.title }}</h2></a>
-      <p>{{ item.content | markdownify | strip_html | truncate: 100}}</p>
+      <a href="{{item.url}}"><h1>{{ item.title | markdownify | strip_html }}</h1></a>
+      <p>{{ item.content | markdownify | strip_html | truncatewords: 50}}</p>
     </article>
-    {%- endif -%}
+
+<hr/>
+  {%- endif -%}
 {%- endfor -%}
