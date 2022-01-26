@@ -42,7 +42,6 @@
   --neutralLight: #edebe9;
   --neutralLighter: #f3f2f1;
   --neutralLighterAlt: #faf9f8;
-  --accentBlue: #0078d4;
 
 /* Typography */
   --font-family-serif: "CrimsonEnglish", "Crimson Text", Garamond, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -84,7 +83,20 @@ body {
 }
 
 body > header, body > footer {
-  margin: var(--gutter) var(--margin-mobile);
+  margin: 1.5rem auto;
+}
+
+body > header {
+  text-align: center;
+  margin-top: 0;
+  background-color: var(--neutralLighterAlt);
+  padding: .5rem 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-4);
+}
+
+body > header h1 {
+  font-size: 1.6rem;
 }
 
 body > header > nav, article > ul {
@@ -115,6 +127,9 @@ body > header > nav, article > ul {
   body > header, body > footer {
     margin: var(--gutter) auto;
     width: var(--body-width);
+  }
+  body > header {
+    width: calc(var(--body-width) + 2*var(--margin-desktop) + var(--sidebar-width) + var(--gutter) + 2rem);
   }
   main {
     display: grid;
@@ -162,6 +177,9 @@ body > header > nav, article > ul {
 }
 
 @media (min-width: 1200px) {
+  body > header {
+    width: calc(var(--body-width) + 2*var(--margin-desktop) );
+  }
   main {
     grid-template-columns: auto auto auto;
   }
@@ -210,6 +228,7 @@ header, footer, nav, h1, h2, h3, h4, h5, h6 {
 
 footer {
   font-size: smaller;
+  color: var(--neutralTertiary);
 }
 
 h1, h2, h3, h4, h5, h6 {
