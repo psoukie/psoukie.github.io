@@ -63,6 +63,9 @@ layout: syntax-subs
       <div class="content">
         {%- if page.title -%}
           <h1>{{ page.title | markdownify | strip_html }}</h1>
+          {%- if page.subtitle -%}
+          <div class="subtitle">{{ page.subtitle | markdownify | strip_html }}</div>
+          {%- endif -%}
         {%- endif -%}
         {%- if page.image -%}
           <figure>

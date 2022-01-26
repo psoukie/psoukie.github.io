@@ -56,7 +56,7 @@ I am planning the following transforms on Markdown syntax when rendering as HTML
 | ---------- | -------- | --------------------------- |
 | Pull quote | `> `     | `<aside class="pullquote">` |
 | Box        | `>> `    | `<div class="box">`         |
-| Factbox    | `>= `    | `<aside class="factbox">`   |
+| Factbox    | `>= `    | `<aside class="box">`   |
 | Quotation  | `>>> `   | `<blockquote>`              |
 
 Note: A 'box' immediately following the article's title (or title and strapline/subtitle) is formatted as a lede paragraph.
