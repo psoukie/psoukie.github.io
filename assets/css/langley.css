@@ -37,7 +37,7 @@
   --font-size-xl: 20px;
   --font-size-xxl: 26px;
   --leading: 1.45;
-  --leading-tight: 1.35;
+  --leading-tight: 1.4;
   --sans-ratio: 1;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
@@ -373,7 +373,7 @@ aside.box {
 
 aside.pullquote {
   display: block;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-l);
   font-style: italic;
   margin: calc(1rem * var(--leading)) 0;
   line-height: var(--leading-tight);
