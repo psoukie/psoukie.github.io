@@ -51,7 +51,7 @@ To help think about this topic, let’s consider books. Yes, we can look at book
 
 In this sense, two printed editions and an ebook with the same words in them are the _same_ book. If I own any of the three, I _have the book_. In contrast, a statue is a unique physical object. Maybe I could get its digital model and 3D print it, but it would be different than the original. I would _not_ have the statue.
 
->= An animated GIF and Beethoven’s Symphony №&nbsp;5 are both digital in nature.
+>= An animated GIF and Beethoven’s Symphony No.&nbsp;5 are both digital in nature.
 
 Seen this way, books — but also Beethoven’s symphonies — are composed of discrete pieces of information. Both are digital in nature, even though they also have physical representations. These ‘analog conversions’ add their own beauty to their renditions of the analog forms, but at their heart, books and symphonies are not analog.
 
@@ -59,7 +59,7 @@ Seen this way, books — but also Beethoven’s symphonies — are composed of d
 
 Digital art is just like a book in its abstract form. It is pure data. It does get reproduced into an analog representation for consumption, but the underlying data of each digital copy are identical.
 
-Do I think that an animated GIF is as important a work of art as the Beethoven’s Symphony №&nbsp;5? Of course not, but it is noteworthy that in a very real sense, they are both digital works of art.
+Do I think that an animated GIF is as important a work of art as the Beethoven’s Symphony No.&nbsp;5? Of course not, but it is noteworthy that in a very real sense, they are both digital works of art.
 
 ## (Intellectual) Ownership
 

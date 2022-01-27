@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,500;0,600;1,500;1,600&family=Source+Code+Pro&display=swap');
 
 :root {
   /* Theme colors */
@@ -30,15 +30,18 @@
 
 /* Typography */
   --font-family-serif: "Libre Baskerville", Garamond, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-sans: "Montserrat", "Myriad", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans: "Lato", "Myriad", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --sans-ratio: 1.05;
+  --font-family-mono: "Source Code Pro", monospace;
+  --mono-ratio: 1.1;
   --font-size-s: 14px;
   --font-size-m: 16px;
   --font-size-l: 18px;
   --font-size-xl: 20px;
   --font-size-xxl: 26px;
-  --leading: 1.45;
+  --leading: 1.5;
   --leading-tight: 1.4;
-  --sans-ratio: 1;
+  --leading-sans: 1.4;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
@@ -59,7 +62,8 @@
 
 @media (min-width: 576px) {
   :root {
-    --leading: 1.5;
+    --leading: 1.6;
+    --leading-tight: 1.5;
     --font-size-s: 13px;
     --font-size-m: 16px;
     --font-size-l: 20px;
@@ -119,7 +123,7 @@ body > header {
 }
 
 body > header h1 {
-  font-size: var(--font-size-l);
+  font-size: calc( var(--sans-ratio) * var(--font-size-l));
   margin: 0;
 }
 
@@ -138,18 +142,24 @@ body > header > nav, article > ul {
   }
 }
 
+header, footer, nav, h2, .subtitle, h3, h4 {
+  font-family: var(--font-family-sans);
+  line-height: var(--leading-sans);
+}
+
+main > header {
+  line-height: var(--leading-sans);
+}
+
 div.content {
   position: relative;
   z-index: 1;
 }
 
 #sidenote-column {
-  height: 100%;
-}
-
-#sidenote-column, main > header {
   font-size: var(--font-size-s);
   line-height: var(--leading-tight);
+  height: 100%;
 }
 
 /* Hide desktop-only elements*/
@@ -248,10 +258,6 @@ header > ul > li {
   margin-bottom: 1em;
 }
 
-header, footer, nav, h2, .subtitle, h3, h4 {
-  font-family: var(--font-family-sans);
-}
-
 h1, h2, .subtitle, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -266,7 +272,7 @@ h1, h2, .subtitle {
 
 h1 {
   color: var(--themeDark);
-  font-size: var(--font-size-xxl);
+  font-size: calc(var(--font-size-xxl) * var(--sans-ratio));
   font-weight: var(--font-weight-regular);
   margin-bottom: calc(1rem * var(--leading));
   text-align: center;
@@ -349,8 +355,9 @@ a:focus {
 }
 
 blockquote {
-  margin-left: 2em;
+  margin-left: 3em;
   margin-right: 0;
+  color: var(--neutralPrimary);
   /* font-style: italic; */
 }
 
@@ -414,9 +421,14 @@ div.box {
   color: var(--themeDarker);
   border-radius: 0;
   background-color: inherit;
-  font-family: var(--font-family-sans);
-  font-size: calc(var(--sans-ratio) * 1em);
-  font-weight: 500;
+  font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 576px) {
+  .content h1 + div.box, .content h1 + div.subtitle + div.box, .content h1 + div.subtitle + figure + div.box, .content h1 + figure + div.box {
+    font-size: calc(var(--sans-ratio) * var(--font-size-l));
+    font-weight: var(--font-weight-regular);
+  }
 }
 
 .box h2, .box h3, .box h4, .box h5 {
@@ -454,7 +466,7 @@ figure > img {
 
 figcaption {
   color: var(--neutralSecondary);
-  font-size: .85em;
+  font-size: var(--font-size-s);
   text-align: center;
 }
 
@@ -476,9 +488,12 @@ pre {
 }
 
 pre, code, kbd {
+  font-family: var(--font-family-mono);
+  font-size: calc(var(--mono-ratio) * 1em);
   border-radius: var(--border-radius);
   background-color: var(--neutralLighterAlt);
-  font-size: .85em;
+  font-style: normal !important;
+  font-weight: 400 !important;
 }
 
 pre {
