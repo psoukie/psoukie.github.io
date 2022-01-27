@@ -74,8 +74,8 @@
   --neutralWhite: #fffefd;
 
   /* Typography */
-  --font-family-serif: "Libre Baskerville", Garamond, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-sans: "LatoLatinWeb", "Myriad", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-serif: "Libre Baskerville", Garamond, Georgia, serif;
+  --font-family-sans: "LatoLatinWeb", "Myriad", "Helvetica Neue", sans-serif;
   --sans-ratio: 1.05;
   --font-family-mono: "Source Code Pro", monospace;
   --mono-ratio: 1.1;
@@ -374,7 +374,7 @@ h3, h4, h5, h6 {
 
 @media (min-width: 576px) {
   h2 {
-    margin: 1em 0 .3em 0;
+    margin: 1.5em 0 .3em 0;
   }
   h3, h4, h5, h6 {
     margin-bottom: .3em;
@@ -426,6 +426,16 @@ a:hover, a:active, a:focus {
 }
 a:focus {
 
+}
+
+a[href*="//"]:not([href*="mysite.com"])::after {
+  content: "↗\FE0E";
+  position: relative;
+  font-size: 80%;
+  line-height: 0;
+  top: -0.5em;
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
 }
 
 a > h2 {
@@ -489,7 +499,7 @@ div.box {
   padding: 1rem;
   margin: calc(1em * var(--leading)) 0;
   border-radius: var(--border-radius);
-  background-color: var(--themeLighter);
+  background-color: var(--neutralLighter);
 }
 
 /* When div.box follows headline (optionally with a strapline or image), format it as a lede paragraph  */
@@ -576,6 +586,10 @@ pre, code, kbd {
   font-weight: 400 !important;
 }
 
+code {
+  padding: 0 .2em;
+}
+
 kbd {
   padding: 0 .25em;
   border: var(--border);
@@ -620,7 +634,7 @@ a.perma {
 /* Tables */
 
 table {
-  margin: 1em 0;
+  margin: calc(1em * var(--leading)) 0;
   border-collapse: collapse;
 }
 
