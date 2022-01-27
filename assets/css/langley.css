@@ -92,7 +92,7 @@ html, body {
 body {
   font-family: var(--font-family-serif);
   line-height: var(--leading);
-  color: var(--neutralPrimary);
+  color: var(--neutralDark);
   font-size: var(--font-size-m);
   max-width: 100%;
   width: fit-content;
@@ -265,11 +265,19 @@ h1, h2, .subtitle {
 }
 
 h1 {
-  color: var(--themeDarkAlt);
+  color: var(--themeDark);
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-regular);
   margin-bottom: calc(1rem * var(--leading));
   text-align: center;
+}
+
+.subtitle {
+  color: var(--themeDarker);
+  font-size: calc(var(--sans-ratio) * var(--font-size-l));
+  text-align: center;
+  margin-top: calc(-.5rem * var(--leading));
+  margin-bottom: calc(2rem * var(--leading));
 }
 
 h2 {
@@ -278,16 +286,9 @@ h2 {
   margin: 1em 0 .5rem 0;
 }
 
-.subtitle {
-  color: var(--themeDark);
-  font-size: calc(var(--sans-ratio) * var(--font-size-l));
-  text-align: center;
-  margin-top: calc(-.5rem * var(--leading));
-  margin-bottom: calc(2rem * var(--leading));
-}
-
 h3, h4, h5, h6 {
   margin-top: calc(1rem * var(--leading));
+  margin-bottom: .2rem;
 }
 
 @media (min-width: 576px) {
@@ -295,7 +296,7 @@ h3, h4, h5, h6 {
     margin: calc(1em * var(--leading)) 0 calc(.5em * var(--leading)) 0;
   }
   h3, h4, h5, h6 {
-    margin-bottom: .333rem;;
+    margin-bottom: .333rem;
   }
 }
 
@@ -363,6 +364,10 @@ blockquote {
   }
 }
 
+.box {
+  color: var(--neutralBlack);
+}
+
 aside.box {
   box-shadow: var(--box-shadow-4);
   padding: 1em;
@@ -399,7 +404,7 @@ div.box {
   padding: 1rem;
   margin: calc(1em * var(--leading)) 0;
   border-radius: var(--border-radius);
-  background-color: var(--neutralLighter);
+  background-color: var(--themeLighterAlt);
 }
 
 /* When div.box follows headline (optionally with a strapline or image), format it as a lede paragraph  */
@@ -538,7 +543,7 @@ a.perma {
 }
 
 .sidenote p {
-  color: var(--neutralSecondary);
+  color: var(--neutralPrimary);
 }
 
 .sidenote>.sidenote-self-link {
@@ -557,9 +562,9 @@ a.perma {
   border-radius: 50%;
 }
 
-.sidenote:target .sidenote-self-link, .sidenote.targeted .sidenote-self-link, .sidenote.highlighted>.sidenote-self-link {
+.sidenote.highlighted>.sidenote-self-link {
   background-color: var(--themeLighter);
-  color: var(--neutralSecondary);
+  color: var(--neutralPrimary);
 }
 
 .sidenote-wrapper .reversefootnote {
@@ -567,7 +572,7 @@ a.perma {
 }
 
 a.footnote.highlighted {
-  color: var(--neutralSecondary);
+  color: var(--neutralPrimary);
 }
 
 a.footnote::before {
@@ -584,7 +589,7 @@ a.footnote::before {
   transition: background-color var(--transition);
 }
 
-a.footnote.targeted::before, a.footnote.highlighted::before {
+a.footnote.highlighted::before {
   background-color: var(--themeLighter);
 }
 

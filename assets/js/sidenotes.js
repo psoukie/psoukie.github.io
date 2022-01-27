@@ -19,22 +19,13 @@ if (typeof window.GW == "undefined")
 /********************/
 
 function GWLog (string) {
-  // console.log(string);
+  console.log(string);
 }
 
 /***********/
 /* HELPERS */
 /***********/
 
-/*  Returns true if the given element intersects the viewport, false otherwise.
-    */
-function isOnScreen(element) {
-    let rect = element.getBoundingClientRect();
-    return (rect.top < window.innerHeight &&
-            rect.bottom > 0 &&
-            rect.left < window.innerWidth &&
-            rect.right > 0);
-}
 
 /*  This is necessary to defeat a bug where if the page is loaded with the URL
     hash targeting some element, the element does not match the :target CSS
@@ -63,12 +54,6 @@ function setHashWithoutScrolling(newHash) {
 
     let scrollPositionBeforeNavigate = window.scrollY;
     location.hash = newHash;
-    requestAnimationFrame(() => {
-        window.scrollTo(0, scrollPositionBeforeNavigate);
-    });
-
-    if (GW.isFirefox)
-        window.getSelection().addRange(selectedRange);
 }
 
 
@@ -307,7 +292,7 @@ function clearFootnotePopups() {
 /*  This function actually calculates and sets the positions of all sidenotes.
     */
 function updateSidenotePositions() {
-
+  GWLog("updateSidenotePositions");
     /*  If we're in footnotes mode (i.e., the viewport is too narrow), then
         don't do anything. soukie TK this is based on breakpoint.
         */
@@ -565,9 +550,9 @@ function constructSidenotes() {
 
     /*  Add the sidenote columns (removing them first if they already exist).
         */
-    if (GW.sidenotes.sidenoteColumn) GW.sidenotes.sidenoteColumn.remove();
-    markdownBody.parentNode.insertAdjacentHTML("beforeend",
-        "<div id='sidenote-column' class='footnotes' style='visibility:hidden'></div>");
+    // if (GW.sidenotes.sidenoteColumn) GW.sidenotes.sidenoteColumn.remove();
+    // markdownBody.parentNode.insertAdjacentHTML("beforeend",
+    //     "<div id='sidenote-column' class='footnotes' style='visibility:hidden'></div>");
     GW.sidenotes.sidenoteColumn = document.querySelector("#sidenote-column");
     GW.sidenotes.sidenoteColumn.style.height = markdownBody.clientHeight + "px";
 
@@ -644,6 +629,15 @@ function constructSidenotes() {
     â€¦ and, of course, correct layout of the sidenotes, even in tricky cases
     where the citations are densely packed and the sidenotes are long.
     */
+
+function sidenotesSetupInner() {
+  constructSidenotes();
+  updateSidenotePositions();
+  updateFootnoteEventListeners();
+  updateFootnoteReferenceLinks();
+  setTimeout(updateSidenotePositions, 5000); // soukie -- in case of late shifts because of slow loading of fonts etc.
+}
+
 function sidenotesSetup() {
     GWLog("sidenotesSetup");
 
@@ -658,9 +652,22 @@ function sidenotesSetup() {
     /*  Construct the sidenotes immediately, and also re-construct them as soon
         as the HTML content is fully loaded (if it isn't already).
         */
-    constructSidenotes();
-    if (document.readyState == "loading")
-        window.addEventListener("DOMContentLoaded", constructSidenotes);
+    // constructSidenotes();
+    //if (document.readyState == "loading")
+
+    // window.addEventListener("load", constructSidenotes);
+
+    // window.addEventListener("load", updateSidenotePositions);
+
+    // if (document.readyState!='loading') sidenotesSetupInner();
+    //     // modern browsers
+    //     else if (document.addEventListener) document.addEventListener('DOMContentLoaded', sidenotesSetupInner);
+    //     // IE <= 8
+    //     else document.attachEvent('onreadystatechange', function(){
+    //         if (document.readyState=='complete') sidenotesSetupInner();
+    //     });
+
+        window.addEventListener("load", sidenotesSetupInner);
 
     /*  Add a resize listener so that sidenote positions are recalculated when
         the window is resized. */
@@ -669,43 +676,6 @@ function sidenotesSetup() {
       clearTimeout(timeout);
       timeout = setTimeout(updateSidenotePositions, delay);
     });
-
-    /*  Lay out the sidenotes as soon as the document is loaded.
-        */
-    if (document.readyState == "complete") {
-        updateSidenotePositions();
-    } else {
-        if (document.readyState == "loading") {
-            window.addEventListener("DOMContentLoaded", updateSidenotePositions);
-        } else {
-            updateSidenotePositions();
-        }
-        window.addEventListener("load", updateSidenotePositions);
-    }
-
-    /*  On page load, set the correct mode (footnote popups or sidenotes), and
-        rewrite the citation (footnote reference) links to point to footnotes
-        or to sidenotes, as appropriate.
-        */
-    if (document.readyState == "complete") {
-        updateFootnoteEventListeners();
-        updateFootnoteReferenceLinks();
-    } else {
-        window.addEventListener("load", () => {
-            updateFootnoteEventListeners();
-            updateFootnoteReferenceLinks();
-        });
-    }
-    /*  In case footnotes.js loads later, make sure event listeners are set in
-        order afterwards.
-        */
-    GW.sidenotes.footnotesObserver = new MutationObserver((mutationsList, observer) => {
-        if (document.querySelector("#footnotediv")) {
-            updateFootnoteEventListeners();
-            GW.sidenotes.footnotesObserver.disconnect();
-        }
-    });
-    GW.sidenotes.footnotesObserver.observe(document.body, { attributes: true, childList: true, subtree: true });
 
     /*  If the page was loaded with a hash that points to a footnote, but
         sidenotes are enabled (or vice-versa), rewrite the hash in accordance
@@ -718,11 +688,6 @@ function sidenotesSetup() {
     } else if (location.hash.match(/#fn[0-9]/) &&
         (window.innerWidth >= 992) ) {
         location.hash = "#sn" + location.hash.substr(3);
-    } else {
-        /*  Otherwise, make sure that if a sidenote is targeted by the hash, it
-            indeed ends up looking highlighted (this defeats a weird bug).
-            */
-        requestAnimationFrame(realignHashIfNeeded);
     }
 }
 
