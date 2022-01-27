@@ -19,7 +19,7 @@ if (typeof window.GW == "undefined")
 /********************/
 
 function GWLog (string) {
-  console.log(string);
+  // console.log(string);
 }
 
 /***********/
