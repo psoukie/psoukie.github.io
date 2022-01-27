@@ -53,10 +53,10 @@ I am planning the following transforms on Markdown syntax when rendering as HTML
 - **Factboxes**: Same as boxes but floated to the side within the margins of body if screen width allows.
 
 | Component  | Markdown | Rendered HTML               |
-| ---------- | -------- | --------------------------- |
+| :--------  | :------- | :-------------------------- |
 | Pull quote | `> `     | `<aside class="pullquote">` |
 | Box        | `>> `    | `<div class="box">`         |
-| Factbox    | `>= `    | `<aside class="box">`   |
+| Factbox    | `>= `    | `<aside class="box">`       |
 | Quotation  | `>>> `   | `<blockquote>`              |
 
 Note: A 'box' immediately following the article's title (or title and strapline/subtitle) is formatted as a lede paragraph.

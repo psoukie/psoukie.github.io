@@ -49,7 +49,6 @@ relative_links:
 markdown: kramdown
 
 kramdown:
-  input: GFM
   hard_wrap: false
   math_engine: null
   smart_quotes: [lsquo,rsquo,ldquo,rdquo]
