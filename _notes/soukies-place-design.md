@@ -1,6 +1,6 @@
 ---
 title: Soukie's Place Design
-season: spring
+season: autumn
 status: ongoing
 tags: [typography, internal]
 date: 2022-01-23

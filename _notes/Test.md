@@ -1,7 +1,7 @@
 ---
 title: Test Page
 subtitle: How It Works Together
-season: spring
+season: autumn
 status: ongoing
 tags: test
 date: 2022-01-18

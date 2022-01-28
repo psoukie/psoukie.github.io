@@ -1,10 +1,10 @@
 ---
 title: Roadmap
 tags: [roadmap]
-season: summer
+season: spring
 status: ongoing
 date: 2022-01-20
-updated: 2022-01-24
+updated: 2022-01-27
 toc: true
 ---
 
@@ -41,9 +41,7 @@ For the new incarnation of Soukie's Place, I'm contemplating using Microsoft [Fl
 
 [^msft]: This, of course, is a matter of taste and opinion, but I do feel Microsoft has proven they keep ahead of the curve -- a good example was their Metro design language which made, at the time, look Apple's skeuomorphic design quite dated).
 
-See details about [this site's design](soukies-place-design).[^del]
-
-[^del]: Just a note to test how it stacks.
+See details about [this site's design](soukies-place-design).
 
 ## Syntax
 
