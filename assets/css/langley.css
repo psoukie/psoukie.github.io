@@ -101,6 +101,7 @@
   --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
   --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */
   --border: 1px solid var(--neutralLight);
+  --float-width: 40%;
 
   --transition: 0.467s cubic-bezier(0.1,0.9,0.2,1);
 }
@@ -337,15 +338,19 @@ h2 {
   font-weight: var(--font-weight-medium);
 }
 
-h1, h2, .subtitle {
-  line-height: var(--leading-tight); /* TK soukie make a var */
+h1 {
+  line-height: var(--leading-tight);
+}
+
+h2, .subtitle {
+  line-height: var(--leading-sans);
 }
 
 h1 {
   color: var(--themeDark);
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-regular);
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   text-align: center;
 }
 
@@ -353,7 +358,7 @@ h1 {
   color: var(--themeDarker);
   font-size: calc(var(--sans-ratio) * var(--font-size-l));
   text-align: center;
-  margin-top: -1.3em;
+  margin-top: -1.5em;
   margin-bottom: 1.66em;
 }
 
@@ -362,7 +367,7 @@ h1 {
 }
 
 h2 {
-  color: var(--neutralPrimaryAlt);
+  color: var(--themeDarker);
   font-size: calc(var(--sans-ratio) * var(--font-size-xl));
   margin: 1em 0 .5rem 0;
 }
@@ -414,7 +419,7 @@ footer {
 p {
   margin: 0;
 }
-p+p {
+p+p, p+.float+p {
   margin-top: calc(.5em * var(--leading));
 }
 
@@ -429,10 +434,10 @@ a:focus {
 
 }
 
-a[href*="//"]:not([href*="mysite.com"])::after {
+a[href*="//"]:not([href*="soukie.net"])::after {
   content: "↗\FE0E";
   position: relative;
-  font-size: 80%;
+  font-size: 70%;
   line-height: 0;
   top: -0.5em;
   font-style: normal;
@@ -464,12 +469,16 @@ blockquote {
   }
 }
 
-aside.box {
+.box {
   box-shadow: var(--box-shadow-4);
-  padding: 1em;
   margin: calc(1em * var(--leading)) 0;
+  padding: 1em;
   background-color: var(--neutralLighterAlt);
   border-radius: var(--border-radius);
+}
+
+div.box {
+  background-color: var(--neutralLighter);
 }
 
 aside.pullquote {
@@ -483,34 +492,14 @@ aside.pullquote {
   color: var(--themeTertiary);
 }
 
-@media (min-width: 576px) {
-  aside.box, aside.pullquote {
-    float: right;
-    margin: .5rem 1em;
-    margin-right: 0;
-    width: 40%;
-    line-height: var(--leading-tight);
-  }
-  aside.pullquote {
-    padding: 0;
-  }
-}
-
-div.box {
-  padding: 1rem;
-  margin: calc(1em * var(--leading)) 0;
-  border-radius: var(--border-radius);
-  background-color: var(--neutralLighter);
-}
-
 /* When div.box follows headline (optionally with a strapline or image), format it as a lede paragraph  */
-.content h1 + div.box, .content h1 + div.subtitle + div.box, .content h1 + div.subtitle + figure + div.box, .content h1 + figure + div.box {
+.content h1 + .box, .content h1 + div.subtitle + .box, .content h1 + div.subtitle + figure + .box, .content h1 + figure + .box {
   margin: 0 0 1em 0;
   padding: 0;
   color: var(--neutralPrimaryAlt);
-  border-radius: 0;
   background-color: inherit;
   font-weight: var(--font-weight-bold);
+  box-shadow: none;
 }
 
 @media (min-width: 576px) {
@@ -543,6 +532,8 @@ ul, ol {
   padding-left: 1em;
 }
 
+/* Figures */
+
 figure {
   margin: calc(1rem * var(--leading)) 0;
   width: 100%;
@@ -555,9 +546,35 @@ figure > img {
 }
 
 figcaption {
-  color: var(--neutralSecondary);
-  font-size: var(--font-size-s);
+  color: var(--neutralPrimaryAlt);
+  font-family: var(--font-family-sans);
+  font-size: calc(var(--sans-ratio) * var(--font-size-s));
+  line-height: var(--leading-sans);
   text-align: center;
+}
+
+@media (min-width: 576px) {
+  .float, aside.pullquote {
+    float: right;
+    margin: 1em;
+    margin-right: 0;
+    width: var(--float-width);
+    line-height: var(--leading-tight);
+  }
+  aside.pullquote {
+    padding: 0;
+  }
+  .edge {
+    position: relative;
+    left: var(--margin);
+    margin-left: calc(-1 * var(--margin) + 1em);
+    width: 40%;
+    width: calc(var(--float-width) + var(--margin));
+  }
+  .edge figcaption {
+    text-align: right;
+    padding-right: var(--margin);
+  }
 }
 
 article {
@@ -637,6 +654,7 @@ a.perma {
 table {
   margin: calc(1em * var(--leading)) 0;
   border-collapse: collapse;
+  border-bottom:  1px solid var(--themeDarkAlt);
 }
 
 th,

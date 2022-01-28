@@ -5,6 +5,7 @@
 {% capture triple-start %}<blockquote>{{nl}}  <blockquote>{{nl}}    <blockquote>{% endcapture%}
 {% capture triple-end %}    </blockquote>{{nl}}  </blockquote>{{nl}}</blockquote>{% endcapture%}
 {% capture pipe-start %}<blockquote>{{nl}}  <p>={% endcapture%}
+{% capture img-caption %}{{nl}}!={% endcapture%}
 
 {% assign output = content
     | replace: triple-start, '<real-block>'
@@ -12,13 +13,18 @@
     | replace: double-start, '<div class="box">'
     | replace: double-end, '</div>'
     | replace: pipe-start, '<aside class="pullquote"><p>'
-    | replace: '<blockquote>', '<aside class="box">'
+    | replace: '<blockquote>', '<aside class="box float">'
     | replace: '</blockquote>', '</aside>'
 %}
 
 {% assign output = output
     | replace: '<real-block>', '<blockquote>'
     | replace: '</real-block>', '</blockquote>'
+    | replace: '<p><img src', '<figure><img src'
+    | replace: '<p class="float edge"><img src', '<figure class="float edge"><img src'
+    | replace: '<p class="float"><img src', '<figure class="float"><img src'
+    | replace: img-caption, '<figcaption><p>'
+    | replace: '=!</p>', '</p></figcaption></figure>'
 %}
 
 {{output}}
