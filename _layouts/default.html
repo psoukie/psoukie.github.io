@@ -1,5 +1,5 @@
 ---
-layout: syntax-subs
+layout: none
 ---
 
 <!DOCTYPE html>
@@ -79,7 +79,8 @@ layout: syntax-subs
             {%- endif -%}
           </figure>
         {%- endif -%}
-        {% include anchor_headings.html html=content anchorBody="#" anchorClass="perma" %}
+        {% include extend-markup.html html=content %}
+        <!-- {% include anchor_headings.html html=content anchorBody="#" anchorClass="perma" %} -->
       </div>
       <div id='sidenote-column' class='footnotes' style='visibility:hidden'></div>
     </main>

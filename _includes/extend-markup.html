@@ -1,0 +1,28 @@
+{%- capture nl -%}
+{%- endcapture -%}
+{%- assign content = include.html -%}
+{%- unless page.retain-headings -%}
+  {%- capture content -%}{%- include substring.html html=content start-old='<h5' end-old='</h5>' start-new='<h6 ' end-new='</h6>' -%}{%- endcapture -%}
+  {%- capture content -%}{%- include substring.html html=content start-old='<h4' end-old='</h4>' start-new='<h5 ' end-new='</h5>' -%}{%- endcapture -%}
+  {%- capture content -%}{%- include substring.html html=content start-old='<h3' end-old='</h3>' start-new='<h4 ' end-new='</h4>' -%}{%- endcapture -%}
+  {%- capture content -%}{%- include substring.html html=content start-old='<h2' end-old='</h2>' start-new='<h3 ' end-new='</h3>' -%}{%- endcapture -%}
+  {%- capture content -%}{%- include substring.html html=content start-old='<h1' end-old='</h1>' start-new='<h2 ' end-new='</h2>' -%}{%- endcapture -%}
+{%- endunless -%}
+{% assign img-start-old = nl | append: '<p><img src' %}
+{% assign img-start-new = nl | append: '<figure><img src' %}
+{% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' newlines=true %}{% endcapture %}
+{% assign img-start-old = nl | append: '<p class="float"><img src' %}
+{% assign img-start-new = nl | append: '<figure class="float"><img src' %}
+{% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' newlines=true %}{% endcapture %}
+{% assign img-start-old = nl | append: '<p class="float edge"><img src' %}
+{% assign img-start-new = nl | append: '<figure class="float edge"><img src' %}
+{% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' newlines=true %}{% endcapture %}
+{% assign content = content
+    | replace: '%IMG-END-TAG%</p>', '" /></figure>' %}
+{% assign img-end-nl = '%IMG-END-TAG%' | append: nl %}
+{% assign p-nl = '</p>' | append: nl %}
+{% capture content %}{% include substring.html html=content start-old=img-end-nl end-old=p-nl start-new='" /><figcaption>' end-new='</figcaption></figure>' newlines=true %}{% endcapture %}
+
+{% capture pullquote-start %}<blockquote>{{nl}}  <p>={% endcapture%}
+{% capture content %}{% include substring.html html=content start-old=pullquote-start end-old='</blockquote>' start-new='<aside class="pullquote">' end-new='</pullquote>' %}{% endcapture %}
+{{content}}

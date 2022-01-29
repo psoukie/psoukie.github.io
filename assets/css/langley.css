@@ -345,7 +345,7 @@ h2 {
 }
 
 h1 {
-  line-height: var(--leading-tight);
+  line-height: var(--leading-sans);  /* Intentionally also for article H1 which is in serif */
 }
 
 h2, .subtitle {

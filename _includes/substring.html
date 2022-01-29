@@ -1,0 +1,22 @@
+{%- capture nl -%}
+{%- endcapture -%}
+{%- assign output = include.html -%}
+{% if include.newlines %}
+  {%- assign start-old = include.start-old -%}
+  {%- assign end-old= include.end-old -%}
+  {%- assign start-new = include.start-new -%}
+  {%- assign end-new= include.end-new -%}
+{% else %}
+  {%- capture start-old -%}{{nl}}{{include.start-old}}{%- endcapture -%}
+  {%- capture end-old -%}{{include.end-old}}{{nl}}{%- endcapture -%}
+  {%- capture start-new -%}{{nl}}{{include.start-new}}{%- endcapture -%}
+  {%- capture end-new -%}{{include.end-new}}{{nl}}{%- endcapture -%}
+{% endif %}
+{%- assign fragments = content | split: start-old | shift -%}
+{%- for fragment in fragments -%}
+  {%- assign snippet = fragment | split: end-old -%}
+  {%- assign original = start-old | append: snippet[0] | append: end-old -%}
+  {%- assign replacement = start-new | append: snippet[0] | append: end-new -%}
+  {%- assign output = output | replace: original, replacement -%}
+{%- endfor -%}
+{{output}}

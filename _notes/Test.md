@@ -11,7 +11,7 @@ date: 2022-01-18
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.[^2]
 
-And we also have a new article on [keyboards-and-their-progress](keyboards-and-their-progress.md)
+And we also have a new article on [keyboards-and-their-resistance-to-innovation](keyboards-and-their-resistance-to-innovation.md)
 
 ## Second Level Heading
 
