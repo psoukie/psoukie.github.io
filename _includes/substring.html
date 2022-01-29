@@ -1,7 +1,7 @@
-{%- capture nl -%}
-{%- endcapture -%}
+{% capture nl %}
+{% endcapture %}
 {%- assign output = include.html -%}
-{% if include.newlines %}
+{% if include.inline %}
   {%- assign start-old = include.start-old -%}
   {%- assign end-old= include.end-old -%}
   {%- assign start-new = include.start-new -%}
