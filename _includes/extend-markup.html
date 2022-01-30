@@ -28,4 +28,4 @@
 {% capture double-start %}<blockquote>{{nl}}  <blockquote>{% endcapture%}
 {% capture content %}{% include substring.html html=content start-old=double-start end-old=double-end start-new='<div class="box">' end-new='</div>' %}{% endcapture %}
 {% capture content %}{% include substring.html html=content start-old='<blockquote class="float">' end-old='</blockquote>' start-new='<aside class="pullquote">' end-new='</aside>' %}{% endcapture %}
-{{content}}
+{% include anchor_headings.html html=content anchorBody="#" anchorClass="perma" %}

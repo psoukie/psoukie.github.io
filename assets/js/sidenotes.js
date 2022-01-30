@@ -546,6 +546,10 @@ function constructSidenotes() {
         load process.
         */
     let markdownBody = document.querySelector("div.content");
+    let headerBar = document.querySelector("main > header");
+    let metaWidth = 0;
+    if (window.innerWidth >= 992 && window.innerWidth < 1200)
+        metaWidth = headerBar.clientHeight;
     if (!markdownBody) return;
 
     /*  Add the sidenote columns (removing them first if they already exist).
@@ -554,7 +558,7 @@ function constructSidenotes() {
     // markdownBody.parentNode.insertAdjacentHTML("beforeend",
     //     "<div id='sidenote-column' class='footnotes' style='visibility:hidden'></div>");
     GW.sidenotes.sidenoteColumn = document.querySelector("#sidenote-column");
-    GW.sidenotes.sidenoteColumn.style.height = markdownBody.clientHeight + "px";
+    GW.sidenotes.sidenoteColumn.style.height = markdownBody.clientHeight - metaWidth + "px";
 
     /*  Create and inject the sidenotes.
         */

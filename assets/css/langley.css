@@ -86,7 +86,7 @@
   --size-xxl: 26px;
   --leading: 1.6;
   --leading-tight: 1.45;
-  --leading-sans: 1.4;
+  --leading-sans: 1.35;
   --weight-regular: 400;
   --weight-semibold: 600;
   --font-weight-bold: 700;
@@ -100,7 +100,7 @@
   --border-radius-large: 8px; /* from MS Fluent UI for large items  */
   --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
   --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */
-  --border: 1px solid var(--neutralLight);
+  --border: 1px solid var(--neutralTertiary);
   --float-width: 40%;
 
   --transition: 0.467s cubic-bezier(0.1,0.9,0.2,1);
@@ -649,6 +649,14 @@ a.perma {
   div.content > [id]:hover > a.perma {
     display: inline-block;
   }
+}
+
+hr {
+  margin: 3rem auto;
+  width: 61.8%;
+  border: none;
+  border-bottom: var(--border);
+  box-shadow: none;
 }
 
 /* Tables */

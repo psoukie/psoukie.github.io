@@ -11,7 +11,7 @@ updated: 2022-01-25
 toc: true
 ---
 
->> The idea of owning an original digital art can be both intriguing and confusing. How do the concepts of originality and ownership transfer from physical to digital art? And are some historical works of art digital in nature?
+The idea of owning an original digital art can be both intriguing and confusing. How do the concepts of originality and ownership transfer from physical to digital art? And are some historical works of art digital in nature?
 
 Crypto art has been making headlines over the past several months with reports of pieces of digital art fetching record-breaking sums in auctions. After each major transaction, there have been articles both questioning and defending the legitimacy and value of crypto art.
 

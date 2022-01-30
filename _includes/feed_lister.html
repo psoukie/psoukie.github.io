@@ -1,18 +1,17 @@
 {%- for item in site.notes -%}
   {%- if item.season == include.season -%}
-    <article>
-      {%- if item.image -%}
-      <a href="{{item.url}}">
-        <figure>
-          <img src="\assets\img\{{ item.image }}" alt="featured image" />
-        </figure>
-      </a>
-      {%- endif -%}
-      <a href="{{item.url}}"><h2>{{ item.title | markdownify | strip_html }}</h2></a>
-      <p>{{ item.content | markdownify | strip_html | truncatewords: 50}}</p>
-      <ul>
-        <li>{{ item.tags | join: " &bull; " }}</li>
-      </ul>
-    </article>
+    {%- if item.image -%}
+    <a href='{{item.url}}'>
+      <figure>
+        <img src='/img/{{ item.image }}' alt='featured image' />
+      </figure>
+    </a>
+    {%- endif -%}
+    <a href="{{item.url}}"><h2>{{ item.title | markdownify | strip_html }}</h2></a>
+    <p>{{ item.content | markdownify | strip_html | truncatewords: 50}}</p>
+    <ul>
+      <li>{{ item.tags | join: " &bull; " }}</li>
+    </ul>
+    <hr />
   {%- endif -%}
 {%- endfor -%}

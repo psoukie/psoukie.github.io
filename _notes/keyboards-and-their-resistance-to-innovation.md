@@ -7,6 +7,7 @@ categories: [technology, life]
 season: summer
 lede: true
 shift-headings: true
+toc: true
 ---
 
 The typewriter was invented around the same time as the telephone, but while phones have changed beyond all recognition, the keyboards of today look substantially the same as when they first made their entrance.
@@ -21,7 +22,7 @@ My Grandmother worked in a sugar factory that stood at the end of my village. Pa
 
 Her office had an electrical typewriter and a phone with a switchboard. There was a lot of plastic and lights. However, at home, in a large wardrobe, below hanging coats and perfumed dresses, she kept an old mechanical typewriter. It was a black metal machine, quite heavy for me to lift and carry to a desk. (Actually, everything seemed sturdier in those days.)
 
-![Remington 92 typewriter](/assets/img/Remington92-n.jpg)
+![Remington 92 typewriter](/img/Remington92-n.jpg)
 Remington 92 typewriter, ca. 1929.  
 (Image by The National Museum of Finland)
 {: .float.edge}
@@ -46,7 +47,7 @@ This change was _not_ done to slow down typists, as is often incorrectly said. T
 
 Another enduring legacy of the old mechanical days — which rarely enters into conversations about keyboard ergonomics — is the staggered positioning of the rows of keys. This progressive offset from right to left, moving from lower to higher rows, allowed the metal arms of the mechanical typewriters to fit without overlapping. Its only real ‘function’ today is to force our fingers into an unnatural twist. This is more true for the left hand because most of the fingers on the right hand extend more naturally to the left.
 
-![A standard ergonomic computer keyboard with lines indicating their left-ward shift](/assets/img/standard-keyboard.jpg)
+![A standard ergonomic computer keyboard with lines indicating their left-ward shift](/img/standard-keyboard.jpg)
 A typical ergonomic keyboard
 {: .float}
 
@@ -92,7 +93,7 @@ Unfortunately, even many keyboards that label themselves as ‘ergonomic’ do n
 
 Without going overboard with the design, a _mainstream_, simple keyboard should have long looked something like this:
 
-![An ergonomic computer keyboard with orthogonal layout](/assets/img/x-bows-keyboard.jpg)
+![An ergonomic computer keyboard with orthogonal layout](/img/x-bows-keyboard.jpg)
 
 Notice the following features:
 
@@ -125,7 +126,7 @@ Why exactly is Dvorak Simplified Keyboard superior to QWERTY?
 -   Key strokes alternate better between hands.
 -   The least frequently used keys are on the lower row which is the hardest to hit (Dvorak keyboard uses this row half as often as QWERTY).
 
-![A chart of typing load per finger](/assets/img/Dvorak-typing-distribution.jpg)
-An illustration from the book _Typewriting Behavior_ that laid out the thinking behind and benefits of the Dvorak Simplified Keyboard.
+![A chart of typing load per finger](/img/Dvorak-typing-distribution.jpg)
+An illustration of how much work each finger has to perform on Dvorak compared to QWERTY from the book _Typewriting Behavior_ that laid out the thinking behind and benefits of the Dvorak Simplified Keyboard.
 
 The criteria Dr. Dvorak and Dr. Dealey used for the Simplified Keyboard were based on research and investigation with scope that amazed me when I read their book _Typewriting Behavior_. Yet, despite all its advantages, it is amazing how little used and known the Simplified Keyboard is. It is not even supported by many devices at all: iPhone comes to mind — although, ironically, Apple’s co-founder Steve Wozniak is a Dvorak typist.
