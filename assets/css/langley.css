@@ -459,21 +459,21 @@ a:hover > h2, a:active > h2, a:focus > h2 {
 }
 
 blockquote {
-  margin-left: 3em;
+  margin-left: 2em;
   margin-right: 0;
   color: var(--neutralPrimary);
   /* font-style: italic; */
 }
 
+@media (min-width: 576px) {
+  blockquote {
+    margin-left: 3em;
+  }
+}
+
 /* blockquote em {
   font-style: normal;
 } */
-
-@media (min-width: 992px) {
-  blockquote {
-    margin-right: 2em;
-  }
-}
 
 .box {
   box-shadow: var(--box-shadow-4);
@@ -499,17 +499,13 @@ aside.pullquote {
 }
 
 /* When div.box follows headline (optionally with a strapline or image), format it as a lede paragraph  */
-.content h1 + .box, .content h1 + div.subtitle + .box, .content h1 + div.subtitle + figure + .box, .content h1 + figure + .box {
-  margin: 0 0 1em 0;
-  padding: 0;
+.content.lede > p:first-of-type {
   color: var(--neutralPrimaryAlt);
-  background-color: inherit;
   font-weight: 700;
-  box-shadow: none;
 }
 
 @media (min-width: 576px) {
-  .content h1 + div.box, .content h1 + div.subtitle + div.box, .content h1 + div.subtitle + figure + div.box, .content h1 + figure + div.box {
+  .content.lede > p:first-of-type {
     font-size: var(--size-l);
     font-weight: 400;
     line-height: var(--leading-tight);
@@ -666,12 +662,14 @@ table {
 th,
 td {
   padding: .3em .5em;
+  vertical-align: top;
 }
 
 th {
   background-color: var(--themeDarkAlt);
   font-weight: 600;
   color: var(--neutralWhite);
+  vertical-align: bottom;
 }
 
 tr:nth-child(even) {

@@ -5,10 +5,11 @@ image: macbook-air.jpg
 caption: (Image by Apple)
 categories: [technology, life]
 season: summer
-downshift: true
+lede: true
+shift-headings: true
 ---
 
->> The typewriter was invented around the same time as the telephone, but while phones have changed beyond all recognition, the keyboards of today look substantially the same as when they first made their entrance.
+The typewriter was invented around the same time as the telephone, but while phones have changed beyond all recognition, the keyboards of today look substantially the same as when they first made their entrance.
 
 Why do keyboards still look like those on old typewriters? Let’s review some of the attempts at innovations that happened over time and why they failed to become widely adopted. This might give us some clues about the dynamics at play here.
 

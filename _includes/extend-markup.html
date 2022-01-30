@@ -1,13 +1,13 @@
 {% capture nl %}
 {% endcapture %}
 {%- assign content = include.html -%}
-{%- unless page.retain-headings -%}
+{%- if include.shift-headings -%}
   {%- capture content -%}{%- include substring.html html=content start-old='<h5' end-old='</h5>' start-new='<h6 ' end-new='</h6>' -%}{%- endcapture -%}
   {%- capture content -%}{%- include substring.html html=content start-old='<h4' end-old='</h4>' start-new='<h5 ' end-new='</h5>' -%}{%- endcapture -%}
   {%- capture content -%}{%- include substring.html html=content start-old='<h3' end-old='</h3>' start-new='<h4 ' end-new='</h4>' -%}{%- endcapture -%}
   {%- capture content -%}{%- include substring.html html=content start-old='<h2' end-old='</h2>' start-new='<h3 ' end-new='</h3>' -%}{%- endcapture -%}
   {%- capture content -%}{%- include substring.html html=content start-old='<h1' end-old='</h1>' start-new='<h2 ' end-new='</h2>' -%}{%- endcapture -%}
-{%- endunless -%}
+{%- endif -%}
 {% assign img-start-old = nl | append: '<p><img src' %}
 {% assign img-start-new = nl | append: '<figure><img src' %}
 {% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
@@ -22,7 +22,10 @@
 {% assign img-end-nl = '%IMG-END-TAG%' | append: nl %}
 {% assign p-nl = '</p>' | append: nl %}
 {% capture content %}{% include substring.html html=content start-old=img-end-nl end-old=p-nl start-new='" /><figcaption>' end-new='</figcaption></figure>' inline=true %}{% endcapture %}
-
-{% capture pullquote-start %}<blockquote>{{nl}}  <p>={% endcapture%}
-{% capture content %}{% include substring.html html=content start-old=pullquote-start end-old='</blockquote>' start-new='<aside class="pullquote"><p>' end-new='</aside>' %}{% endcapture %}
+{% capture factbox-start %}<blockquote class="float">{{nl}}  <blockquote>{% endcapture%}
+{% capture double-end %}  </blockquote>{{nl}}</blockquote>{% endcapture%}
+{% capture content %}{% include substring.html html=content start-old=factbox-start end-old=double-end start-new='<aside class="box float">' end-new='</aside>' %}{% endcapture %}
+{% capture double-start %}<blockquote>{{nl}}  <blockquote>{% endcapture%}
+{% capture content %}{% include substring.html html=content start-old=double-start end-old=double-end start-new='<div class="box">' end-new='</div>' %}{% endcapture %}
+{% capture content %}{% include substring.html html=content start-old='<blockquote class="float">' end-old='</blockquote>' start-new='<aside class="pullquote">' end-new='</aside>' %}{% endcapture %}
 {{content}}
