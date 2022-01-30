@@ -14,7 +14,7 @@ date: 2022-01-23
 
 The colors were derived using [Fluent UI Theme Designer (windows.net)](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html) using the following colors:
 
-- Primary color: `#A63B2A`
+- Primary color: `#a63b2a`
 - Text color: `#363432`
 - Background color: `#fffefd`
 

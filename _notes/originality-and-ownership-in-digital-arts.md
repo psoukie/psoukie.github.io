@@ -9,6 +9,7 @@ status: ongoing
 date: 2021-03-18
 updated: 2022-01-25
 toc: true
+lede: true
 ---
 
 The idea of owning an original digital art can be both intriguing and confusing. How do the concepts of originality and ownership transfer from physical to digital art? And are some historical works of art digital in nature?

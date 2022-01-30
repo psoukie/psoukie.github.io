@@ -1,6 +1,7 @@
 ---
 title: Poem Test
 format: poetry
+published: false
 ---
 
 Let's see how my website handles poetry. This is some regular text before tehep poem is included.
