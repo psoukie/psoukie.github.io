@@ -684,6 +684,43 @@ tr:nth-child(even) {
   background-color: var(--themeLighterAlt);
 }
 
+/* Poetry */
+
+div.poetry {
+  width: fit-content;
+  margin: calc(1em * var(--leading)) auto;
+}
+
+div.stanza {
+	list-style-type: none;
+  margin-top: calc(1em * var(--leading));
+  padding: 0;
+  width: fit-content;
+}
+
+.stanza .line {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+  text-indent: -3em;
+  padding-left: 3em;
+}
+
+.stanza .line p {
+	margin: 0;
+	padding: 0;
+}
+
+.indented {
+	margin: 0 0 0 -2em;
+}
+
+.indented .line {
+  text-indent: -2em;
+  padding-left: 2em;
+}
+
+
 /* Sidenotes section */
 
 #sidenote-column>* {
