@@ -8,6 +8,31 @@
   {%- capture content -%}{%- include substring.html html=content start-old='<h2' end-old='</h2>' start-new='<h3 ' end-new='</h3>' -%}{%- endcapture -%}
   {%- capture content -%}{%- include substring.html html=content start-old='<h1' end-old='</h1>' start-new='<h2 ' end-new='</h2>' -%}{%- endcapture -%}
 {%- endif -%}
+{%- if page.format == 'poetry' -%}
+  {% capture p-s %}{{nl}}<p>//poetry</p>{% endcapture %}
+  {% capture p-e %}{{nl}}<p>//end-poetry</p>{% endcapture %}
+  {% capture p-sn %}{{nl}}<div class="poetry">{% endcapture %}
+  {% capture p-en %}{{nl}}</div>{% endcapture %}
+  {% capture ul-1 %}{{nl}}<ul>{% endcapture %}
+  {% capture ul-2 %}{{nl}}    <ul>{% endcapture %}
+  {% capture li-1 %}{{nl}}  <li>{% endcapture %}
+  {% capture li-2 %}{{nl}}      <li>{% endcapture %}
+  {% capture ul-end %}</ul>{{nl}}{% endcapture %}
+  {% capture li-end %}</li>{{nl}}{% endcapture %}
+  {% capture ul-1n %}{{nl}}<div class="stanza">{% endcapture %}
+  {% capture ul-2n %}{{nl}}    <div class="indented">{% endcapture %}
+  {% capture li-1n %}{{nl}}  <div class="line">{% endcapture %}
+  {% capture li-2n %}{{nl}}      <div class="line">{% endcapture %}
+  {% capture ul-li-end-n %}</div>{{nl}}{% endcapture %}
+  {%- assign content = content | replace: p-s, p-sn -%}
+  {%- assign content = content | replace: p-e, p-en -%}
+  {%- assign content = content | replace: ul-1, ul-1n -%}
+  {%- assign content = content | replace: ul-2, ul-2n -%}
+  {%- assign content = content | replace: li-1, li-1n -%}
+  {%- assign content = content | replace: li-2, li-2n -%}
+  {%- assign content = content | replace: li-end, ul-li-end-n -%}
+  {%- assign content = content | replace: ul-end, ul-li-end-n -%}
+{%- endif -%}
 {% assign img-start-old = nl | append: '<p><img src' %}
 {% assign img-start-new = nl | append: '<figure><img src' %}
 {% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
@@ -17,8 +42,7 @@
 {% assign img-start-old = nl | append: '<p class="float edge"><img src' %}
 {% assign img-start-new = nl | append: '<figure class="float edge"><img src' %}
 {% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
-{% assign content = content
-    | replace: '%IMG-END-TAG%</p>', '" /></figure>' %}
+{% assign content = content | replace: '%IMG-END-TAG%</p>', '" /></figure>' %}
 {% assign img-end-nl = '%IMG-END-TAG%' | append: nl %}
 {% assign p-nl = '</p>' | append: nl %}
 {% capture content %}{% include substring.html html=content start-old=img-end-nl end-old=p-nl start-new='" /><figcaption>' end-new='</figcaption></figure>' inline=true %}{% endcapture %}
