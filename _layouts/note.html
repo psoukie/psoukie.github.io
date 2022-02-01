@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<main>
+  <header>
+    <ul>
+    {%- if page.date -%}
+      <li><span>Published</span> {{ page.date | date: "%B %d, %Y"}}</li>
+    {%- endif -%}
+    {%- if page.toc -%}
+      <li>
+        <nav>
+          <span>In this article</span>
+          {% include toc.html html=content %}
+        </nav>
+      </li>
+    {%- endif -%}
+    {%- if page.categories -%}
+      <li class="tag-list">
+        <span>Filed under</span>
+        <ul>
+        {%- for cat in page.categories -%}
+          <li><a href="/series/{{ cat }}">{{ cat }}</a></li>
+        {%- endfor -%}
+        </ul>
+      </li>
+    {%- endif -%}
+    </ul>
+  </header>
+  <div class="content{% if page.lede %} lede{% endif %}">
+  {%- if page.title -%}
+    <h1>{{ page.title | markdownify | strip_html }}</h1>
+    {%- if page.subtitle -%}
+    <div class="subtitle">{{ page.subtitle | markdownify | strip_html }}</div>
+    {%- endif -%}
+  {%- endif -%}
+  {%- if page.image -%}
+    <figure>
+      <img src="/img/{{ page.image }}" alt="featured image" />
+      {%- if page.caption -%}
+        <figcaption>{{ page.caption | markdownify }}</figcaption>
+      {%- endif -%}
+    </figure>
+  {%- endif -%}
+    {{ content }}
+  </div>
+  <div id='sidenote-column' class='footnotes' style='visibility:hidden'></div>
+</main>

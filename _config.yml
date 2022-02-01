@@ -20,11 +20,9 @@
 
 title: Soukie’s Place
 name: Pavel Soukenik
-email: your-email@example.com
+email: pavel@soukie.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A collection of articles and posts by Pavel Soukenik.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://soukie.net # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -60,6 +58,9 @@ collections:
     notes:
       output: true
       permalink: /:title
+    series:
+      output: true
+      permalink: /series/:title
 
 toc:
   max_level: 3
@@ -75,17 +76,19 @@ feed:
 defaults:
   - scope:
       path: ""
-      type: posts
+      type: pages
     values:
-      layout: default
-      permalink: /posts/:title
-      content-type: post
+      layout: page
+  - scope:
+      path: ""
+      type: series
+    values:
+      layout: page
   - scope:
       path: ""
       type: notes
     values:
-      layout: default
-      content-type: notes
+      layout: note
 
 # Exclude from processing.
 # The following items will not be processed, by default.

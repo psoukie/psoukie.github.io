@@ -1,0 +1,5 @@
+{%- for note in site.notes -%}
+  {%- if note.categories contains page.category -%}
+{% include snippet.html full=true %}
+  {%- endif -%}
+{%- endfor -%}

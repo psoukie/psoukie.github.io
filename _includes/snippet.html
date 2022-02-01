@@ -1,0 +1,27 @@
+{%- if include.full -%}
+  {%- if note.image -%}
+    <a href='{{note.url}}'>
+      <figure>
+        <img src='/img/{{ note.image }}' alt='featured image' />
+      </figure>
+    </a>
+  {%- endif -%}
+{%- endif -%}
+  <a href="{{note.url}}"><h{% if include.full %}2{% else %}3{% endif %}><a href='{{ note.url }}'>{{ note.title | markdownify | strip_html }}</a></h{% if include.full %}2{% else %}3{% endif %}></a>
+{%- if include.full -%}
+  {% if note.subtitle %}
+    <div class='subtitle'><a href='{{ note.url }}'>{{ note.subtitle }}</a></div>
+  {% endif %}
+  {%- if note.summary -%}
+    <div>
+      {{ note.summary | markdownify }}
+  {%- else -%}
+      {{ note.content | markdownify | strip_html | truncatewords: 50}}
+    </div>
+  {%- endif -%}
+{% endif %}
+{% if include.read-more %}
+  <div class='read-more'>
+    <a href='{{ note.url }}'>Read more</a>
+  </div>
+{% endif %}

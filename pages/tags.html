@@ -1,0 +1,22 @@
+---
+title: Index
+permalink: /tags
+---
+{% for note in site.notes %}
+  {% assign tags = tags | concat: note.tags %}
+{% endfor %}
+{% assign tags = tags | uniq | sort_natural %}
+
+{% for tag in tags %}
+  <div>
+    <h3>{{ tag }}</h3>
+    <div>
+      {% for note in site.notes %}
+        {% if note.tags contains tag %}
+          {% include snippet.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+</ul>
