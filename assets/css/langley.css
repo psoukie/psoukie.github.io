@@ -458,9 +458,12 @@ a:hover > h2, a:active > h2, a:focus > h2 {
 }
 
 blockquote {
-  margin-left: 2em;
+  margin-left: 1em;
   margin-right: 0;
   color: var(--neutralPrimary);
+  padding: 1em;
+  box-shadow: var(--box-shadow-4);
+  border-radius: var(--border-radius);
   /* font-style: italic; */
 }
 

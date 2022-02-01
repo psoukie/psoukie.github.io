@@ -12,13 +12,13 @@
   {% if note.subtitle %}
     <div class='subtitle'><a href='{{ note.url }}'>{{ note.subtitle }}</a></div>
   {% endif %}
+  <div>
   {%- if note.summary -%}
-    <div>
       {{ note.summary | markdownify }}
   {%- else -%}
       {{ note.content | markdownify | strip_html | truncatewords: 50}}
-    </div>
   {%- endif -%}
+  </div>
 {% endif %}
 {% if include.read-more %}
   <div class='read-more'>

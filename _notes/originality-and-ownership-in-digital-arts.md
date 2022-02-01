@@ -53,7 +53,8 @@ To help think about this topic, let’s consider books. Yes, we can look at book
 
 In this sense, two printed editions and an ebook with the same words in them are the _same_ book. If I own any of the three, I _have the book_. In contrast, a statue is a unique physical object. Maybe I could get its digital model and 3D print it, but it would be different than the original. I would _not_ have the statue.
 
->= An animated GIF and Beethoven’s Symphony No.&nbsp;5 are both digital in nature.
+> An animated GIF and Beethoven’s Symphony No.&nbsp;5 are both digital in nature.
+{: .float}
 
 Seen this way, books — but also Beethoven’s symphonies — are composed of discrete pieces of information. Both are digital in nature, even though they also have physical representations. These ‘analog conversions’ add their own beauty to their renditions of the analog forms, but at their heart, books and symphonies are not analog.
 
@@ -101,7 +102,7 @@ In his informative and thoughtful article explaining NFT art, Mitchell Clark ask
 
 Reading his article, it’s not hard to see NFT as the logical end point when the value in collecting art is divorced from the artwork’s intrinsic value. Aaron Hertzmann expressed it as follows:
 
->>> If the point of ownership is to be able to say you own the work, why bother with anything but a receipt?
+> If the point of ownership is to be able to say you own the work, why bother with anything but a receipt?
 
 His quote is even more striking given the restricted meaning of the word ‘ownership’ in this context.
 
@@ -111,7 +112,7 @@ Hertzmann does a good job of answering the question “why people buy original w
 
 In an article [NFTs explained: what they are, and why they’re suddenly worth millions](https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq), Mitchell Clark makes statements that are factually correct but easy to overinterpret:
 
->>> NFTs are designed to give you something that can’t be copied: ownership of the work (though the artist can still retain the copyright and reproduction rights, just like with physical artwork). To put it in terms of physical art collecting: anyone can buy a Monet print. But only one person can own the original.
+> NFTs are designed to give you something that can’t be copied: ownership of the work (though the artist can still retain the copyright and reproduction rights, just like with physical artwork). To put it in terms of physical art collecting: anyone can buy a Monet print. But only one person can own the original.
 
 “Ownership of the work” is a big phrase for describing ownership of a token. It is also important to realize that thing that “can’t be copied” is the NFT, _not_ the artwork to which it is applied.
 
