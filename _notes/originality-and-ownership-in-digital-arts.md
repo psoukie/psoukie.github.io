@@ -1,7 +1,7 @@
 ---
 title: Originality and Ownership in Digital Art  
 summary: How do concepts of originality and ownership transfer from physical to digital art? And are some historical works of art digital in nature?
-categories: [arts, technology]
+series: [arts, technology]
 tags: [art, cryptoart, NFT, analog, digital]
 image: quantized-starry-night.jpg
 caption: (_Quantized Starry Night_, source image from puzzlewarehouse.com, edited by Pavel Soukenik)

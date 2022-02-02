@@ -4,7 +4,7 @@ slug: keyboards-and-their-resistance-to-innovation
 image: macbook-air.jpg
 tags: [keyboard, history, QWERTY, Dvorak, typewriter, ergonomics, digital]
 caption: (Image by Apple)
-categories: [technology, life]
+series: [technology, life]
 season: summer
 lede: true
 shift-headings: true
