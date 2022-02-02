@@ -50,27 +50,14 @@
 
 :root {
   /* Theme colors */
-  --themePrimary: #a63b2a;
-  --themeLighterAlt: #fbf5f4;
-  --themeLighter: #f1d8d4;
-  --themeLight: #e4b8b1;
-  --themeTertiary: #c97b6f;
-  --themeSecondary: #b04c3c;
-  --themeDarkAlt: #953425;
-  --themeDark: #7e2c1f;
-  --themeDarker: #5d2017;
-  --neutralLighterAlt: #f8f7f6;
-  --neutralLighter: #f4f3f2;
-  --neutralLight: #eae9e8;
-  --neutralQuaternaryAlt: #dad9d8;
-  --neutralQuaternary: #d0cfce;
-  --neutralTertiaryAlt: #c8c7c6;
-  --neutralTertiary: #c3c1bf;
-  --neutralSecondary: #868481;
-  --neutralPrimaryAlt: #4e4c4a;
-  --neutralPrimary: #363432;
-  --neutralDark: #292726;
-  --neutralBlack: #1e1d1c;
+  --Cucumber: #8DA45C;
+  --Blue: #5D9DB1;
+  --Anzac: #E2BC46;
+  --Tango: #E67F29;
+  --Rust: #c97b6f;
+  --Tan: #562C02;
+  --Merino: #F2EEE2;
+  --neutralBlack: #020202;
   --neutralWhite: #fffefd;
 
   /* Typography */
@@ -100,7 +87,7 @@
   --border-radius-large: 8px; /* from MS Fluent UI for large items  */
   --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
   --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */
-  --border: 1px solid var(--neutralTertiary);
+  --border: 1px solid var(--Rust);
   --float-width: 40%;
 
   --transition: 0.467s cubic-bezier(0.1,0.9,0.2,1);
@@ -168,12 +155,12 @@ table {
 
 html, body {
   overflow-x: hidden;
-  background-color: var(--neutralLight);
+  background-color: var(--Merino);
 }
 
 body {
   line-height: var(--leading);
-  color: var(--neutralDark);
+  color: var(--neutralBlack);
   font-size: var(--size-m);
   max-width: 100%;
   width: fit-content;
@@ -188,7 +175,7 @@ body > header {
   text-align: center;
   margin-top: 0;
   padding: calc(var(--margin)/2) 0;
-  background-color: var(--neutralLighterAlt);
+  background-color: var(--Cucumber);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   box-shadow: var(--box-shadow-4);
 }
@@ -204,6 +191,11 @@ body > header h1 {
   font-size: calc( var(--sans-ratio) * var(--size-xl));
   margin: 0;
   font-weight: 600;
+  color: var(--Merino);
+}
+
+body > header h1 a {
+  color: var(--Merino);
 }
 
 body > header > nav, article > ul {
@@ -211,10 +203,6 @@ body > header > nav, article > ul {
   justify-content: space-between;
 }
 
-main > #sidenote-column {
-  display: block;
-  position: relative;
-}
 main header nav { display: block;}
 main header .tag-list { display: list-item;}
 main header span { display: block;}
@@ -273,6 +261,8 @@ div.content {
     border-radius: var(--border-radius-large);
   }
   main > header, main > #sidenote-column {
+    display: block;
+    position: relative;
     grid-column: 2;
     width: var(--width-sidebar);
   }
@@ -280,7 +270,7 @@ div.content {
     padding: 1rem;
     height: fit-content;
     border-radius: var(--border-radius);
-    background-color: var(--neutralLighterAlt);
+    background-color: var(--neutralWhite);
     box-shadow: var(--box-shadow-4);
   }
   main > header span {
@@ -352,7 +342,7 @@ h2, .subtitle {
 }
 
 h1 {
-  color: var(--themeDark);
+  color: var(--Blue);
   font-size: var(--size-xxl);
   font-weight: 400;
   margin-bottom: 1.5em;
@@ -360,7 +350,7 @@ h1 {
 }
 
 .subtitle {
-  color: var(--themeDarker);
+  color: var(--Blue);
   font-size: calc(var(--sans-ratio) * var(--size-l));
   text-align: center;
   margin-top: -1.5em;
@@ -372,7 +362,7 @@ h1 {
 }
 
 h2 {
-  color: var(--themeDarker);
+  color: var(--Blue);
   font-size: calc(var(--sans-ratio) * var(--size-xl));
   margin: 1em 0 .5rem 0;
 }
@@ -392,7 +382,7 @@ h3, h4, h5, h6 {
 }
 
 h3 {
-  color: var(--neutralPrimary);
+  color: var(--Tan);
   font-size: calc(var(--sans-ratio) * var(--size-m));
 }
 
@@ -411,11 +401,11 @@ h5, h6 {
 
 header, footer {
   font-size: calc(var(--sans-ratio) * 1em);
-  color: var(--neutralPrimary);
+  color: var(--Tan);
 }
 
 footer {
-  color: var(--neutralTertiary);
+  color: var(--Tan);
   text-align: center;
 }
 
@@ -429,11 +419,11 @@ p+p, p+.float+p {
 }
 
 a {
-  color: var(--themePrimary);
+  color: var(--Rust);
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
-  color: var(--themeDarker);
+  color: var(--Tango);
 }
 a:focus {
 
@@ -450,20 +440,17 @@ a[href*="//"]:not([href*="soukie.net"])::after {
 }
 
 a > h2 {
-  color: var(--themeDark);
+  color: var(--Cucumber);
 }
 
 a:hover > h2, a:active > h2, a:focus > h2 {
-  color: var(--themeDarker);
+  color: var(--Cucumber);
 }
 
 blockquote {
   margin-left: 1em;
   margin-right: 0;
-  color: var(--neutralPrimary);
-  padding: 1em;
-  box-shadow: var(--box-shadow-4);
-  border-radius: var(--border-radius);
+  color: var(--Tan);
   /* font-style: italic; */
 }
 
@@ -481,12 +468,8 @@ blockquote {
   box-shadow: var(--box-shadow-4);
   margin: calc(1em * var(--leading)) 0;
   padding: 1em;
-  background-color: var(--neutralLighterAlt);
+  background-color: var(--Merino);
   border-radius: var(--border-radius);
-}
-
-div.box {
-  background-color: var(--neutralLighter);
 }
 
 aside.pullquote {
@@ -497,12 +480,12 @@ aside.pullquote {
   line-height: var(--leading-tight);
   padding-left: 3rem;
   text-align: right;
-  color: var(--themeTertiary);
+  color: var(--Cucumber);
 }
 
 /* When div.box follows headline (optionally with a strapline or image), format it as a lede paragraph  */
 .content.lede > p:first-of-type {
-  color: var(--neutralPrimaryAlt);
+  color: var(--Tan);
   font-weight: 700;
 }
 
@@ -519,12 +502,12 @@ aside.pullquote {
 }
 
 ::-moz-selection {
-  background-color: var(--themeSecondary);
+  background-color: var(--Rust);
   color: var(--neutralWhite);
 }
 
 ::selection {
-  background-color: var(--themeSecondary);
+  background-color: var(--Rust);
   color: var(--neutralWhite);
 }
 
@@ -550,7 +533,7 @@ figure > img {
 }
 
 figcaption {
-  color: var(--neutralPrimaryAlt);
+  color: var(--Tan);
   font-family: var(--font-family-sans);
   font-size: calc(var(--sans-ratio) * var(--size-s));
   line-height: var(--leading-sans);
@@ -598,7 +581,7 @@ pre {
   overflow: auto;
   padding: .5rem;
   border-radius: var(--border-radius);
-  background-color: var(--neutralLighterAlt);
+  background-color: var(--Merino);
 }
 
 pre, code, kbd {
@@ -631,8 +614,8 @@ div.footnotes:not(#sidenote-column)::before {
   display: block;
   font-family: var(--font-family-sans);
   font-weight: 600;
-  color: var(--themeDarker);
-  border-top: 1px solid var(--neutralTertiary);
+  color: var(--Tan);
+  border-top: 1px solid var(--Tango);
   padding-top: 1em;
 }
 
@@ -666,7 +649,7 @@ hr {
 table {
   margin: calc(1em * var(--leading)) 0;
   border-collapse: collapse;
-  border-bottom:  1px solid var(--themeDarkAlt);
+  border-bottom:  1px solid var(--Anzac);
 }
 
 th,
@@ -676,14 +659,14 @@ td {
 }
 
 th {
-  background-color: var(--themeDarkAlt);
+  background-color: var(--Anzac);
   font-weight: 600;
   color: var(--neutralWhite);
   vertical-align: bottom;
 }
 
 tr:nth-child(even) {
-  background-color: var(--themeLighterAlt);
+  background-color: var(--Merino);
 }
 
 /* Poetry */
@@ -739,12 +722,12 @@ div.stanza {
 }
 
 .sidenote p {
-  color: var(--neutralPrimary);
+  color: var(--Tan);
 }
 
 .sidenote>.sidenote-self-link {
   font-weight: 700;
-  color: var(--neutralTertiary);
+  color: var(--Cucumber);
   background-color: none;
   position: absolute;
   top: 0;
@@ -759,8 +742,8 @@ div.stanza {
 }
 
 .sidenote.highlighted>.sidenote-self-link {
-  background-color: var(--themeLighter);
-  color: var(--neutralPrimary);
+  background-color: var(--Anzac);
+  color: var(--Rust);
 }
 
 .sidenote-wrapper .reversefootnote {
@@ -768,7 +751,7 @@ div.stanza {
 }
 
 a.footnote.highlighted {
-  color: var(--neutralPrimary);
+  color: var(--Rust);
 }
 
 a.footnote::before {
@@ -786,7 +769,7 @@ a.footnote::before {
 }
 
 a.footnote.highlighted::before {
-  background-color: var(--themeLighter);
+  background-color: var(--Anzac);
 }
 
 .sidenote-wrapper {
@@ -796,5 +779,5 @@ a.footnote.highlighted::before {
 }
 
 .sidenote.highlighted .sidenote-outer-wrapper {
-  border-color: var(--neutralTertiaryAlt);
+  border-color: var(--Tango);
 }
