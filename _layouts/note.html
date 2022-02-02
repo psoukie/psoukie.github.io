@@ -21,7 +21,7 @@ layout: default
         <span>Filed under</span>
         <ul>
         {%- for cat in page.categories -%}
-          <li><a href="/series/{{ cat }}">{{ cat }}</a></li>
+          <li><a href="/series/{{ cat }}">{{ site.series | where: "category", cat | map: "title" | first }}</a></li>
         {%- endfor -%}
         </ul>
       </li>
