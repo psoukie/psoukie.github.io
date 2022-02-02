@@ -43,6 +43,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+Font x-height comparison. Mx*Mx*{: .sans}*Mx*{: .bodoni}
+{: .larger}
+
 [^2]: Custom footnote text.
 
 Text under heading 2. Trigger rebuild. And another note[^note] is here.
@@ -56,6 +59,8 @@ Term
 
 Second Term
 :  Definition after an empty line.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 > And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
 

@@ -1,52 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro&display=swap');
 
-/* Webfont: LatoLatin-Bold */@font-face {
-    font-family: 'LatoLatinWeb';
-    src: url('/assets/fonts/LatoLatin-Bold.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/LatoLatin-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/LatoLatin-Bold.woff2') format('woff2'), /* Modern Browsers */
-         url('/assets/fonts/LatoLatin-Bold.woff') format('woff'), /* Modern Browsers */
-         url('/assets/fonts/LatoLatin-Bold.ttf') format('truetype');
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('/assets/fonts/hkgrotesk-medium.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/hkgrotesk-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/hkgrotesk-medium.woff2') format('woff2'), /* Modern Browsers */
+         url('/assets/fonts/hkgrotesk-medium.woff') format('woff'), /* Modern Browsers */;
     font-style: normal;
-    font-weight: 700;
+    font-weight: normal;
     text-rendering: optimizeLegibility;
 }
 
-/* Webfont: LatoLatin-Italic */@font-face {
-    font-family: 'LatoLatinWeb';
-    src: url('/assets/fonts/LatoLatin-Italic.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/LatoLatin-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/LatoLatin-Italic.woff2') format('woff2'), /* Modern Browsers */
-         url('/assets/fonts/LatoLatin-Italic.woff') format('woff'), /* Modern Browsers */
-         url('/assets/fonts/LatoLatin-Italic.ttf') format('truetype');
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('/assets/fonts/hkgrotesk-mediumitalic.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/hkgrotesk-mediumitalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/hkgrotesk-mediumitalic.woff2') format('woff2'), /* Modern Browsers */
+         url('/assets/fonts/hkgrotesk-mediumitalic.woff') format('woff'), /* Modern Browsers */;
     font-style: italic;
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
 
-/* Webfont: LatoLatin-Semibold */@font-face {
-    font-family: 'LatoLatinWeb';
-    src: url('/assets/fonts/LatoLatin-Semibold.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/LatoLatin-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/LatoLatin-Semibold.woff2') format('woff2'), /* Modern Browsers */
-         url('/assets/fonts/LatoLatin-Semibold.woff') format('woff'), /* Modern Browsers */
-         url('/assets/fonts/LatoLatin-Semibold.ttf') format('truetype');
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('/assets/fonts/hkgrotesk-extrabold.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/hkgrotesk-extrabold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/hkgrotesk-extrabold.woff2') format('woff2'), /* Modern Browsers */
+         url('/assets/fonts/hkgrotesk-extrabold.woff') format('woff'), /* Modern Browsers */;
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     text-rendering: optimizeLegibility;
 }
 
-/* Webfont: LatoLatin-Regular */@font-face {
-    font-family: 'LatoLatinWeb';
-    src: url('/assets/fonts/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
-    src: url('/assets/fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('/assets/fonts/LatoLatin-Regular.woff2') format('woff2'), /* Modern Browsers */
-         url('/assets/fonts/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
-         url('/assets/fonts/LatoLatin-Regular.ttf') format('truetype');
+@font-face {
+    font-family: 'Bodoni-11';
+    src: url('/assets/fonts/bodoni-11-bold.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/bodoni-11-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/bodoni-11-bold.woff2') format('woff2'), /* Modern Browsers */
+         url('/assets/fonts/bodoni-11-bold.woff') format('woff'), /* Modern Browsers */;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 700;
     text-rendering: optimizeLegibility;
 }
+
 
 :root {
   /* Theme colors */
@@ -62,8 +59,10 @@
 
   /* Typography */
   --font-family-serif: "Libre Baskerville", Garamond, Georgia, serif;
-  --font-family-sans: "LatoLatinWeb", "Myriad", "Helvetica Neue", sans-serif;
-  --sans-ratio: 1.05;
+  --font-family-sans: "HK Grotesk", "Myriad", "Helvetica Neue", sans-serif;
+  --font-family-headings: "Bodoni-11", Bodoni-11, "Bodoni MT", Bodoni, serif;
+  --sans-ratio: 1.08;
+  --headings-ratio: 1.15;
   --font-family-mono: "Source Code Pro", monospace;
   --mono-ratio: 1.1;
   --size-s: 14px;
@@ -75,7 +74,7 @@
   --leading-tight: 1.45;
   --leading-sans: 1.35;
   --weight-regular: 400;
-  --weight-semibold: 600;
+  --weight-semibold: 700;
   --font-weight-bold: 700;
 
   /* Layout */
@@ -83,10 +82,10 @@
   --width-sidebar: 180px;
   --margin: 1.3125rem;
   --gutter: calc(1rem + ((1vw - 3.75px) * 5));
-  --border-radius: 4px; /* from MS Fluent UI for small items  */
-  --border-radius-large: 8px; /* from MS Fluent UI for large items  */
-  --box-shadow-4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); /* from ms-depth-4 */
-  --box-shadow-8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); ; /* from ms-depth-8 */
+  --border-radius: 0;
+  --border-radius-large: 0;
+  --box-shadow-4: none; /* from ms-depth-4 */
+  --box-shadow-8: none; ; /* from ms-depth-8 */
   --border: 1px solid var(--Rust);
   --float-width: 40%;
 
@@ -188,9 +187,9 @@ body > header {
 }
 
 body > header h1 {
-  font-size: calc( var(--sans-ratio) * var(--size-xl));
+  font-size: calc( 1.4 * var(--size-xl));
   margin: 0;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--Merino);
 }
 
@@ -274,7 +273,6 @@ div.content {
     box-shadow: var(--box-shadow-4);
   }
   main > header span {
-    font-weight: 600;
     text-transform: uppercase;
   }
 }
@@ -330,10 +328,11 @@ h1, h3, .subtitle {
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h1 {
+  font-family: var(--font-family-headings);
   line-height: var(--leading-sans);  /* Intentionally also for article H1 which is in serif */
 }
 
@@ -343,7 +342,7 @@ h2, .subtitle {
 
 h1 {
   color: var(--Blue);
-  font-size: var(--size-xxl);
+  font-size: calc(var(--headings-ratio) * var(--size-xxl));
   font-weight: 400;
   margin-bottom: 1.5em;
   text-align: center;
@@ -353,7 +352,7 @@ h1 {
   color: var(--Blue);
   font-size: calc(var(--sans-ratio) * var(--size-l));
   text-align: center;
-  margin-top: -1.5em;
+  margin-top: -2.2em;
   margin-bottom: 1.66em;
 }
 
@@ -440,11 +439,11 @@ a[href*="//"]:not([href*="soukie.net"])::after {
 }
 
 a > h2 {
-  color: var(--Cucumber);
+  color: var(--Blue);
 }
 
 a:hover > h2, a:active > h2, a:focus > h2 {
-  color: var(--Cucumber);
+  color: var(--Blue);
 }
 
 blockquote {
@@ -472,6 +471,11 @@ blockquote {
   border-radius: var(--border-radius);
 }
 
+div.box {
+  color: var(--neutralWhite);
+  background-color: var(--Cucumber);
+}
+
 aside.pullquote {
   display: block;
   font-size: var(--size-l);
@@ -489,26 +493,16 @@ aside.pullquote {
   font-weight: 700;
 }
 
-@media (min-width: 576px) {
-  .content.lede > p:first-of-type {
-    font-size: var(--size-l);
-    font-weight: 400;
-    line-height: var(--leading-tight);
-  }
-}
-
 .box h2, .box h3, .box h4, .box h5 {
   margin-top: 0;
 }
 
 ::-moz-selection {
-  background-color: var(--Rust);
-  color: var(--neutralWhite);
+  background-color: var(--Anzac);
 }
 
 ::selection {
-  background-color: var(--Rust);
-  color: var(--neutralWhite);
+  background-color: var(--Anzac);
 }
 
 a {
@@ -533,7 +527,6 @@ figure > img {
 }
 
 figcaption {
-  color: var(--Tan);
   font-family: var(--font-family-sans);
   font-size: calc(var(--sans-ratio) * var(--size-s));
   line-height: var(--leading-sans);
@@ -613,7 +606,7 @@ div.footnotes:not(#sidenote-column)::before {
   content: "Footnotes";
   display: block;
   font-family: var(--font-family-sans);
-  font-weight: 600;
+  font-weight: bold;
   color: var(--Tan);
   border-top: 1px solid var(--Tango);
   padding-top: 1em;
@@ -660,7 +653,7 @@ td {
 
 th {
   background-color: var(--Anzac);
-  font-weight: 600;
+  font-weight: bold;
   color: var(--neutralWhite);
   vertical-align: bottom;
 }
@@ -719,10 +712,6 @@ div.stanza {
   border-radius: var(--border-radius);
   background-color: var(--neutralWhite);
   box-shadow: var(--box-shadow-4);
-}
-
-.sidenote p {
-  color: var(--Tan);
 }
 
 .sidenote>.sidenote-self-link {
