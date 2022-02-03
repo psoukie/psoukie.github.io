@@ -8,11 +8,15 @@
     </a>
   {%- endif -%}
 {%- endif -%}
-
+  {% if note.title != "" %}
+    {%- assign notename = note.title -%}
+  {%- else -%}
+    {%- assign notename = note.id -%}
+  {%- endif -%}
   {% if include.full %}
-  <a href="{{note.url}}"><h2>{{ note.title | markdownify | strip_html }}</h2></a>
+  <a href="{{note.url}}"><h2>{{ notename | markdownify | strip_html }}</h2></a>
   {% else %}
-  <a href="{{note.url}}"><h3>{{ note.title | markdownify | strip_html }}</h3></a>
+  <a href="{{note.url}}"><h2>{{ notename | markdownify | strip_html }}</h2></a>
   {% endif %}
 {%- if include.full -%}
   {% if note.subtitle %}

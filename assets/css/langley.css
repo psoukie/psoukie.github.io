@@ -238,6 +238,10 @@ div.content {
   z-index: 1;
 }
 
+#dummy {
+  width: 200em; /* to stretch out to maximum when content not full */
+}
+
 #sidenote-column {
   font-size: var(--size-s);
   line-height: var(--leading-tight);

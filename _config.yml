@@ -58,6 +58,15 @@ collections:
     notes:
       output: true
       permalink: /:title
+    poems:
+      output: true
+      permalink: /poems/:title
+    observations:
+      output: true
+      permalink: /observations/:title
+    stories:
+      output: true
+      permalink: /stories/:title
     series:
       output: true
       permalink: /series/:title
@@ -76,9 +85,9 @@ feed:
 defaults:
   - scope:
       path: ""
-      type: pages
     values:
       layout: page
+      title: ""
   - scope:
       path: ""
       type: series
@@ -89,6 +98,7 @@ defaults:
       type: notes
     values:
       layout: note
+      title: ""
 
 # Exclude from processing.
 # The following items will not be processed, by default.

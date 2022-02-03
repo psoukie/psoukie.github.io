@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<main class="poem">
+  <header>
+  {% include navigation.html %}
+  </header>
+  <div class="content{% if page.lede %} lede{% endif %}">
+  <div id="dummy"></div>
+  {%- if page.title != "" -%}
+    <h1>{{ page.title | markdownify | strip_html }}</h1>
+    {%- if page.subtitle -%}
+    <div class="subtitle">{{ page.subtitle | markdownify | strip_html }}</div>
+    {%- endif -%}
+  {%- endif -%}
+  {%- if page.image -%}
+    <figure>
+      <img src="/img/{{ page.image }}" alt="featured image" />
+      {%- if page.caption -%}
+        <figcaption>{{ page.caption | markdownify }}</figcaption>
+      {%- endif -%}
+    </figure>
+  {%- endif -%}
+{%- if page.collection == "poems" -%}
+    <div class="poetry">
+{%- include extend-markup.html html=content poetry=true shift-headings=page.shift-headings -%}
+    </div>
+{%- else -%}
+  {%- include extend-markup.html html=content shift-headings=page.shift-headings -%}
+{%- endif -%}
+  </div>
+  <div id='about-column'>
+    <p>Brief text about Angela Cummings. {{page.date}}</p>
+  </div>
+  <div id='sidenote-column' class='footnotes' style='visibility:hidden'></div>
+</main>

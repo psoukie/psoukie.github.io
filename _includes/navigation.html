@@ -1,0 +1,8 @@
+<nav>
+  <ul>
+    <li {% if page.collection=="poems" or page.url=="/poems" %}class="selected"{% endif %}><a href="/poems">Poems</a></li>
+    <li {% if page.collection=="stories" or page.url=="/stories" %}class="selected"{% endif %}><a href="/stories">Stories</a></li>
+    <li {% if page.collection=="observations" or page.url=="/observations" %}class="selected"{% endif %}><a href="/observations">Observations</a></li>
+    <li {% if page.url=="/about" %}class="selected"{% endif %}><a href="/about">About me</a></li>
+  </ul>
+</nav>

@@ -35,12 +35,22 @@ layout: none
 </head>
 
 <body>
+  <header class="container">
+    <h1><a href="{{site.url}}">{{ site.title }}</a></h1>
+    <div id="burgerBtn"></div>
 
-    {%- include header.html -%}
+  </header>
 
-    {%- include extend-markup.html html=content shift-headings=page.shift-headings -%}
+  {{ content }}
 
-    {%- include footer.html -%}
+  {%- include footer.html -%}
 
 </body>
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+      document.getElementById('burgerBtn').addEventListener('click', function() {
+        document.getElementsByTagName('body')[0].classList.toggle('navigation');
+      }, false);
+  }, false);
+</script>
 </html>

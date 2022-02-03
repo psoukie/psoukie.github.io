@@ -8,7 +8,7 @@
   {%- capture content -%}{%- include substring.html html=content start-old='<h2' end-old='</h2>' start-new='<h3 ' end-new='</h3>' -%}{%- endcapture -%}
   {%- capture content -%}{%- include substring.html html=content start-old='<h1' end-old='</h1>' start-new='<h2 ' end-new='</h2>' -%}{%- endcapture -%}
 {%- endif -%}
-{%- if page.format == 'poetry' -%}
+{%- if include.poetry -%}
   {% capture p-s %}{{nl}}<p>//poetry</p>{% endcapture %}
   {% capture p-e %}{{nl}}<p>//end-poetry</p>{% endcapture %}
   {% capture p-sn %}{{nl}}<div class="poetry">{% endcapture %}
@@ -32,6 +32,7 @@
   {%- assign content = content | replace: li-2, li-2n -%}
   {%- assign content = content | replace: li-end, ul-li-end-n -%}
   {%- assign content = content | replace: ul-end, ul-li-end-n -%}
+  {%- assign content = content | replace: "<ul>", ul-1n -%}
 {%- endif -%}
 {% assign img-start-old = nl | append: '<p><img src' %}
 {% assign img-start-new = nl | append: '<figure><img src' %}

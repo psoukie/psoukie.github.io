@@ -1,15 +1,6 @@
 ---
-title: Poem Test
-format: poetry
-published: false
+title: Pluto
 ---
-
-Let's see how my website handles poetry. This is some regular text before tehep poem is included.
-
-//poetry
-
-## Pluto
-*by Angela Cummings*
 
 - Pluto, you are out. Just like that.
 - Heartless.
@@ -32,7 +23,3 @@ Let's see how my website handles poetry. This is some regular text before tehep 
 ^
 - Still, you glide on, if awkwardly, if slowly.
 - It is dark out there. Mercury is nervous.
-
-//end-poetry
-
-And here could be more regular text in the article....
