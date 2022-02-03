@@ -5,7 +5,7 @@ published: false
 
 - Pluto, you are out. Just like that.
 - Heartless.
-^
+- ~
 - As if none of us could relate to you—
   - not quite big enough for our own britches,
   - not pulling all of our own weight.
@@ -21,6 +21,6 @@ published: false
 - Who will bat ninth for the galaxy?
 - Must you be known as only a mousey mouse’s dog?
 - Unsavory.
-^
+- ~
 - Still, you glide on, if awkwardly, if slowly.
 - It is dark out there. Mercury is nervous.

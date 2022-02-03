@@ -9,6 +9,7 @@
   {%- capture content -%}{%- include substring.html html=content start-old='<h1' end-old='</h1>' start-new='<h2 ' end-new='</h2>' -%}{%- endcapture -%}
 {%- endif -%}
 {%- if include.poetry -%}
+  {% capture stanzabreak %}</ul>{{nl}}<ul>{% endcapture %}
   {% capture p-s %}{{nl}}<p>//poetry</p>{% endcapture %}
   {% capture p-e %}{{nl}}<p>//end-poetry</p>{% endcapture %}
   {% capture p-sn %}{{nl}}<div class="poetry">{% endcapture %}
@@ -24,6 +25,7 @@
   {% capture li-1n %}{{nl}}  <div class="line">{% endcapture %}
   {% capture li-2n %}{{nl}}      <div class="line">{% endcapture %}
   {% capture ul-li-end-n %}</div>{{nl}}{% endcapture %}
+  {%- assign content = content | replace: "  <li>~</li>", stanzabreak -%}
   {%- assign content = content | replace: p-s, p-sn -%}
   {%- assign content = content | replace: p-e, p-en -%}
   {%- assign content = content | replace: ul-1, ul-1n -%}
