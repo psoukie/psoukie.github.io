@@ -21,13 +21,9 @@
 title: Soukie’s Place
 name: Pavel Soukenik
 email: pavel@soukie.net
-description: >- # this means to ignore newlines until "baseurl:"
-  A collection of articles and posts by Pavel Soukenik.
+description: A collection of articles and posts by Pavel Soukenik.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://soukie.net # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-profile_pic: /img/profile.jpg
 copyright_name: MIT
 encoding: utf-8
 

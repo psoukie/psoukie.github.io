@@ -47,15 +47,16 @@
 
 :root {
   /* Theme colors */
-  --Cucumber: #8DA45C;
-  --Blue: #8DA45C;
+  --Cucumber: #8da45c;
+  --Asparagus: #6b7c45;
+  --Collard: #4f5b33;
   --Anzac: #E2BC46;
   --Tango: #E67F29;
   --Rust: #c97b6f;
-  --Tan: #562C02;
   --Merino: #F2EEE2;
-  --neutralBlack: #020202;
-  --neutralWhite: #fffefd;
+  --Lighter: #faf9f4;
+  --Black: #020202;
+  --White: #fffefd;
 
   /* Typography */
   --font-family-serif: "Libre Baskerville", Garamond, Georgia, serif;
@@ -160,7 +161,7 @@ html, body {
 
 body {
   line-height: var(--leading);
-  color: var(--neutralBlack);
+  color: var(--Black);
   font-size: var(--size-m);
   max-width: 100%;
   width: fit-content;
@@ -196,29 +197,16 @@ body > header h1 {
 }
 
 body > header h1 a {
-  color: var(--Merino);
+  color: var(--White);
 }
 
 main header nav { display: block;}
 main header span { display: block;}
 
-main .selected:before {
-  content: "< ";
-}
-
-@media (min-width: 1200px) {
-  main .selected:before {
-    content: "";
-  }
-  main .selected:after {
-    content: " >";
-  }
-}
-
 @media (max-width: 991px) {
   main {
     max-width: var(--width-body);
-    background-color: var(--neutralWhite);
+    background-color: var(--White);
     padding: var(--margin);
     box-shadow: var(--box-shadow-8);
     border-radius: var(--border-radius-large);
@@ -266,7 +254,7 @@ div.content {
     grid-row: 1 / 4;
     position: relative;
     z-index: 1;
-    background-color: var(--neutralWhite);
+    background-color: var(--White);
     box-shadow: var(--box-shadow-8);
     width: var(--width-body);
     padding: var(--margin);
@@ -280,10 +268,15 @@ div.content {
     width: var(--width-sidebar);
   }
   main > header, #about-column {
-    padding: 1rem;
     height: fit-content;
+  }
+  main > header {
+    width: calc( var(--width-sidebar) + 2em );
+  }
+  #about-column {
+    padding: 1rem;
     border-radius: var(--border-radius);
-    background-color: var(--neutralWhite);
+    background-color: var(--Lighter);
     box-shadow: var(--box-shadow-4);
   }
   main > header span {
@@ -313,29 +306,6 @@ div.content {
   }
 }
 
-header ul, article > ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-body > header ul {
-  margin-top: auto;
-}
-
-header ul ul ul {
-  margin-left: 1em;
-}
-
-header ul li {
-  margin-top: .3em;
-  margin-bottom: .3em;
-}
-
-header > ul > li {
-  margin-bottom: 1em;
-}
-
 h1, h2, .subtitle, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -358,18 +328,18 @@ h2, .subtitle {
 }
 
 h1 {
-  color: var(--Blue);
+  color: var(--Asparagus);
   font-size: calc(var(--headings-ratio) * var(--size-xxl));
   font-weight: 400;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   text-align: center;
 }
 
 .subtitle {
-  color: var(--Blue);
+  color: var(--Collard);
   font-size: calc(var(--sans-ratio) * var(--size-l));
   text-align: center;
-  margin-top: -2.2em;
+  margin-top: -1.2em;
   margin-bottom: 1.66em;
 }
 
@@ -378,7 +348,7 @@ h1 {
 }
 
 h2 {
-  color: var(--Blue);
+  color: var(--Collard);
   font-size: calc(var(--sans-ratio) * var(--size-xl));
   margin: 1em 0 .5rem 0;
 }
@@ -398,7 +368,7 @@ h3, h4, h5, h6 {
 }
 
 h3 {
-  color: var(--Tan);
+  color: var(--Collard);
   font-size: calc(var(--sans-ratio) * var(--size-m));
 }
 
@@ -418,12 +388,12 @@ h5, h6 {
 
 header, footer {
   font-size: calc(var(--sans-ratio) * 1em);
-  color: var(--Tan);
+  color: var(--Collard);
 }
 
 footer {
-  color: var(--Tan);
   text-align: center;
+    font-size: calc( var(--sans-ratio) * var(--size-s) );
 }
 
 /* Typography */
@@ -457,17 +427,17 @@ a[href*="//"]:not([href*="soukie.net"])::after {
 }
 
 a > h2 {
-  color: var(--Blue);
+  color: var(--Asparagus);
 }
 
 a:hover > h2, a:active > h2, a:focus > h2 {
-  color: var(--Blue);
+  color: var(--Asparagus);
 }
 
 blockquote {
   margin-left: 1em;
   margin-right: 0;
-  color: var(--Tan);
+  color: var(--Collard);
   /* font-style: italic; */
 }
 
@@ -490,7 +460,7 @@ blockquote {
 }
 
 div.box {
-  color: var(--neutralWhite);
+  color: var(--White);
   background-color: var(--Cucumber);
 }
 
@@ -507,7 +477,7 @@ aside.pullquote {
 
 /* When div.box follows headline (optionally with a strapline or image), format it as a lede paragraph  */
 .content.lede > p:first-of-type {
-  color: var(--Tan);
+  color: var(--Collard);
   font-weight: 700;
 }
 
@@ -579,7 +549,11 @@ article {
   box-shadow: var(--box-shadow-4);
   padding: 1rem;
   border-radius: var(--border-radius);
-  margin: calc(2em * var(--leading)) 0;
+  margin: 1rem;
+}
+
+h1 + article {
+  margin-top: -2rem;
 }
 
 article > ul {
@@ -625,7 +599,6 @@ div.footnotes:not(#sidenote-column)::before {
   display: block;
   font-family: var(--font-family-sans);
   font-weight: bold;
-  color: var(--Tan);
   border-top: 1px solid var(--Tango);
   padding-top: 1em;
 }
@@ -672,7 +645,7 @@ td {
 th {
   background-color: var(--Anzac);
   font-weight: bold;
-  color: var(--neutralWhite);
+  color: var(--White);
   vertical-align: bottom;
 }
 
@@ -728,7 +701,7 @@ div.stanza {
   padding: 2em 1rem 1rem 1em;
   width: var(--width-sidebar);
   border-radius: var(--border-radius);
-  background-color: var(--neutralWhite);
+  background-color: var(--White);
   box-shadow: var(--box-shadow-4);
 }
 
@@ -841,6 +814,64 @@ a.footnote.highlighted::before {
   transition: all 0.3s ease-in;
 }
 
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  font-weight: bold;
+  margin: 2em 0;
+  color: var(--White);
+  background-color: var(--Asparagus);
+  transition: all 0.2s ease-in;
+}
+
+nav li.selected {
+  background-color: var(--Cucumber);
+}
+
+@media (max-width: 1199px)  {
+  nav li {
+    margin-left: 2em;
+  }
+  nav li:hover, nav li.selected {
+    margin-left: 0;
+    padding-left: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  nav li {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav li {
+    margin-right: 2em;
+  }
+  nav li:hover, nav li.selected {
+    margin-right: 0;
+  }
+}
+
+nav li a {
+  display: block;
+  padding: .5em 20px;
+  color: var(--Merino);
+}
+
+nav li a:hover, a:active, a:focus {
+  color: var(--White);
+}
+
+nav li.selected a {
+  color: var(--White);
+}
+
 body > header nav {
   position:absolute;
   z-index:10;
@@ -852,22 +883,9 @@ body > header nav {
   li {
     position: relative;
     text-align: right;
-    padding: .5em 20px .5em 0;
     width:0;
-    margin:30px 0 0 0;
     right: -3rem;
-    color: var(--neutralWhite);
-    background: var(--Cucumber);
     transition: all 0.4s ease-in;
-    &.selected {
-      font-weight: bold;
-    }
-    a {
-      color: var(--neutralWhite);
-    }
-    a:hover, a:active, a:focus {
-      color: var(--Merino);
-    }
     & + li {
       right:-6em;
       & + li {
