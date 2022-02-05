@@ -1,40 +1,27 @@
 {% capture nl %}
 {% endcapture %}
 {%- assign content = include.html -%}
-{%- if include.shift-headings -%}
-  {%- capture content -%}{%- include substring.html html=content start-old='<h5' end-old='</h5>' start-new='<h6 ' end-new='</h6>' -%}{%- endcapture -%}
-  {%- capture content -%}{%- include substring.html html=content start-old='<h4' end-old='</h4>' start-new='<h5 ' end-new='</h5>' -%}{%- endcapture -%}
-  {%- capture content -%}{%- include substring.html html=content start-old='<h3' end-old='</h3>' start-new='<h4 ' end-new='</h4>' -%}{%- endcapture -%}
-  {%- capture content -%}{%- include substring.html html=content start-old='<h2' end-old='</h2>' start-new='<h3 ' end-new='</h3>' -%}{%- endcapture -%}
-  {%- capture content -%}{%- include substring.html html=content start-old='<h1' end-old='</h1>' start-new='<h2 ' end-new='</h2>' -%}{%- endcapture -%}
-{%- endif -%}
-{%- if include.poetry -%}
-  {% capture stanzabreak %}</ul>{{nl}}<ul>{% endcapture %}
-  {% capture p-s %}{{nl}}<p>//poetry</p>{% endcapture %}
-  {% capture p-e %}{{nl}}<p>//end-poetry</p>{% endcapture %}
-  {% capture p-sn %}{{nl}}<div class="poetry">{% endcapture %}
-  {% capture p-en %}{{nl}}</div>{% endcapture %}
-  {% capture ul-1 %}{{nl}}<ul>{% endcapture %}
-  {% capture ul-2 %}{{nl}}    <ul>{% endcapture %}
-  {% capture li-1 %}{{nl}}  <li>{% endcapture %}
-  {% capture li-2 %}{{nl}}      <li>{% endcapture %}
-  {% capture ul-end %}</ul>{{nl}}{% endcapture %}
-  {% capture li-end %}</li>{{nl}}{% endcapture %}
-  {% capture ul-1n %}{{nl}}<div class="stanza">{% endcapture %}
-  {% capture ul-2n %}{{nl}}    <div class="indented">{% endcapture %}
-  {% capture li-1n %}{{nl}}  <div class="line">{% endcapture %}
-  {% capture li-2n %}{{nl}}      <div class="line">{% endcapture %}
-  {% capture ul-li-end-n %}</div>{{nl}}{% endcapture %}
+{%- unless page.preserve-headings -%}
+  {%- assign content = content | replace: "<h5", "<h6" -%}
+  {%- assign content = content | replace: "<h4", "<h5" -%}
+  {%- assign content = content | replace: "<h3", "<h4" -%}
+  {%- assign content = content | replace: "<h2", "<h3" -%}
+  {%- assign content = content | replace: "<h1", "<h2" -%}
+  {%- assign content = content | replace: "</h5>", "</h6>" -%}
+  {%- assign content = content | replace: "</h4>", "</h5>" -%}
+  {%- assign content = content | replace: "</h3>", "</h4>" -%}
+  {%- assign content = content | replace: "</h2>", "</h3>" -%}
+  {%- assign content = content | replace: "</h1>", "</h2>" -%}
+{%- endunless -%}
+{%- if page.collection == "poems" -%}
+  {%- capture stanzabreak -%}</ul>{{nl}}<ul>{%- endcapture -%}
+  {%- assign content = content | replace: "  <ul>", "  <div class='indented'>" -%}
   {%- assign content = content | replace: "  <li>~</li>", stanzabreak -%}
-  {%- assign content = content | replace: p-s, p-sn -%}
-  {%- assign content = content | replace: p-e, p-en -%}
-  {%- assign content = content | replace: ul-1, ul-1n -%}
-  {%- assign content = content | replace: ul-2, ul-2n -%}
-  {%- assign content = content | replace: li-1, li-1n -%}
-  {%- assign content = content | replace: li-2, li-2n -%}
-  {%- assign content = content | replace: li-end, ul-li-end-n -%}
-  {%- assign content = content | replace: ul-end, ul-li-end-n -%}
-  {%- assign content = content | replace: "<ul>", ul-1n -%}
+  {%- assign content = content | replace: "  </ul>", "  </div>" -%}
+  {%- assign content = content | replace: "<ul>", "<div class='stanza'>" -%}
+  {%- assign content = content | replace: "</ul>", "</div>" -%}
+  {%- assign content = content | replace: "<li>", "<div class='line'>" -%}
+  {%- assign content = content | replace: "</li>", "</div>" -%}
 {%- endif -%}
 {% assign img-start-old = nl | append: '<p><img src' %}
 {% assign img-start-new = nl | append: '<figure><img src' %}
