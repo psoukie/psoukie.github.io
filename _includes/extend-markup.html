@@ -23,15 +23,10 @@
   {%- assign content = content | replace: "<li>", "<div class='line'>" -%}
   {%- assign content = content | replace: "</li>", "</div>" -%}
 {%- endif -%}
-{% assign img-start-old = nl | append: '<p><img src' %}
-{% assign img-start-new = nl | append: '<figure><img src' %}
-{% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
-{% assign img-start-old = nl | append: '<p class="float"><img src' %}
-{% assign img-start-new = nl | append: '<figure class="float"><img src' %}
-{% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
-{% assign img-start-old = nl | append: '<p class="float edge"><img src' %}
-{% assign img-start-new = nl | append: '<figure class="float edge"><img src' %}
-{% capture content %}{% include substring.html html=content start-old=img-start-old end-old='" />' start-new=img-start-new end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
+
+{% capture content %}{% include substring.html html=content start-old='<p><img src' end-old='" />' start-new='<figure><img src' end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
+{% capture content %}{% include substring.html html=content start-old='<p class="float"><img src' end-old='" />' start-new='<figure class="float"><img src' end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
+{% capture content %}{% include substring.html html=content start-old='<p class="float edge"><img src' end-old='" />' start-new='<figure class="float edge"><img src' end-new='%IMG-END-TAG%' inline=true %}{% endcapture %}
 {% assign content = content | replace: '%IMG-END-TAG%</p>', '" /></figure>' %}
 {% assign img-end-nl = '%IMG-END-TAG%' | append: nl %}
 {% assign p-nl = '</p>' | append: nl %}

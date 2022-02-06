@@ -72,6 +72,7 @@
   --neutralDark: #292726;
   --neutralBlack: #1e1d1c;
   --neutralWhite: #fffefd;
+  --neutralGray: #fbf9f8;
 
   /* Typography */
   --font-family-serif: "Libre Baskerville", Garamond, Georgia, serif;
@@ -361,6 +362,10 @@ h1 {
   text-align: center;
 }
 
+h1 + figure.float {
+  margin-top: 0;
+}
+
 .subtitle {
   color: var(--themeDarker);
   font-size: calc(var(--sans-ratio) * var(--size-l));
@@ -462,7 +467,7 @@ a:hover > h2, a:active > h2, a:focus > h2 {
 blockquote {
   margin-left: 1em;
   margin-right: 0;
-  color: var(--neutralPrimary);
+  background-color: var(--neutralGray);
   padding: 1em;
   box-shadow: var(--box-shadow-4);
   border-radius: var(--border-radius);
@@ -471,7 +476,8 @@ blockquote {
 
 @media (min-width: 576px) {
   blockquote {
-    margin-left: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
 
@@ -513,6 +519,11 @@ aside.pullquote {
     font-size: var(--size-l);
     font-weight: 400;
     line-height: var(--leading-tight);
+    margin: 0 0 1em 2em;
+  }
+  .content.lede > p:first-of-type::first-letter {
+    font-size: 1.618em;
+    line-height: 0;
   }
 }
 
@@ -540,8 +551,8 @@ ul, ol {
 
 /* Figures */
 
-figure {
-  margin: calc(1rem * var(--leading)) 0;
+figure, audio {
+  margin: 1rem 0;
   width: 100%;
 }
 
@@ -626,12 +637,14 @@ pre code {
 
 div.footnotes:not(#sidenote-column) {
   margin-top: calc(3rem * var(--leading));
+  font-size: var(--size-s);
 }
 
 div.footnotes:not(#sidenote-column)::before {
   content: "Footnotes";
   display: block;
   font-family: var(--font-family-sans);
+  font-size: calc( var(--size-m) * var(--sans-ratio) );
   font-weight: 600;
   color: var(--themeDarker);
   border-top: 1px solid var(--neutralTertiary);
@@ -736,7 +749,7 @@ div.stanza {
   padding: 2em 1rem 1rem 1em;
   width: var(--width-sidebar);
   border-radius: var(--border-radius);
-  background-color: var(--neutralWhite);
+  background-color: var(--neutralGray);
   box-shadow: var(--box-shadow-4);
 }
 

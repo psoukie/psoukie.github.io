@@ -19,7 +19,7 @@ Crypto art has been making headlines over the past several months with reports o
 
 Buying and trading crypto art is often compared to that of physical art. This is for good reasons, but it is also important to be aware of their inherent differences.
 
-## Analog and Digital Worlds
+# Analog and Digital Worlds
 
 The words _analog_ and _digital_ are so ubiquitous that they became somewhat divorced from their meanings. In this context, ‘analog’ means _continuous_ (literally ‘proportionate’), and ‘digital’ means _discrete_ (‘numerical’).
 
@@ -29,7 +29,7 @@ We live in an analog world. Our senses perceive signals that are inherently cont
 
 Let’s set aside questions about the process and accuracy of the conversions, and focus on the differences of these two forms in the context of art.
 
-### Pros and Cons
+## Pros and Cons
 
 Analog and digital works of art have their own advantages and disadvantages.
 
@@ -39,7 +39,7 @@ On the other hand, digital art is data. The number 15,078 is a piece of informat
 
 Depending on your philosophy or needs, these characteristics can be good or bad. If you want to preserve a film print of Stanley Kubrick’s _2001:&nbsp;Space Odyssey_, the impermanence of analog is your enemy. If you are selling songs on the internet, you contend with the ease of creating copies of digital files.
 
-## Originality
+# Originality
 
 What does it mean when a piece of art is an original? And is it different in analog and digital?
 
@@ -47,7 +47,7 @@ What does it mean when a piece of art is an original? And is it different in ana
 
 In the digital realm, the concept of originality is even trickier. Is my number 15,078 original? If so, which instance is the original? The one that went briefly through my computer’s memory as a sequence of characters I typed, or the first copy saved in my local GitHub repository? Trying to pin down something in relation to digital _information_ is a fool’s errand.
 
-### Books As Digital Doubles
+## Books As Digital Doubles
 
 To help think about this topic, let’s consider books. Yes, we can look at books primarily as physical artifacts, and many collectors do. A rare first edition is a part of an original set, just like the 200 photograph prints. But we can also think of a book as information.
 
@@ -58,19 +58,19 @@ In this sense, two printed editions and an ebook with the same words in them are
 
 Seen this way, books — but also Beethoven’s symphonies — are composed of discrete pieces of information. Both are digital in nature, even though they also have physical representations. These ‘analog conversions’ add their own beauty to their renditions of the analog forms, but at their heart, books and symphonies are not analog.
 
-### Digital Is Not Worthless
+## Digital Is Not Worthless
 
 Digital art is just like a book in its abstract form. It is pure data. It does get reproduced into an analog representation for consumption, but the underlying data of each digital copy are identical.
 
 Do I think that an animated GIF is as important a work of art as the Beethoven’s Symphony No.&nbsp;5? Of course not, but it is noteworthy that in a very real sense, they are both digital works of art.
 
-## (Intellectual) Ownership
+# (Intellectual) Ownership
 
 I would argue that information — whether it is contents of a book or a digital file — can only be described as an original when speaking in an intellectual sense: as the act of first thinking of something and committing it into a form that is shared with others is noteworthy.
 
 The concepts of intellectual property rights, licensing, and ownership have developed as social norms for crediting and rewarding artists precisely because some works can be easily copied or duplicated to a point that smudges (or eliminates) the difference between an original and a copy.
 
-## Crypto Art
+# Crypto Art
 
 What makes crypto art[^crypto] different from other digital files is that they are associated with sophisticated blockchain records using a “non-fungible token” (NFT). Blockchain is a robust method to document and prove all transactions related to the tokens. Since the artwork and token both exist digitally, the token cannot be physically reattached to a different work of art.
 
@@ -78,7 +78,7 @@ Interestingly, NFTs do not focus on (or address) the problem of validating or pr
 
 [^crypto]: The concept was very recent at the time of writing but it still bears clarifying that this article is about digital art only, and not physical works with an attached tag which ties them to a cryptographic record of ownership.
 
-### Ownership in NFT
+## Ownership in NFT
 
 What legal rights (if any) are being exchanged with the sale of the token depends on each situation. Most often, the only right granted by the author is a license for use. In many cases, the exact same digital content is also available publicly without the NFT.
 
@@ -90,13 +90,13 @@ Could then Queen auction off separately the song _The Show Must Go On_ from that
 
 The only inherent ownership in crypto art is the ownership of an undisputed record of a specific transaction in relation to that asset.
 
-## A Critical View
+# A Critical View
 
 In the world of fine art collecting, just like collecting in general, the value of what someone is paying for or trading is not directly linked to the underlying value of what changes hands.
 
 In essence, while the digital art might have its own value, there is no underlying value of the NFT proper because it is a purely virtual token associated with something else.
 
-### Trading Receipts
+## Trading Receipts
 
 In his informative and thoughtful article explaining NFT art, Mitchell Clark asks: [Why would anyone buy crypto art — let alone spend millions on what’s essentially a link to a JPEG file?](https://theconversation.com/why-would-anyone-buy-crypto-art-let-alone-spend-millions-on-whats-essentially-a-link-to-a-jpeg-file-157115)
 
@@ -108,7 +108,7 @@ His quote is even more striking given the restricted meaning of the word ‘owne
 
 Hertzmann does a good job of answering the question “why people buy original works of art.” That sentence is also the only occurrence of the word 'original' in his article. The concept is alluded to again later when he writes: “This does not mean that art is interchangeable, or that the historical significance and technical skill of a Rembrandt is imaginary.”
 
-### The Monet Conflation
+## The Monet Conflation
 
 In an article [NFTs explained: what they are, and why they’re suddenly worth millions](https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq), Mitchell Clark makes statements that are factually correct but easy to overinterpret:
 
@@ -122,7 +122,7 @@ Clark admits later in the same article: “With digital art, a copy is literally
 
 If Monet lived today and created his art as digital files available to purchase (like music downloads), it would be more accurate to say: "Anyone can buy an original Monet image. But only one person can own a unique token associated with it."
 
-## Trade with Eyes Open
+# Trade with Eyes Open
 
 Does that mean crypto art does not have value? No. The value people place in collecting things (art included) is largely subjective. The goal of this article was to explore how originals exist in digital world, and what ownership in crypto actually relates to.
 

@@ -4,6 +4,7 @@ description: A collection of articles and posts by Pavel Soukenik.
 permalink: /
 ---
 
-{%- for note in site.notes -%}
+{% assign sorted_notes = site.notes | sort: 'date' | reverse %}
+{%- for note in sorted_notes -%}
   {%- include snippet.html full=true -%}
 {%- endfor -%}
