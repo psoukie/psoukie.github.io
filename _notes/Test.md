@@ -3,8 +3,6 @@ title: Markdown Test Page
 subtitle: How It Works Together
 image: macbook-air.jpg
 caption: (Image by Apple)
-season: autumn
-status: ongoing
 tags: [test]
 series: [life]
 date: 2022-01-17

@@ -5,7 +5,6 @@ image: macbook-air.jpg
 tags: [keyboard, history, QWERTY, Dvorak, typewriter, ergonomics, digital]
 caption: (Image by Apple)
 series: [technology, life]
-season: summer
 lede: true
 shift-headings: true
 toc: true

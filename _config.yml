@@ -54,15 +54,6 @@ collections:
     notes:
       output: true
       permalink: /:title
-    poems:
-      output: true
-      permalink: /poems/:title
-    observations:
-      output: true
-      permalink: /observations/:title
-    stories:
-      output: true
-      permalink: /stories/:title
     series:
       output: true
       permalink: /series/:title

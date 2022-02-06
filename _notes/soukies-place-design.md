@@ -1,7 +1,6 @@
 ---
 title: Soukie's Place Design
-season: autumn
-status: ongoing
+published: false
 tags: [typography, internal]
 date: 2022-01-23
 ---

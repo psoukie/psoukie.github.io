@@ -5,8 +5,6 @@ series: [arts, technology]
 tags: [art, cryptoart, NFT, analog, digital]
 image: quantized-starry-night.jpg
 caption: (_Quantized Starry Night_, source image from puzzlewarehouse.com, edited by Pavel Soukenik)
-season: summer
-status: ongoing
 date: 2021-03-18
 updated: 2022-01-25
 toc: true
