@@ -7,6 +7,7 @@ updated: 2021-04-11
 image: shobogenzo.jpg
 caption: "1811 edition  of _Shōbōgenzō_, written by Dōgen in 13th century. (Image source: terebess.hu)"
 lede: true
+toc: true
 ---
 
 Genjo Koan is a key writing in Zen Buddhism and Japanese literature in general. Ten years ago, I wrote an article on the challenges of translating this text to accurately convey its meaning to modern readers. Now, I come back to it to solve two mysteries that eluded me.
@@ -76,7 +77,7 @@ Ten years ago, this compelled me to turn to the original text to see if I could 
 
 Even the first few words show why translating Genjo Koan is a challenge. Translations that begin with “_As all things are buddha-dharma_” (Tanahashi et al.) sound very esoteric even though the original text is less obscure than it this would lead you to believe.
 
-First, the translation should not open with “As” or “Because” but rather with “When.” The Japanese compound means ‘occasion’ or a period of time, literally ‘season’ (時節, time-period). ‘While all things…’ could also be a good translation also but it could be misread as not applying to a time period.
+First, the translation should not open with “As” or “Because” but rather with “When.” The Japanese compound means ‘occasion’ or a period of time, literally ‘season’ (時節, time-period). ‘While all things…’ could also be a good translation but it could be misread as not applying to a time period.
 
 Second, “are” is not a suitable translation for _naru_ (なる) here. Even though the vast majority of translations simply use “are,” Myers explains that “this term … encompasses a series of meanings ranging from ‘to be’ to ‘to become,’ including nuances such as ‘to be formed into.’ ” His view is supported by Nishijima and Cross, as well as the context.
 
@@ -90,38 +91,81 @@ Looking at the interlinear translation below, the first sentence has six concept
 
 Reading the third line as a synthesis of the first two lines -- rather than a repetition of the first line -- is also supported by Dōgen’s preamble of leaping over (or transcending) the ‘abundance’ and ‘lack,’ which refer back, according to Myers, to the two world views expressed in the first two sentences.
 
-## The First Mystery
+### The First Mystery
 
-The reality is a bit trickier. Looking at the interlinear translation, it is easy to see that the first sentence has ‘delusion realization’ (迷悟)[^wisdom] as one of the six concepts. The second sentence negates these separately, as two concepts, using Japanese words ‘confusion’ (まどひ) and ‘understanding’ (さとり). And then in the third sentence, the same compound reappears as ‘delusion realization’ (迷悟) as one of the three combined concepts.
+The reality is a bit trickier. As seen in the [interlinear translation](#interlinear-translation) below, it is easy to see that the first sentence has ‘delusion realization’ (迷悟)[^wisdom] as one of the six concepts. The second sentence negates these separately, as two concepts, using Japanese words ‘confusion’ (まどひ) and ‘understanding’ (さとり). And then in the third sentence, the same compound reappears as ‘delusion realization’ (迷悟) as one of the three combined concepts.
 
 [^wisdom]: When Myers translates the first occurrence as “wisdom,” it makes the English progression a little tidier than the original text. But he calls this out in a comment, and his translation is rare in not losing the distinction between Dōgen’s use of Japanese synonyms in the second sentence.
 
 What happened to ‘practice’ which was implicitly paired with ‘delusion-realization’ in the first sentence? (The other pairs being birth and death and enlightened and ordinary beings.) And how can the presence of this compound in the first sentence be reconciled with the synthesis idea?
 
-### A Simple Continuation
+## Contrasting and Comparing
 
 The fourth sentence is notoriously difficult to translate, and in most translations it is disconnected from what came before by starting with “Yet.” I am now convinced that it is more than an observation or an illustration of the synthetic quality of the compounds. Linguistically, it directly continues with the contrasting of concepts from the preceding statements and takes it into our everyday world.
 
 > Flowers and weeds elicit opposing feelings, but are they that different?
 {: .float}
 
-First, the flowers and weeds: Both are plants, but some are viewed with longing, others with aversion. When read on a page, the similarity between the two is striking: 華 and 草.
+First, the flowers and weeds: Both are plants, but some are viewed with longing, others with aversion. The contrast extends to what the plants are doing -- the flowers wither and fall, the weeds grow. Yet, when read on a page in the original text, we are struck by the similarity between the characters for flowers and weeds: 華 and 草.
 
-The contrasts extend to the action -- the flowers wither, the weeds grow -- and to the feelings associated with them.
+Notice how Dōgen built the comparison of these elements:
 
-‘Longing’ is the translation of the compound ‘love pity’ (愛惜). It has a quality of not wanting to part with something. But the way Dōgen uses ‘aversion’ is more complicated: while ‘discard dislike’ (棄嫌, _ki-ken_) does not exist in Japanese as a compound, when reversed (嫌棄) we get the Chinese word for ‘aversion’ which -- when read in Japanese (_ken-ki_) -- has the same meaning.[^ken-ki]
+<style type="text/css">
+	td { padding: .2em 1em; vertical-align: middle; text-align: center; border: var(--border); }
+	tr:nth-child(even) { background-color: inherit; }
+	table { border: none; margin: 1rem;}
+	tr td { background-color: var(--neutralLighterAlt); }
+	tr.shaded td { background-color: var(--themeLighterAlt); }
+</style>
+
+<table>
+	<tr>
+		<td rowspan="2">flower</td>
+		<td colspan="2">longing</td>  
+		<td rowspan="2">fall</td>
+	</tr>
+	<tr>
+		<td colspan>love</td>
+		<td colspan>pity</td>
+	</tr>
+	<tr>
+		<td>華</td>
+		<td colspan>愛</td>
+		<td colspan>惜</td>
+		<td colspan>ちり</td>
+	</tr>
+	<tr class="shaded">
+		<td>草</td>
+		<td colspan>棄</td>
+		<td colspan>嫌</td>
+		<td colspan>おふる</td>
+	</tr>
+	<tr class="shaded">
+		<td rowspan="2">weed</td>
+		<td colspan>discard</td>
+		<td colspan>dislike</td>
+		<td rowspan="2">grow</td>
+	</tr>
+	<tr class="shaded">
+		<td colspan="2">aversion</td>  
+	</tr>
+</table>
+
+‘Longing’ is the translation of the compound ‘love pity’ (愛惜). It has a quality of not wanting to part with something. But the way Dōgen uses ‘aversion’ is more complicated because the ‘discard dislike’ compound (棄嫌, _ki-ken_) does not exist in Japanese. If the two characters were reversed (嫌棄), they form a Chinese word for ‘aversion’ which -- when pronounced in Japanese (_ken-ki_) -- has the same meaning.[^ken-ki]
 
 [^ken-ki]: In Japanese, _ken-ki_ would be however written using a different compound (嫌忌).
 
-Looking also at the individual characters, we see that ‘love’ and ‘dislike’ are clear opposites. ‘Pity’ (惜) is made of a semantic component ‘heart’ (忄semantic) and a phonetic component ‘past’ (昔). In contrast, ‘discard’ (棄) is an ideogram of a child, basket, and two hands (‘throwing out a child in a basket’). It has a meaning of rejecting and abandoning.
+The contrast of the two compounds -- longing and aversion -- also exists between their individual characters: love and dislike and pitying and rejecting. ‘Love’ and ‘dislike’ are clear opposites. ‘Pity’ (惜) is made of a semantic component ‘heart’ (忄) and a phonetic component ‘past’ (昔). In contrast, ‘discard’ (棄) is an ideogram of a child, basket, and two hands (‘throwing out a child in a basket’). It has a meaning of rejecting and abandoning.
 
-The contrast of the two compounds -- longing and aversion -- also exists between their individual characters: love and dislike and pitying and rejecting. Just like with the flowers and weeds, the difference between these feelings turn out to be quite subtle, namely in the direction of the emotion.
+These opposing feelings might not be as far apart as they seem. Just like with the flowers and weeds (which are similar beyond the way these words are written), the difference between them turns out to be quite subtle, namely in the direction of the emotion.
 
-## The Second Mystery
+### The Second Mystery
 
-This seems compelling but why would Dōgen pair ‘longing’ (愛惜) with the unfamiliar 棄嫌 (_ki-ken_, ‘discard dislike’) rather than with the normal order for ‘aversion’ 嫌棄 (_ken-ki_)? Is this a mistake in the text, or is this a mistaken argument?
+This seems compelling but why would Dōgen pair ‘longing’ (愛惜) with the unfamiliar 棄嫌 (_ki-ken_, ‘discard dislike’), rather than with the normal order for ‘aversion’ (嫌棄, _ken-ki_)? Moreover, as we have just seen, the opposites on the level of individual characters would have also aligned more tidily were the ‘discard dislike’ compound reversed.
 
-### Unlocking the Meaning
+Is this a mistake in the text, or is this a mistaken argument?
+
+## Unlocking the Meaning
 
 I believe Dōgen started with ‘delusion-realization’ (迷悟) in the first sentence because it was a familiar concept. In Mahayana tradition, delusion and realization (enlightenment) are considered to be two sides of the same thing. He did it to plant a seed of a familiar idea.
 
@@ -133,7 +177,7 @@ Flowers, withering, longing, love, and pity. These are all opposites of weeds, g
 
 Because he was trying to make a point about two concepts being one, I suspect Dōgen used _ki-ken_ instead of _ken-ki_ on purpose when contrasting longing with aversion in order to jolt his audience out of superficial reading. Not unlike when you read about camping and encounter the word pitfire. It can help us see what is behind the words.
 
-# The Importance of Translations
+## The Importance of Translations
 
 Aren’t the differences in translation very subtle or purely linguistic? I believe not. Translating 13^th^-century writings of Dōgen from Japanese is important both for its literary significance and for the spiritual and philosophical value it has for many people. Whether you care about the literary or spiritual aspect, both can be fully appreciated and understood only through accurate translations.
 
@@ -147,7 +191,7 @@ I created my own interlinear translation of the opening paragraph in February 20
 
 <style type="text/css">div.box {font-size: var(--size-s); -ms-overflow-style: scrollbar; overflow: auto; white-space: nowrap; } div.box em {font-size: var(--size-m);} </style>
 
->> 1\.  
+>> ^[1]^  
 >>   諸  法  の  佛    法    なる    時   節、 すなはち  
 >> many things buddha things become time period, ‘that is’
 >>
@@ -165,7 +209,7 @@ I created my own interlinear translation of the opening paragraph in February 20
 >> there is life,[^6] there is death,  
 >> there are enlightened beings, there are ordinary beings.[^7]_
 >>  
->> <br/>2.  
+>> <br/>^[2]^  
 >> ⠀ ⠀万⠀⠀  法⠀⠀⠀⠀とも⠀に われ⠀に⠀ あらざる⠀⠀⠀時  節、  
 >> myriad things together self⠀  if it is not time period,
 >> 
@@ -183,7 +227,7 @@ I created my own interlinear translation of the opening paragraph in February 20
 >> no enlightened beings, no ordinary beings,  
 >> no birth, no perishing.[^10]_
 >>  
->> <br/>3.  
+>> <br/>^[3]^  
 >>   佛⠀⠀ 道⠀⠀⠀もとより     豐 ⠀⠀⠀儉 ⠀⠀ より⠀⠀ 跳⠀⠀⠀ 出⠀⠀⠀ せる    
 >> buddha way⠀ from origin ⠀abundant frugal⠀ from⠀ leap⠀ above⠀ does
 >> 
@@ -201,7 +245,7 @@ I created my own interlinear translation of the opening paragraph in February 20
 >> there is delusion-realization,  
 >> there are ordinary-enlightened beings._  
 >> 
->> <br/>4.  
+>> <br/>^[4]^  
 >> ⠀ しかも    かく⠀の⠀⠀ごとく⠀⠀なり⠀ と⠀ いへども、    
 >> nevertheless⠀ thus⠀⠀⠀⠀⠀like⠀⠀⠀ are⠀⠀⠀⠀although
 >> 

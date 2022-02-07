@@ -394,16 +394,19 @@ h2 {
   margin: 1em 0 .5rem 0;
 }
 
+h3 {
+  margin-bottom: .2rem;
+}
+
 h3, h4, h5, h6 {
   margin-top: calc(1rem * var(--leading));
-  margin-bottom: .2rem;
 }
 
 @media (min-width: 576px) {
   h2 {
     margin: 1.5em 0 .3em 0;
   }
-  h3, h4, h5, h6 {
+  h3 {
     margin-bottom: .3em;
   }
 }
