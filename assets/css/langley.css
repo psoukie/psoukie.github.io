@@ -431,7 +431,7 @@ footer {
 p {
   margin: 0;
 }
-p+p, p+.float+p {
+p + p, p + .float + p, p + .pullquote + p {
   margin-top: calc(.5em * var(--leading));
 }
 
@@ -512,6 +512,7 @@ aside.pullquote {
 .content.lede > p:first-of-type {
   color: var(--neutralPrimaryAlt);
   font-weight: 700;
+  margin-top: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -519,7 +520,7 @@ aside.pullquote {
     font-size: var(--size-l);
     font-weight: 400;
     line-height: var(--leading-tight);
-    margin: 0 0 1em 2em;
+    margin: 2em 0 1em 2em;
   }
   .content.lede > p:first-of-type::first-letter {
     font-size: 1.618em;
@@ -562,15 +563,28 @@ figure > img {
   object-fit: contain;
 }
 
-figcaption {
+figcaption, .source {
   color: var(--neutralPrimaryAlt);
   font-family: var(--font-family-sans);
-  font-size: calc(var(--sans-ratio) * var(--size-s));
   line-height: var(--leading-sans);
+}
+
+figcaption {
+  font-size: calc(var(--sans-ratio) * var(--size-s));
   text-align: center;
 }
 
+.source {
+  font-size: calc(var(--sans-ratio) * var(--size-m));
+  text-align: right;
+  margin-top: -.5em;
+  color: var(--neutralPrimary);
+}
+
 @media (min-width: 576px) {
+  .source {
+    margin-right: 1em;
+  }
   .float, aside.pullquote {
     float: right;
     margin: 1em;
@@ -746,7 +760,7 @@ div.stanza {
 
 .sidenote {
   position: absolute;
-  padding: 2em 1rem 1rem 1em;
+  padding: 0 1rem 1rem 1rem;
   width: var(--width-sidebar);
   border-radius: var(--border-radius);
   background-color: var(--neutralGray);
@@ -757,13 +771,10 @@ div.stanza {
   color: var(--neutralPrimary);
 }
 
-.sidenote>.sidenote-self-link {
+.sidenote .sidenote-self-link {
   font-weight: 700;
   color: var(--neutralTertiary);
-  background-color: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin: .2em 0 -.3em -.5em;
   width: 2em;
   height: 2em;
   display: flex;
@@ -773,12 +784,12 @@ div.stanza {
   border-radius: 50%;
 }
 
-.sidenote.highlighted>.sidenote-self-link {
+.sidenote.highlighted .sidenote-self-link {
   background-color: var(--themeLighter);
   color: var(--neutralPrimary);
 }
 
-.sidenote-wrapper .reversefootnote {
+#sidenote-column .reversefootnote {
   display: none;
 }
 
@@ -804,12 +815,6 @@ a.footnote.highlighted::before {
   background-color: var(--themeLighter);
 }
 
-.sidenote-wrapper {
-  overflow: hidden;
-  position: relative;
-  margin-bottom: .5em;
-}
-
-.sidenote.highlighted .sidenote-outer-wrapper {
+.sidenote.highlighted {
   border-color: var(--neutralTertiaryAlt);
 }

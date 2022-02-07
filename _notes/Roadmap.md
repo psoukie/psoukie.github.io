@@ -57,6 +57,8 @@ I am planning the following transforms on Markdown syntax when rendering as HTML
 | Factbox    | `>> `<br />`{: float}`  | `<aside class="box">`       |
 | Quotation  | `> `      | `<blockquote>`              |
 
+Also added `.source` to be used under blockquotes. 
+
 ## YAML Tricks
 
 - The first paragraph of the article can be formatted as a lede paragraph using YAML `lede: true`

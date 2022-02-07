@@ -571,14 +571,11 @@ function constructSidenotes() {
         let sidenote = document.createElement("div");
         sidenote.classList.add("sidenote");
         sidenote.id = "sn" + (i + 1);
-        //  Wrap the contents of the footnote in two wrapper divs...
+
         let referencedFootnote = document.querySelector(GW.sidenotes.footnoteRefs[i].hash.replace(/:/, "\\:"));
-        sidenote.innerHTML = "<div class='sidenote-wrapper'>" +
-                             (referencedFootnote ? referencedFootnote.innerHTML : "Loading sidenote contents, please waitâ€¦")
-                             + "</div></div>";
+        sidenote.innerHTML = (referencedFootnote ? referencedFootnote.innerHTML : "Loading sidenote contents, please waitâ€¦");
         //  Add the sidenote to the sidenotes array...
         GW.sidenotes.sidenoteDivs.push(sidenote);
-        //  On which side should the sidenote go? Odd - right; even - left.
         let side = GW.sidenotes.sidenoteColumn;
         //  Inject the sidenote into the page.
         side.appendChild(sidenote);
@@ -591,7 +588,7 @@ function constructSidenotes() {
         sidenoteSelfLink.classList.add("sidenote-self-link");
         sidenoteSelfLink.href = "#sn" + (i + 1);
         sidenoteSelfLink.textContent = (i + 1);
-        GW.sidenotes.sidenoteDivs[i].appendChild(sidenoteSelfLink);
+        GW.sidenotes.sidenoteDivs[i].children[0].prepend(sidenoteSelfLink);
     }
 
     /*  Create & inject the hidden sidenote storage (for sidenotes within
@@ -651,7 +648,7 @@ function sidenotesSetup() {
         considered to be overlapping.
         */
     GW.sidenotes = {
-        sidenoteSpacing:    60
+        sidenoteSpacing:    16
     };
 
     /*  Construct the sidenotes immediately, and also re-construct them as soon
