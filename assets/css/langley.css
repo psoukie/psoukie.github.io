@@ -235,6 +235,16 @@ main > header {
 }
 
 div.content {
+  min-height: 20em;
+}
+
+div.content, div.content blockquote, div.content div, div.content aside {
+  position: relative;
+  z-index: 1;
+}
+
+/* To ensure footnote markers get highlighted correcty */
+main, main blockquote, main div, main aside {
   position: relative;
   z-index: 1;
 }
