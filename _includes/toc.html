@@ -99,7 +99,7 @@
         {% endif %}
 
         {% if firstHeader %}
-            {% assign minHeader = currLevel %}
+          {% assign minHeader = minHeader %} <!-- Pavel Soukenik changed from currLevel on purpose to allow starting with lower headings -->
         {% endif %}
 
         {% capture _hAttrToStrip %}{{ _workspace[0] | split: '>' | first }}>{% endcapture %}

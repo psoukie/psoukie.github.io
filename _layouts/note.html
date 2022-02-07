@@ -4,29 +4,23 @@ layout: default
 
 <main>
   <header>
-    <ul>
     {%- if page.date -%}
-      <li><span>Published</span> {{ page.date | date: "%B %d, %Y"}}</li>
+      <p><span>Published</span> {{ page.date | date: "%B %d, %Y"}}</p>
     {%- endif -%}
     {%- if page.toc -%}
-      <li>
-        <nav>
-          <span>In this article</span>
-          {% include toc.html html=content %}
-        </nav>
-      </li>
+      <p><span>In this article</span></p>
+      <nav>
+        {%- include toc.html html=content %}
+      </nav>
     {%- endif -%}
     {%- if page.series -%}
-      <li class="tag-list">
-        <span>Filed under</span>
-        <ul>
+      <p><span>Filed under</span></p>
+      <ul class="tag-list">
         {%- for cat in page.series -%}
-          <li><a href="/series/{{ cat }}">{{ site.series | where: "category", cat | map: "title" | first }}</a></li>
+          <li><a href="/series/{{ cat }}">{{ site.series | where: "series", cat | map: "title" | first }}</a></li>
         {%- endfor -%}
-        </ul>
-      </li>
+      </ul>
     {%- endif -%}
-    </ul>
   </header>
   <div class="content{% if page.lede %} lede{% endif %}">
   {%- if page.title -%}

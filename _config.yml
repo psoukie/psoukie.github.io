@@ -59,7 +59,6 @@ collections:
       permalink: /series/:title
 
 toc:
-  min_level: 1
   max_level: 3
 
 feed:
