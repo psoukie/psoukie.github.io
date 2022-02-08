@@ -3,6 +3,7 @@ title: Unlocking the Meaning of Genjo Koan
 subtitle: A Discussion and Interlinear Translation of the Essay’s Opening
 started: 2011-05-10
 date: 2022-02-07
+series: life
 image: shobogenzo.jpg
 caption: "1811 edition  of _Shōbōgenzō_, written by Dōgen in 13th century. (Image source: terebess.hu)"
 lede: true
@@ -112,7 +113,7 @@ Notice how Dōgen built the comparison of these elements:
 <style type="text/css">
 	td { padding: .2em 1em; vertical-align: middle; text-align: center; border: var(--border); }
 	tr:nth-child(even) { background-color: inherit; }
-	table { border: none; margin: 1rem;}
+	table { border: none; margin: 1rem 0 1rem 1rem;}
 	tr td { background-color: var(--neutralLighterAlt); }
 	tr.shaded td { background-color: var(--themeLighterAlt); }
 </style>

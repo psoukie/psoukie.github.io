@@ -4,6 +4,7 @@ started: 2008-10-18
 date: 2022-02-04
 summary: |
   "A mix of good mystery, writing and music," would be a correct answer. If you are thinking "What is a schattenjäger?" you will find the answer in the game series written by Jane Jensen. The first game, *Sins of the Fathers*, could not have appeared at a different time.
+series: entertainment
 ---
 
 ![A drawing of Gabriel Knight, the protagonist of the series](../img/gabrielknight.png)

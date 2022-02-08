@@ -3,4 +3,4 @@ title: About
 permalink: /about
 ---
 
-Placeholder text about Angela Cummings and this website.
+Placeholder text about Soukie's Place website and Pavel Soukenik.

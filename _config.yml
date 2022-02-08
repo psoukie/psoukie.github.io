@@ -46,6 +46,7 @@ kramdown:
   math_engine: null
   smart_quotes: [lsquo,rsquo,ldquo,rdquo]
   syntax_highlighter: rouge
+  footnote_backlink: '&#x21A9;&#xFE0E;'
 
 sass:
   style: compressed

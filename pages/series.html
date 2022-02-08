@@ -4,15 +4,15 @@ permalink: /series
 description: A list of all article series on this website.
 ---
 
+<style type="text/css">h3 {display: inline-block;}</style>
+
 {%- for serie in site.series -%}
-<a href="/series/{{serie.category}}"><h2 id='{{ serie.title | slugify }}'>{{ serie.title | strip }}</h2></a>
+<h2 id='{{ serie.title | slugify }}'><a href="/series/{{serie.category}}">{{ serie.title | strip }}</a></h2>
   {%- for note in site.notes -%}
-    {%- if note.categories contains serie.category -%}
+    {%- if note.series contains serie.series -%}
     <details>
 <summary>{% include snippet.html %}</summary>
-      <article>
 {% include snippet.html full=true %}
-      </article>
     </details>
     {%- endif -%}
   {%- endfor -%}

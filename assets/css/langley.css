@@ -186,7 +186,6 @@ body > header, body > footer {
 }
 
 body > header {
-  text-align: center;
   margin-top: 0;
   padding: calc(var(--margin)/2) 0;
   background-color: var(--neutralLighterAlt);
@@ -205,11 +204,6 @@ body > header h1 {
   font-size: calc( var(--sans-ratio) * var(--size-xl));
   margin: 0;
   font-weight: 600;
-}
-
-body > header > nav, article > ul {
-  display: flex;
-  justify-content: space-between;
 }
 
 main header nav { display: block;}
@@ -830,4 +824,213 @@ a.footnote.highlighted::before {
 
 .sidenote.highlighted {
   border-color: var(--neutralTertiaryAlt);
+}
+
+/* Menu */
+
+#MenuBtn {
+  display: none;
+  color: var(--themePrimary);
+  cursor:pointer;
+}
+
+#burgerBtn {
+  border-top:2px solid var(--themePrimary);
+  height:21px;
+  width:30px;
+  box-sizing:border-box;
+  position:absolute;
+  z-index:30;
+  right: var(--margin);
+  top:1.1em;
+  cursor:pointer;
+  transition: all 0.52s;
+}
+
+@media (min-width: 576px) {
+  #burgerBtn {
+    right:3em;
+    top:2em;
+  }
+}
+
+@media (min-width: 992px) {
+  #MenuBtn {
+    display: block;
+  }
+  #burgerBtn {
+    display: none;
+  }
+}
+
+#burgerBtn:before {
+  content:"";
+  display:block;
+  position:absolute;
+  height:2px;
+  width:30px;
+  left:0;
+  background: var(--themePrimary);
+  top:7px;
+  transition: all 0.52s;
+}
+#burgerBtn:after {
+  content:"";
+  display:block;
+  position:absolute;
+  height:2px;
+  width:30px;
+  left:0;
+  background: var(--themePrimary);
+  bottom:0;
+  transition: all 0.52s;
+}
+
+body > header nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body > header nav li {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transition: background-color .52s, opacity .52s, visibility .52s, width .52s, right .52s;
+}
+
+@media (max-width: 991px) {
+  body > header nav li {
+    margin: 2em 0;
+    white-space: nowrap;
+    color: var(--Parchment);
+      background-color: var(--neutralLighter);
+    box-shadow: var(--box-shadow-4);
+    border-radius: var(--border-radius);
+  }
+}
+
+@media (min-width: 992px) {
+  body > header {
+    position: relative;
+    z-index: 50;
+  }
+  body > header nav {
+    position: absolute;
+    text-align: right;
+    right: var(--margin);
+    top: 2.8rem;
+    list-style-type:none;
+    margin: 0;
+    padding:0;
+  }
+  body > header nav ul {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    padding: .5em 0;
+    margin: .5em -20px 0 0;
+    background-color: var(--neutralLighterAlt);
+    box-shadow: var(--box-shadow-8);
+    border-radius: var(--border-radius);
+    transition: visibility .52s, opacity .52s;
+  }
+}
+
+body > header nav li.selected {
+  background-color: var(--themeLighter);
+  font-weight: bold;
+}
+
+body > header nav li a {
+  display: block;
+  padding: .5em 20px;
+  color: var(--themePrimary);
+  a:hover, a:active, a:focus {
+    color: var(--themeTertiary);
+  }
+}
+
+body > header nav li.selected a {
+  color: var(--themeTertiary);
+}
+
+body > header nav {
+  z-index:10;
+  list-style-type:none;
+  margin: 0;
+  padding:0;
+}
+
+@media (max-width: 991px) {
+  body > header nav {
+    position:absolute;
+    right: 3em;
+    list-style-type:none;
+    margin-top: 3em;
+    li {
+      text-align: right;
+      width:0;
+      right: -3rem;
+      & + li {
+        right:-6em;
+        & + li {
+          right:-9em;
+          & + li {
+            right:-12em;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.navigation {
+  > header nav li {
+    visibility: visible;
+    opacity: 1;
+    width:10em;
+    right:0;
+  }
+  #burgerBtn {
+    border-color:transparent;
+    &:before {
+      transform: rotate(45deg);
+      width:33px;
+      left:-2px;
+    }
+    &:after {
+      transform: rotate(135deg);
+      bottom:11px;
+      width:33px;
+      left:-2px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  body > header nav:hover {
+    ul {
+      visibility: visible;
+      height: auto;
+      opacity: 1;
+    }
+    li {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+main {
+  z-index: 30;
+  opacity: 1;
+  visibility:visible;
+  transition: visibility .52s, opacity .52s, transform .52s;
+}
+
+body.navigation main {
+  opacity: 0;
+  transform: scale(0.85) translatey(-7.5%);
+  visibility:hidden;
 }

@@ -14,9 +14,9 @@
     {%- assign notename = note.id -%}
   {%- endif -%}
   {% if include.full %}
-  <a href="{{note.url}}"><h2>{{ notename | markdownify | strip_html }}</h2></a>
+  <h2><a href="{{note.url}}">{{ notename | markdownify | strip_html }}</a></h2>
   {% else %}
-  <a href="{{note.url}}"><h2>{{ notename | markdownify | strip_html }}</h2></a>
+  <h3><a href="{{note.url}}">{{ notename | markdownify | strip_html }}</a></h3>
   {% endif %}
 {%- if include.full -%}
   {% if note.subtitle %}
