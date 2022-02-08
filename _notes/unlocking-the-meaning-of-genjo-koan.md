@@ -1,16 +1,15 @@
 ---
 title: Unlocking the Meaning of Genjo Koan
 subtitle: A Discussion and Interlinear Translation of the Essay’s Opening
-date: 2021-04-11
 started: 2011-05-10
-updated: 2021-04-11
+date: 2022-02-07
 image: shobogenzo.jpg
 caption: "1811 edition  of _Shōbōgenzō_, written by Dōgen in 13th century. (Image source: terebess.hu)"
 lede: true
 toc: true
 ---
 
-Genjo Koan is a key writing in Zen Buddhism and Japanese literature in general. Ten years ago, I wrote an article on the challenges of translating this text to accurately convey its meaning to modern readers. Now, I come back to it to solve two mysteries that eluded me.
+Genjo Koan is a key writing in Zen Buddhism and Japanese literature in general. Ten years ago, I wrote an article on the challenges of translating this text to accurately convey its meaning to modern readers. Now, I come back to it to solve two mysteries that eluded me.<!--more-->
 
 Genjo Koan (_Genjōkōan_) is one of the essays in _Shōbōgenzō_, written by Eihei Dōgen. Dōgen’s writings are notoriously difficult to translate. Japanese, like all languages, has changed a lot since the 13^th^ century. To complicate matters more, Dōgen often stretches the language to its limits and intertwines Chinese characters and quotations in his writing.
 
@@ -200,7 +199,7 @@ I created my own interlinear translation of the opening paragraph in February 20
 >>
 >>      生      あり、    死    あり、  
 >>      life        is,     death    is,
->> 
+>>
 >>    諸 ⠀⠀ 佛    あり、   衆 ⠀生   あり、  
 >>  many buddhas ⠀  are,  mass life     is.
 >>
@@ -212,16 +211,16 @@ I created my own interlinear translation of the opening paragraph in February 20
 >> <br/>^[2]^  
 >> ⠀ ⠀万⠀⠀  法⠀⠀⠀⠀とも⠀に われ⠀に⠀ あらざる⠀⠀⠀時  節、  
 >> myriad things together self⠀  if it is not time period,
->> 
+>>
 >> ⠀  まどひ   なく、 ⠀ さとり   なく、  
 >>  confusion   no, understanding⠀ no,
->> 
+>>
 >>   諸⠀⠀⠀ 佛   なく、   衆⠀ 生   なく、  
 >> many buddhas⠀ no,   mass life⠀   no,
->> 
+>>
 >>     生⠀    なく、    滅    なし。  
 >>     life⠀    no,   perishing⠀  no.
->> 
+>>
 >> <br/>_During the time when all things are stripped of their selves,[^8]  
 >> there is no confusion, no understanding,[^9]  
 >> no enlightened beings, no ordinary beings,  
@@ -230,28 +229,28 @@ I created my own interlinear translation of the opening paragraph in February 20
 >> <br/>^[3]^  
 >>   佛⠀⠀ 道⠀⠀⠀もとより     豐 ⠀⠀⠀儉 ⠀⠀ より⠀⠀ 跳⠀⠀⠀ 出⠀⠀⠀ せる    
 >> buddha way⠀ from origin ⠀abundant frugal⠀ from⠀ leap⠀ above⠀ does
->> 
+>>
 >>  ゆゑに、     生   滅⠀⠀⠀⠀あり、  
 >> therefore   ⠀ life perishing⠀ is,⠀
->> 
+>>
 >>         迷 ⠀⠀⠀⠀ 悟 ⠀⠀ ⠀あり、  
 >>       delusion realization⠀ is,
->> 
+>>
 >>            生⠀⠀⠀佛 ⠀ ⠀あり。  
 >>           life buddha  is.
->> 
+>>
 >> <br/>_The path of Buddha naturally leaps above this abundance and lack,  
 >> so there is birth-perishing,  
 >> there is delusion-realization,  
 >> there are ordinary-enlightened beings._  
->> 
+>>
 >> <br/>^[4]^  
 >> ⠀ しかも    かく⠀の⠀⠀ごとく⠀⠀なり⠀ と⠀ いへども、    
 >> nevertheless⠀ thus⠀⠀⠀⠀⠀like⠀⠀⠀ are⠀⠀⠀⠀although
->> 
+>>
 >> ⠀ 華 ⠀は⠀ 愛 ⠀惜⠀に⠀ちり、 ⠀草⠀は  棄   嫌⠀に⠀おふる⠀のみ ⠀なり。  
 >> flower⠀ love pity⠀⠀ fall,⠀ grass  discard dislike⠀⠀ grow  only be.⠀
->> 
+>>
 >> <br/>_Although it can be said that it is this way,  
 >> it is merely the flowers withering in longing,[^11]  
 >>   the weeds spreading in aversion.[^12]_  

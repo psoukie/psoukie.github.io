@@ -98,8 +98,8 @@
             {% continue %}
         {% endif %}
 
-        {% if firstHeader %}
-          {% assign minHeader = minHeader %} <!-- Pavel Soukenik changed from currLevel on purpose to allow starting with lower headings -->
+        {% if firstHeader and minHeader < currLevel %}
+          {% capture jekyll_toc %}<ul><li>{% endcapture %}
         {% endif %}
 
         {% capture _hAttrToStrip %}{{ _workspace[0] | split: '>' | first }}>{% endcapture %}

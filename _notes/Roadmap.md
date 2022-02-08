@@ -2,8 +2,7 @@
 title: Roadmap
 tags: [roadmap]
 season: spring
-date: 2022-01-20
-updated: 2022-01-27
+started: 2022-01-20
 toc: true
 published: false
 ---
@@ -57,12 +56,14 @@ I am planning the following transforms on Markdown syntax when rendering as HTML
 | Factbox    | `>> `<br />`{: float}`  | `<aside class="box">`       |
 | Quotation  | `> `      | `<blockquote>`              |
 
-Also added `.source` to be used under blockquotes. 
+Also added `.source` to be used under blockquotes.
+
+Also support the `<!--more-->` tag for automated summary.
 
 ## YAML Tricks
 
 - The first paragraph of the article can be formatted as a lede paragraph using YAML `lede: true`
-- The headings in the source Markdown can be shifted by one (h1 to h2 etc.) with `shift-headings: true`
+- The headings in the source Markdown are shifted by one (h1 to h2 etc.) by default, which can be prevented with `preserve-headings: true`
 
 ## Page Structure
 

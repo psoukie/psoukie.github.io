@@ -5,7 +5,8 @@ image: macbook-air.jpg
 caption: (Image by Apple)
 tags: [test]
 series: [life]
-date: 2022-01-17
+started: 2022-01-17
+date: 2022-01-20
 lede: true
 toc: true
 published: false

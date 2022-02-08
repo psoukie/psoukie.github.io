@@ -30,7 +30,8 @@
   {%- if note.summary -%}
       {{ note.summary | markdownify }}
   {%- else -%}
-      {{ note.content | markdownify | strip_html | truncatewords: 50}}
+      {% assign summary = note.content | split: site.excerpt_separator %}
+      {{ summary[0] | markdownify | strip_html | truncatewords: 50}}
   {%- endif -%}
   </div>
   {% if include.read-more %}

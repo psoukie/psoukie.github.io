@@ -340,10 +340,6 @@ header ul li {
   margin-bottom: .3em;
 }
 
-header > ul > li {
-  margin-bottom: 1em;
-}
-
 h1, h2, .subtitle, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -444,7 +440,7 @@ footer {
 p {
   margin: 0;
 }
-p + p, p + .float + p, p + .pullquote + p {
+p + p, nav + p, p + .float + p, p + .pullquote + p {
   margin-top: calc(.5em * var(--leading));
 }
 
@@ -806,6 +802,10 @@ div.stanza {
   display: none;
 }
 
+a.footnote {
+  font-weight: bold;
+}
+
 a.footnote.highlighted {
   color: var(--neutralPrimary);
 }
@@ -816,7 +816,7 @@ a.footnote::before {
   background-color: inherit;
   position: absolute;
   left: -.5em;
-  top: -.5em;
+  top: -.3em;
   width: 1.6em;
   height: 1.6em;
   z-index: -1;
