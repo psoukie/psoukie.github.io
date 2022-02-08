@@ -828,6 +828,11 @@ a.footnote.highlighted::before {
 
 /* Menu */
 
+body > header {
+  position: relative;
+  z-index: 50;
+}
+
 #MenuBtn {
   display: none;
   color: var(--themePrimary);
@@ -848,13 +853,6 @@ a.footnote.highlighted::before {
 }
 
 @media (min-width: 576px) {
-  #burgerBtn {
-    right:3em;
-    top:2em;
-  }
-}
-
-@media (min-width: 992px) {
   #MenuBtn {
     display: block;
   }
@@ -899,7 +897,7 @@ body > header nav li {
   transition: background-color .52s, opacity .52s, visibility .52s, width .52s, right .52s;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 575px) {
   body > header nav li {
     margin: 2em 0;
     white-space: nowrap;
@@ -910,11 +908,7 @@ body > header nav li {
   }
 }
 
-@media (min-width: 992px) {
-  body > header {
-    position: relative;
-    z-index: 50;
-  }
+@media (min-width: 576px) {
   body > header nav {
     position: absolute;
     text-align: right;
@@ -962,7 +956,7 @@ body > header nav {
   padding:0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 575px) {
   body > header nav {
     position:absolute;
     right: 3em;
