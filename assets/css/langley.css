@@ -979,31 +979,33 @@ body > header nav {
   }
 }
 
-body.navigation {
-  > header nav li {
-    visibility: visible;
-    opacity: 1;
-    width:10em;
-    right:0;
-  }
-  #burgerBtn {
-    border-color:transparent;
-    &:before {
-      transform: rotate(45deg);
-      width:33px;
-      left:-2px;
+@media (max-width: 575px) {
+  body.navigation {
+    > header nav li {
+      visibility: visible;
+      opacity: 1;
+      width:10em;
+      right:0;
     }
-    &:after {
-      transform: rotate(135deg);
-      bottom:11px;
-      width:33px;
-      left:-2px;
+    #burgerBtn {
+      border-color:transparent;
+      &:before {
+        transform: rotate(45deg);
+        width:33px;
+        left:-2px;
+      }
+      &:after {
+        transform: rotate(135deg);
+        bottom:11px;
+        width:33px;
+        left:-2px;
+      }
     }
   }
 }
 
-@media (min-width: 992px) {
-  body > header nav:hover {
+@media (min-width: 576px) {
+  body > header nav:hover, body.navigation > header nav {
     ul {
       visibility: visible;
       height: auto;
