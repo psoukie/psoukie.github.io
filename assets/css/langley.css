@@ -847,12 +847,12 @@ body > header {
   position:absolute;
   z-index:30;
   right: var(--margin);
-  top:1.1em;
+  top: 35%;
   cursor:pointer;
   transition: all 0.52s;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   #MenuBtn {
     display: block;
   }
@@ -897,7 +897,7 @@ body > header nav li {
   transition: background-color .52s, opacity .52s, visibility .52s, width .52s, right .52s;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   body > header nav li {
     margin: 2em 0;
     white-space: nowrap;
@@ -908,7 +908,7 @@ body > header nav li {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   body > header nav {
     position: absolute;
     text-align: right;
@@ -956,7 +956,7 @@ body > header nav {
   padding:0;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   body > header nav {
     position:absolute;
     right: 3em;
@@ -979,7 +979,7 @@ body > header nav {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   body.navigation {
     > header nav li {
       visibility: visible;
@@ -1004,7 +1004,7 @@ body > header nav {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   body > header nav:hover, body.navigation > header nav {
     ul {
       visibility: visible;
