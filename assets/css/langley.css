@@ -163,6 +163,7 @@ h4 {
 
 table {
   font-size: calc(var(--sans-ratio) * 1em);
+  display: inline-block;
 }
 
 /* Document layout */
@@ -550,7 +551,12 @@ a {
 }
 
 ul, ol {
+  margin-left: 1em;
   padding-left: 1em;
+}
+
+li {
+  margin-bottom: calc(.3em * var(--leading));
 }
 
 /* Figures */
@@ -573,8 +579,13 @@ figcaption, .source {
 }
 
 figcaption {
-  font-size: calc(var(--sans-ratio) * var(--size-s));
+  font-size: calc(var(--sans-ratio) * var(--size-m));
   text-align: center;
+}
+
+figcaption small {
+  font-size: calc(var(--sans-ratio) * var(--size-s));
+  display: block;
 }
 
 .source {
