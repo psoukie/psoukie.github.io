@@ -60,6 +60,8 @@ Also added `.source` to be used under blockquotes.
 
 Also support the `<!--more-->` tag for automated summary.
 
+Document `{:.float.edge}` and widths using `{:.w15}` etc.
+
 ## YAML Tricks
 
 - The first paragraph of the article can be formatted as a lede paragraph using YAML `lede: true`
@@ -98,23 +100,24 @@ So here is what I need to do:
 
 - [X] Install Pico.css
 - Build basic theme structure:
-	- [ ] basic header without menu
+	- [x] basic header without menu
 	- [X] index page (list of articles / recent changes)
 - [X] Theme colors and dynamic font size
-- [ ] CSS styles based on  Fluid design
+- [x] CSS styles based on  Fluid design
 - [X] Create Markdown conversions (fact boxes, pull quotes)
-- [ ] Markup conversion or formatting for image captions
+- [x] Markup conversion or formatting for image captions
 - [X] Build support for footnotes / sidenotes
-- [ ] Fix bug footnotes when reloading
+- [x] Fix bug footnotes when reloading
 
 
 ### V.2
 - [ ] SEO
+- [ ] Update documentation
 - [ ] Feed
 - [ ] Simplify and fix sidenotes.js
 - [ ] Tidy up CSS styles and ensure design compliance
 - [ ] Comments
 - [ ] Search feature
 - [ ] tags page
-- [ ] categories page(s) - borrow from cxogrow
+- [x] categories page(s) - borrow from cxogrow
 - [ ] Anonymized traffic tracking
