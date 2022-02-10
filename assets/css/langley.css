@@ -511,6 +511,10 @@ aside.pullquote {
   color: var(--themeTertiary);
 }
 
+aside.pullquote em {
+  font-style: normal;
+}
+
 /* When div.box follows headline (optionally with a strapline or image), format it as a lede paragraph  */
 .content.lede > p:first-of-type {
   color: var(--neutralPrimaryAlt);
@@ -692,13 +696,12 @@ pre, code, kbd {
   font-weight: 400 !important;
 }
 
-code {
-  padding: 0 .2em;
-}
-
-kbd {
+code, kbd {
   padding: 0 .25em;
+  margin: 0 .1em;
   border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--neutralLighter);
 }
 
 pre code {

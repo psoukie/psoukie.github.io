@@ -6,14 +6,16 @@ date: 2022-02-08
 series: entertainment
 image: hive-photo.jpg
 toc: true
+series: entertainment
+summary: "This notation system fulfills the following goals: (1) Games that are mirrored, rotated or played with reversed colors have identical notations. (2) Pieces of the same kind do not need to be tracked. (3) Every move has only one notation."
 ---
 
 A consistent notation system plays a key role in the practice and study of board games. The direction-based notation for Hive was created to fulfill the following goals:
 
 1. Games that are mirrored, rotated or played with reversed colors all have identical notations.
 2. Pieces of the same kind do not need to be tracked.
-3. Moves are easy to record and replay for human players and computers.
-4. Every move has only one notation.
+3. Every move has only one notation.
+4. Moves are easy to record and replay for human players and computers.
 
 These goals are even more important when studying openings where -- save for transpositions in move order -- this system produces identical notation. This is true regardless of which color moves first, rotations and mirroring.
 
@@ -232,7 +234,7 @@ Shaded pieces indicate transition moves that occurred within the numbered sequen
 | Move | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |  20. | A2×Qn    | G+S1n    |
-|  21. | G+A3m    | L×Qf     | 
+|  21. | G+A3m    | L×Qf     |
 |  22. | ×Mr      |          |
 
 ![diagram](../img/hive-7.png){:.w18}
@@ -245,7 +247,7 @@ Numbers above 20 in the diagram omit the first digit: ① means 21; ② means 22
 | ----:| -------- | -------- |
 |  22. |          | B2n      |
 |  23. | L×Qf     | Pr       |
-|  24. | A1×B2a   | G1m      | 
+|  24. | A1×B2a   | G1m      |
 
 ![diagram](../img/hive-8.png){:.w20}
 {:.float}
@@ -265,7 +267,7 @@ Numbers above 20 in the diagram omit the first digit: ① means 21; ② means 22
 
 | Move | Player 1 | Player 2 |
 | ----:| -------- | -------- |
-|  28. | M×Qf     | M×Qa     | 
+|  28. | M×Qf     | M×Qa     |
 
 ## Second Example
 
@@ -275,7 +277,7 @@ This example was transcribed from [2019 Brilliancy Award Game One](https://www.y
 >> Player 2: **Christian Galeas**  
 >> Date: **May 12, 2019**  
 >> Tournament: **2019 BoardSpace.net Online World Championship**
- 
+
 | Move | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |   1. | L        | L        |
@@ -309,5 +311,5 @@ This example was transcribed from [2019 Brilliancy Award Game One](https://www.y
 * * *
 
 >> ## Why This Article
->> 
+>>
 >> In 2019, I played the Hive game with my children remotely and we used the directions concept to communicate the moves. Although I notated the two example games given above, I haven’t had time until now to formally write down the notation principles.
