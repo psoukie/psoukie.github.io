@@ -2,18 +2,18 @@
 title: Direction-Based Notation for Hive
 subtitle: A Thematic Symmetrical Notation System for the Hive Board Game
 started: 2021-04-07
-date: 2022-02-08
+date: 2022-02-10
 series: entertainment
 image: hive-photo.jpg
 toc: true
 series: entertainment
-summary: "This notation system fulfills the following goals: (1) Games that are mirrored, rotated or played with reversed colors have identical notations. (2) Pieces of the same kind do not need to be tracked. (3) Every move has only one notation."
+summary: "This notation system fulfills the following goals: (1) Games that are mirrored, rotated or played with reversed colors have identical notations. (2) Pieces of the same kind do not need to be tracked to be told apart. (3) Every move has only one notation."
 ---
 
 A consistent notation system plays a key role in the practice and study of board games. The direction-based notation for Hive was created to fulfill the following goals:
 
 1. Games that are mirrored, rotated or played with reversed colors all have identical notations.
-2. Pieces of the same kind do not need to be tracked.
+2. Pieces of the same kind do not need to be tracked to be told apart.
 3. Every move has only one notation.
 4. Moves are easy to record and replay for human players and computers.
 
@@ -22,17 +22,21 @@ These goals are even more important when studying openings where -- save for tra
 ![two symmetrical games of Hive](../img/hive-symmetry.png)
 The sequence of play in these two games is identical. Using the direction-based system, their notation is identical too.
 
-The notation uses directions which are thematically derived from the movement of the sun. This choice was made because it both achieves the stated goals, and it also thematically fits the way bees communicate and navigate in nature.
+The notation uses directions which are based on the movement of the sun. This choice was made because it both achieves the stated goals, and it also thematically fits the way bees communicate and navigate in nature.
 
 ## Notation Examples
 
-The notation identifies the piece being moved and its destination. The destination is notated using either a direction or a ‘reference piece’ and a direction. Let’s take a look at what the notation looks like before we look at the details:
+The notation identifies the piece being moved and its destination. The destination is notated using either only a direction or a ‘reference piece’ and a direction.
 
--   **Ba** means the Beetle moves in the afternoon direction.
--   **M+Qn** means the Mosquito is placed to Queen Bee’s noon side.
--   **A2×Pm** means the second Soldier Ant moves against opponent’s Pillbug’s midnight side.
+>> Before we go into the details, here are examples of what the notation looks like:
+>>
+>> -   **Ba** means the Beetle[^details] moves to a destination in the afternoon direction (which could involve climbing up or down).
+>> -   **M+Qn** means the Mosquito is placed to a destination on Queen Bee’s noon side.
+>> -   **A2×Pm** means the second Soldier Ant moves against opponent’s Pillbug’s midnight side.
 
 This article explains the rules for the notation and includes two example games.
+
+[^details]: More accurately, **B** means the only visible Beetle in the Hive of the player whose turn it is.
 
 # Foundations
 
@@ -73,7 +77,7 @@ Clockwise (top), and counterclockwise (bottom) assignment of directions.
 -   **r**: sunrise
 -   **f**: forenoon
 
-When directions are assigned clockwise, the sun moves as observed in the Northern hemisphere. When counterclockwise, the directions correspond to the sun's movement in the Southern hemisphere.
+>> When directions are assigned clockwise, the sun moves as observed in the Northern hemisphere. When counterclockwise, the directions correspond to the sun's movement in the Southern hemisphere.
 
 ### Determining the Directions
 
@@ -82,7 +86,7 @@ The first turn by the two players determines noon and midnight directions as fol
 The remaining directions are assigned when either player places or moves a piece to a space that is not in the noon or midnight direction from other pieces in the Hive. The clockwise or anticlockwise order of direction is selected so that the new space will be in the afternoon or sunset direction from all the other pieces.
 
 ![Establishing directions](../img/hive-est-directions.png){:.w25}
-First player opened with Ladybug, and when the second player placed the Pillbug, she established the noon and midnight directions. The Queen Bee was the first to be placed in a different direction. This established the remaining directions so that the new space would be in afternoon/sunset direction from other pieces.
+First player opened with Ladybug, and when the second player placed the Pillbug, she established the noon and midnight directions. Later, Queen Bee was the first to be placed in a different direction, establishing the remaining directions so that it is in an afternoon or sunset direction from other pieces.
 
 Once the directions are established, they stay fixed for the rest of the game, even if the first two pieces were to move.
 
@@ -92,7 +96,9 @@ The notation records which piece is being moved (**moved piece**) on a player’
 
 ## Moved Piece
 
-A “moved piece” is the piece being physically moved. This means that pieces that are being placed into the Hive and opponent’s pieces moved using the Pillbug special ability are also considered “moved pieces.”
+A “moved piece” is the piece being physically moved.
+
+>> This means that pieces that are being placed into the Hive and opponent’s pieces moved using the Pillbug special ability are also considered “moved pieces.”
 
 The moved piece is notated using the Piece Notation, below.
 
@@ -100,11 +106,11 @@ The moved piece is notated using the Piece Notation, below.
 
 Piece Notation identifies a specific piece as follows:
 
-1.  If the piece belongs to the opponent, notate **×** (multiplication sign, or lower-case letter **x**).
-2.  Notate the abbreviation of the piece. (See **Pieces** above.)
-3.  If the piece is not the only one of the same color and kind visible (uncovered) in the Hive, notate a number (1, 2, or 3) as assigned to the piece among the identical pieces using the **counting** method (see below).[^placement]
+1.  If the piece belongs to the opponent, the piece notation starts with **×** (multiplication sign, or lower-case letter **x**).
+2.  It always contains the abbreviation of the piece. (See **Pieces** above.)
+3.  If the piece is not the only one of the same color and kind visible (uncovered) in the Hive,[^placement] it is followed by a number (1, 2 or 3) as assigned to the piece among the identical pieces using the **[counting](#counting)** method (see below).
 
-[^placement]: Note that when placing a piece into the Hive, the numbering part of the notation is not used for that piece.
+[^placement]: Note that this means that when placing a piece into the Hive, the numbering part of the notation is not used for that piece.
 
 ## Counting
 
@@ -115,9 +121,9 @@ The chart on the left illustrates the general order of counting. The right examp
 
 ## Direct Destination
 
-If the destination is next to the moved piece or the moved piece is a Grasshopper using its regular move, the destination is notated using only the abbreviation of the direction of the move. In other cases, use the referenced destination below.[^grasshopper]
+If the destination is next to the moved piece or the moved piece is a Grasshopper using its regular move, the destination is notated using only the abbreviation of the direction of the move. In other cases, use the [referenced destination](#fererenced-destination) below.
 
-[^grasshopper]: Note that this means a Mosquito mimicking a Grasshopper is not notated using direct destination.
+>> Note that this means a move with a Soldier Ant to a space next to it is notated using direct destination. It also means that a move with a Mosquito mimicking a Grasshopper is not notated using direct destination.
 
 ## Referenced Destination
 
@@ -144,9 +150,9 @@ To determine the reference piece from the pieces next to the destination, choose
 
 ## Canonical Notation
 
-Although many moves can be recorded in an even more abbreviated form, the remaining redundancy was left in the notation on purpose: it makes the notation easy to read and record, and it makes it more resistant to errors.
+Although many moves could be recorded in an even more abbreviated form, the remaining redundancy was left in the notation on purpose. It makes the notation easy to read and record, and it makes it more resistant to errors.
 
-In non-canonical notation, it is possible to leave out some parts of the notation (piece numbering, reference, or direction) or choose a different reference piece, provided that the notation still describes only one legal turn.
+In non-canonical notations, it is possible to leave out some parts of the notation (piece numbering, reference, or direction) or choose a different reference piece, provided that the notation still describes only one legal turn.
 
 * * *
 
@@ -161,7 +167,7 @@ The following game was transcribed from [2019 Brilliancy Award Game Two](https:/
 >> Date: **September 8, 2019**  
 >> Tournament: **2019 BoardSpace.net Online World Championship**
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |   1. | L        | P        |
 |   2. | M+Lm     | A+Pn     |
@@ -174,7 +180,7 @@ The following game was transcribed from [2019 Brilliancy Award Game Two](https:/
 The diagram shows the position after the first player’s fourth turn.
 {: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |   4. |          | A×Mm     |
 |   5. | A+Pa     | A+Qa     |
@@ -187,7 +193,7 @@ The diagram shows the position after the first player’s fourth turn.
 Shaded pieces indicate transition moves that occurred within the numbered sequence.
 {: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |   8. | Ba       | MQs      |
 |   9. | Qs       | A2×Qs    |
@@ -198,7 +204,7 @@ Shaded pieces indicate transition moves that occurred within the numbered sequen
 
 <br/>{: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |  11. | A+Lr     | Bf       |
 |  12. | A2×Qn    | Bn       |
@@ -209,7 +215,7 @@ Shaded pieces indicate transition moves that occurred within the numbered sequen
 
 <br/>{: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |  14. | A+Lr     | Gn       |
 |  15. | A1×A2m   | S+Pf     |
@@ -221,7 +227,7 @@ Shaded pieces indicate transition moves that occurred within the numbered sequen
 
 <br/>{: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |  18. | A1×B1a   | Gm       |
 |  19. | A2×A1a   | L+S2m    |
@@ -231,7 +237,7 @@ Shaded pieces indicate transition moves that occurred within the numbered sequen
 
 <br/>{: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |  20. | A2×Qn    | G+S1n    |
 |  21. | G+A3m    | L×Qf     |
@@ -243,7 +249,7 @@ Shaded pieces indicate transition moves that occurred within the numbered sequen
 Numbers above 20 in the diagram omit the first digit: ① means 21; ② means 22.
 {: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |  22. |          | B2n      |
 |  23. | L×Qf     | Pr       |
@@ -254,7 +260,7 @@ Numbers above 20 in the diagram omit the first digit: ① means 21; ② means 22
 
 <br/>{: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |  25. | L×Pr     | S1s      |
 |  26. | Bm       | G1s      |
@@ -265,7 +271,7 @@ Numbers above 20 in the diagram omit the first digit: ① means 21; ② means 22
 
 <br/>{: style="clear:both;"}
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |  28. | M×Qf     | M×Qa     |
 
@@ -278,7 +284,7 @@ This example was transcribed from [2019 Brilliancy Award Game One](https://www.y
 >> Date: **May 12, 2019**  
 >> Tournament: **2019 BoardSpace.net Online World Championship**
 
-| Move | Player 1 | Player 2 |
+| Turn | Player 1 | Player 2 |
 | ----:| -------- | -------- |
 |   1. | L        | L        |
 |   2. | A+Lm     | M+Ln     |

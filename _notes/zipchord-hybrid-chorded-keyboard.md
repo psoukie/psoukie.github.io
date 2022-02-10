@@ -1,5 +1,5 @@
 ---
-title: ZipChord Hybrid Chorded Keyboard
+title: "ZipChord: Hybrid Chorded Keyboard"
 subtitle: Faster and More Comfortable Typing
 image: ZipChord-chart.png
 caption: "Frequency of the top 100 most used words in 'The Lord of the Rings,' demonstrating Zipf's law in action. The most frequent word makes up 6% of all words in the text."

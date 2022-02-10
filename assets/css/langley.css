@@ -489,6 +489,7 @@ blockquote {
 } */
 
 .box {
+  overflow: hidden;
   box-shadow: var(--box-shadow-4);
   margin: calc(1em * var(--leading)) 0;
   padding: 1em;
@@ -583,7 +584,7 @@ figure > img {
 }
 
 .float > img {
-  width: calc( 1.1 * var(--float-width) );
+  width: var(--float-width);
 }
 
 img {

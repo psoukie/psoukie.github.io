@@ -7,7 +7,7 @@ summary: |
 series: entertainment
 ---
 
-![A drawing of Gabriel Knight, the protagonist of the series](../img/gabrielknight.png){:.w15}
+![A drawing of Gabriel Knight, the protagonist of the series](../img/gabrielknight.png)
 A portrait of Gabriel Knight, the protagonist of the series
 {: .float}
 
