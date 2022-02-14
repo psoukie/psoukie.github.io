@@ -591,6 +591,7 @@ img {
   width: 100%;
 }
 
+
 img.full {
   width: calc( 100% + 2 * var(--margin));
   margin-left: calc( -1 * var(--margin));
