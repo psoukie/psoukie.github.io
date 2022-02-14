@@ -591,6 +591,11 @@ img {
   width: 100%;
 }
 
+img.full {
+  width: calc( 100% + 2 * var(--margin));
+  margin-left: calc( -1 * var(--margin));
+}
+
 figcaption, .source {
   color: var(--neutralPrimaryAlt);
   font-family: var(--font-family-sans);
@@ -598,7 +603,7 @@ figcaption, .source {
 }
 
 figcaption {
-  font-size: calc(var(--sans-ratio) * var(--size-m));
+  font-size: calc(var(--sans-ratio) * var(--size-s));
   text-align: center;
 }
 

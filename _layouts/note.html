@@ -27,14 +27,14 @@ layout: default
   </header>
   <div class="content{% if page.lede %} lede{% endif %}">
   {%- if page.title -%}
-    <h1>{{ page.title | markdownify | strip_html }}</h1>
+    <h1>{{ page.title | markdownify }}</h1>
     {%- if page.subtitle -%}
-    <div class="subtitle">{{ page.subtitle | markdownify | strip_html }}</div>
+    <div class="subtitle">{{ page.subtitle | markdownify }}</div>
     {%- endif -%}
   {%- endif -%}
   {%- if page.image -%}
     <figure>
-      <img src="/img/{{ page.image }}" alt="featured image" />
+      <img src="/img/{{ page.image }}" {% if page.image-format %}class="{{ page.image-format }}"{% endif %}   alt="featured image" />
       {%- if page.caption -%}
         <figcaption>{{ page.caption | markdownify }}</figcaption>
       {%- endif -%}

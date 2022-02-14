@@ -60,7 +60,7 @@ Also added `.source` to be used under blockquotes.
 
 Also support the `<!--more-->` tag for automated summary.
 
-Document `{:.float.edge}` and widths using `{:.w15}` etc.
+Document `{:.float.edge}` and widths using `{:.w15}` etc., and also image-format YAML (only 'full' defined now but it attaches the keyword as CSS class).
 
 ## YAML Tricks
 
