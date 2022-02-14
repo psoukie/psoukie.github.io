@@ -7,7 +7,6 @@ series: life
 image: shobogenzo.jpg
 caption: "1811 edition  of _Shōbōgenzō_, written by Dōgen in 13th century. (Image source: terebess.hu)"
 lede: true
-toc: true
 ---
 
 Genjo Koan is a key writing in Zen Buddhism and Japanese literature in general. Ten years ago, I wrote an article on the challenges of translating this text to accurately convey its meaning to modern readers. Now, I come back to it to solve two mysteries that eluded me.<!--more-->

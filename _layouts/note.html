@@ -10,12 +10,12 @@ layout: default
     {%- if page.started -%}
       <p><span>Started</span> {{ page.started | date: "%B %e, %Y"}}</p>
     {%- endif -%}
-    {%- if page.toc -%}
+    {%- unless page.no-toc -%}
       <p><span>In this article</span></p>
       <nav>
         {%- include toc.html html=content %}
       </nav>
-    {%- endif -%}
+    {%- endunless -%}
     {%- if page.series -%}
       <p><span>Filed under</span></p>
       <ul class="tag-list">

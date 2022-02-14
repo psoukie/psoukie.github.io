@@ -1,12 +1,11 @@
 ---
 title: Originality and Ownership in Digital Art  
-series: [arts, technology]
+series: [entertainment, technology]
 tags: [art, cryptoart, NFT, analog, digital]
 image: quantized-starry-night.jpg
 caption: (_Quantized Starry Night_, source image from puzzlewarehouse.com, edited by Pavel Soukenik)
 started: 2021-03-18
 date: 2022-01-25
-toc: true
 lede: true
 ---
 

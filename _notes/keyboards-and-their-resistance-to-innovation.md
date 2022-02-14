@@ -9,7 +9,6 @@ date: 2022-01-29
 started: 2010-05-09
 lede: true
 shift-headings: true
-toc: true
 ---
 
 The typewriter was invented around the same time as the telephone, but while phones have changed beyond all recognition, the keyboards of today look substantially the same as when they first made their entrance.<!--more-->
@@ -107,13 +106,19 @@ Really ergonomic designs further modify the relative distances of keys between d
 
 Laptops contend with constrained space so it’s understandable if the two halves of the keyboard are not angled. It is shocking though that as of 2021, there is not a single laptop on the market that would have an ortholinear layout as opposed to the anti-ergonomic staggered layout.
 
+## Stenography and Chorded Keyboards
+
+An alternative method of inputting text which deserves its own article is stenography. Stenography is a very efficient -- but much harder to learn -- way of entering text because whole words can be formed by simultaneous presses of 'chords' of keys.
+
+Stenography typically uses specialized keyboards but there are software emulations for PCs. Exploring this topic eventually led me to an idea of a [hybrid keyboard entry](zipchord-hybrid-chorded-keyboard.md) which combines chords for frequent words with regular typing.
+
 # Looking into the Future
 
 Christopher Sholes died in 1890; typewriters were on the rise and opening employment opportunities for women. My grandmother’s old typewriter that I first learned to type on was built just before August Dvorak designed the Simplified Keyboard. Dvorak died in 1975 — two years before home computers would allow people to switch keyboard layouts at will. His contribution is now almost forgotten. The use of his keyboard was recently estimated at around two thousand people worldwide.
 
-We are looking at a real possibility that the primary input method is going to transfer from keyboards to voice without the keyboard having ever really evolved at all in close to 150 years.
+We are looking at a real possibility that the primary input method is going to transfer from keyboards to voice without the keyboard having evolved much at all in close to 150 years.
 
-I speculate that the fear that people would not want to adapt to a change in something complex like a keyboard combined with the lack of a sustained push from a real innovator in modern times that separates the success of evolution in phone interfaces from the stagnation of keyboards.
+I speculate that the fear that people would not want to adapt to a change in something complex like a keyboard combined with the lack of a sustained push from a real innovator is what separates the success of evolution in phone interfaces from the stagnation of keyboards.
 
 Our software products are developed in constant innovation but largely using keyboards that are pre-historic in comparison. The least we should do is demand that manufacturers start building keyboards and laptops with physical layouts that take at least a tiny step toward innovation and ergonomics.
 

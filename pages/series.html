@@ -7,7 +7,7 @@ description: A list of all article series on this website.
 <style type="text/css">h3 {display: inline-block;}</style>
 
 {%- for serie in site.series -%}
-<h2 id='{{ serie.title | slugify }}'><a href="/series/{{serie.category}}">{{ serie.title | strip }}</a></h2>
+<h2 id='{{ serie.title | slugify }}'><a href="/series/{{serie.series}}">{{ serie.title | strip }}</a></h2>
   {%- for note in site.notes -%}
     {%- if note.series contains serie.series -%}
     <details>

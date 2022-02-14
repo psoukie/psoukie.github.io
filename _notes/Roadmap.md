@@ -3,7 +3,6 @@ title: Roadmap
 tags: [roadmap]
 season: spring
 started: 2022-01-20
-toc: true
 published: false
 ---
 
@@ -66,6 +65,7 @@ Document `{:.float.edge}` and widths using `{:.w15}` etc., and also image-format
 
 - The first paragraph of the article can be formatted as a lede paragraph using YAML `lede: true`
 - The headings in the source Markdown are shifted by one (h1 to h2 etc.) by default, which can be prevented with `preserve-headings: true`
+- `no-toc: true` prevents toc 
 
 ## Page Structure
 

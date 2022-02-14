@@ -5,7 +5,6 @@ started: 2021-04-07
 date: 2022-02-10
 series: entertainment
 image: hive-photo.jpg
-toc: true
 series: entertainment
 summary: "This notation system fulfills the following goals: (1) Games that are mirrored, rotated or played with reversed colors have identical notations. (2) Pieces of the same kind do not need to be tracked to be told apart. (3) Every move has only one notation."
 ---

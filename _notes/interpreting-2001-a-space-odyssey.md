@@ -4,11 +4,10 @@ subtitle: How Intentional Ambiguity Leads to Richer Interpretations
 image: 2001-white-room.jpg
 image-format: full
 caption: "The last scene with the monolith in _2001: A Space Odyssey._ (Image copyright Warner Bros. Entertainment)"
-series: art
+series: entertainment
 started: 2021-08-19
 date: 2022-02-13
 lede: true
-toc: true
 ---
 
 The impenetrable black monolith in Stanley Kubrick’s _2001: A Space Odyssey_ neatly encapsulates the qualities of the whole film. Its meaning is as opaque as its surface. The ambiguity of its function is the complete opposite of its clearly defined form.
