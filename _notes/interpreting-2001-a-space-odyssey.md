@@ -4,6 +4,7 @@ subtitle: How Intentional Ambiguity Leads to Richer Interpretations
 image: 2001-white-room.jpg
 image-format: full
 caption: "The last scene with the monolith in _2001: A Space Odyssey._ (Image copyright Warner Bros. Entertainment)"
+series: art
 started: 2021-08-19
 date: 2022-02-13
 lede: true
@@ -113,8 +114,8 @@ The effect is not dissimilar to the Troxler effect illustrated here. The above i
 ## … or Breath
 
 In _2001: A Space Odyssey_, the sound of breathing is prominent through pivotal parts of the film. Some meditation techniques use breath as an object of focus. Whether we pay attention to it or not, breathing is always there. We can consciously control it or let it happen on its own, but it is present as long as we live.
-	
-![Still image of the Dave Bowman in 2001](/img/2001-bowman.jpg)
+
+![Still image of Dave Bowman in 2001](/img/2001-bowman.jpg)
 
 Obviously, there are differences between all these. The breath and the monolith have a concrete physical presence. The optical illusion disappears in our mind while not disappearing literally. A koan or a silent mantra can fade from our consciousness and completely disappear for a time. On the other hand, the monolith is unchanging, opaque, and uniform. But if we look at it up close, it does disappear.
 
