@@ -3,4 +3,4 @@ title: About
 permalink: /about
 ---
 
-Placeholder text about Soukie's Place website and Pavel Soukenik.
+Placeholder text about Soukie website and Pavel Soukenik.

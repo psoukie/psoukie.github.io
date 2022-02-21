@@ -336,6 +336,15 @@ header ul li {
 
 h1, h2, .subtitle, h3, h4, h5, h6 {
   margin: 0;
+  em {
+    font-style: normal;
+  }
+  em::before {
+    content: "‘";
+  }
+  em::after {
+    content: "’";
+  }
 }
 
 h1, h3, .subtitle {
@@ -362,10 +371,6 @@ h1 {
   text-align: center;
 }
 
-h1 + figure.float {
-  margin-top: 0;
-}
-
 .subtitle {
   color: var(--themeDarker);
   font-size: calc(var(--sans-ratio) * var(--size-l));
@@ -376,6 +381,14 @@ h1 + figure.float {
 
 .subtitle + figure, h1 + figure {
   margin-top: -1em;
+}
+
+h1 + figure.float {
+  margin-top: 0;
+}
+
+figure + h2 {
+  margin-top: 1em;
 }
 
 h2 {
@@ -389,8 +402,13 @@ h3 {
 }
 
 h3, h4, h5, h6 {
-  margin-top: calc(1rem * var(--leading));
+  margin-top: 1rem;
 }
+
+h2 + h3 {
+  margin-top: .5rem;
+}
+
 
 @media (min-width: 576px) {
   h2 {
@@ -579,7 +597,7 @@ figure {
   width: auto;
 }
 
-figure > img {
+figure img {
   object-fit: contain;
 }
 
@@ -677,10 +695,8 @@ figcaption small {
 }
 
 article {
-  box-shadow: var(--box-shadow-4);
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  margin: calc(2em * var(--leading)) 0;
+  padding: calc(2em * var(--leading)) 1rem;
+  border-bottom: var(--border);
 }
 
 article > ul {

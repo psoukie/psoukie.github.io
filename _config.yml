@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Soukie’s Place
+title: Soukie
 name: Pavel Soukenik
 email: pavel@soukie.net
 description: A collection of articles and posts by Pavel Soukenik.

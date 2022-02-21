@@ -1,11 +1,11 @@
 {%- if include.full -%}
 <article>
   {%- if note.image -%}
-    <a href='{{note.url}}'>
-      <figure>
+    <figure>
+      <a href='{{note.url}}'>
         <img src='/img/{{ note.image }}' alt='featured image' />
-      </figure>
-    </a>
+      </a>
+    </figure>
   {%- endif -%}
 {%- endif -%}
   {% if note.title != "" %}
@@ -14,16 +14,16 @@
     {%- assign notename = note.id -%}
   {%- endif -%}
   {% if include.full %}
-  <h2><a href="{{note.url}}">{{ notename | markdownify | strip_html }}</a></h2>
+  <h2><a href="{{note.url}}">{{ notename | markdownify }}</a></h2>
   {% else %}
-  <h3><a href="{{note.url}}">{{ notename | markdownify | strip_html }}</a></h3>
+  <h3><a href="{{note.url}}">{{ notename | markdownify }}</a></h3>
   {% endif %}
 {%- if include.full -%}
   {% if note.subtitle %}
     {% if include.full %}
-    <h3>{{ note.subtitle | markdownify | strip_html }}</h3>
+    <h3>{{ note.subtitle | markdownify }}</h3>
     {% else %}
-    <h4>{{ note.subtitle | markdownify | strip_html }}</h4>
+    <h4>{{ note.subtitle | markdownify }}</h4>
     {% endif %}
   {% endif %}
   <div>
