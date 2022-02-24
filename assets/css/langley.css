@@ -467,7 +467,7 @@ a:focus {
 
 }
 
-a[href*="//"]:not([href*="soukie.net"])::after {
+a[href*="//"]:not([href*="pavelsoukenik.com"])::after {
   content: "↗\FE0E";
   position: relative;
   font-size: 70%;

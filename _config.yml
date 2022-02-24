@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Soukie
+title: Pavel Soukenik
 name: Pavel Soukenik
 email: pavel@soukie.net
 description: A collection of articles and posts by Pavel Soukenik.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://soukie.net # the base hostname & protocol for your site, e.g. http://example.com
+url: https://pavelsoukenik.com # the base hostname & protocol for your site, e.g. http://example.com
 copyright_name: MIT
 encoding: utf-8
 
