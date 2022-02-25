@@ -9,13 +9,13 @@ lede: true
 summary: Putin's full-scale invasion of Ukraine prompted me to revisit what I wrote three years after Garry Kasparov retired from professional chess to pursue his fight for Russian democracy -- a fight which has only grown in importance.
 ---
 
->> Putin's full-scale invasion of Ukraine prompted me to revisit this article which I wrote in 2008. Since then, many more people were imprisoned, assassinated and killed under Putin's regime.
+>> Putin's full-scale invasion[^different] of Ukraine prompted me to revisit this article which I wrote in 2008. Since then, many more people were imprisoned, assassinated and killed under Putin's regime.
 >>
 >> The past (and a very grim specific past) is not as far as it seems: 1980 is only as distant from today as 1938 was from 1980.
 >>
 >> I believe we allow bad things to happen because we forget too easily and we avoid inconveniences. But we are not powerless, which is something I will elaborate on in my next post.
 
-[^different]: That history books will need to differentiate between Putin's first invasion of Ukraine and annexation of Crimea in 2014 and this large-scale invasion of 2022 is a reason enough for a pause.
+[^different]: That history books will need to differentiate between Putin's first invasion of Ukraine and annexation of Crimea in 2014 and this second invasion of 2022 is a reason enough for a pause.
 
 Considered the strongest chess player of all time, Garry Kasparov retired from professional chess in 2005. After having achieved everything a chess player could,[^master] he put his focus on Russian politics. His possibly toughest match yet.
 
@@ -58,4 +58,4 @@ Does Kasparov recognize that the analogy between politics and chess is limited? 
 
 For more historical context and observations that are no less relevant today, you can check out this 8-minute [interview with Gary Kasparov](https://www.youtube.com/watch?v=40tzSCSrdJI) conducted by Bill Maher in 2007 during Kasparov's presidential candidacy.
 
-In 2015, after Russian first invasion of Ukraine, Kasparov wrote the book, _Winter Is Coming: Why Vladimir Putin and the Enemies of the Free World Must Be Stopped_.
+In 2015, after the first Russian invasion of Ukraine, Kasparov wrote the book _Winter Is Coming: Why Vladimir Putin and the Enemies of the Free World Must Be Stopped_.
