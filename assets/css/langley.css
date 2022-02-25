@@ -167,7 +167,7 @@ table {
 }
 
 summary {
-  margin: .5em 0; 
+  margin: .5em 0;
 }
 
 /* Document layout */
@@ -985,17 +985,6 @@ body > header nav li {
   transition: background-color .52s, opacity .52s, visibility .52s, width .52s, right .52s;
 }
 
-@media (max-width: 991px) {
-  body > header nav li {
-    margin: 2em 0;
-    white-space: nowrap;
-    color: var(--Parchment);
-      background-color: var(--neutralLighter);
-    box-shadow: var(--box-shadow-4);
-    border-radius: var(--border-radius);
-  }
-}
-
 @media (min-width: 992px) {
   body > header nav {
     position: absolute;
@@ -1051,6 +1040,12 @@ body > header nav {
     list-style-type:none;
     margin-top: 3em;
     li {
+      margin: 2em 0;
+      white-space: nowrap;
+      color: var(--Parchment);
+      background-color: var(--neutralLighter);
+      box-shadow: var(--box-shadow-4);
+      border-radius: var(--border-radius);
       text-align: right;
       width:0;
       right: -3rem;
@@ -1072,7 +1067,7 @@ body > header nav {
     > header nav li {
       visibility: visible;
       opacity: 1;
-      width:10em;
+      width:12em;
       right:0;
     }
     #burgerBtn {
