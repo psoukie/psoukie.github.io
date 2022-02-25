@@ -1,10 +1,8 @@
 {%- if include.full -%}
-<article>
+<article onclick='location.href="{{note.url}}";' style='cursor: pointer;'>
   {%- if note.image -%}
     <figure>
-      <a href='{{note.url}}'>
-        <img src='/img/{{ note.image }}' alt='featured image' />
-      </a>
+      <img src='/img/{{ note.image }}' alt='featured image' />
     </figure>
   {%- endif -%}
 {%- endif -%}
@@ -14,9 +12,9 @@
     {%- assign notename = note.id -%}
   {%- endif -%}
   {% if include.full %}
-  <h2><a href="{{note.url}}">{{ notename | markdownify }}</a></h2>
+  <h2>{{ notename | markdownify }}</h2>
   {% else %}
-  <h3><a href="{{note.url}}">{{ notename | markdownify }}</a></h3>
+  <h3>{{ notename | markdownify }}</h3>
   {% endif %}
 {%- if include.full -%}
   {% if note.subtitle %}

@@ -60,6 +60,6 @@ Does Kasparov recognize that the analogy between politics and chess is limited? 
 
 * * *
 
-For more historical context and observations that are no less relevant today, you can check out this 8-minute [interview with Gary Kasparov](https://www.youtube.com/watch?v=40tzSCSrdJI) conducted by Bill Maher in 2007 during Kasparov's presidential candidacy.
+For more historical context and observations that are no less relevant today, you can check out this 8-minute [interview with Gary Kasparov](https://www.youtube.com/watch?v=40tzSCSrdJI) by Bill Maher in 2007 during Kasparov's presidential candidacy.
 
-In 2015, after the first Russian invasion of Ukraine, Kasparov wrote and published the book _Winter Is Coming: Why Vladimir Putin and the Enemies of the Free World Must Be Stopped_.
+In 2015, after the first Russian invasion of Ukraine, Kasparov published the book _Winter Is Coming: Why Vladimir Putin and the Enemies of the Free World Must Be Stopped_.
