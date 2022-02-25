@@ -77,7 +77,6 @@ defaults:
       path: ""
     values:
       layout: page
-      title: ""
   - scope:
       path: ""
       type: series
@@ -88,7 +87,6 @@ defaults:
       type: notes
     values:
       layout: note
-      title: ""
 
 # Exclude from processing.
 # The following items will not be processed, by default.

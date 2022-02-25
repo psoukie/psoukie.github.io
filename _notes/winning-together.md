@@ -3,10 +3,9 @@ title: Winning Together
 subtitle: Fifteen Years of Collaboration in a Single Post
 started: 2021-05-05
 date: 2021-05-05
-series: entertainment
+series: people-history
 image: pyramids.jpg
 caption: (Photo by Osama Elsayed on Unsplash)
-series: life
 ---
 
 I am sharing this article as a reflection, a thank you, and maybe an inspiration after fifteen years of working together with my colleagues, partners, and clients on building solutions that break down language barriers and make amazing devices and services accessible to people around the world.

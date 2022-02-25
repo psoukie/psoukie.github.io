@@ -1,6 +1,6 @@
 {% capture nl %}
 {% endcapture %}
-{%- assign content = include.html -%}
+{%- assign content = nl | append: include.html -%}
 {%- unless page.preserve-headings -%}
   {%- assign content = content | replace: "<h5", "<h6" -%}
   {%- assign content = content | replace: "<h4", "<h5" -%}

@@ -1,0 +1,61 @@
+---
+title: "Putin-Kasparov: A Ruthless Game"
+subtitle: A 2008 Prequel to _Enough Is Enough_
+series: people-history
+started: 2008-11-25
+date: 2022-02-24
+no-toc: true
+lede: true
+summary: Putin's full-scale invasion of Ukraine prompted me to revisit what I wrote three years after Garry Kasparov retired from professional chess to pursue his fight for Russian democracy -- a fight which has only grown in importance.
+---
+
+>> Putin's full-scale invasion of Ukraine prompted me to revisit this article which I wrote in 2008. Since then, many more people were imprisoned, assassinated and killed under Putin's regime.
+>>
+>> The past (and a very grim specific past) is not as far as it seems: 1980 is only as distant from today as 1938 was from 1980.
+>>
+>> I believe we allow bad things to happen because we forget too easily and we avoid inconveniences. But we are not powerless, which is something I will elaborate on in my next post.
+
+[^different]: That history books will need to differentiate between Putin's first invasion of Ukraine and annexation of Crimea in 2014 and this large-scale invasion of 2022 is a reason enough for a pause.
+
+Considered the strongest chess player of all time, Garry Kasparov retired from professional chess in 2005. After having achieved everything a chess player could,[^master] he put his focus on Russian politics. His possibly toughest match yet.
+
+[^master]: Garry Kasparov dominated the chess scene for 21 years. He holds many tournament records, and the news of his loss to Deep Blue during a rematch in 1997 spread beyond chess circles, heralding the eventual domination of board games by computers.
+
+Democracy and freedom are abstract concepts, and there are ways which allow people with sufficient power to significantly weaken opposition even without resorting to physical attacks. Labeling the opposition as enemy-sponsored radicals threatening our way of life is often a convenient start which then justifies a harsher treatment in the name of defending the country's or ethnicity's interests.
+
+Not allowing opponents on air to get their message out is instrumental in minimizing the damage.[^fake-news] An established regime that can influence the media does not need to waste energy on trying to argue with competing ideas (which could be difficult), and can concentrate on promoting solely its own narrative instead.
+
+Legal obstacles and restrictions are another go-to option in the strategic arsenal of staying in power. These can range from prohibitive requirements to outright bans. A more creative step is to invent your own opposition. One leader of a new liberal party, <em>Pravoye Delo</em> (Right Cause), conceded: "It's the reality in this country... These days you can't form a party without the Kremlin." Pravoye Delo is not a real opposition but it diverted some support from the real political threats.
+
+[^fake-news]: This was written before the invention of the strategy of labeling inconvenient facts as "fake news," which allows people using the tactic to mislead their audience even in the event they are exposed to the truth.
+
+>> ## Some of the Victims
+>>
+>> Famous for her Chechen war coverage and the author of the book _Putin's Russia: Life in a Failing Democracy_, **Anna Politkovskaya** was shot dead on October 7, 2006.
+>>
+>> Russian dissident and former member of FSB[^fsb] **Alexander Litvinenko** died on November 23, 2006 after being poisoned with radioactive polonium. He made numerous allegations against the Russian government.
+>>
+>> **Larisa Arap** was illegally hospitalized in a mental institution against her will and kept under drugs in 2007 following the publishing of her article on the mistreatment of children at the state psychiatric clinics.
+>>
+>> **Magomed Yevloyev** was shot in the head in a police vehicle on August 31, 2008. He exposed a mass voter fraud in Ingushetia during the 2008 Russian presidential election.
+>>
+>> It was estimated that 21 journalists were killed between 2000 and 2008.
+{:.float}
+
+[^fsb]: Federal Security Service of the Russian Federation, the successor of KGB.
+
+Kasparov is a very outspoken critic of the Putin's regime; maybe too outspoken. "I do not talk in details -- people who knew them are all dead now because they were vocal," said a former KGB general about Kasparov in 2007. "I am quiet. There is only one man who is vocal, and he may be in trouble."
+
+The reason for Kasparov not being in the kind of trouble one would expect is his name. He is an internationally recognized figure frequently appearing in Western media. But he still remains a subject to some bullying: A year ago, he was detained during a demonstration and sentenced for five days on grounds of resisting arrest. And his cooperation with radical left- _and_ right-wing activists to maximize the unified opposition was a double-edged sword.
+
+Kasparov is the author of the book *How Life Imitates Chess*, but the analogy has its limits. In chess, Kasparov would never keep playing in a position where the odds were so much against him;[^lost-causes] and just waiting for the other player to blunder would be an insult. In life, as he often explains in interviews, he feels he has to try and do something, or else become indifferent and leave the country. But the regime is not immune either. A sharply falling price has no effect on the chessmen, but it could well prove fatal for the government.
+
+[^lost-causes]: In 2012, Jennifer duBois published _A Partial History of Lost Causes_, a novel which follows a young woman pursuing the exact same question -- how do you keep fighting against impossible odds -- and features a character with uncanny resemblance to Kasparov. It also touches on the responsibility for the [Russian apartment bombings](https://en.wikipedia.org/wiki/Russian_apartment_bombings).
+
+Does Kasparov recognize that the analogy between politics and chess is limited? Yes, he conceded: "In chess, there are rules." I would add that another difference is that when I saw Kasparov play in 2002, I was sitting in a hall of silent spectators, but in this match with Russia, we need not remain silent.
+
+* * *
+
+For more historical context and observations that are no less relevant today, you can check out this 8-minute [interview with Gary Kasparov](https://www.youtube.com/watch?v=40tzSCSrdJI) conducted by Bill Maher in 2007 during Kasparov's presidential candidacy.
+
+In 2015, after Russian first invasion of Ukraine, Kasparov wrote the book, _Winter Is Coming: Why Vladimir Putin and the Enemies of the Free World Must Be Stopped_.

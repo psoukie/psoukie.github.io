@@ -155,6 +155,7 @@ nav,
 h2,
 .subtitle,
 h3,
+.h3,
 h4 {
   font-family: var(--font-family-sans);
   line-height: var(--leading-sans);
@@ -163,6 +164,10 @@ h4 {
 table {
   font-size: calc(var(--sans-ratio) * 1em);
   display: inline-block;
+}
+
+summary {
+  margin: .5em 0; 
 }
 
 /* Document layout */
@@ -198,12 +203,6 @@ body > header {
     margin-top: var(--gutter);
     border-radius: var(--border-radius);
   }
-}
-
-body > header h1 {
-  font-size: calc( var(--sans-ratio) * var(--size-xl));
-  margin: 0;
-  font-weight: 600;
 }
 
 main header nav { display: block;}
@@ -334,7 +333,7 @@ header ul li {
   margin-bottom: .3em;
 }
 
-h1, h2, .subtitle, h3, h4, h5, h6 {
+h1, .site-title, h2, .subtitle, h3, .h3, h4, h5, h6 {
   margin: 0;
   em {
     font-style: normal;
@@ -347,7 +346,7 @@ h1, h2, .subtitle, h3, h4, h5, h6 {
   }
 }
 
-h1, h3, .subtitle {
+h1, .site-title, h3, .h3, .subtitle {
   font-weight: 700;
 }
 
@@ -355,7 +354,7 @@ h2 {
   font-weight: 600;
 }
 
-h1 {
+h1, .site-title {
   line-height: var(--leading-sans);  /* Intentionally also for article H1 which is in serif */
 }
 
@@ -363,12 +362,18 @@ h2, .subtitle {
   line-height: var(--leading-sans);
 }
 
-h1 {
+h1, .site-title {
   color: var(--themeDark);
   font-size: var(--size-xxl);
   font-weight: 400;
   margin-bottom: 1.5em;
   text-align: center;
+}
+
+.site-title {
+  font-size: calc( var(--sans-ratio) * var(--size-xl));
+  margin: 0;
+  font-weight: 600;
 }
 
 .subtitle {
@@ -387,8 +392,16 @@ h1 + figure.float {
   margin-top: 0;
 }
 
+h1 + article {
+  margin-top: -2em;
+}
+
 figure + h2 {
   margin-top: 1em;
+}
+
+article > h2 {
+  margin-top: 0;
 }
 
 h2 {
@@ -401,7 +414,7 @@ h3 {
   margin-bottom: .2rem;
 }
 
-h3, h4, h5, h6 {
+h3, .h3, h4, h5, h6 {
   margin-top: 1rem;
 }
 
@@ -419,7 +432,7 @@ h2 + h3 {
   }
 }
 
-h3 {
+h3, .h3 {
   color: var(--neutralPrimary);
   font-size: calc(var(--sans-ratio) * var(--size-m));
 }
@@ -546,7 +559,7 @@ aside.pullquote em {
     font-size: var(--size-l);
     font-weight: 400;
     line-height: var(--leading-tight);
-    margin: 2em 0 1em 2em;
+    margin: 2em 0 1em 0;
   }
   .content.lede > p:first-of-type::first-letter {
     font-size: 1.618em;
@@ -660,14 +673,13 @@ figcaption small {
   }
   .float, aside.pullquote {
     float: right;
-    width: fit-content;
+    width: var(--float-width);
     margin: 1em;
     margin-right: 0;
     line-height: var(--leading-tight);
   }
   aside.pullquote {
     padding: 0;
-    width: var(--float-width);
   }
   .float > img {
     width: var(--float-width);
@@ -874,10 +886,6 @@ div.stanza {
 
 #sidenote-column .reversefootnote {
   display: none;
-}
-
-a.footnote {
-  font-weight: bold;
 }
 
 a.footnote.highlighted {

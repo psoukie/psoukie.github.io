@@ -4,7 +4,7 @@ subtitle: How It Works Together
 image: macbook-air.jpg
 caption: (Image by Apple)
 tags: [test]
-series: [life]
+series: [people-history]
 started: 2022-01-17
 date: 2022-01-20
 lede: true

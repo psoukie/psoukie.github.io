@@ -11,7 +11,7 @@ description: A list of all article series on this website.
   {%- for note in site.notes -%}
     {%- if note.series contains serie.series -%}
     <details>
-<summary>{% include snippet.html %}</summary>
+<summary><span class='h3'>{{ note.title | markdownify | strip_html }}<span></summary>
 {% include snippet.html full=true %}
     </details>
     {%- endif -%}
