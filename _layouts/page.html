@@ -5,13 +5,11 @@ layout: default
 <main>
   <header>
     <ul>
-      <li>
-        {% if page.description %}
-          <p>{{ page.description | markdownify }}</p>
-        {% else %}
-          <p>This is a page layout</p>
-        {% endif %}
-      </li>
+      {% if page.description %}
+        <li>
+          {{ page.description | markdownify }}
+        </li>
+      {% endif %}
       {%- if page.toc -%}
         <li>
           <nav>
