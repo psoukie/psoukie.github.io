@@ -25,11 +25,11 @@
     {% endif %}
   {% endif %}
   <div>
-  {%- if note.summary -%}
-      {{ note.summary | markdownify }}
+  {%- if note.description -%}
+      {{ note.description | markdownify }}
   {%- else -%}
-      {% assign summary = note.content | split: site.excerpt_separator %}
-      {{ summary[0] | markdownify | strip_html | truncatewords: 50}}
+      {% assign description = note.content | split: site.excerpt_separator %}
+      {{ description[0] | markdownify | strip_html | truncatewords: 40}}
   {%- endif -%}
   </div>
   {% if include.read-more %}

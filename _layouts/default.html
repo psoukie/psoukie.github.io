@@ -9,22 +9,31 @@ layout: none
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name="description" content="{{site.description}}">
-    <meta content="{{site.title}}" property="og:site_name"/>
-    <meta content="{{site.description}}" property="og:description">
-    <meta content="{{ site.url }}/about/" property="article:author">
     {% unless page.class contains "title" %}
       <script src="/assets/js/sidenotes.js" async></script>
     {% endunless %}
     {%- if page.title -%}
-      <title>{{ page.title | markdownify | strip_html }} | Pavel Soukenik</title>
+      {%- if page.description -%}
+        <meta name="description" content="{{ page.description | markdownify | strip_html }}">
+      {%- else -%}
+        {% assign description = page.content | split: site.excerpt_separator %}
+        <meta name="description" content="{{ description[0] | markdownify | strip_html | truncatewords: 40}}">
+      {%- endif -%}
+      <title>{{ page.title | markdownify | strip_html }} | {{site.title}}</title>
+      <meta content="{{page.title}}" property="og:site_name"/>
+      <meta content="{{site.description}}" property="og:description">
       <meta content="{{ page.title | markdownify | strip_html }} | Angela Cummings" property="og:title">
       <meta content="article" property="og:type">
     {%- else -%}
-    <title>Pavel Soukenik</title>
-      <meta content="Pavel Soukenik" property="og:title">
+      <meta name="description" content="{{site.description}}">
+      <title>{{site.title}}</title>
+      <meta content="{{site.title}}" property="og:site_name"/>
+      <meta content="{{site.description}}" property="og:description">
+      <meta content="{{site.title}}" property="og:title">
       <meta content="website" property="og:type">
     {%- endif -%}
+    <meta name="author" content="Pavel Soukenik">
+    <meta content="{{ site.url }}/about/" property="article:author">
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     <link rel="canonical" href="{{site.url}}{{page.url}}"/>
 

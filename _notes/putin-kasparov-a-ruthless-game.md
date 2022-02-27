@@ -6,7 +6,7 @@ started: 2008-11-25
 date: 2022-02-25
 no-toc: true
 lede: true
-summary: Putin's full-scale invasion of Ukraine prompted me to revisit what I wrote three years after Garry Kasparov retired from professional chess to pursue his fight for Russian democracy -- a fight which has only grown in importance.
+description: Putin's full-scale invasion of Ukraine prompted me to revisit what I wrote three years after Garry Kasparov retired from professional chess to pursue his fight for Russian democracy -- a fight which has only grown in importance.
 ---
 
 >> Putin's full-scale invasion[^different] of Ukraine prompted me to revisit this article which I wrote in 2008. Since then, many more people were imprisoned, assassinated and killed under Putin's regime.

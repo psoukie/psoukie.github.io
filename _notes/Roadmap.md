@@ -57,7 +57,7 @@ I am planning the following transforms on Markdown syntax when rendering as HTML
 
 Also added `.source` to be used under blockquotes.
 
-Also support the `<!--more-->` tag for automated summary.
+Also support the `<!--more-->` tag for automated description.
 
 Document `{:.float.edge}` and widths using `{:.w15}` etc., and also image-format YAML (only 'full' defined now but it attaches the keyword as CSS class).
 
