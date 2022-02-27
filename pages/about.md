@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: /about
-description: Pavel Soukenik<br /><small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /><em>he / him</em>
+description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em>
 ---
 
 Pavel Soukenik is a business growth leader with a record of building award-winning global enterprise solutions for the world's top technology companies. He is the Executive Director for Strategic Accounts at Webhelp focused on digital content services.
