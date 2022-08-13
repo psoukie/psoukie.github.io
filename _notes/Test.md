@@ -10,7 +10,6 @@ date: 2022-01-20
 lede: true
 toc: true
 published: false
-shift-headings: true
 ---
 
 Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco.
@@ -165,9 +164,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 > And a regular block quote retains its syntax  (`> `).
 
->> ### Factbox
+>> ### Factbox heading
 >>
->> And with a special syntax (`>`), we get a factbox. But then it's unclear how to do a heading for it....
+>> And with a special syntax (`>`), we get a factbox. Just make sure to assign `{: .float}` styling to it.
 {: .float}
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

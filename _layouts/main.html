@@ -24,10 +24,10 @@ layout: default
   {%- endif -%}
 {%- if page.collection == "poems" -%}
     <div class="poetry">
-  {%- include extend-markup.html html=content poetry=true shift-headings=page.shift-headings -%}
+  {%- include extend-markup.html html=content poetry=true preserve-headings=page.preserve-headings -%}
     </div>
 {%- else -%}
-  {%- include extend-markup.html html=content shift-headings=page.shift-headings -%}
+  {%- include extend-markup.html html=content preserve-headings=page.preserve-headings -%}
 {%- endif -%}
   </div>
   <div id='about-column'>

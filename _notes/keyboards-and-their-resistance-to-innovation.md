@@ -8,7 +8,7 @@ series: [technology-ai, people-history]
 date: 2022-01-29
 started: 2010-05-09
 lede: true
-shift-headings: true
+preserve-headings: false
 ---
 
 The typewriter was invented around the same time as the telephone, but while phones have changed beyond all recognition, the keyboards of today look substantially the same as when they first made their entrance.<!--more-->
