@@ -551,7 +551,11 @@ aside.pullquote em {
 .content.lede > p:first-of-type {
   color: var(--neutralPrimaryAlt);
   font-weight: 700;
+  font-style: italic;
   margin-top: 1rem;
+}
+.content.lede > p:first-of-type  em {
+  font-style: normal;
 }
 
 @media (min-width: 576px) {
