@@ -1,5 +1,5 @@
 ---
-title: "Revisiting the Big Tech ‘Frightful 5’"
+title: "Revisiting the Big Tech ‘Frightful&nbsp;5’"
 subtitle: What Set the Big Five Apart From FAANG+
 date: 2022-02-27
 started: 2021-02-17

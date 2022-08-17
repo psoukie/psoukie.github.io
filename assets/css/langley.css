@@ -24,7 +24,8 @@
     text-rendering: optimizeLegibility;
 }
 
-/* Webfont: LatoLatin-Semibold */@font-face {
+/* Webfont: LatoLatin-Semibold */
+@font-face {
     font-family: 'LatoLatinWeb';
     src: url('/assets/fonts/LatoLatin-Semibold.eot'); /* IE9 Compat Modes */
     src: url('/assets/fonts/LatoLatin-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -184,6 +185,10 @@ body {
   max-width: 100%;
   width: fit-content;
   margin: 0 auto;
+}
+
+.small {
+  font-size: var(--size-s);
 }
 
 body > header, body > footer {

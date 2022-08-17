@@ -44,39 +44,44 @@ Starting with function, the Attesa impresses with its ability to run reliably on
 
 * Affordable — no worries about losing or dinging the watch at the airport security check.
 
-  Very subtle, but efficient lume on the hands and hour markers.
+* Very subtle, but efficient lume on the hands and hour markers.
 
-  Clean design (city names, DST and reception labels are discreet)
-
-  > > ## 
+* Clean design (city names, DST and reception labels are discreet) 
 
 * And because it’s affordable, you won’t be too distressed if it gets dinged or lost while negotiating security checkpoints after a short night of sleep.
 
+* The radio signal has a low frequency with wave length over three miles, and can therefore travel a long distance with low energy and – unlike GPS signal – can easily pass through walls.
+
+>> ## History of Radio-Controlled Clocks
+>>
+>> **1898:** Howard Grubb proposes "Marconi" wave could be used to set watches.
+>>
+>> **1903:** US Navy broadcasts the first radio time signal.
+>>
+>> **1910:** The Eiffel Tower Time escapes demolition thanks to its transmissions of Paris Observatory time.
+>>
+>> **1913:** NAA in Arlington, VA starts broadcasting time in  morse code.
+>>
+>> **1924:** BBC introduces the famous six pips time signal.
+>>
+>> **1960**: Digitally encoded signals with hour, minute and seconds.
+>>
+>> Adapted from “Radio Controlled Clocks” by Michael Lombardi.
+>> {: .small}
+{: .float}
+
 This watch could be left on the Moon, and it would happily keep track of time and calendar for years. In most places on the Northern hemisphere here on Earth, it would do so while adjusting to an atomic clock through a radio signal.
+
+
 
 Would you do not get is a world timer or a GMT indication with an explicit am/pm designation. Still, for people unaccustomed to converting between time zones, the crown offers a fast way to “fly” between locations and see the hour hand adjust in real time.
 
->> ## Radio-Controlled Clocks
->>
->> TK Source: “ Radio controlled clocks” - Michael Lombardi, NIST
->>
->> 1898 Havard Golebb TK “…. quote.”
->> 1903 - first broadcast of time signal
->>
->> The Eiffel Tower Time Code is what saved the — now-iconic — landmark from being demolished.
->>
->> NAA - Arlington, VA - 1913 — morse code
->>
->> BBC — six pips — 1924
->>
->> Digitally encoded signals with hour, minute and second was introducted between 1960-65.
->>
->> The signal has a low frequency with wave length over three miles, and can therefore travel a long distance with low energy and — unlike GPS signal — can easily pass through walls.
-{: .float}
-
 ## Form
 
-This Attesa has a very clean, classical dial. At a glance, all you see are the applied batons and roman indeces at 12 and 6, the hands and a small but readable date window, and the labels *Citizen* and *Attesa* (the latter is a recent addition which balances the layout).
+This Attesa has a very clean, classical dial. At a glance, all you see are the applied roman indices at 12 and 6, the batons indicating the remaining hours (with the exception of 3 which has a small but readable date window), the hands, and the labels *Citizen* and *Attesa*. (the latter is a recent addition which balances the layout).
+
+![Attesa dial TK]()
+The Attesa dial TK
 
 More subtle are the minute track marks and lume dots, the indicators for atomic clock synchronization status and daylight savings time that are disguised as markers of the minute track, and the airport codes on the inside bezel that let you quickly select between all the world time zones.
 
