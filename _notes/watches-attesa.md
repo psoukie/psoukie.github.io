@@ -8,7 +8,7 @@ published: false
 
 This titanium watch with a perpetual calendar, quick time zone switching, and atomic clock reception is the frequent fliers’ perfect companion.
 
-I discovered Attesa by way of searching for a traveler GMT watch with a dressier look. Something that could work well – both in form and function – for a business traveler. This turned out to be much harder than I expected.
+I discovered Attesa by way of searching for a traveler GMT watch with a dressier look. Something that could work well – both in form and function – for a business traveler. The search out to be more difficult than I expected.
 
 First, many GMT watches are “desk” or office GMTs – they are designed to change the GMT hand independently to make it easy to read time in other places without disrupting the primary time shown by the standard hands. That is not ideal for my needs,[^GMT] and besides, a better tool for reading time for multiple locations around the world while sitting at your desk is to buy one of the world time desk clocks.
 
@@ -28,22 +28,31 @@ And I stumbled on a complete revelation: Citizen *Attesa CB1120-50G* – a titan
 
 # Form and Function
 
-What does a business traveler need in a watch? And does anyone really even need a wrist watch nowadays?
+What does a business traveler need in a watch? And does anyone really even need a wrist watch nowadays? As a dedicated, single-purpose tool, a watch should be superior to multipurpose devices such as smartphones and smart watches. Most watches (and this one more than others) definitely are.
 
-As a dedicated, single-purpose tool, a watch should be superior to multipurpose devices such as smartphones and smart watches. Most watches (and this one more than others) definitely are.
-
-Form and function – coupled, perhaps, with meaning – are the main criteria we evaluate watches on. In terms of subjective to objective, they probably rank from meaning to form to function. (And in terms of importance, that is both situational and subjective.)
+Form and function – coupled, perhaps, with meaning – are the main criteria we evaluate watches on. In terms of subjective to objective, they probably rank from meaning to form to function. In terms of importance, these items are both situational and subjective. 
 
 ## Function
 
-Starting with function, the Attesa impresses with its ability to run reliably on its own. You could leave this watch on the Moon, and it would happily keep track of time and dates. And in most places on the Earth, it would do so while synchronized with an atomic clock through a radio signal.
+Starting with function, the Attesa impresses with its ability to run reliably on its own while keeping accurate track of time across time zones and daylight savings adjustments. From the functional perspective, this is an ultimate watch for a traveler:
 
-From the functional perspective, this is an ultimate watch for a traveler:
+* It’s powered by light so you never need to worry about forgetting to wind the watch, charging it every night, or having it run out of battery while on a trip.
 
-* You never worry about forgetting to wind the watch or running out of battery.
-* It is extremely accurate – it will keep accurate time even during longer trips outside of the atomic clock radio coverage.
+* It is very accurate. It’s quartz crystal will keep good time (TK precision) even during longer trips outside of the atomic clock radio coverage.
+
 * It seamlessly switches between time zones (including those with 30-minute differences, that would challenge GMT watches) and keeps accurate date across months and years.
-* And because of it’s affordable cost, you will survive if it gets dinged or lost when navigating airport security after a short night of sleep.
+
+* Affordable — no worries about losing or dinging the watch at the airport security check.
+
+  Very subtle, but efficient lume on the hands and hour markers.
+
+  Clean design (city names, DST and reception labels are discreet)
+
+  > > ## 
+
+* And because it’s affordable, you won’t be too distressed if it gets dinged or lost while negotiating security checkpoints after a short night of sleep.
+
+This watch could be left on the Moon, and it would happily keep track of time and calendar for years. In most places on the Northern hemisphere here on Earth, it would do so while adjusting to an atomic clock through a radio signal.
 
 Would you do not get is a world timer or a GMT indication with an explicit am/pm designation. Still, for people unaccustomed to converting between time zones, the crown offers a fast way to “fly” between locations and see the hour hand adjust in real time.
 
@@ -95,6 +104,8 @@ The watch comes on a titanium bracelet which is replacable but the lug width is 
 
 (while, in my eyes, an aviator/pilot watch or a dress watch would fit the bill much better as the basis.)
 
+
+
 The watch shares the characteristics of the Promaster Tough: you don’t need to worry about this watch. Left to its own devices, it ill be as accurate in five years as a typical mechanica watch is after five days — but without any need for  charging — and it will show the correct time to boot.
 
 I’ve seen at least one review which missed the presence of the perpetual calendar (which does not depend on the radio controlled settings). To actually show the name of the day and month on the dial is more of a flex than a need.  While I am often unsure about the date, I always know what day of the week it is and which month we are in.
@@ -112,18 +123,6 @@ In fact, none of the complications and special features are visibly heralded. No
 
 
 accurate, light, thin, quick timezone switching (including zones with a 30 minute difference), perpetual calendar, classical diameter, metal bracelet, water proof to 10 ATM, magnetic resistance, shock resistance,
-
-solar powered (no worrying about batteries running out or forgetting to wind the watch)
-
-Great accuracy even without radio sync.
-
-Dead beat second without a bounce, perfectly aligned with the indeces 
-
-Affordable — no worries about losing or dinging the watch at the airport security check.
-
-Very subtle, but efficient lume on the hands and hour markers.
-
-Clean design (city names, DST and reception labels are discreet)
 
 > > ## Alternatives
 > > 
@@ -155,3 +154,8 @@ Thanks to its precision and perpetual calendar, it can do really well even witho
 Simply put, this watch doesn’t need you. If you’re not prepared for a strong, light, slim, accurate, and independent watch, you might look for other options.
 
 But if you could use a sharp, light-powered watch that can breeze through time zones and catch atomic clock at the speed of light, you just need to choose the color.
+
+
+
+Dead beat second without a bounce, perfectly aligned with the indeces 
+
