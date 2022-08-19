@@ -1,14 +1,15 @@
 ---
-title: "Citizen Attesa: An Ideal Business Traveler's Watch"
+title: "An Ideal Business Traveler's Watch"
+subtitle: Citizen Attesa CB1120-50G Review
 slug: citizen-attesa-an-ideal-business-travelers-watch
 date: 2022-08-13
 lede: true
 published: false
 ---
 
-This titanium watch with a perpetual calendar, quick time zone switching, and atomic clock reception is the frequent fliers’ perfect companion.
+This titanium watch with a perpetual calendar, quick time zone switching, and an atomic clock receiver is the frequent fliers’ perfect companion.
 
-I discovered Attesa by way of searching for a traveler GMT watch with a dressier look. Something that could work well – both in form and function – for a business traveler. The search out to be more difficult than I expected.
+I discovered Attesa CB1120-50G by way of searching for a traveler GMT watch with a dressier look. Something that could work well – both in form and function – for a business traveler. This search turned out to be more difficult than I expected.
 
 First, many GMT watches are “desk” or office GMTs – they are designed to change the GMT hand independently to make it easy to read time in other places without disrupting the primary time shown by the standard hands. That is not ideal for my needs,[^GMT] and besides, a better tool for reading time for multiple locations around the world while sitting at your desk is to buy one of the world time desk clocks.
 
@@ -30,51 +31,59 @@ And I stumbled on a complete revelation: Citizen *Attesa CB1120-50G* – a titan
 
 What does a business traveler need in a watch? And does anyone really even need a wrist watch nowadays? As a dedicated, single-purpose tool, a watch should be superior to multipurpose devices such as smartphones and smart watches. Most watches (and this one more than others) definitely are.
 
-Form and function – coupled, perhaps, with meaning – are the main criteria we evaluate watches on. In terms of subjective to objective, they probably rank from meaning to form to function. In terms of importance, these items are both situational and subjective. 
+Form and function – coupled, perhaps, with meaning – are the main criteria we evaluate watches on. In terms of subjective to objective, they probably rank from meaning to form to function. In terms of importance, these items are both situational and subjective.
 
 ## Function
 
-Starting with function, the Attesa impresses with its ability to run reliably on its own while keeping accurate track of time across time zones and daylight savings adjustments. From the functional perspective, this is an ultimate watch for a traveler:
+Starting with function, the Attesa impresses with its ability to run reliably on its own while staying on top of accurate time across time zones and daylight savings adjustments. From the functional perspective, this is an ultimate watch for a traveler:
 
-* It’s powered by light so you never need to worry about forgetting to wind the watch, charging it every night, or having it run out of battery while on a trip.
+* You never need to worry about forgetting to wind or charge the watch or running out of battery while on a trip. The Attesa is powered by light and has a ridiculous six-month power reserve (with a two-year power save mode).
+* It is very accurate. On its own, the H149 movement is certified to ±15 seconds per month, but judging by a similar Citizen it could be much more precise in practice.[^promaster] Regardless, the Attesa is guaranteed to be ten times more accurate than a certified chronometer even on a long trip outside of the atomic clock radio coverage.
+* It seamlessly switches between time zones with a pull and twist of the crown, including for India and parts of Australia with their GMT-hand-defying 30-minute differences. And thanks to its perpetual calendar, the date is always correct as it autonomously keeps track of days, months and leap years.
 
-* It is very accurate. It’s quartz crystal will keep good time (TK precision) even during longer trips outside of the atomic clock radio coverage.
+Would you do not get is a world timer or a GMT indication, and there is no explicit am/pm differentiation. For locations you cannot convert easily in your head, the watch offers a fast way to “fly” between locations by using the crown and seeing the hands adjust in real time.
 
-* It seamlessly switches between time zones (including those with 30-minute differences, that would challenge GMT watches) and keeps accurate date across months and years.
+[^promaster]: My Citizen Promaster Tough with the same rating and similar price point has been off by about one second per month.
 
-* Affordable — no worries about losing or dinging the watch at the airport security check.
+### Atomic Clock Synchronization
 
-* Very subtle, but efficient lume on the hands and hour markers.
-
-* Clean design (city names, DST and reception labels are discreet) 
-
-* And because it’s affordable, you won’t be too distressed if it gets dinged or lost while negotiating security checkpoints after a short night of sleep.
-
-* The radio signal has a low frequency with wave length over three miles, and can therefore travel a long distance with low energy and – unlike GPS signal – can easily pass through walls.
-
->> ## History of Radio-Controlled Clocks
+>> ## Radio-Controlled Time(-line)
 >>
->> **1898:** Howard Grubb proposes "Marconi" wave could be used to set watches.
+>> **1898:** Howard Grubb proposes radio could be used to set watches.
 >>
 >> **1903:** US Navy broadcasts the first radio time signal.
 >>
->> **1910:** The Eiffel Tower Time escapes demolition thanks to its transmissions of Paris Observatory time.
+>> **1910:** The Eiffel Tower escapes demolition thanks to its time transmissions.
 >>
 >> **1913:** NAA in Arlington, VA starts broadcasting time in  morse code.
 >>
 >> **1924:** BBC introduces the famous six pips time signal.
 >>
->> **1960**: Digitally encoded signals with hour, minute and seconds.
+>> **1960**: First digitally encoded signals with hour, minute and seconds.
 >>
 >> Adapted from “Radio Controlled Clocks” by Michael Lombardi.
 >> {: .small}
 {: .float}
 
+
+
+The watch has a receiver that synchronizes it to atomic clocks via radio signals from stations in the United States, Europe, Japan and China. Compared to GPS, the radio signal has a low frequency (with wave length over three miles) which can travel a long distance and pass through walls, as long as you are within coverage.[^coverage]
+
+The transmitted information includes full date and also future date of daylight savings time change. The automated daylight savings changes can be disabled with manual adjustment, and the watch will also remember any individual DST adjustments you made for each time zone.
+
+### Operating the watch
+
+To check or change the time zones, you simply pull the crown into the first position, and the seconds hand will quickly point to the city code of the current time zone. You can move between the cities by turning the crown (with discernible clicks). The seconds hand jumps between the selections and the hour hand (and minute hand and date, if needed) adjust in real time.
+
+To check the daylight savings time of the location you are viewing, pull the crown to the second position. The seconds hand will move to indicate whether the DST is on or off, and – if needed – you can manually override the daylight savings for this location by turning the crown.
+
+With the crown pushed in, the watch allows you to quickly check the result of last night’s automated reception by pressing the push button on the side, or force a manual synchronization with a long press.
+
+The time, date and year can be also set manually by using the crown in combination with the push button. Lastly, should there be a problem with the alignment of the hands, there is one more recessed button that allows you to reset the hands.
+
+[^coverage]: I live north west of Seattle which is fairly far from the WWVB Fort Collins station in Denver, CO, but the watch receives the signal successfully almost every night even in a watch case. If live outside of the radio coverage, you can either set the time, date and year manually or use one of several free mobile apps that produce audible signal that the watch is able to pick up and decode.
+
 This watch could be left on the Moon, and it would happily keep track of time and calendar for years. In most places on the Northern hemisphere here on Earth, it would do so while adjusting to an atomic clock through a radio signal.
-
-
-
-Would you do not get is a world timer or a GMT indication with an explicit am/pm designation. Still, for people unaccustomed to converting between time zones, the crown offers a fast way to “fly” between locations and see the hour hand adjust in real time.
 
 ## Form
 
@@ -94,6 +103,10 @@ The dial does seem to slope gently to its center, givin it a sense of depth, but
 Simplicity does not equal austerity though. The metal ring around the sapphire crystal and two of the three facets on the side of the case were given a silver-colored reflective treatment of the Duratec coating. It is a subtle effect but elevates the look from what could otherwise be too much of the moon-surface-looking titanium.
 
 Under loupe, you can further appreciate the finishing on the roman numerals and batons that seem made of the same material but with a brushed or ridged surface.
+
+* Very subtle, but efficient lume on the hands and hour markers.
+
+* Clean design (city names, DST and reception labels are discreet)
 
 Finally, in addition to a partially protected regular crown that serves to operate all the key functions of the watch (including changing DST) in one of its two positions, there is also a small pusher and one recessed pusher.
 
@@ -121,16 +134,41 @@ To cram the dial with all the other information is to show off. Why clutter the 
 
 In fact, none of the complications and special features are visibly heralded. No special dial for low power reserve. Month and year? Only shown while setting the time manually. And the airport codes that hint at the ability to adjust the hands (sic) to a different time zone are printed in discrete lettering.
 
+## Meaning
+
+Meaning might seem a strange aspect of a watch review but I believe that – not just with watches – the story behind the brand, how the product is made, and other aspects that tie into things that are meaningful to us all affect how we perceive them.
+
+Subjectively, because I do not know much about Citizen, this is a bit of a low point. If I were to select a GMT watch based purely on its meaning, I would go with the Longines Zulu (see in [Alternatives](#alternatives) below). Their watch and aviation history is very compelling and even ties to the first non-stop transpacific flight which landed at a place very close to where I live.
+
+There are two things I already knew: A few years ago, Citizen made news by releasing the first autonomous quartz watch with a precision of ±1 second per year. (So precise you’d have to start thinking about how to handle leap seconds.) And I had also looked at their domestic-only “The Citizen” series of watches which seem to be on par – Zaratsu polishing included – with Grand Seiko.
+
+The rest of the meaning came through my investigations: The history of the radio controlled watches is absolutely fascinating, including this prediction from 1898:
+
+> There is something very beautiful in this action of the “Marconi” wave. In a city supplied with this apparatus we should be conscious as we hear each hour strike that above us and around us, swiftly and silently, this electrical wave is passing, conscientiously doing its work, and setting each clock in each establishment absolutely right, without any physical connection whatsoever between the central distributing clock, and those which it keeps correct by means of this mysterious electrical wave.
+>
+> We might go even still further, … and have our watches  automatically set by this electrical wave as we walk about the streets.
+
+It took almost one hundred years until the technology fully caught up to this dream, with Junghans MEGA&nbsp;1 being the first ever such wrist watch. By this time though, the clocks were not being synchronized to just any central clock but to extremely accurate atomic clocks.
+
+In 2018, the US budget proposed to cut the funds for the radio stations that make this technology possible but they survived because too many clocks depend on it. Just like about a hundred years prior, the radio time signals helped save the Eiffel Tower from demolition.
+
+The other things that make this watch meaningful to me are the embrace of innovation over antiquity: the incredibly efficient light-powered movement and titanium as the lighter and stronger material (even though our brains have been conditioned to equate ‘heavy’ to solid).
+
+Lastly, the watch is an exercise in restraint and modesty.
+
+## Cost
+
+* Affordable — no worries about losing or dinging the watch at the airport security check.
+* And because it’s affordable, you won’t be too distressed if it gets dinged or lost while negotiating security checkpoints after a short night of sleep.
+
 
 
 --- ---
 
-
-
 accurate, light, thin, quick timezone switching (including zones with a 30 minute difference), perpetual calendar, classical diameter, metal bracelet, water proof to 10 ATM, magnetic resistance, shock resistance,
 
 > > ## Alternatives
-> > 
+> >
 > > * **Grand Seiko SBGP003** – bigger, more accurate, different class and price, but could just as well go with The Citizen (no atomic radio or timezone switching, but same Zaratsu polishing, much higher accuracy and independently set hour hand)
 > > * **Longines VHP** – not really a contender
 > > * **Longines Zulu** – automatic, so very different. Would be perfect in 40mm or less.
@@ -154,7 +192,7 @@ This one doesn’t.
 
 Unless you are going to put the watch in a dark drawer, the Attesa does not need your help. And even then, it would continue quietly keeping time for two years.
 
-Thanks to its precision and perpetual calendar, it can do really well even without the atomic clock signal. 
+Thanks to its precision and perpetual calendar, it can do really well even without the atomic clock signal.
 
 Simply put, this watch doesn’t need you. If you’re not prepared for a strong, light, slim, accurate, and independent watch, you might look for other options.
 
@@ -162,5 +200,4 @@ But if you could use a sharp, light-powered watch that can breeze through time z
 
 
 
-Dead beat second without a bounce, perfectly aligned with the indeces 
-
+Dead beat second without a bounce, perfectly aligned with the indeces
