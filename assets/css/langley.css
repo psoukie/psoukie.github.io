@@ -439,6 +439,10 @@ h2 + h3 {
 
 h3, .h3 {
   color: var(--neutralPrimary);
+  font-size: calc(var(--sans-ratio) * var(--size-l));
+}
+
+aside h3, .box h3 {
   font-size: calc(var(--sans-ratio) * var(--size-m));
 }
 
