@@ -1,4 +1,6 @@
-{%- for note in site.notes -%}
+{% assign sorted_notes = site.notes | sort: 'date' | reverse %}
+
+{%- for note in sorted_notes -%}
   {%- if note.series contains page.series -%}
 {% include snippet.html full=true %}
   {%- endif -%}

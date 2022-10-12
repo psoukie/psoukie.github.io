@@ -5,7 +5,7 @@ permalink: /
 
 <h4>Latest Updates</h4>
 
-{% assign sorted_notes = site.notes | sort: 'updated' | reverse %}
+{% assign sorted_notes = site.notes | sort: 'date' | reverse %}
 {%- for note in sorted_notes -%}
   {%- include snippet.html full=true -%}
 {%- endfor -%}

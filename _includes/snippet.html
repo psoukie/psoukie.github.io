@@ -28,8 +28,12 @@
   {%- if note.description -%}
       {{ note.description | markdownify }}
   {%- else -%}
+    {% if note.content contains site.excerpt_separator %}
       {% assign description = note.content | split: site.excerpt_separator %}
-      {{ description[0] | markdownify | strip_html | truncatewords: 40}}
+      {{ description[0] | markdownify | strip_html }}
+    {% else %}
+      {{ note.content | markdownify | strip_html | truncatewords: 40}}
+    {% endif %}
   {%- endif -%}
   </div>
   {% if include.read-more %}
