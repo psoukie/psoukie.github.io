@@ -17,6 +17,9 @@ layout: none
   {%- assign title = title | markdownify | strip_html | strip %}
   <title>{{ title | strip }}</title>
   <meta content="{{title}}" property="og:title">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@pavel_soukenik" />
+    <meta name="twitter:creator" content="@pavel_soukenik" />
   {%- if page.description -%}
     {%- assign description = page.description | markdownify | strip_html  -%}
   {%- else -%}
@@ -25,6 +28,9 @@ layout: none
   {%- assign description = description | strip %}
   <meta name="description" content="{{ description  }}">
   <meta content="{{ description }}" property="og:description">
+  {%- if page.image %}
+    <meta content="{{ site.url }}/img/{{ page.image }}" property="og:image">
+  {%- endif %}
   <meta content="{{site.title}}" property="og:site_name"/>
   {%- if page.class contains "title" %}
     <meta content="website" property="og:type">
