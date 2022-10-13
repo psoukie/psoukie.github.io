@@ -1,13 +1,19 @@
 ---
 title: About
 permalink: /about
-description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em>
+description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em><br /><br /><a href="https://www.linkedin.com/in/psoukenik/">LinkedIn</a><br /><br /><a href="https://twitter.com/pavel_soukenik">Twitter</a>
 ---
 
-Pavel Soukenik is a business growth leader with a record of building award-winning global enterprise solutions for the world's top technology companies. He is the Executive Director for Strategic Accounts at Webhelp focused on digital content services.
+Pavel Soukenik is a passionate business leader with a record of building award-winning global enterprise solutions for the world's top technology companies. He is the Executive Director at Webhelp, focused on Trust and Safety.
 
 He is a father to two sons and lives with his wife on Whidbey Island in Washington state. He is passionate about cultures, languages, technology, AI, design, music, board games and philosophy. This website reflects some of these interests.
 
-Born and raised in Czechoslovakia, he studied mathematics and English at the Faculty of Science and the Faculty of Arts of Masaryk University, after he combined his interest in software development and languages by joining Ando Translations to work in localization. Later, he led the fastest growing business unit at Moravia, a top localization and globalization service provider, and then moved to manage its global sales and marketing teams as the Chief Client Acquisition Officer.
+Born in Czechoslovakia, he studied mathematics at the Faculty of Science and English and American Studies at the Faculty of Arts of Masaryk University. His interests in software development and languages led him to a career in localization at Ando Translations and Moravia. Prior to joining Webhelp, Pavel served as Vice President of RWS Moravia’s fastest growing business unit and was promoted to Chief Client Acquisition Officer in 2018.
 
 He is an adjunct lecturer at the University of Washington and in his spare time volunteers by teaching chess to seniors.
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/psoukenik/)
+
+- [Twitter](https://twitter.com/pavel_soukenik)
