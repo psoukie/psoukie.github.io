@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: /about
-description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em><br /><br />[LinkedIn](https://www.linkedin.com/in/psoukenik/)<br /><br />[Twitter](https://twitter.com/pavel_soukenik)
+description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em><br /><br />[LinkedIn](https://www.linkedin.com/in/psoukenik/)<br /><br /><a rel="me" href="https://mastodon.social/@soukenik">Mastodon</a><br /><br />[Twitter](https://twitter.com/pavel_soukenik)
 ---
 
 Pavel Soukenik is a passionate business leader with a record of building award-winning global enterprise solutions for the world's top technology companies. He is the Executive Director at Webhelp, focused on Trust and Safety.
@@ -15,5 +15,7 @@ He is an adjunct lecturer at the University of Washington and in his spare time 
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/psoukenik/)
+
+- [Mastodon](https://mastodon.social/@soukenik)
 
 - [Twitter](https://twitter.com/pavel_soukenik)
