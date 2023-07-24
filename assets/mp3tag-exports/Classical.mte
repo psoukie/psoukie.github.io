@@ -1,0 +1,68 @@
+$filename(C:\Users\pavel\Documents\Music Collection\classical.html,utf-8)
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Collection: Artist List</title>
+	<link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+	<link rel="stylesheet" href="/assets/css/new.css">
+	<link rel="stylesheet" href="/assets/css/collection.css">
+	<style>
+		table {
+			font-size: 12px;
+		}
+		th {
+			position: sticky;
+			top: -1px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Classical Music Collection</h1>
+	</header>
+	<input class="searchInput" data-table-id="t1" type="search" placeholder="Search" aria-label="Search" aria-target="t1">
+	<table class="sortTable" id="t1" style="width: 100%;">
+		<thead>
+			<tr>
+				<th id="c1" style="width: 22%;">Composer</th>
+				<th style="width: 22%;">Work</th>
+				<th style="width: 22%;">Conductor</th>
+				<th style="width: 22%;">Orchestra</th>
+				<th style="width: 10%;">Year</th>
+				<!-- <th style="width: 18%;">Title</th>
+				<th>Artist</th>
+				<th>Path</th>
+				<th>Album</th> -->
+			</tr>
+		</thead>
+		$loop(%composer%)
+			$loop(%work%)
+				$loop(%conductor%)
+					$loop(%orchestra%)
+						$loop(%album%, 1)
+							<tr>
+								<td>%Composer%</td>
+								<td>%Work%</td>
+								<td>%Conductor%</td>
+								<td>%Orchestra%</td>
+								<td>%ORIGYEAR%</td>
+								<!-- <td>%Title%</td>
+								<td>%Artist%</td>
+								<td>$mid(%_folderpatd%,22,200)</td>
+								<td>%Album%</td> -->
+							</tr>
+						$loopend()
+					$loopend()
+				$loopend()
+			$loopend()
+		$loopend()
+	</table>
+	<script src="/assets/js/searchTable.js"></script>
+	<script src="/assets/js/sortTable.js"></script>
+	<script>document.getElementById("c1").click();</script>
+</body>
+</html>

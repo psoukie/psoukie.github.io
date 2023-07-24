@@ -1,0 +1,60 @@
+$filename(C:\Users\pavel\Documents\Music Collection\album.html,utf-8)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+    <title>Music Collection: Album List</title>
+	<link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+	<link rel="stylesheet" href="/assets/css/new.css">
+	<link rel="stylesheet" href="/assets/css/collection.css">
+	<style>
+		details summary {
+			display: flex;
+			gap: 2em;
+			flex-direction: row;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Music Collection</h1>
+		<nav>
+            <a href="artist.html">Artist</a> |
+            <strong>Album</strong> |
+            <a href="composer.html">Composer</a> |
+            <a href="song.html">Song</a>
+        </nav>
+		<nav>
+			$loop(%album%)
+				$puts(newindex,$caps($left(%album%,1)))
+				$if($and($neql($get(newindex),$get(firstindex)),$grtr($ord($get(newindex)),64)),<a href="#$put(firstindex,$get(newindex))">$get(newindex)</a> ,)
+			$loopend()
+		</nav>
+	</header>
+	$loop(%album%)
+		$puts(newindex,$caps($left(%album%,1)))
+		$if($and($neql($get(newindex),$get(secondindex)),$grtr($ord($get(newindex)),64)),<hr/><a id="$put(secondindex,$get(newindex))"><h2>$get(newindex)</h2></a>,)
+		<details>
+			<summary>
+				<img src="/img/covers/$replace($ansi($validate(%albumartist%-%album%,_)), ,_).jpg" />
+				<div>
+					<h4>%album%</h4>
+					<p><strong>%albumartist%</strong></p>
+				</div>
+			</summary>
+			$loop(%track%)
+				$puts(various,$if($or($neql(%artist%,%albumartist%),$eql($get(various),1)),1,0))
+			$loopend()
+			<ol>
+				$loop(%track%)
+					<li>%title%$if($and(%artist%,$eql($get(various),1)), <em>(%artist%)</em>,)</li>
+				$loopend()
+			</ol>
+		</details>
+		$puts(various,0)
+	$loopend()
+</body>
+</html>
