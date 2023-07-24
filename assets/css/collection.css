@@ -2,6 +2,7 @@ img {
     height: 6em;
     margin: 0;
 }
+
 summary::marker {
      content: "";
      display: none;
@@ -9,17 +10,6 @@ summary::marker {
 details summary::-webkit-details-marker {
     content: "";
     display:none;
-}
-
-h4, p {
-    padding: 0;
-    margin: 0;
-}
-div {
-    display: flex;
-    gap: 2em;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 details[open] summary {
