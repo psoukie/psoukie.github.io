@@ -1,0 +1,21 @@
+img {
+    height: 6em;
+    margin: 0;
+}
+summary::marker {
+     content: "";
+}
+h4, p {
+    padding: 0;
+    margin: 0;
+}
+div {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+details[open] summary {
+    width: auto;
+} 
