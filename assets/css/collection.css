@@ -4,7 +4,13 @@ img {
 }
 summary::marker {
      content: "";
+     display: none;
+    }
+details summary::-webkit-details-marker {
+    content: "";
+    display:none;
 }
+
 h4, p {
     padding: 0;
     margin: 0;
