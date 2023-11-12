@@ -5,8 +5,8 @@ image: macbook-air.jpg
 tags: [keyboard, history, QWERTY, Dvorak, typewriter, ergonomics, digital]
 caption: <small>(Image by Apple)</small>
 series: [technology-ai, people-history]
-date: 2022-01-29
-started: 2010-05-09
+date: 2010-05-09
+updated: 2022-01-29
 lede: true
 preserve-headings: false
 ---

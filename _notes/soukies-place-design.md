@@ -2,8 +2,8 @@
 title: Soukie's Place Design
 published: false
 tags: [typography, internal]
-started: 2022-01-23
-date: 2022-01-25
+date: 2022-01-23
+updated: 2022-01-25
 ---
 
 ## Typefaces

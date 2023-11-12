@@ -5,8 +5,8 @@ image: 2001-white-room.jpg
 image-format: full
 caption: "The last scene with the monolith in _2001: A Space Odyssey._ (Image copyright Warner Bros. Entertainment)"
 series: art-entertainment
-started: 2021-08-19
-date: 2022-02-13
+date: 2021-08-19
+updated: 2022-02-13
 lede: true
 ---
 

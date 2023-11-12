@@ -1,8 +1,8 @@
 ---
 title: Unlocking the Meaning of Genjo Koan
 subtitle: A Discussion and Interlinear Translation of the Essay’s Opening
-started: 2011-05-10
-date: 2022-02-07
+date: 2011-05-10
+updated: 2022-02-07
 series: people-history
 image: shobogenzo.jpg
 caption: "1811 edition  of _Shōbōgenzō_, written by Dōgen in 13th century. (Image source: terebess.hu)"

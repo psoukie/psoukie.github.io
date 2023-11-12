@@ -3,8 +3,8 @@ title: Corporate Brands and Constitutional Amendments
 subtitle: Four Years Later
 slug: corporate-brands-and-constitutional-amendments
 series: people-history
-date: 2022-10-12
-started: 2018-10-05
+date: 2018-10-05
+updated: 2022-10-12
 image: kaepernick_west.jpg
 image-format: full
 caption: "Nike’s ‘Believe in Something’ ad and an edited image and text from Kanye West’s Twitter"

@@ -1,7 +1,6 @@
 ---
 title: Winning Together
 subtitle: Fifteen Years of Collaboration in a Single Post
-started: 2021-05-05
 date: 2021-05-05
 series: people-history
 image: pyramids.jpg

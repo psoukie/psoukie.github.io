@@ -1,8 +1,8 @@
 ---
 title: "Revisiting the Big Tech ‘Frightful&nbsp;5’"
 subtitle: What Set the Big Five Apart From FAANG+
-date: 2022-02-27
-started: 2021-02-17
+date: 2021-02-17
+updated: 2022-02-27
 image: NYT.png
 image-format: full
 series: technology-ai

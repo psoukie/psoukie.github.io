@@ -5,10 +5,10 @@ layout: default
 <main>
   <header>
     {%- if page.date -%}
-      <p><span>Updated</span> {{ page.date | date: "%B %e, %Y"}}</p>
+      <p><span>Published</span> {{ page.date | date: "%B %e, %Y"}}</p>
     {%- endif -%}
-    {%- if page.started -%}
-      <p><span>Started</span> {{ page.started | date: "%B %e, %Y"}}</p>
+    {%- if page.updated -%}
+      <p><span>Updated</span> {{ page.updated | date: "%B %e, %Y"}}</p>
     {%- endif -%}
     {%- unless page.no-toc -%}
       <p><span>In this article</span></p>

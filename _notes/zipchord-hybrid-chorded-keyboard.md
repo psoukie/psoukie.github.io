@@ -5,8 +5,8 @@ image: ZipChord-chart.png
 caption: "Frequency of the top 100 most used words in 'The Lord of the Rings,' demonstrating Zipf's law in action. The most frequent word makes up 6% of all words in the text."
 lede: true
 series: technology-ai
-date: 2022-02-09
-started: 2021-04-23
+date: 2021-04-23
+updated: 2022-02-09
 ---
 
 Thanks to Zipf’s law, it takes only a small number of chorded shortcuts to improve one half of all the typing we do.

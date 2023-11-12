@@ -5,8 +5,8 @@ image: macbook-air.jpg
 caption: (Image by Apple)
 tags: [test]
 series: [people-history]
-started: 2022-01-17
-date: 2022-01-20
+date: 2022-01-17
+updated: 2022-01-20
 lede: true
 toc: true
 preserve-headings: false

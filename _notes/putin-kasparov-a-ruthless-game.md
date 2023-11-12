@@ -2,8 +2,8 @@
 title: "Putin-Kasparov: A Ruthless Game"
 subtitle: The Continuing Fight for Russia's Democracy
 series: people-history
-started: 2008-11-25
-date: 2022-02-25
+date: 2008-11-25
+updated: 2022-02-25
 no-toc: true
 lede: true
 description: Putin's full-scale invasion of Ukraine prompted me to revisit what I wrote three years after Garry Kasparov retired from professional chess to pursue his fight for Russian democracy -- a fight which has only grown in importance.
