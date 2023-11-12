@@ -393,6 +393,10 @@ h1, .site-title {
   margin-top: -1em;
 }
 
+h1 + figure + p {
+  margin-top: 2em;
+}
+
 h1 + figure.float {
   margin-top: 0;
 }
