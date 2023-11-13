@@ -4,7 +4,7 @@ subtitle: Navigating the Purpose and Responsibility in Our Work
 series: people-history
 date: 2023-11-12
 image: wave-fiji.jpg
-caption: Photo by Bradley Hook on Unsplash
+caption: (Photo by Bradley Hook on Unsplash)
 ---
 
 When we’re immersed in our daily work, it’s easy to overlook a profound truth: the tasks we undertake – both big and small – and the reason why we pursue them have a far-reaching influence. Our actions ripple beyond our horizon; they can resonate and shape the lives of others in ways we might never directly see. For me, this is both an inspiration and a reminder of our responsibility and potential.
