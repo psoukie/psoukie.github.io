@@ -137,11 +137,6 @@
     --margin: 4rem;
   }
 }
-@media (min-width: 1200px) {
-  :root {
-
-  }
-}
 
 /* Font family, size and weight definitions */
 
@@ -489,9 +484,6 @@ a {
 }
 a:hover, a:active, a:focus {
   color: var(--themeDarker);
-}
-a:focus {
-
 }
 
 a[href*="//"]:not([href*="pavelsoukenik.com"])::after {
