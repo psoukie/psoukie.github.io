@@ -234,6 +234,7 @@ main > header {
 
 div.content {
   min-height: 20em;
+  padding-bottom: var(--margin);
 }
 
 div.content, div.content blockquote, div.content div, div.content aside {
