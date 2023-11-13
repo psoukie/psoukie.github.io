@@ -112,6 +112,7 @@ So here is what I need to do:
 
 ### V.2
 - [ ] SEO
+- [ ] Add alt-text into YAML for featured images
 - [ ] Update documentation
 - [ ] Feed
 - [ ] Simplify and fix sidenotes.js
