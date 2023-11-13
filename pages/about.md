@@ -1,21 +1,21 @@
 ---
 title: About
 permalink: /about
-description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em><br /><br />[LinkedIn](https://www.linkedin.com/in/psoukenik/)<br /><br /><a rel="me" href="https://mastodon.social/@soukenik">Mastodon</a><br /><br />[Twitter](https://twitter.com/pavel_soukenik)
+description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em><br /><br />[LinkedIn](https://www.linkedin.com/in/psoukenik/)<br /><br /><a rel="me" href="https://mastodon.social/@soukenik">Mastodon</a>
 ---
 
-Pavel Soukenik is a passionate business leader with a record of building award-winning global enterprise solutions for the world's top technology companies. He is the Executive Director at Webhelp, focused on Trust and Safety.
+Hello! I’m Pavel – a father, husband, and business professional. At my core, I am driven by a passion for understanding and connecting the world through technology, culture, and language.
 
-He is a father to two sons and lives with his wife on Whidbey Island in Washington state. He is passionate about cultures, languages, technology, AI, design, music, board games and philosophy. This website reflects some of these interests.
+My interests span from the nuances of different cultures and languages to the ever-evolving world of AI and technology. I'm also an avid fan of design, music, board games, and life philosophy. I have two sons, and I live with my wife on Whidbey Island in Washington state.
 
-Born in Czechoslovakia, he studied mathematics at the Faculty of Science and English and American Studies at the Faculty of Arts of Masaryk University. His interests in software development and languages led him to a career in localization at Ando Translations and Moravia. Prior to joining Webhelp, Pavel served as Vice President of RWS Moravia’s fastest growing business unit and was promoted to Chief Client Acquisition Officer in 2018.
+My work has focused on building award-winning global enterprise solutions for the world’s top technology companies. In my spare time, I teach at the University of Washington, sharing what I’ve learned with others.
 
-He is an adjunct lecturer at the University of Washington and in his spare time volunteers by teaching chess to seniors.
+This website is a reflection of my interests. It’s a space where I share insights, experiences, and the occasional musings on the things that pique my curiosity.
+
+Welcome, and I hope you find something here that resonates with you.
 
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/psoukenik/)
 
 - [Mastodon](https://mastodon.social/@soukenik)
-
-- [Twitter](https://twitter.com/pavel_soukenik)
