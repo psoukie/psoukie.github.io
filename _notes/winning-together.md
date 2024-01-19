@@ -7,7 +7,7 @@ image: pyramids.jpg
 caption: (Photo by Osama Elsayed on Unsplash)
 ---
 
-I am sharing this article as a reflection, a thank you, and maybe an inspiration after fifteen years of working together with my colleagues, partners, and clients on building solutions that break down language barriers and make amazing devices and services accessible to people around the world.
+<a href="https://authograph.com/view?r=y3FWn569F3" title="Authograph details" style="display: inline-block; text-decoration: none; user-select: none; border: 1.5px solid currentcolor; padding: 0 .4em; margin: 0 .3em;">HHH</a> I am sharing this article as a reflection, a thank you, and maybe an inspiration after fifteen years of working together with my colleagues, partners, and clients on building solutions that break down language barriers and make amazing devices and services accessible to people around the world.
 
 As I am leaving my role of Chief Client Acquisition Officer at RWS Moravia, I am fondly looking back at the people I was fortunate to work with and learn from and at the things we have achieved together. I joined Moravia in January 2006 as a project manager. It was not my first job in localization but it was my dream job, even though I really only knew two things about Moravia: they worked for Microsoft (which was the most mature localization client), and they were the first ever Czech company to open a subsidiary in Japan.
 

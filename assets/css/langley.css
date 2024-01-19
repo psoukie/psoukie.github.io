@@ -486,7 +486,7 @@ a:hover, a:active, a:focus {
   color: var(--themeDarker);
 }
 
-a[href*="//"]:not([href*="pavelsoukenik.com"])::after {
+a[href*="//"]:not([href*="pavelsoukenik.com"]):not([href*="authograph.com"])::after {
   content: "↗\FE0E";
   position: relative;
   font-size: 70%;
