@@ -81,7 +81,9 @@ Try creating one for a something you already published by following these simple
 
   ![A screenshot of information on how to apply the Authograph link to the content](../img/tutorial-3.jpg)
 
-Congratulations, you just created your first Authograph. (The result from my example can be seen at the top of [this article](/winning-together).) make this even faster by registering, which is also free. This allows you to use your previous records as templates, publish without additional verification emails, and to amend your existing records.
+Congratulations, you just created your first Authograph. (The result from my example can be seen at the top of [this article](/winning-together).)
+
+You can create the records even faster when you register, which is also free. This allows you to use your previous records as templates, publish without additional verification emails, and to amend your existing records.
 
 There are more things you can do that are available through the menus of each credit and on the Options tab in the editor, but these steps are all you need to publish an Authograph record.
 
