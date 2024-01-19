@@ -8,7 +8,7 @@ caption: A detail from a photo by Mélanie These
 description: "Discover Authograph, an authorship label and certification service promoting transparency in content creation in the AI era. Learn how it lets you build trust and credibility with your audiences."
 ---
 
-As readers, viewers, and listeners, we naturally like to know where the content we are consuming came from. When reading an article, we would expect it to readily answer some questions: *Who* wrote it, and *when*? While the matter of *where* is less relevant today, in its place, a bigger question arises: *How* was it created? Was AI involved, and if so, in which areas? Was the content reviewed, and by whom?
+<a href="https://authograph.com/view?r=TBcbBKbUCu" title="Authograph details" style="display: inline-block; text-decoration: none; user-select: none; border: 1.5px solid currentcolor; padding: 0 .4em; margin: 0 .3em;">CHC</a> As readers, viewers, and listeners, we naturally like to know where the content we are consuming came from. When reading an article, we would expect it to readily answer some questions: *Who* wrote it, and *when*? While the matter of *where* is less relevant today, in its place, a bigger question arises: *How* was it created? Was AI involved, and if so, in which areas? Was the content reviewed, and by whom?
 
 Knowing these things feels like a basic right. When I look up an article and do not see its publication date or its sources, I feel disappointed. I am more likely to stay and engage with content which shows the context of its creation. Transparency builds trust, and I believe this is now more important than ever.
 
