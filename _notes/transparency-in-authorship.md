@@ -14,11 +14,11 @@ Knowing these things feels like a basic right. When I look up an article and do 
 
 While we have useful conventions to list the date, place, author, and even copyright status, there is no established way to indicate the *how* behind the work. This led me to create **Authograph** – an authorship label that can be read at a glance and created by anyone in a matter of a minute.
 
-## The Challenge With Unclear Authorship
+## The Challenge with Unclear Authorship
 
 My thinking about the “reader’s rights” to authorship information and about what was needed in the Authograph service were further strengthened by two experiences:
 
-I would often read an article or a post, and feel like the content was produced with the aid of generative AI. I also listened to some collaborative music projects that my son enjoys and contributes to, and felt the information about who did what and based on what sources was difficult to convey.
+I would often read an article or a post and feel like the content was produced with the aid of generative AI. I also listened to some collaborative music projects that my son enjoys and contributes to and saw the information about who did what and based on what sources was complicated to convey.
 
 While there are tools that can detect AI content and there are several formal citation styles, they also have their drawbacks (which is why I rarely go and test articles for AI use or see citations outside of academic writing). 
 
