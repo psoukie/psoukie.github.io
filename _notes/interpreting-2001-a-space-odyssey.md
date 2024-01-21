@@ -7,6 +7,8 @@ caption: "The last scene with the monolith in _2001: A Space Odyssey._ (Image co
 series: art-entertainment
 date: 2021-08-19
 updated: 2022-02-13
+authograph-label: HHH
+authograph-link: https://authograph.com/view?r=rU4pqvZoWw
 lede: true
 ---
 
@@ -124,4 +126,4 @@ Did Kubrick intend for the monolith to be interpreted the way I did? No, I do no
 
 The beauty of art is that the readers and viewers get to interpret it themselves. Had the final film turned out differently, people would have produced different interpretations of its meaning. That is not to disprove or discount any of the existing analyses but rather to reinforce that we should not search for one correct, hidden answer to the meaning of _2001_. With this in mind, we are free to enjoy the film and form our own intuitive understandings.
 
->> The quotes in the article are from the books _The Film Director as Superstar_ by Joseph Gelmis and _Space Odyssey_ by Michael Benson and from William Kloman’s article _“In 2001, Will Love Be a Seven-Letter Word?”_ (The New York Times, April 14, 1968)
+>> The quotes in the article are from the books _The Film Director as Superstar_ by Joseph Gelmis and _Space Odyssey: Stanley Kubrick, Arthur C. Clarke, and the Making of a Masterpiece_ by Michael Benson, and from William Kloman’s article _“In 2001, Will Love Be a Seven-Letter Word?”_ (The New York Times, April 14, 1968)

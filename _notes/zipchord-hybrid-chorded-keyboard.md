@@ -7,6 +7,8 @@ lede: true
 series: technology-ai
 date: 2021-04-23
 updated: 2022-02-09
+authograph-label: HHH
+authograph-link: https://authograph.com/view?r=WfBxBBRDdY
 ---
 
 Thanks to Zipf’s law, it takes only a small number of chorded shortcuts to improve one half of all the typing we do.

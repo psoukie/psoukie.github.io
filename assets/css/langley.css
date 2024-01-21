@@ -81,6 +81,7 @@
   --sans-ratio: 1.05;
   --font-family-mono: "Source Code Pro", monospace;
   --mono-ratio: 1.1;
+  --size-xs: 13px;
   --size-s: 14px;
   --size-m: 16px;
   --size-l: 18px;
@@ -117,8 +118,6 @@
   :root {
     --leading: 1.6;
     --leading-tight: 1.5;
-    --size-s: 13px;
-    --size-m: 16px;
     --size-l: 20px;
     --size-xl: 26px;
     --size-xxl: 32px;
@@ -183,7 +182,7 @@ body {
 }
 
 .small {
-  font-size: var(--size-s);
+  font-size: var(--size-xs);
 }
 
 body > header, body > footer {
@@ -203,6 +202,10 @@ body > header {
     margin-top: var(--gutter);
     border-radius: var(--border-radius);
   }
+}
+
+main header {
+  font-size: var(--size-s);
 }
 
 main header nav { display: block;}
@@ -228,7 +231,7 @@ main header p {
   main header {
     display: flex;
     color: var(--neutralSecondary);
-    font-size: var(--size-s);
+    font-size: var(--size-xs);
     justify-content: space-between;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--neutralTertiary);
@@ -272,7 +275,7 @@ main, main blockquote, main div, main aside {
 }
 
 #sidenote-column {
-  font-size: var(--size-s);
+  font-size: var(--size-xs);
   line-height: var(--leading-tight);
   height: 100%;
 }
@@ -315,7 +318,7 @@ main, main blockquote, main div, main aside {
     box-shadow: var(--box-shadow-4);
   }
   main header > * {
-    margin-top: var(--size-s);
+    margin-top: var(--size-xs);
   }
 }
 
@@ -668,7 +671,7 @@ figcaption, .source {
 }
 
 figcaption {
-  font-size: calc(var(--sans-ratio) * var(--size-s));
+  font-size: calc(var(--sans-ratio) * var(--size-xs));
   text-align: center;
 }
 
@@ -680,7 +683,7 @@ figcaption {
 }
 
 figcaption small {
-  font-size: calc(var(--sans-ratio) * var(--size-s));
+  font-size: calc(var(--sans-ratio) * var(--size-xs));
   display: block;
 }
 
@@ -788,7 +791,7 @@ pre code {
 
 div.footnotes:not(#sidenote-column) {
   margin-top: calc(3rem * var(--leading));
-  font-size: var(--size-s);
+  font-size: var(--size-xs);
 }
 
 div.footnotes:not(#sidenote-column)::before {

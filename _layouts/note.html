@@ -10,18 +10,18 @@ layout: default
     {%- if page.updated -%}
       <p><span>Updated</span> {{ page.updated | date: "%B %e, %Y"}}</p>
     {%- endif -%}
-    {%- unless page.no-toc -%}
-      <nav>
-        <p><span>In this article</span></p>
-        {%- include toc.html html=content %}
-      </nav>
-    {%- endunless -%}
     {%- if page.authograph-label -%}
       <p>
         <span>Authograph</span>
         <a href="{{ page.authograph-link }}" title="Authograph details" class="authograph">{{ page.authograph-label }}</a>
       </p>
     {%- endif -%}
+    {%- unless page.no-toc -%}
+      <nav>
+        <p><span>In this article</span></p>
+        {%- include toc.html html=content %}
+      </nav>
+    {%- endunless -%}
     {%- if page.series -%}
       <div>
         <span>Filed under</span>
