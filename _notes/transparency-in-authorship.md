@@ -6,6 +6,7 @@ series: technology-ai
 image: transparency-in-authorship.jpg
 caption: A detail from a photo by Mélanie These
 description: "Discover Authograph, an authorship label and certification service promoting transparency in content creation in the AI era. Learn how it lets you build trust and credibility with your audiences."
+canonical: https://authograph.com/transparency-in-authorship
 authograph-label: CHC
 authograph-link: https://authograph.com/view?r=TBcbBKbUCu
 ---
