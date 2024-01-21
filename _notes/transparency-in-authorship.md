@@ -6,6 +6,8 @@ series: technology-ai
 image: transparency-in-authorship.jpg
 caption: A detail from a photo by Mélanie These
 description: "Discover Authograph, an authorship label and certification service promoting transparency in content creation in the AI era. Learn how it lets you build trust and credibility with your audiences."
+authograph-label: CHC
+authograph-link: https://authograph.com/view?r=TBcbBKbUCu
 ---
 
 <a href="https://authograph.com/view?r=TBcbBKbUCu" title="Authograph details" style="display: inline-block; text-decoration: none; user-select: none; border: 1.5px solid currentcolor; padding: 0 .4em; margin: 0 .3em;">CHC</a> As readers, viewers, and listeners, we naturally like to know where the content we are consuming came from. When reading an article, we would expect it to readily answer some questions: *Who* wrote it, and *when*? While the matter of *where* is less relevant today, in its place, a bigger question arises: *How* was it created? Was AI involved, and if so, in which areas? Was the content reviewed, and by whom?

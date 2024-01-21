@@ -11,18 +11,26 @@ layout: default
       <p><span>Updated</span> {{ page.updated | date: "%B %e, %Y"}}</p>
     {%- endif -%}
     {%- unless page.no-toc -%}
-      <p><span>In this article</span></p>
       <nav>
+        <p><span>In this article</span></p>
         {%- include toc.html html=content %}
       </nav>
     {%- endunless -%}
+    {%- if page.authograph-label -%}
+      <p>
+        <span>Authograph</span>
+        <a href="{{ page.authograph-link }}" title="Authograph details" class="authograph">{{ page.authograph-label }}</a>
+      </p>
+    {%- endif -%}
     {%- if page.series -%}
-      <p><span>Filed under</span></p>
-      <ul class="tag-list">
-        {%- for cat in page.series -%}
-          <li><a href="/series/{{ cat }}">{{ site.series | where: "series", cat | map: "title" | first }}</a></li>
-        {%- endfor -%}
-      </ul>
+      <div>
+        <span>Filed under</span>
+        <ul class="tag-list">
+          {%- for cat in page.series -%}
+            <li><a href="/series/{{ cat }}">{{ site.series | where: "series", cat | map: "title" | first }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
     {%- endif -%}
   </header>
   <div class="content{% if page.lede %} lede{% endif %}">

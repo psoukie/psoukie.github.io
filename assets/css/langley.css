@@ -207,7 +207,15 @@ body > header {
 
 main header nav { display: block;}
 main header .tag-list { display: list-item;}
-main header span { display: block;}
+main header span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+main header p {
+  font-weight: 600;
+}
 
 @media (max-width: 991px) {
   main {
@@ -217,10 +225,26 @@ main header span { display: block;}
     box-shadow: var(--box-shadow-8);
     border-radius: var(--border-radius-large);
   }
+  main header {
+    display: flex;
+    color: var(--neutralSecondary);
+    font-size: var(--size-s);
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--neutralTertiary);
+    margin-bottom: var(--size-xxl);
+  }
+
+  body main header > * {
+    margin: 0;
+    text-align: center;
+  }
+
   /* Hide desktop-only elements*/
-  #sidenote-column, main header {
+  #sidenote-column, main header nav, main header div {
     display: none;
   }
+
 }
 
 main > header {
@@ -290,9 +314,8 @@ main, main blockquote, main div, main aside {
     background-color: var(--neutralLighterAlt);
     box-shadow: var(--box-shadow-4);
   }
-  main > header span {
-    font-weight: 600;
-    text-transform: uppercase;
+  main header > * {
+    margin-top: var(--size-s);
   }
 }
 
@@ -474,7 +497,7 @@ footer {
 p {
   margin: 0;
 }
-p + p, nav + p, p + .float + p, p + .pullquote + p {
+p + p, p + .float + p, p + .pullquote + p {
   margin-top: calc(.5em * var(--leading));
 }
 
@@ -1131,4 +1154,13 @@ body.navigation main {
   opacity: 0;
   transform: scale(0.85) translatey(-7.5%);
   visibility:hidden;
+}
+
+.authograph {
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+  border: 1.5px solid currentcolor;
+  padding: 0.1em .4em 0 .4em;
+  margin: 0 .3em;
 }
