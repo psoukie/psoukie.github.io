@@ -7,14 +7,14 @@
   {%- endif -%}
 {%- endif -%}
   {% if note.title != "" %}
-    {%- assign notename = note.title -%}
+    {%- assign notename = note.title | markdownify | strip_html -%}
   {%- else -%}
     {%- assign notename = note.id -%}
   {%- endif -%}
   {% if include.full %}
-  <h2>{{ notename | markdownify }}</h2>
+  <h2>{{ notename }}</h2>
   {% else %}
-  <h3>{{ notename | markdownify }}</h3>
+  <h3>{{ notename }}</h3>
   {% endif %}
 {%- if include.full -%}
   {% if note.subtitle %}
