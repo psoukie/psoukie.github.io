@@ -900,7 +900,7 @@ div.stanza {
 
 .sidenote {
   position: absolute;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 .8rem 1rem 1rem;
   width: var(--width-sidebar);
   border-radius: var(--border-radius);
   background-color: var(--neutralGray);
