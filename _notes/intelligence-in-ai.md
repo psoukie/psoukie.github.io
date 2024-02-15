@@ -1,6 +1,7 @@
 ---
-title: " Intelligence in AI:<br/> Seeing Past the Symbols"
+title: "Intelligence in AI:<br/> Seeing Past the Symbols"
 subtitle: "Part 1: Machines, Understanding, and Intelligence"
+slug: intelligence-in-ai
 date: 2024-02-14
 series: technology-ai
 image: ILY.jpg
@@ -93,13 +94,13 @@ The discussion about LLMs’ characteristics touches models of language and thou
 [^l-2]: LeCun, “Objective-Driven AI.”
 [^boinodiris]: Phaedra Boinodiris, “[Risks of Large Language Models (LLM)](https://www.youtube.com/watch?v=r4kButlDLUc),” YouTube video, presented by IBM Technology. Posted April 14, 2023. https://www.youtube.com/watch?v=r4kButlDLUc.
 [^bender-gebru]: Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell, “[On the dangers of stochastic parrots: Can language models be too big?🦜](https://dl.acm.org/doi/abs/10.1145/3442188.3445922),” in *Proceedings of the 2021 ACM conference on fairness, accountability, and transparency* (2021): 615.
-[^parrot]: The paper discusses ongoing concerns in AI community about the risks of replicating bias in training data, environmental cost, and the ethical considerations of AI research. Its release led to significant discussions within Google, resulting in the departure of Timnit Gebru and Margaret Mitchell from the company.
+[^parrot]: The paper discusses ongoing concerns about the risks of replicating bias in training data, environmental cost, and the ethical considerations of AI research. Its release led to significant discussions within Google, resulting in the departure of Timnit Gebru and Margaret Mitchell from the company.
 [^b-g-2]: Bender, Gebru et al., “Stochastic Parrots,” 616.
 [^turochamp]: For details on Alan Turing and David Champernowne’s  1948 *Turochamp*, see Garry Kasparov and Frederic Friedel, “[Reconstructing Turing’s ‘paper machine’](https://easychair.org/publications/preprint_download/WjKW),” EasyChair Preprint no. 3 (2017).
 [^turing]: Alan Turing, “Intelligent Machinery,” in *Collected Works of A.M. Turing: Mechanical Intelligence*, ed. D.C. Ince (Amsterdam: North-Holland, 1992), 109.
 [^l-3]: LeCun, “Objective-Driven AI.”
 [^alphazero]: David Silver et al., "A General Reinforcement Learning Algorithm That Masters Chess, Shogi, and Go through Self-Play," *Science* 362, no. 6419 (2018): 1140-1144.
-[^open]: While chess is a closed system and uses different architecture and training techniques, the point is about the quality of ‘understanding’ and to note how the projections seen in language communication are less likely in non-verbal domains.
+[^open]: While AlphaZero employs a distinct architecture and training approach in a closed domain, the emphasis is on the level of ‘understanding’ it exhibits and reduced inclination to anthropomorphize machines in non-verbal contexts.
 [^piantadosi-hill]: Steven T. Piantadosi and Felix Hill, “[Meaning without reference in large language models](https://arxiv.org/abs/2208.02957v2),” arXiv preprint arXiv:2208.02957 (2022): 1, 4–5.
 [^p-h-2]:  Piantadosi and Hill, discussing findings from N. H. Packard et al., “Geometry from a Time Series,” *Physical Review Letters* 45, no. 9 (1980): 712, 4–5.
 [^contrast]: Piantadosi and Hill’s see “many places where these models _can still be_ improved,” (emphasis added) and predict that “as these improvements are made, the models will come into closer alignment with humans, and [they] will enrich the model’s sense of meaning.” (pp. 3–4) This narrative contrasts with e.g. LeCun’s perspective that emphasize areas where LLMs fail entirely and disputes their ability of continued advancement.
