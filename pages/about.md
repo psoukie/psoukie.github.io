@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: /about
-description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em><br /><br />[LinkedIn](https://www.linkedin.com/in/psoukenik/)<br /><br /><a rel="me" href="https://mastodon.social/@soukenik">Mastodon</a>
+description: Pavel Soukenik<br /> <small>[PAH-VHEL&ensp;SO-CAN-EEK]</small><br /> <em>he / him</em><br /><br />[LinkedIn](https://www.linkedin.com/in/psoukenik/)<br /><br />[Bluesky](https://bsky.app/profile/pavelsoukenik.bsky.social)<br /><br /><a rel="me" href="https://mastodon.social/@soukenik">Mastodon</a>
 ---
 
 Hello! I’m Pavel – a father, husband, and business professional. At my core, I am driven by a passion for understanding and connecting the world through technology, culture, and language.
@@ -14,8 +14,12 @@ This website is a reflection of my interests. It’s a space where I share insig
 
 Welcome, and I hope you find something here that resonates with you.
 
-## Contact
+## Follow Me
+
+Follow me for new articles and updates:
 
 - [LinkedIn](https://www.linkedin.com/in/psoukenik/)
+
+- [Bluesky](https://bsky.app/profile/pavelsoukenik.bsky.social)
 
 - [Mastodon](https://mastodon.social/@soukenik)
