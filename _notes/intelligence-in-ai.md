@@ -13,15 +13,15 @@ lede: true
 preserve-headings: true
 ---
 
-The debate surrounding large language models’ (LLMs) capacity for understanding presents a window into their capabilities and the future of machine intelligence. Drawing from a range of expert opinions, this article explores what it reveals about the strengths and weaknesses of current models and the path toward human-level intelligence in&nbsp;AI.
+The questions around AI’s capacity to understand meaning present a window into the capabilities and the future of machine intelligence. Drawing from a range of expert opinions, this article explores what they reveal about the strengths and weaknesses of current models and the path toward human-level intelligence in&nbsp;AI.
 
-<a href="https://authograph.com/view?r=ZQvxiBShAa" title="Authograph details" class="authograph">CHC</a>[^atg] The nature of comprehension in LLMs has provoked a vibrant debate. While the nuances are crucial for researchers and engineers working on mitigating their downsides and advancing their capabilities, they have significance for anyone engaged with generative AI or interested in the future of machine learning.
+<a href="https://authograph.com/view?r=ZQvxiBShAa" title="Authograph details" class="authograph">CHC</a>[^atg] The nature of comprehension in large language models (LLMs) has provoked a vibrant debate. While the nuances are crucial for researchers and engineers working on mitigating their downsides and advancing their capabilities, they have significance for anyone engaged with generative AI or interested in the future of machine learning.
 
 By surveying different perspectives and the special role of symbols and meaning in this debate, this article aims to enrich our understanding of LLM’s strengths, mitigation strategies, and assess how their practical success might shape the journey toward machines with human-level performance.
 
 ## Machines, Understanding, and Intelligence: A Survey
 
-The notion of ‘understanding’ in the context of large language models (LLMs) is a subject of ongoing debate. The differing views stem from several sources: the definitions of terms such as ‘understanding,’ ‘meaning,’ and ‘intelligence;’ conceptual differences on how closely symbols (like words) relate to the concepts they represent; and from tangible observations about the systems.
+The notion of ‘understanding’ in the context of AI is a subject of ongoing debate. The differing views stem from several sources: the definitions of terms such as ‘understanding,’ ‘meaning,’ and ‘intelligence;’ conceptual differences on how closely symbols (like words) relate to the concepts they represent; and from tangible observations about the systems.
 
 Given that language serves as both the subject and the instrument in this discussion, a note on some anthropomorphic descriptions in this article is pertinent. As Phillip Brooker, William Dutton, and Michael Mair observe, “While [these] may be useful or indeed harmless, when taken at face value . . . they generate a false picture of algorithms as well as our own thinking and reasoning practices by treating them as analogues of one another.”[^brooker]
 
@@ -41,7 +41,7 @@ LeCun firmly asserts that machines will eventually surpass human performance in 
 
 While the scientific community has a range of views, LeCun’s perspective as Meta’s Chief AI Scientist at the forefront of LLM is a sobering reminder of the hurdles in overcoming these challenges.
 
-These critiques underscore that the difference between the ability to successfully manipulate language and genuine understanding is far beyond semantics, and represents an unsolved challenge in the quest for machine intelligence.
+These critiques underscore that the difference between the ability to successfully manipulate language and genuine understanding is far beyond semantics and represents an unsolved challenge in the quest for machine intelligence.
 
 ### The Illusion of Understanding
 
@@ -60,7 +60,7 @@ Echoing the idea that we might be projecting intelligence onto things devoid of 
 
 The contrast between AI in chess and language vividly illustrates these arguments:
 
-Seventy years after his invention, Turing would likely have been thrilled by the mastery, deep understanding, and even artistry in chess exhibited by AlphaZero.[^alphazero] (Now running on Tensor Processing Units instead of paper.) Yet, despite my admiration for AlphaZero’s elegant design and innovative play, I perceive its evaluations as outputs of a sophisticated tool.
+Seventy years after his invention, Turing would likely have been thrilled by the mastery, deep understanding, and even artistry in chess exhibited by AlphaZero.[^alphazero] (And running on Tensor Processing Units instead of paper.) Yet, despite my admiration for AlphaZero’s elegant design and innovative play, I perceive its evaluations as outputs of a sophisticated tool.
 
 In contrast, using ChatGPT&nbsp;4 for feedback on my article’s structure manifests as a different experience. This, even though AlphaZero’s grasp of chess surpasses any human, while essentially the opposite is true of LLMs and humans in the language domain.[^open]
 
@@ -83,11 +83,11 @@ The diverse viewpoints represented in this first section reflect a broad range o
 The discussion about LLMs’ characteristics touches models of language and thought representation, inviting a deeper examination into the concept of meaning. As promised in the introduction, insights from this exploration should further enrich our ability to leverage LLMs’ strengths, mitigate their shortcomings, and orient us as we witness future advances.
 
 
->> This article will continue with part 2, **The Finger Pointing to the Moon**, examining how the relationship of symbols and meaning play role in LLMs capabilities, with emphasis on practical strengths and mitigations as seen through this lens; and conclude with a look at how the success of LLMs affects the paths towards machines with human-level performance.
+>> The next part of this article will examine how the relationship of symbols and meaning plays a role in LLMs capabilities, with emphasis on practical strengths and mitigations as seen through this lens, and conclude with a look at how the success of LLMs affects the paths towards machines with human-level performance.
 >> {: .small}
 
-[^atg]: This is a human-produced text that includes manually adapted recommendations generated by ChatGPT&nbsp;4 on structure, fluency, and vocabulary. [Details](https://authograph.com/view?r=ZQvxiBShAa "Authograph record")
-[^brooker]: Phillip Brooker, William Dutton, and Michael Mair, “[The New Ghosts in the Machine: ‘Pragmatist’ AI and the Conceptual Perils of Anthropomorphic Description](https://livrepository.liverpool.ac.uk/3057133/),” *Ethnographic Studies* 16 (2019): 273
+[^atg]: This is a human-produced text that includes manually adapted recommendations generated by ChatGPT&nbsp;4 on structure, fluency, and vocabulary. [Authograph details](https://authograph.com/view?r=ZQvxiBShAa "Authograph record").
+[^brooker]: Phillip Brooker, William Dutton, and Michael Mair, “[The New Ghosts in the Machine: ‘Pragmatist’ AI and the Conceptual Perils of Anthropomorphic Description](https://livrepository.liverpool.ac.uk/3057133/),” *Ethnographic Studies* 16 (2019): 273.
 [^browning-lecun]: Jacob Browning and Yann LeCun, “[AI and the Limits of Language](https://www.noemamag.com/ai-and-the-limits-of-language/),” *Noema Magazine*, August 23, 2022, https://www.noemamag.com/ai-and-the-limits-of-language/.
 [^b-l]: Browning and LeCun, “AI and the Limits of Language.”
 [^lecun]: Yann LeCun, “[Objective-Driven AI: Towards Machines that can Learn, Reason, and Plan](https://www.youtube.com/watch?v=d_bdU3LsLzE),” lecture, The Dean W. Lytle Endowed Lecture Series, University of Washington Department of Electrical & Computer Engineering, HUB Lyceum, January 24, 2024.
@@ -96,11 +96,11 @@ The discussion about LLMs’ characteristics touches models of language and thou
 [^bender-gebru]: Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell, “[On the dangers of stochastic parrots: Can language models be too big?🦜](https://dl.acm.org/doi/abs/10.1145/3442188.3445922),” in *Proceedings of the 2021 ACM conference on fairness, accountability, and transparency* (2021): 615.
 [^parrot]: The paper discusses ongoing concerns about the risks of replicating bias in training data, environmental cost, and the ethical considerations of AI research. Its release led to significant discussions within Google, resulting in the departure of Timnit Gebru and Margaret Mitchell from the company.
 [^b-g-2]: Bender, Gebru et al., “Stochastic Parrots,” 616.
-[^turochamp]: For details on Alan Turing and David Champernowne’s  1948 *Turochamp*, see Garry Kasparov and Frederic Friedel, “[Reconstructing Turing’s ‘paper machine’](https://easychair.org/publications/preprint_download/WjKW),” EasyChair Preprint no. 3 (2017).
+[^turochamp]: For details on Alan Turing and David Champernowne’s  1948 *Turochamp*, see Garry Kasparov and Frederic Friedel, “[Reconstructing Turing’s ‘paper machine’](https://easychair.org/publications/preprint_download/WjKW),” _EasyChair Preprint no. 3_ (2017).
 [^turing]: Alan Turing, “Intelligent Machinery,” in *Collected Works of A.M. Turing: Mechanical Intelligence*, ed. D.C. Ince (Amsterdam: North-Holland, 1992), 109.
 [^l-3]: LeCun, “Objective-Driven AI.”
 [^alphazero]: David Silver et al., "A General Reinforcement Learning Algorithm That Masters Chess, Shogi, and Go through Self-Play," *Science* 362, no. 6419 (2018): 1140-1144.
 [^open]: While AlphaZero employs a distinct architecture and training approach in a closed domain, the emphasis is on the level of ‘understanding’ it exhibits and reduced inclination to anthropomorphize machines in non-verbal contexts.
-[^piantadosi-hill]: Steven T. Piantadosi and Felix Hill, “[Meaning without reference in large language models](https://arxiv.org/abs/2208.02957v2),” arXiv preprint arXiv:2208.02957 (2022): 1, 4–5.
+[^piantadosi-hill]: Steven T. Piantadosi and Felix Hill, “[Meaning without reference in large language models](https://arxiv.org/abs/2208.02957v2),” _arXiv preprint arXiv:2208.02957_ (2022): 1, 4–5.
 [^p-h-2]:  Piantadosi and Hill, discussing findings from N. H. Packard et al., “Geometry from a Time Series,” *Physical Review Letters* 45, no. 9 (1980): 712, 4–5.
-[^contrast]: Piantadosi and Hill’s see “many places where these models _can still be_ improved,” (emphasis added) and predict that “as these improvements are made, the models will come into closer alignment with humans, and [they] will enrich the model’s sense of meaning.” (pp. 3–4) This narrative contrasts with e.g. LeCun’s perspective that emphasize areas where LLMs fail entirely and disputes their ability of continued advancement.
+[^contrast]: Piantadosi and Hill’s see “many places where these models _can still be_ improved,” (emphasis added) and predict that “as these improvements are made, the models will come into closer alignment with humans, and [they] will enrich the model’s sense of meaning.” (pp. 3–4) This narrative contrasts with e.g. LeCun’s perspective on areas where LLMs fail entirely and their capacity for continued advancement.
