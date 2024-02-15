@@ -2,30 +2,62 @@
 Sidenotes are superior to footnotes where possible because they enable the reader to immediately look at them without requiring user action to 'go to' or 'pop up' the footnotes; even floating footnotes require effort by the reader.
 sidenotes.js is inspired by the Tufte-CSS sidenotes (https://edwardtufte.github.io/tufte-css/#sidenotes), but where Tufte-CSS uses static footnotes inlined into the body of the page (requiring modifications to Pandoc's compilation), which doesn't always work well for particularly long or frequent sidenotes, sidenotes.js will rearrange sidenotes to fit as best as possible, and will respond to window changes.
 Particularly long sidenotes are also partially 'collapsed'.
+
 Author: Said Achmiz
 2019-03-11
 license: MIT (derivative of footnotes.js, which is PD)
 */
 
-var timeout = false,
-    delay = 250,
-    lastsize = 0; //1 - small, 2 - large
 
 if (typeof window.GW == "undefined")
     window.GW = { };
-
-/********************/
-/* DEBUGGING OUTPUT */
-/********************/
-
 function GWLog (string) {
-  // console.log(string);
+        // console.log(string);
 }
 
 /***********/
 /* HELPERS */
 /***********/
 
+/*  The "target counterpart" is the element associated with the target, i.e.:
+    if the URL hash targets a footnote reference, its counterpart is the
+    sidenote for that citation; and vice-versa, if the hash targets a sidenote,
+    its counterpart is the in-text citation. We want a target counterpart to be
+    highlighted along with the target itself; therefore we apply a special
+    "targeted" class to the target counterpart.
+    */
+function updateTargetCounterpart() {
+    GWLog("updateTargetCounterpart");
+
+    /*  Clear existing targeting.
+        */
+    document.querySelectorAll(".targeted").forEach(element => {
+        element.classList.remove("targeted");
+    });
+
+    /*  Identify new target counterpart, if any.
+        */
+    var counterpart;
+    if (location.hash.hasPrefix("/#sn:")) {
+        counterpart = document.querySelector("#fnref:" + location.hash.substr(4));
+    } else if (location.hash.hasPrefix("/#fnref:") && (window.innerWidth >= 992) ) {
+        counterpart = document.querySelector("#sn:" + location.hash.substr(7));
+    }
+    /*  If a target counterpart exists, mark it as such.
+        */
+    if (counterpart)
+        counterpart.classList.toggle("targeted", true);
+}
+
+/*  Returns true if the given element intersects the viewport, false otherwise.
+    */
+function isOnScreen(element) {
+    let rect = element.getBoundingClientRect();
+    return (rect.top < window.innerHeight &&
+            rect.bottom > 0 &&
+            rect.left < window.innerWidth &&
+            rect.right > 0);
+}
 
 /*  This is necessary to defeat a bug where if the page is loaded with the URL
     hash targeting some element, the element does not match the :target CSS
@@ -34,7 +66,7 @@ function GWLog (string) {
 function realignHashIfNeeded() {
     GWLog("realignHashIfNeeded");
 
-    if (location.hash.match(/#sn[0-9]/) || location.hash.match(/#fnref[0-9]/))
+    if (location.hash.hasPrefix("/#sn:") || location.hash.hasPrefix("/#fnref:"))
         realignHash();
 }
 function realignHash() {
@@ -54,8 +86,112 @@ function setHashWithoutScrolling(newHash) {
 
     let scrollPositionBeforeNavigate = window.scrollY;
     location.hash = newHash;
+    requestAnimationFrame(() => {
+        window.scrollTo(0, scrollPositionBeforeNavigate);
+    });
+
+    if (GW.isFirefox)
+        window.getSelection().addRange(selectedRange);
 }
 
+/*  Firefox.
+
+    This workaround is necessary because Firefox takes the 'ch' unit, *as used
+    in media queries* (e.g. "@media only screen and (max-width: 120ch)") from,
+    not the font-family set on the 'body' element or the 'html' element or even
+    the ':root' element (as Chrome does, and as is proper), but from the font
+    *set by the user to be the browser default*. That means that media queries
+    specified in 'ch' units change their meaning based on the browser default
+    font, even if that font is used absolutely nowhere on the page.
+
+    This makes 'ch' based media queries utterly useless in Firefox.
+
+    Thus, this workaround, which is a sort of "polyfill" for correct 'ch' unit
+    based media query behavior. It checks the computed value of the 'body'
+    element (which, while *specified* in 'ch' units, is returned in pixels),
+    divides it by the *specified* value, thus deriving the width of a 'ch' unit
+    for the font specified for the body. It then constructs media queries
+    specified in pixels (which are equivalent to those specified in default.css
+    in 'ch' units), and injects a <style> block into the <head> with those
+    media queries, wrapped in a Firefox-specific CSS block.
+    */
+function ridiculousWorkaroundsForBrowsersFromBizarroWorld() {
+    GWLog("ridiculousWorkaroundsForBrowsersFromBizarroWorld");
+
+    GW.isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+    if (!GW.isFirefox) {
+        GW.sidenotes.viewportWidthBreakpointMediaQueryString = `(max-width: 176ch)`;
+        GW.sidenotes.mobileViewportWidthBreakpointMediaQueryString = `(max-width: 65ch)`;
+    } else {
+        /*  This should match the "max-width" property of the "body" element.
+            */
+        GW.maxBodyWidthInCharacterUnits = 112;
+
+        /*  This should be some property/value pair that only Firefox supports.
+            */
+        GW.firefoxTargetingSelector = "@supports (-moz-user-focus: normal)";
+
+        let widthOfCharacterUnit = parseInt(getComputedStyle(document.body).maxWidth) / GW.maxBodyWidthInCharacterUnits;
+        let viewportWidthBreakpointInPixels = 176 * widthOfCharacterUnit;
+        GW.sidenotes.viewportWidthBreakpointMediaQueryString = `(max-width: ${viewportWidthBreakpointInPixels}px)`;
+        let mobileViewportWidthBreakpointInPixels = 65 * widthOfCharacterUnit;
+        GW.sidenotes.mobileViewportWidthBreakpointMediaQueryString = `(max-width: ${mobileViewportWidthBreakpointInPixels}px)`;
+
+        var sidenotesBrowserWorkaroundStyleBlock = document.querySelector("style#sidenotes-browser-workaround");
+        if (!sidenotesBrowserWorkaroundStyleBlock) {
+            sidenotesBrowserWorkaroundStyleBlock = document.createElement("style");
+            sidenotesBrowserWorkaroundStyleBlock.id = "sidenotes-browser-workaround";
+            document.querySelector("body").appendChild(sidenotesBrowserWorkaroundStyleBlock);
+        }
+        sidenotesBrowserWorkaroundStyleBlock.innerHTML = `
+            ${GW.firefoxTargetingSelector} {
+                @media only screen and (max-width: ${viewportWidthBreakpointInPixels}px) {
+                    #sidenote-column-left,
+                    #sidenote-column-right {
+                        display: none;
+                    }
+                }
+                @media only screen and (min-width: ${viewportWidthBreakpointInPixels + 1}px) {
+                    main {
+                        position: relative;
+                        right: 4ch;
+                    }
+                    #markdownBody {
+                        position: relative;
+                    }
+                }
+                @media only screen and (max-width: ${viewportWidthBreakpointInPixels}px) {
+                    .footnote-ref:target {
+                        background-color: inherit;
+                        box-shadow: none;
+                    }
+                }
+            }
+        `;
+    }
+
+    /*  Create media query objects (for checking and attaching listeners).
+        */
+    GW.sidenotes.mediaQueries = {
+        viewportWidthBreakpoint: matchMedia(GW.sidenotes.viewportWidthBreakpointMediaQueryString),
+        mobileViewportWidthBreakpoint: matchMedia(GW.sidenotes.mobileViewportWidthBreakpointMediaQueryString),
+        hover: matchMedia("only screen and (hover: hover) and (pointer: fine)")
+    };
+
+    /*  Listen for changes to whether the viewport width media query is matched;
+        if such a change occurs (i.e., if the viewport becomes, or stops being,
+        wide enough to support sidenotes), switch modes from footnote popups to
+        sidenotes or vice/versa, as appropriate.
+        (This listener may also be fired if the dev tools pane is opened, etc.)
+        */
+    GW.sidenotes.mediaQueries.viewportWidthBreakpoint.addListener(GW.sidenotes.viewportWidthBreakpointChanged = () => {
+        GWLog("GW.sidenotes.viewportWidthBreakpointChanged");
+
+        updateFootnoteEventListeners();
+        GW.sidenotes.footnotesObserver.disconnect();
+        updateFootnoteReferenceLinks();
+    });
+}
 
 /*  Returns true if the string begins with the given prefix.
     */
@@ -85,7 +221,6 @@ function isWithinCollapsedBlock(element) {
     /*  If the element is not within a collapse block at all, it obviously can't
         be within a *currently-collapsed* collapse block.
         */
-
     let collapseParent = element.closest(".collapse");
     if (!collapseParent) return false;
 
@@ -139,18 +274,17 @@ function revealTarget() {
     GWLog("revealTarget");
 
     if (!location.hash) return;
-
-    let target = document.querySelector(decodeURIComponent(location.hash));
+    let target = document.querySelector(decodeURIComponent(location.hash.replace(/:/, "\\:")));
     if (!target) return;
 
     /*  What needs to be revealed is not necessarily the targeted element
         itself; if the target is a sidenote, expand collapsed blocks to reveal
         the citation reference.
         */
-    let targetInText = location.hash.match(/#sn[0-9]/) ?
-                       document.querySelector("#fnref" + location.hash.substr(3)) :
-                       target;
-    expandCollapseBlocksToReveal(targetInText);
+    // let targetInText = location.hash.match(/#sn[0-9]/) ?
+    //                    document.querySelector("#fnref" + location.hash.substr(3)) :
+    //                    target;
+    // expandCollapseBlocksToReveal(targetInText);
 
     //  Scroll the target into view.
     target.scrollIntoView();
@@ -208,15 +342,13 @@ function updateSidenotesInCollapseBlocks() {
 function updateFootnoteReferenceLinks() {
     GWLog("updateFootnoteReferenceLinks");
 
-    let footnoteAnchors = Array.from(document.querySelectorAll("div.footnotes li[id^='fn:']"));
-
     for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
         let fnref = GW.sidenotes.footnoteRefs[i];
+        const anchorText = fnref.href.slice(fnref.href.indexOf("#") + 4);
         if (window.innerWidth >= 992) {
-            fnref.href = "#sn" + (i + 1);
+            fnref.href = "#sn:" + anchorText;
         } else {
-            fnref.href = "#fn" + (i + 1);
-            footnoteAnchors[i].id = "fn" + (i + 1);
+            fnref.href = "#fn:" + anchorText;
         }
     }
 }
@@ -268,7 +400,9 @@ function updateFootnoteEventListeners() {
             sidenote.removeEventListener("mouseout", GW.sidenotes.sidenoteout);
         }
 
-        if (window.Footnotes && window.innerWidth > 992) {
+        if (window.Footnotes &&
+            window.innerWidth >= 992 &&
+            GW.sidenotes.mediaQueries.hover == true) {
             //  Bind footnote events.
             Footnotes.setup();
         }
@@ -292,25 +426,46 @@ function clearFootnotePopups() {
 /*  This function actually calculates and sets the positions of all sidenotes.
     */
 function updateSidenotePositions() {
-  GWLog("updateSidenotePositions");
+    GWLog("updateSidenotePositions");
+
     /*  If we're in footnotes mode (i.e., the viewport is too narrow), then
-        don't do anything. soukie TK this is based on breakpoint.
+        don't do anything.
         */
     if (window.innerWidth < 992)
         return;
 
     /*  Position left sidenote column so top is flush with top of first
         full-width block (i.e., one that is not pushed right by the TOC).
+
         NOTE: This doesnâ€™t quite do what it says (due to overflow), but thatâ€™s
         fine; nothing really breaks as a result...
         */
     let markdownBody = document.querySelector("div.content");
-    let offset = markdownBody.offsetTop || 0;
-/*    if (GW.sidenotes.sidenoteColumn.offsetTop < firstFullWidthBlock.offsetTop) {
-        GW.sidenotes.sidenoteColumn.style.top = offset + "px";
-        GW.sidenotes.sidenoteColumn.style.height = `calc(100% - ${offset}px)`;
+    // var firstFullWidthBlock;
+    // for (var block of markdownBody.children) {
+    //     if (block.clientWidth == markdownBody.clientWidth) {
+    //         firstFullWidthBlock = block;
+    //         break;
+    //     }
+    // }
+    // let offset = firstFullWidthBlock.offsetTop || 0;
+    // if (GW.sidenotes.sidenoteColumnLeft.offsetTop < firstFullWidthBlock.offsetTop) {
+    //     GW.sidenotes.sidenoteColumnLeft.style.top = offset + "px";
+    //     GW.sidenotes.sidenoteColumnLeft.style.height = `calc(100% - ${offset}px)`;
+    // }
+
+    let metaHeight = 0;
+    if (window.innerWidth >= 992 && window.innerWidth < 1200) {
+        const headerBar = document.querySelector("main > header");
+        const aboutBar = document.querySelector("#about-column");
+        const headerHeight = headerBar ? headerBar.clientHeight : 0;
+        const aboutHeight = aboutBar ? aboutBar.clientHeight : 0;
+        metaHeight = headerHeight + aboutHeight + 32;
     }
-*/
+
+    GW.sidenotes.sidenoteColumn.style.height = markdownBody.clientHeight - metaHeight + "px";
+
+
     //  Update the disposition of sidenotes within collapse blocks.
     updateSidenotesInCollapseBlocks();
 
@@ -330,7 +485,7 @@ function updateSidenotePositions() {
         let side = GW.sidenotes.sidenoteColumn;
 
         //  Default position (vertically aligned with the footnote reference).
-        sidenote.style.top = Math.round(((GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top) - side.getBoundingClientRect().top) ) + "px";
+        sidenote.style.top = Math.round(((GW.sidenotes.footnoteRefs[i].getBoundingClientRect().top) - side.getBoundingClientRect().top) + 4) + "px";
 
         /*  Mark sidenotes which are cut off vertically.
             */
@@ -546,23 +701,20 @@ function constructSidenotes() {
         load process.
         */
     let markdownBody = document.querySelector("div.content");
-    let headerBar = document.querySelector("main > header");
-    let aboutBar = document.querySelector("#about-column");
-    let metaWidth = 0;
-    if (window.innerWidth >= 992 && window.innerWidth < 1200) {
-        const headerHeight = headerBar ? headerBar.clientHeight : 0;
-        const aboutHeight = aboutBar ? aboutBar.clientHeight : 0;
-        metaWidth = headerHeight + aboutHeight + 32;
-    }
     if (!markdownBody) return;
 
     /*  Add the sidenote columns (removing them first if they already exist).
-        */
-    // if (GW.sidenotes.sidenoteColumn) GW.sidenotes.sidenoteColumn.remove();
-    // markdownBody.parentNode.insertAdjacentHTML("beforeend",
-    //     "<div id='sidenote-column' class='footnotes' style='visibility:hidden'></div>");
+    */
+    // if (GW.sidenotes.sidenoteColumnLeft) GW.sidenotes.sidenoteColumnLeft.remove();
+    // if (GW.sidenotes.sidenoteColumnRight) GW.sidenotes.sidenoteColumnRight.remove();
+    // markdownBody.insertAdjacentHTML("beforeend",
+    //     "<div id='sidenote-column-left' class='footnotes' style='visibility:hidden'></div>" +
+    //     "<div id='sidenote-column-right' class='footnotes' style='visibility:hidden'></div>");
+    // GW.sidenotes.sidenoteColumnLeft = document.querySelector("#sidenote-column-left");
+    // GW.sidenotes.sidenoteColumnRight = document.querySelector("#sidenote-column-right");
+
+    // Pavel: account for my specific use case:
     GW.sidenotes.sidenoteColumn = document.querySelector("#sidenote-column");
-    GW.sidenotes.sidenoteColumn.style.height = markdownBody.clientHeight - metaWidth + "px";
 
     /*  Create and inject the sidenotes.
         */
@@ -573,8 +725,9 @@ function constructSidenotes() {
         //  Create the sidenote outer containing block...
         let sidenote = document.createElement("div");
         sidenote.classList.add("sidenote");
-        sidenote.id = "sn" + (i + 1);
-
+        const linkText = GW.sidenotes.footnoteRefs[i].href;
+        const anchorText = linkText.slice(linkText.indexOf("#") + 4);
+        sidenote.id = "sn:" + anchorText;
         let referencedFootnote = document.querySelector(GW.sidenotes.footnoteRefs[i].hash.replace(/:/, "\\:"));
         sidenote.innerHTML = (referencedFootnote ? referencedFootnote.innerHTML : "Loading sidenote contents, please waitâ€¦");
         //  Add the sidenote to the sidenotes array...
@@ -584,12 +737,15 @@ function constructSidenotes() {
         side.appendChild(sidenote);
     }
 
-    /*  Create & inject the sidenote self-links (i.e., boxed sidenote numbers).
+    /*  Create & inject the sidenote self-links (i.e., boxed sidenote numbers). 
+        TK: Pavel's note: this works only as long as there is only one reference in the text to each footnote.
         */
     for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
         let sidenoteSelfLink = document.createElement("a");
         sidenoteSelfLink.classList.add("sidenote-self-link");
-        sidenoteSelfLink.href = "#sn" + (i + 1);
+        const linkText = GW.sidenotes.footnoteRefs[i].href;
+        const anchorText = linkText.slice(linkText.indexOf("#") + 4);
+        sidenoteSelfLink.href = "#sn:" + anchorText;
         sidenoteSelfLink.textContent = (i + 1);
         GW.sidenotes.sidenoteDivs[i].children[0].prepend(sidenoteSelfLink);
     }
@@ -603,6 +759,21 @@ function constructSidenotes() {
     GW.sidenotes.hiddenSidenoteStorage.style.display = "none";
     markdownBody.appendChild(GW.sidenotes.hiddenSidenoteStorage);
 
+    /*  Add listeners to target a sidenote when clicked.
+        */
+    for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
+        let sidenote = GW.sidenotes.sidenoteDivs[i];
+        sidenote.addEventListener("click", GW.sidenotes.sidenoteClicked = (event) => {
+            GWLog("GW.sidenotes.sidenoteClicked");
+
+            if (decodeURIComponent(location.hash) == sidenote.id || event.target.tagName == "A") return;
+
+            //  Preserve hash before changing it.
+            if (!(location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:")))
+                GW.sidenotes.hashBeforeSidenoteWasFocused = location.hash;
+            setHashWithoutScrolling(encodeURIComponent(sidenote.id));
+        });
+    }
 
     /*  Insert zero-width spaces after problematic characters in sidenotes.
         (This is to mitigate justification/wrapping problems.)
@@ -625,24 +796,17 @@ function constructSidenotes() {
 
 /*  Q:  Why is this setup function so long and complex?
     A:  In order to properly handle all of the following:
+
     1.  The two different modes (footnote popups vs. sidenotes)
     2.  The interactions between sidenotes and collapse blocks
     3.  Linking to footnotes/sidenotes
     4.  Loading a URL that links to a footnote/sidenote
     5.  Disclosing too-long sidenotes (and otherwise interacting with sidenotes)
     6.  Changes in the viewport width dynamically altering all of the above
+
     â€¦ and, of course, correct layout of the sidenotes, even in tricky cases
     where the citations are densely packed and the sidenotes are long.
     */
-
-function sidenotesSetupInner() {
-  constructSidenotes();
-  updateSidenotePositions();
-  updateFootnoteEventListeners();
-  updateFootnoteReferenceLinks();
-  setTimeout(updateSidenotePositions, 5000); // soukie -- in case of late shifts because of slow loading of fonts etc.
-}
-
 function sidenotesSetup() {
     GWLog("sidenotesSetup");
 
@@ -651,36 +815,67 @@ function sidenotesSetup() {
         considered to be overlapping.
         */
     GW.sidenotes = {
-        sidenoteSpacing:    16
+        sidenoteSpacing: 16
     };
+
+    //  Compensate for Firefox nonsense.
+    ridiculousWorkaroundsForBrowsersFromBizarroWorld();
+    if (GW.isFirefox && document.readyState != "complete")
+        window.addEventListener("load", ridiculousWorkaroundsForBrowsersFromBizarroWorld);
 
     /*  Construct the sidenotes immediately, and also re-construct them as soon
         as the HTML content is fully loaded (if it isn't already).
         */
-    // constructSidenotes();
-    //if (document.readyState == "loading")
-
-    // window.addEventListener("load", constructSidenotes);
-
-    // window.addEventListener("load", updateSidenotePositions);
-
-    // if (document.readyState!='loading') sidenotesSetupInner();
-    //     // modern browsers
-    //     else if (document.addEventListener) document.addEventListener('DOMContentLoaded', sidenotesSetupInner);
-    //     // IE <= 8
-    //     else document.attachEvent('onreadystatechange', function(){
-    //         if (document.readyState=='complete') sidenotesSetupInner();
-    //     });
-
-        window.addEventListener("load", sidenotesSetupInner);
+    if (document.readyState == "loading") {
+        window.addEventListener("DOMContentLoaded", constructSidenotes);
+    } else {
+        constructSidenotes();
+    }
 
     /*  Add a resize listener so that sidenote positions are recalculated when
-        the window is resized. */
+        the window is resized.
+        */
+    // window.addEventListener('resize', GW.sidenotes.windowResized = (event) => {
+    //     GWLog("GW.sidenotes.windowResized");
 
-    window.addEventListener('resize', function() {
-      clearTimeout(timeout);
-      timeout = setTimeout(updateSidenotePositions, delay);
+    //     updateSidenotePositions();
+    // });
+    /*  Lay out the sidenotes as soon as the document is loaded.
+        */
+    if (document.readyState == "complete") {
+        updateSidenotePositions();
+    } else {
+        if (document.readyState == "loading") {
+            window.addEventListener("DOMContentLoaded", updateSidenotePositions);
+        } else {
+            updateSidenotePositions();
+        }
+        window.addEventListener("load", updateSidenotePositions);
+    }
+
+    /*  On page load, set the correct mode (footnote popups or sidenotes), and
+        rewrite the citation (footnote reference) links to point to footnotes
+        or to sidenotes, as appropriate.
+        */
+    if (document.readyState == "complete") {
+        updateFootnoteEventListeners();
+        updateFootnoteReferenceLinks();
+    } else {
+        window.addEventListener("load", () => {
+            updateFootnoteEventListeners();
+            updateFootnoteReferenceLinks();
+        });
+    }
+    /*  In case footnotes.js loads later, make sure event listeners are set in
+        order afterwards.
+        */
+    GW.sidenotes.footnotesObserver = new MutationObserver((mutationsList, observer) => {
+        if (document.querySelector("#footnotediv")) {
+            updateFootnoteEventListeners();
+            GW.sidenotes.footnotesObserver.disconnect();
+        }
     });
+    GW.sidenotes.footnotesObserver.observe(document.body, { attributes: true, childList: true, subtree: true });
 
     /*  If the page was loaded with a hash that points to a footnote, but
         sidenotes are enabled (or vice-versa), rewrite the hash in accordance
@@ -688,14 +883,65 @@ function sidenotesSetup() {
         to the appropriate element - footnote or sidenote).
         */
     if (location.hash.match(/#sn[0-9]/) &&
-        (window.innerWidth < 992) ) {
+            (window.innerWidth < 992) ) {
         location.hash = "#fn" + location.hash.substr(3);
     } else if (location.hash.match(/#fn[0-9]/) &&
-        (window.innerWidth >= 992) ) {
+            (window.innerWidth >= 992) ) {
         location.hash = "#sn" + location.hash.substr(3);
+    } else {
+        /*  Otherwise, make sure that if a sidenote is targeted by the hash, it
+            indeed ends up looking highlighted (this defeats a weird bug).
+            */
+        requestAnimationFrame(realignHashIfNeeded);
     }
+
+    /*  Having updated the hash, now properly highlight everything, if needed,
+        and add a listener to update the target counterpart if the hash changes
+        later.
+
+        Also, if the hash points to a collapse block, or to an element within a
+        collapse block, expand it and all collapse blocks enclosing it.
+        */
+    window.addEventListener("hashchange", GW.sidenotes.hashChanged = () => {
+        GWLog("GW.sidenotes.hashChanged");
+
+        revealTarget();
+        updateTargetCounterpart();
+    });
+    window.addEventListener("load", () => {
+        revealTarget();
+        updateTargetCounterpart();
+    });
+
+    /*  Add event listeners to (asynchronously) recompute sidenote positioning
+        when a collapse block is manually collapsed or expanded.
+        */
+    document.querySelectorAll(".disclosure-button").forEach(collapseCheckbox => {
+        collapseCheckbox.addEventListener("change", GW.sidenotes.disclosureButtonValueChanged = (event) => {
+            GWLog("GW.sidenotes.disclosureButtonValueChanged");
+
+            setTimeout(updateSidenotePositions);
+        });
+    });
+
+    //  Prepare for hash reversion.
+    /*  Save the hash, if need be (if it does NOT point to a sidenote or a
+        footnote reference).
+        */
+    GW.sidenotes.hashBeforeSidenoteWasFocused = (location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:")) ?
+                                                "" : location.hash;
+    /*  Add event listener to un-focus a sidenote (by resetting the hash) when
+        then document is clicked anywhere but a sidenote or a link.
+        */
+    document.body.addEventListener("click", GW.sidenotes.bodyClicked = (event) => {
+        GWLog("GW.sidenotes.bodyClicked");
+
+        if (!(event.target.tagName == "A" || event.target.closest(".sidenote")) &&
+            (location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:"))) {
+            setHashWithoutScrolling(GW.sidenotes.hashBeforeSidenoteWasFocused);
+        }
+    });
 }
 
 //  LET... THERE... BE... SIDENOTES!!!
-
-document.addEventListener('DOMContentLoaded', sidenotesSetup);
+sidenotesSetup();
