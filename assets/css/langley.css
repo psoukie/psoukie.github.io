@@ -603,6 +603,12 @@ aside.pullquote em {
   }
 }
 
+.sans {
+  font-family: var(--font-family-sans);
+  line-height: var(--leading-sans);
+  font-size: calc(var(--sans-ratio) * 1em);
+}
+
 .box h2, .box h3, .box h4, .box h5 {
   margin-top: 0;
 }
