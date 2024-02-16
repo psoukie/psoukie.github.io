@@ -6,6 +6,8 @@ Particularly long sidenotes are also partially 'collapsed'.
 Author: Said Achmiz
 2019-03-11
 license: MIT (derivative of footnotes.js, which is PD)
+
+Simplified for use on pavelsoukenik.com by Pavel Soukenik
 */
 
 
@@ -49,16 +51,6 @@ function updateTargetCounterpart() {
         counterpart.classList.toggle("targeted", true);
 }
 
-/*  Returns true if the given element intersects the viewport, false otherwise.
-    */
-function isOnScreen(element) {
-    let rect = element.getBoundingClientRect();
-    return (rect.top < window.innerHeight &&
-            rect.bottom > 0 &&
-            rect.left < window.innerWidth &&
-            rect.right > 0);
-}
-
 /*  This is necessary to defeat a bug where if the page is loaded with the URL
     hash targeting some element, the element does not match the :target CSS
     pseudo-class.
@@ -96,72 +88,6 @@ String.prototype.hasPrefix = function (prefix) {
     return (this.lastIndexOf(prefix, 0) === 0);
 }
 
-/*******************/
-/* COLLAPSE BLOCKS */
-/*******************/
-
-/*  Returns true if the given collapse block is currently collapsed.
-    NOTE: This does not count targeted collapse blocks as expanded unless
-    their disclosure button is also engaged (i.e., in the checked state).
-    This is deliberate! (Because we use the disclosure button state to
-    determine whether we need to recompute layout.)
-    */
-function isCollapsed(collapseBlock) {
-    let collapseCheckbox = collapseBlock.querySelector(".disclosure-button");
-    return (collapseCheckbox.checked == false);
-}
-
-/*  Returns true if the given element is within a currently-collapsed collapse
-    block.
-    */
-function isWithinCollapsedBlock(element) {
-    /*  If the element is not within a collapse block at all, it obviously can't
-        be within a *currently-collapsed* collapse block.
-        */
-    let collapseParent = element.closest(".collapse");
-    if (!collapseParent) return false;
-
-    /*  If the element is within a collapse block and that collapse block is
-        currently collapsed, then the condition is satisfied...
-        */
-    if (isCollapsed(collapseParent)) return true;
-
-    /*  BUT the collapse block that the element is in, even if *it* is not
-        itself collapsed, could be *within* another collapse block!
-        */
-    return isWithinCollapsedBlock(collapseParent.parentElement);
-}
-
-/*  This function expands all collapse blocks containing the given element, if
-    any (including the element itself, if it is a collapse block). Returns true
-    if any such expansion occurred.
-    */
-function expandCollapseBlocksToReveal(element) {
-    GWLog("expandCollapseBlocksToReveal");
-
-    /*  If the given element is not within any collapse block, there is nothing
-        to do.
-        */
-    if (!isWithinCollapsedBlock(element)) return false;
-
-    //  Expand the nearest collapse block.
-    let collapseParent = element.closest(".collapse");
-    let disclosureButton = collapseParent.querySelector(".disclosure-button");
-    let expansionOccurred = (disclosureButton.checked == false);
-    disclosureButton.checked = true;
-    collapseParent.classList.toggle("expanded", disclosureButton.checked);
-
-    //  Expand any higher-level collapse blocks!
-    /*  Update sidenote positions only if we do NOT have to do any further
-        expansion (otherwise we'll do redundant layout).
-        */
-    if (!expandCollapseBlocksToReveal(collapseParent.parentElement) && expansionOccurred)
-        setTimeout(updateSidenotePositions);
-
-    //  Report whether we had to expand a collapse block.
-    return expansionOccurred;
-}
-
 /*  This function expands all necessary collapse blocks to reveal the element
     targeted by the URL hash. (This includes expanding collapse blocks to
     reveal a footnote reference associated with a targeted sidenote). It also
@@ -174,57 +100,10 @@ function revealTarget() {
     let target = document.querySelector(decodeURIComponent(location.hash.replace(/:/, "\\:")));
     if (!target) return;
 
-    /*  What needs to be revealed is not necessarily the targeted element
-        itself; if the target is a sidenote, expand collapsed blocks to reveal
-        the citation reference.
-        */
-    // let targetInText = location.hash.match(/#sn[0-9]/) ?
-    //                    document.querySelector("#fnref" + location.hash.substr(3)) :
-    //                    target;
-    // expandCollapseBlocksToReveal(targetInText);
-
     //  Scroll the target into view.
     target.scrollIntoView();
 }
 
-/*  Move sidenotes within currently-collapsed collapse blocks to the hidden
-    sidenote storage container (#hidden-sidenote-storage). Conversely, move
-    sidenotes within currently-expanded collapse blocks from the hidden sidenote
-    storage container to the appropriate sidenote column.
-    */
-function updateSidenotesInCollapseBlocks() {
-    GWLog("updateSidenotesInCollapseBlocks");
-
-    for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
-        let fnref = GW.sidenotes.footnoteRefs[i];
-        let sidenote = GW.sidenotes.sidenoteDivs[i];
-
-        //  If the enclosing collapse block is currently collapsed...
-        if (isWithinCollapsedBlock(fnref)) {
-            //  Move the sidenote to the hidden sidenote storage.
-            GW.sidenotes.hiddenSidenoteStorage.appendChild(sidenote);
-            continue;
-        }
-
-        //  Otherwise, move the sidenote back into the correct sidenote column.
-        let side = GW.sidenotes.sidenoteColumn;
-        //  What's the next sidenote?
-        var nextSidenoteIndex = i + 2;
-        while (nextSidenoteIndex < GW.sidenotes.footnoteRefs.length &&
-               GW.sidenotes.sidenoteDivs[nextSidenoteIndex].parentElement == GW.sidenotes.hiddenSidenoteStorage)
-               nextSidenoteIndex += 2;
-        if (nextSidenoteIndex >= GW.sidenotes.footnoteRefs.length) {
-        /*  If no subsequent sidenote is displayed, append the current sidenote
-            to the column.
-            */
-            side.appendChild(sidenote);
-        } else {
-        /*  Otherwise, insert it before the next displayed sidenote.
-            */
-            side.insertBefore(sidenote, GW.sidenotes.sidenoteDivs[nextSidenoteIndex]);
-        }
-    }
-}
 
 /***************************/
 /* FOOTNOTES VS. SIDENOTES */
@@ -261,11 +140,6 @@ function updateFootnoteEventListeners() {
     var sidenotesMode = (window.innerWidth >= 992);
 
     if (sidenotesMode) {
-        if (window.Footnotes) {
-            //  Unbind footnote events.
-            Footnotes.unbind();
-        }
-
         //  Bind sidenote mouse events.
         for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
             let fnref = GW.sidenotes.footnoteRefs[i];
@@ -284,7 +158,6 @@ function updateFootnoteEventListeners() {
                 fnref.classList.remove("highlighted");
             });
         }
-        clearFootnotePopups();
     } else {
         //  Unbind sidenote mouse events.
         for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
@@ -296,24 +169,7 @@ function updateFootnoteEventListeners() {
             sidenote.removeEventListener("mouseover", GW.sidenotes.sidenoteover);
             sidenote.removeEventListener("mouseout", GW.sidenotes.sidenoteout);
         }
-
-        if (window.Footnotes &&
-            window.innerWidth >= 992 &&
-            GW.sidenotes.mediaQueries.hover == true) {
-            //  Bind footnote events.
-            Footnotes.setup();
-        }
     }
-}
-
-/*  In some rare cases, we might switch to sidenote mode while a footnote popup
-    is on the screen. Since we remove footnote popup event listeners during the
-    switch, that popup will remain there forever... unless we clean it up.
-    */
-function clearFootnotePopups() {
-    GWLog("clearFootnotePopups");
-
-    document.querySelectorAll("#footnotediv").forEach(footnotePopup => { footnotePopup.remove(); });
 }
 
 /**********/
@@ -363,20 +219,12 @@ function updateSidenotePositions() {
     GW.sidenotes.sidenoteColumn.style.height = markdownBody.clientHeight - metaHeight + "px";
 
 
-    //  Update the disposition of sidenotes within collapse blocks.
-    updateSidenotesInCollapseBlocks();
-
     /*  Initial layout (to force browser layout engine to compute sidenotesâ€™
         height for us).
         */
     for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
         let sidenote = GW.sidenotes.sidenoteDivs[i];
 
-        /*  Check whether the sidenote is in the hidden sidenote storage (i.e.,
-            within a currently-collapsed collapse block. If so, skip it.
-            */
-        if (sidenote.parentElement == GW.sidenotes.hiddenSidenoteStorage)
-            continue;
 
         //  What side is this sidenote on?
         let side = GW.sidenotes.sidenoteColumn;
@@ -418,11 +266,6 @@ function updateSidenotePositions() {
     for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
         let sidenote = GW.sidenotes.sidenoteDivs[i];
         let nextSidenote = sidenote.nextElementSibling;
-
-        /*  Is this sidenote even displayed? Or is it hidden (i.e., within
-            a currently-collapsed collapse block)? If so, skip it.
-            */
-        if (sidenote.parentElement == GW.sidenotes.hiddenSidenoteStorage) continue;
 
         //  What side is this sidenote on?
         let side = GW.sidenotes.sidenoteColumn;
@@ -475,7 +318,7 @@ function updateSidenotePositions() {
                 In that case, just give up.
                 */
             if (nextProscribedRangeAfterSidenote == -1) {
-                GWLog("TOO MUCH SIDENOTES. GIVING UP. :(");
+                GWLog("TOO MANY SIDENOTES. GIVING UP. :(");
                 return;
             }
 
@@ -600,16 +443,6 @@ function constructSidenotes() {
     let markdownBody = document.querySelector("div.content");
     if (!markdownBody) return;
 
-    /*  Add the sidenote columns (removing them first if they already exist).
-    */
-    // if (GW.sidenotes.sidenoteColumnLeft) GW.sidenotes.sidenoteColumnLeft.remove();
-    // if (GW.sidenotes.sidenoteColumnRight) GW.sidenotes.sidenoteColumnRight.remove();
-    // markdownBody.insertAdjacentHTML("beforeend",
-    //     "<div id='sidenote-column-left' class='footnotes' style='visibility:hidden'></div>" +
-    //     "<div id='sidenote-column-right' class='footnotes' style='visibility:hidden'></div>");
-    // GW.sidenotes.sidenoteColumnLeft = document.querySelector("#sidenote-column-left");
-    // GW.sidenotes.sidenoteColumnRight = document.querySelector("#sidenote-column-right");
-
     // Pavel: account for my specific use case:
     GW.sidenotes.sidenoteColumn = document.querySelector("#sidenote-column");
 
@@ -648,31 +481,6 @@ function constructSidenotes() {
         GW.sidenotes.sidenoteDivs[i].children[0].prepend(sidenoteSelfLink);
     }
 
-    /*  Create & inject the hidden sidenote storage (for sidenotes within
-        currently-collapsed collapse blocks).
-        */
-    if (GW.sidenotes.hiddenSidenoteStorage) GW.sidenotes.hiddenSidenoteStorage.remove();
-    GW.sidenotes.hiddenSidenoteStorage = document.createElement("div");
-    GW.sidenotes.hiddenSidenoteStorage.id = "hidden-sidenote-storage";
-    GW.sidenotes.hiddenSidenoteStorage.style.display = "none";
-    markdownBody.appendChild(GW.sidenotes.hiddenSidenoteStorage);
-
-    /*  Add listeners to target a sidenote when clicked.
-        */
-    // for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
-    //     let sidenote = GW.sidenotes.sidenoteDivs[i];
-    //     sidenote.addEventListener("click", GW.sidenotes.sidenoteClicked = (event) => {
-    //         GWLog("GW.sidenotes.sidenoteClicked");
-
-    //         if (decodeURIComponent(location.hash) == sidenote.id || event.target.tagName == "A") return;
-
-    //         //  Preserve hash before changing it.
-    //         if (!(location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:")))
-    //             GW.sidenotes.hashBeforeSidenoteWasFocused = location.hash;
-    //         setHashWithoutScrolling(encodeURIComponent(sidenote.id));
-    //     });
-    // }
-
     /*  Insert zero-width spaces after problematic characters in sidenotes.
         (This is to mitigate justification/wrapping problems.)
         */
@@ -687,6 +495,15 @@ function constructSidenotes() {
         });
     });
 }
+
+function addBreakpointListener(query) {
+    const breakpoint = window.matchMedia(query);
+    breakpoint.addEventListener('change', function(e) {
+        updateSidenotePositions();
+        updateFootnoteEventListeners();
+        updateFootnoteReferenceLinks();
+    });
+  }
 
 /******************/
 /* INITIALIZATION */
@@ -716,14 +533,13 @@ function sidenotesSetup() {
         sidenoteSpacing: 16
     };
 
-    // Add listener window width changes
-    const breakpoint = window.matchMedia("(max-width: 991px)");
+    const updateAll = function() {
 
-    breakpoint.addEventListener('change', function(e) {
-        updateFootnoteEventListeners();
-        GW.sidenotes.footnotesObserver.disconnect();
-        updateFootnoteReferenceLinks();
-    });
+    };
+
+    // Add listener for window width changes
+    addBreakpointListener("(max-width:  991px)");
+    addBreakpointListener("(max-width: 1199px)");
 
     /*  Construct the sidenotes immediately, and also re-construct them as soon
         as the HTML content is fully loaded (if it isn't already).
@@ -768,16 +584,6 @@ function sidenotesSetup() {
             updateFootnoteReferenceLinks();
         });
     }
-    /*  In case footnotes.js loads later, make sure event listeners are set in
-        order afterwards.
-        */
-    GW.sidenotes.footnotesObserver = new MutationObserver((mutationsList, observer) => {
-        if (document.querySelector("#footnotediv")) {
-            updateFootnoteEventListeners();
-            GW.sidenotes.footnotesObserver.disconnect();
-        }
-    });
-    GW.sidenotes.footnotesObserver.observe(document.body, { attributes: true, childList: true, subtree: true });
 
     /*  If the page was loaded with a hash that points to a footnote, but
         sidenotes are enabled (or vice-versa), rewrite the hash in accordance
