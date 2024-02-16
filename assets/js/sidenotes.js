@@ -761,19 +761,19 @@ function constructSidenotes() {
 
     /*  Add listeners to target a sidenote when clicked.
         */
-    for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
-        let sidenote = GW.sidenotes.sidenoteDivs[i];
-        sidenote.addEventListener("click", GW.sidenotes.sidenoteClicked = (event) => {
-            GWLog("GW.sidenotes.sidenoteClicked");
+    // for (var i = 0; i < GW.sidenotes.footnoteRefs.length; i++) {
+    //     let sidenote = GW.sidenotes.sidenoteDivs[i];
+    //     sidenote.addEventListener("click", GW.sidenotes.sidenoteClicked = (event) => {
+    //         GWLog("GW.sidenotes.sidenoteClicked");
 
-            if (decodeURIComponent(location.hash) == sidenote.id || event.target.tagName == "A") return;
+    //         if (decodeURIComponent(location.hash) == sidenote.id || event.target.tagName == "A") return;
 
-            //  Preserve hash before changing it.
-            if (!(location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:")))
-                GW.sidenotes.hashBeforeSidenoteWasFocused = location.hash;
-            setHashWithoutScrolling(encodeURIComponent(sidenote.id));
-        });
-    }
+    //         //  Preserve hash before changing it.
+    //         if (!(location.hash.hasPrefix("#sn:") || location.hash.hasPrefix("#fnref:")))
+    //             GW.sidenotes.hashBeforeSidenoteWasFocused = location.hash;
+    //         setHashWithoutScrolling(encodeURIComponent(sidenote.id));
+    //     });
+    // }
 
     /*  Insert zero-width spaces after problematic characters in sidenotes.
         (This is to mitigate justification/wrapping problems.)
@@ -882,12 +882,12 @@ function sidenotesSetup() {
         with the current mode (this will also cause the page to end up scrolled
         to the appropriate element - footnote or sidenote).
         */
-    if (location.hash.match(/#sn[0-9]/) &&
+    if (location.hash.match(/#sn:/) &&
             (window.innerWidth < 992) ) {
-        location.hash = "#fn" + location.hash.substr(3);
-    } else if (location.hash.match(/#fn[0-9]/) &&
+        location.hash = "#fn:" + location.hash.slice(4);
+    } else if (location.hash.match(/#fn:/) &&
             (window.innerWidth >= 992) ) {
-        location.hash = "#sn" + location.hash.substr(3);
+        location.hash = "#sn:" + location.hash.slice(4);
     } else {
         /*  Otherwise, make sure that if a sidenote is targeted by the hash, it
             indeed ends up looking highlighted (this defeats a weird bug).
@@ -916,13 +916,13 @@ function sidenotesSetup() {
     /*  Add event listeners to (asynchronously) recompute sidenote positioning
         when a collapse block is manually collapsed or expanded.
         */
-    document.querySelectorAll(".disclosure-button").forEach(collapseCheckbox => {
-        collapseCheckbox.addEventListener("change", GW.sidenotes.disclosureButtonValueChanged = (event) => {
-            GWLog("GW.sidenotes.disclosureButtonValueChanged");
+    // document.querySelectorAll(".disclosure-button").forEach(collapseCheckbox => {
+    //     collapseCheckbox.addEventListener("change", GW.sidenotes.disclosureButtonValueChanged = (event) => {
+    //         GWLog("GW.sidenotes.disclosureButtonValueChanged");
 
-            setTimeout(updateSidenotePositions);
-        });
-    });
+    //         setTimeout(updateSidenotePositions);
+    //     });
+    // });
 
     //  Prepare for hash reversion.
     /*  Save the hash, if need be (if it does NOT point to a sidenote or a
