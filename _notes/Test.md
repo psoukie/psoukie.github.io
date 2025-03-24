@@ -201,17 +201,20 @@ No a quote anymore, but let's ==highlight== something.
 
 | Component  | Markdown | Rendered HTML               |
 | :--------  | :------- | :-------------------------- |
-| Pull quote | `> `     | But now with a table that won't fit on the screen, so what's up with that? |
+| Pull quote | `> {: .float}`     | `<aside class="pullquote">` |
 | Box        | `>> `    | `<div class="box">`         |
-| Factbox    | `>= `    | `<aside class="box">`       |
+| Factbox    | `> {: .float}`    | `<aside class="box">`       |
 | Quotation  | `>>> `   | `<blockquote>`              |
 
 Normal text again.
 
 Font size test: x**x**{: style="font-family: var(--font-family-sans); font-weight: 400; font-size: calc( var(--sans-ratio) * var(--font-size-m));"}
 
-````
-<html>   <body>     <header>	  <nav/> thous otshu thu aoeuh
+```html
+<html>
+  <body>
+	<header>	  
+		<nav/>
 	</header>
   	<main>
 	  <header>
@@ -219,10 +222,44 @@ Font size test: x**x**{: style="font-family: var(--font-family-sans); font-weigh
 		<nav />
 	  </header>
 	  <article>
-	    $content
+	    <p class="normal">Here is my text</p>
 	  </article>
 	  <footer />
 	</main>
   <footer>
 </html>
-````
+```
+
+## Update
+
+And with the latest update, it's possible to format arbitrary `aside` elements as follows:
+
+```markdown
+> [!box]
+> Contents of the note
+```
+
+> [!box]
+> Contents of the note
+
+```markdown
+> [!box float]
+> ## Factbox heading
+> 
+> Contents of the note.
+> with multiple lines.
+```
+
+> [!box float]
+> ## Factbox heading
+> 
+> Contents of the note.
+> with multiple lines.
+
+```markdown
+> [!box small]
+> and a smaller text here
+```
+
+> [!box small]
+> and a smaller text here
