@@ -1,0 +1,21 @@
+{% capture nl %}
+{% endcapture %}
+{% assign html = include.html %}
+
+{% assign callout_types = "box,factbox,pullquote,note,tip,warning,info" | split: "," %}
+
+{% for type in callout_types %}
+  {% capture callout-start %}<blockquote>{{nl}}  <p>[!{{ type }}]{% endcapture %}
+  {% assign open_tag = "<aside class='" | append: type | append: "'><p>" %}
+  {% assign close_tag = "</aside>" %}
+  {% capture html %}
+    {% include substring.html
+      html=html
+      start-old=callout-start
+      end-old='</blockquote>'
+      start-new=open_tag
+      end-new=close_tag %}
+  {% endcapture %}
+{% endfor %}
+
+{{ html }}
