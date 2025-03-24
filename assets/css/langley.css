@@ -924,8 +924,8 @@ div.stanza {
 }
 
 .sidenote .sidenote-self-link {
-  font-weight: 700;
-  color: var(--neutralTertiary);
+  font-weight: 600;
+  color: var(--neutralSecondary);
   margin: .2em 0 -.3em -.5em;
   width: 2em;
   height: 2em;
@@ -934,6 +934,10 @@ div.stanza {
   justify-content: center;
   transition: color var(--transition), background-color var(--transition);
   border-radius: 50%;
+}
+
+.sidenote .sidenote-self-link:hover {
+  color: var(--neutralPrimaryAlt);
 }
 
 .sidenote.highlighted .sidenote-self-link {
