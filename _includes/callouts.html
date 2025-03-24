@@ -2,20 +2,37 @@
 {% endcapture %}
 {% assign html = include.html %}
 
-{% assign callout_types = "box,factbox,pullquote,note,tip,warning,info" | split: "," %}
+{% capture callout-start %}<blockquote>{{nl}}  <p>[!{% endcapture %}
 
-{% for type in callout_types %}
-  {% capture callout-start %}<blockquote>{{nl}}  <p>[!{{ type }}]{% endcapture %}
-  {% assign open_tag = "<aside class='" | append: type | append: "'><p>" %}
-  {% assign close_tag = "</aside>" %}
-  {% capture html %}
+{% capture html %}
     {% include substring.html
-      html=html
-      start-old=callout-start
-      end-old='</blockquote>'
-      start-new=open_tag
-      end-new=close_tag %}
-  {% endcapture %}
-{% endfor %}
+        html=html
+        inline = true
+        start-old=callout-start
+        end-old=']'
+        start-new='<aside class="'
+        end-new='%ASIDE-END-PLACEHOLDER%' %}
+{% endcapture %}
+
+{% assign html = html | replace: '%ASIDE-END-PLACEHOLDER%</p>', '%ASIDE-END-PLACEHOLDER-SIMPLE%' %}
+
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old='%ASIDE-END-PLACEHOLDER%'
+        end-old='</blockquote>'
+        start-new='"><p>'
+        end-new='</aside>' %}
+{% endcapture %}
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old='%ASIDE-END-PLACEHOLDER-SIMPLE%'
+        end-old='</blockquote>'
+        start-new='">'
+        end-new='</aside>' %}
+{% endcapture %}
 
 {{ html }}
