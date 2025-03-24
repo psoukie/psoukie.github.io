@@ -767,22 +767,23 @@ article > ul {
   margin-bottom: calc(1em * var(--leading));
 }
 
+pre, code, kbd {
+  font-family: var(--font-family-mono);
+  font-style: normal !important;
+  font-weight: 400 !important;
+}
+
 pre {
   -ms-overflow-style: scrollbar;
   overflow: auto;
   padding: .5rem;
   border-radius: var(--border-radius);
   background-color: var(--neutralLighterAlt);
-}
-
-pre, code, kbd {
-  font-family: var(--font-family-mono);
-  font-size: calc(var(--mono-ratio) * 1em);
-  font-style: normal !important;
-  font-weight: 400 !important;
+  font-size: calc(var(--mono-ratio) * var(--size-s));
 }
 
 code, kbd {
+  font-size: calc(var(--mono-ratio) * 1em);
   padding: 0 .25em;
   margin: 0 .1em;
   border: var(--border);
@@ -790,8 +791,13 @@ code, kbd {
   background-color: var(--neutralLighter);
 }
 
-pre code {
+pre code,
+pre kbd {
   padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
   font-size: 1em;
 }
 
