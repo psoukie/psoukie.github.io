@@ -77,7 +77,7 @@ Amateur programmers were trying their hands at producing text adventures of thei
     
 [^tads]: Text Adventure Development System – a complex, object-oriented language with customizable libraries – started gaining popularity by 1992 with the release of version 2 and more games. An HTML multimedia version was created in 1998.
     
-[^int-fict]: _rec.arts.int-fiction_ is a Usenet newsgroup founded by **Adam Engst** to discuss hypertext narratives. This soon shifted to interactive fiction as represented by text adventures. _rec.games.int-fiction_ was created in 1992 to keep _raif_ focused on creative aspects.
+[^int-fict]: _rec.arts.int-fiction_, a Usenet newsgroup founded by Adam Engst to discuss hypertext narratives. This soon shifted to interactive fiction as represented by text adventures. _rec.games.int-fiction_ was created in 1992 to keep _raif_ focused on authoring.
     
 [^legend]: **Legend Entertainment Company** was formed by Bob Bates and Mike Verdu and joined by Steve Meretzky. (Another ex-Infocom employee, Brian Moriarty, created _Loom_ for **Lucasfilm Games** in 1990.)
     
@@ -100,38 +100,6 @@ Amateur programmers were trying their hands at producing text adventures of thei
 [^t3]: Michael J. Roberts rewrote the system and introduced a complex conversation framework and the ability to modify parsing of the player's commands.
 
 [^ifdb]: The _Interactive Fiction Database_ was created by Michael J. Roberts; it is an interactive fiction equivalent of IMDb.
-
-	<li>79&ensp;[def]<strong>Infocom</strong>[note]<strong>Infocom</strong> produced over 30 interactive fiction titles in 20 years of existence. Some of their best known authors are Bob Bates, Michael Berlyn, Marc Blank, Amy Briggs, Stuart Galley, David Lebling, Steven Meretzky and Brian Moriarty.[/note] company founded</li>
-
-    <li>80&ensp;[def]<strong>On-Line Systems</strong>[note]Founded by <strong>Ken</strong> and <strong>Roberta Williams</strong>, the company was renamed to <strong>Sierra On-Line</strong> in 1982 and concentrated on graphic adventures.[/note] founded</li>
-
-    <li>82&ensp;[def]<strong>Level 9</strong>[note]<strong>Level 9 Computing</strong> was formed by brothers Pete, Mike and Nick Austin in England.[/note] founded</li>
-
-    <li>83-86&ensp;First authoring systems: [def]<em>The&nbsp;Quill</em>[note]Written by <strong>Graeme Yeandle</strong> in 1983, <em>The&nbsp;Quill</em> was a menu-driven system capable of creating simple text adventures.[/note], [def]<em>[caps]gags[/caps]</em>[note]<em>Generic Adventure Game System</em> was written by <strong>Mark J. Welch</strong> in 1985.[/note], [def]<em>AdvSys</em>[note]<em>AdvSys</em> was written by <strong>David Betz</strong> in 1986.[/note]</li>
-
-    <li>84&ensp;[def]<strong>Magnetic Scrolls</strong>[note]Founded by <strong>Anita Sinclair</strong> and <strong>Ken Gordon</strong> in London, the company was famous for producing imaginative titles with beautiful in-game artworks.[/note] founded</li>
-
-    <li>87&ensp;[def]<em>[caps]agt[/caps]</em>[note]<strong>David Malmberg</strong> expanded [caps]<em>gags</em>[/caps] and created <em>Adventure Game Toolkit</em>. It was the first full-featured programming language for text adventures, sparkling an online community and an annual contest.[/note] by <strong>David Malmberg</strong>, and [def]<em>[caps]tads[/caps]</em>[note]<em>Text Adventure Development System</em>&mdash;a complex, object-oriented language with customizable 'libraries'&mdash;started gaining popularity by 1992 with the release of version 2 and more games. An [caps]html[/caps] multimedia version was created in 1998.[/note] by <strong>Michael J. Roberts</strong>;<br />[def]<em>rec.arts.int-fiction</em>[note][caps]raif[/caps] is a Usenet newsgroup founded by <strong>Adam Engst</strong> to discuss hypertext narratives. This soon shifted to interactive fiction as represented by text adventures. <em>rec.games.int-fiction</em> was created in 1992 to keep [caps]raif[/caps] focused on creative aspects.[/note] newsgroup</li>
-
-    <li>89&ensp;[def]<strong>Legend Entertainment</strong>[note]Legend Entertainment Company was formed by <strong>Bob Bates</strong> and <strong>Mike Verdu</strong> and joined by <strong>Steve Meretzky</strong>. (Another ex-Infocom employee, <strong>Brian Moriarty</strong>, created <em>Loom</em> for <strong>Lucasfilm Games</strong> in 1990.)[/note] founded</li>
-
-    <li>92&ensp;[def]<em>[caps]alan[/caps]</em>[note]Public release of version 2.3 of the high-level programming language by <strong>Thomas Nilsson</strong> and <strong>Göran Forslund</strong>. (It had been under development since 1988.)[/note] released; [def]<em>[caps]if ftp[/caps]</em>[note]<strong>Volker Blasius</strong> opens the interactive fiction [caps]ftp[/caps] archive.[/note] archive</li>
-
-    <li>93&ensp;<strong>Graham Nelson</strong> releases [def]<em>Inform</em>[note]A language that produces Infocom's <strong>Z-machine</strong> format games was announced: "It is not a marvellously well-written program, but it does work, and it is documented." In 1996, when version 6 was published, it had already become the the most popular development language.[/note]</li>
-
-    <li>94-97&ensp;Rise of the [def]community[note][caps]spag[/caps] e-zine is founded by <strong>G. Kevin Wilson</strong> in 1994. In 1995, <strong>Eileen Mullin</strong> announces the first issue of <em>[caps]xyzzy[/caps]news</em>, <strong>Carl Muckenhoupt</strong> opens <em>Baf's Guide to the IF Archive</em> (a catalogue with reviews), and the first interactive fiction competition is held. Eileen also organizes the first <em>[caps]xyzzy[/caps] Awards</em> in 1997 (similar to the Academy Awards).[/note]</li>
-
-    <li>95-98&ensp;[def]<em>Hugo</em>[note]Written by <strong>Kent Tessman</strong> in 1995, it is a programming language with strong multimedia capabilities.[/note] and [def]<em>[caps]adrift[/caps]</em>[note]Originally released as "Adventure Generator" in 1998, [caps]adrift[/caps] is an Adventure Developer &amp; Runner - Interactive Fiction Toolkit written by <strong>Campbell Wild</strong>, it is a menu-based authoring system for Windows.[/note] released</li>
-
-    <li>99&ensp;[def]<em>Glulx</em>[note]A new virtual machine designed by <strong>Andrew Plotkin</strong> with the aim to remove the limitations of the <em>Z-machine</em> while preserving the compatibility with <em>Inform</em>.[/note] virtual machine</li>
-
-    <li>01-04&ensp;[def]<em>IF-Review</em>[note]"The Online Interactive Fiction Review Site" maintained by <strong>Mark J. Musante</strong> since 2001[/note], [def]<em>IF Ratings</em>[note]"Interactive Fiction Ratings" created by <strong>Chrysoula Tzavelas</strong> in 2003[/note] and [def]<em>[caps]ifr[/caps]</em>[note]"Interactive Fiction Reviews Organization" started in 2004 and focused also on non-English language entries.[/note] review sites</li>
-
-    <li>03&ensp;<strong>Nick Monfort</strong> publishes [def]<em>Twisty Little Passages</em>[note]"This is a thoroughly researched history of interactive fiction, as well as a brilliant analysis of the genre," wrote <strong>Steve Meretzky</strong> about the book.[/note]</li>
-
-    <li>06&ensp;[def]<em>Inform&nbsp;7</em>[note]Released by <strong>Graham Nelson</strong> as a beta version, it is a revolutionary departure combining a pseudo-natural programming language with a rule-based approach.[/note] and [def]<em>[caps]tads[/caps]&nbsp;3</em>[note]<strong>Michael J. Roberts</strong> rewrote the system and introduced a complex conversation framework and the ability to modify parsing of the player's commands.[/note] released</li>
-
-    <li>07&ensp;[def]<em>IFDb</em>[note]The <em>Interactive Fiction Database</em> was created by <strong>Michael J. Roberts</strong> and is an interactive fiction equivalent of IMDb.[/note] founded</li></ul></p>[/factbox]
 
 The difference was that soon the fans had to cater for themselves, and they mostly did so for free. This allowed the authors of the modern works to experiment with the characteristics of the medium. What makes it different from novels or movies? What are the unique strengths or weaknesses? The emphasis was shifted away from solving puzzles (which was the pinnacle of the era when games were written by the programmers for the programmers) to the narrative and emotional impact.
 
