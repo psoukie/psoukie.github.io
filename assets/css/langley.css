@@ -604,6 +604,11 @@ aside.pullquote em {
   font-size: calc(var(--sans-ratio) * 1em);
 }
 
+.mono {
+  font-family: var(--font-family-mono);
+  font-size: calc(var(--mono-ratio) * 1em);
+}
+
 .box h2, .box h3, .box h4, .box h5 {
   margin-top: 0;
 }
@@ -842,8 +847,8 @@ hr {
 table {
   font-size: calc(var(--sans-ratio) * 1em);
   display: inline-block;
-  margin: calc(1em * var(--leading)) 0;
   margin-top: calc(.5em * var(--leading));
+  margin-bottom: calc(1em * var(--leading));
   border-collapse: collapse;
   border-bottom:  1px solid var(--themeDarkAlt);
 }
