@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Kaisei+Decol:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro&display=swap');
 
 /* Webfont: LatoLatin-Bold */@font-face {
     font-family: 'LatoLatinWeb';
@@ -21,6 +21,19 @@
          url('/assets/fonts/LatoLatin-Italic.ttf') format('truetype');
     font-style: italic;
     font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: LatoLatin-Medium */
+@font-face {
+    font-family: 'LatoLatinWeb';
+    src: url('/assets/fonts/LatoLatin-Medium.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/LatoLatin-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/LatoLatin-Medium.woff2') format('woff2'), /* Modern Browsers */
+         url('/assets/fonts/LatoLatin-Medium.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/LatoLatin-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
     text-rendering: optimizeLegibility;
 }
 
@@ -76,17 +89,17 @@
   --neutralGray: #fbf9f8;
 
   /* Typography */
-  --font-family-serif: "Libre Baskerville", Garamond, Georgia, serif;
+  --font-family-serif: "Lora", "Kaisei Decol", Garamond, Georgia, serif;
   --font-family-sans: "LatoLatinWeb", "Myriad", "Helvetica Neue", sans-serif;
-  --sans-ratio: 1.05;
+  --sans-ratio: .978;
   --font-family-mono: "Source Code Pro", monospace;
-  --mono-ratio: 1.1;
+  --mono-ratio: .95;
   --size-xs: 13px;
   --size-s: 14px;
   --size-m: 16px;
-  --size-l: 18px;
-  --size-xl: 20px;
-  --size-xxl: 26px;
+  --size-l: 19px;
+  --size-xl: 23px;
+  --size-xxl: 28px;
   --leading: 1.6;
   --leading-tight: 1.45;
   --leading-sans: 1.35;
@@ -118,9 +131,11 @@
   :root {
     --leading: 1.6;
     --leading-tight: 1.5;
+    --size-s: 15px;
+    --size-m: 17px;
     --size-l: 20px;
     --size-xl: 26px;
-    --size-xxl: 32px;
+    --size-xxl: 34px;
   }
 }
 
@@ -150,8 +165,7 @@ nav,
 h2,
 .subtitle,
 h3,
-.h3,
-h4 {
+.h3 {
   font-family: var(--font-family-sans);
   line-height: var(--leading-sans);
 }
@@ -355,7 +369,7 @@ header ul li {
   margin-bottom: .3em;
 }
 
-h1, .site-title, h2, .subtitle, h3, .h3, h4, h5, h6 {
+h1, .site-title, h2, .subtitle, h3, .h3 {
   margin: 0;
   em {
     font-style: normal;
@@ -368,28 +382,31 @@ h1, .site-title, h2, .subtitle, h3, .h3, h4, h5, h6 {
   }
 }
 
-h1, .site-title, h3, .h3, .subtitle {
-  font-weight: 700;
+h1,
+.site-title,
+h3,
+.h3,
+.subtitle {
+  font-weight: 600;
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 500;
+  font-size: calc(var(--sans-ratio) * var(--size-xl));
+  margin: 1em 0 .5rem 0;
 }
 
 h1, .site-title {
   line-height: var(--leading-sans);  /* Intentionally also for article H1 which is in serif */
-}
-
-h2, .subtitle {
-  line-height: var(--leading-sans);
-}
-
-h1, .site-title {
   color: var(--themeDark);
   font-size: var(--size-xxl);
   font-weight: 400;
   margin-bottom: 1.5em;
   text-align: center;
+}
+
+h2, .subtitle {
+  line-height: var(--leading-sans);
 }
 
 .site-title {
@@ -430,17 +447,11 @@ article > h2 {
   margin-top: 0;
 }
 
-h2 {
-  color: var(--themeDarker);
-  font-size: calc(var(--sans-ratio) * var(--size-xl));
-  margin: 1em 0 .5rem 0;
-}
-
 h3 {
   margin-bottom: .2rem;
 }
 
-h3, .h3, h4, h5, h6 {
+h3, .h3 {
   margin-top: 1rem;
 }
 
@@ -459,7 +470,6 @@ h2 + h3 {
 }
 
 h3, .h3 {
-  color: var(--neutralPrimary);
   font-size: calc(var(--sans-ratio) * var(--size-l));
 }
 
@@ -467,17 +477,21 @@ aside h3, .box h3 {
   font-size: calc(var(--sans-ratio) * var(--size-m));
 }
 
-h4, h5, h6 {
-  font-size: calc(var(--sans-ratio) * var(--size-m));
-  font-weight: 400;
+h4,
+h5,
+h6 {
+  font-size: var(--size-m);
+  margin-top: calc(.5em * var(--leading));
+  margin-bottom: 0;
 }
 
 h4 {
-  text-transform: uppercase;
+  font-weight: 700;
 }
 
 h5, h6 {
-  font-weight: 700;
+  font-weight: 400;
+  font-style: italic;
 }
 
 header, footer {
