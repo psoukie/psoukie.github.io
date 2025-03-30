@@ -197,6 +197,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 > And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
 
+Anonymous
+{: .source}
+
 No a quote anymore, but let's ==highlight== something.
 
 | Component  | Markdown | Rendered HTML               |
@@ -235,22 +238,33 @@ Font size test: x**x**{: style="font-family: var(--font-family-sans); font-weigh
 And with the latest update, it's possible to format arbitrary `aside` elements as follows:
 
 ```markdown
+> [!aside pullquote]
+> This should be a pullquote.
+```
+
+> [!aside pullquote]
+> This should be a pullquote.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo[^4] consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+```markdown
 > [!box]
-> Contents of the note
+> Contents of the box note
 ```
 
 > [!box]
-> Contents of the note
+> Contents of the box note
 
 ```markdown
-> [!box float]
+> [!aside box float]
 > ## Factbox heading
 > 
 > Contents of the note.
 > with multiple lines.
 ```
 
-> [!box float]
+> [!aside box float]
 > ## Factbox heading
 > 
 > Contents of the note.
@@ -263,3 +277,10 @@ And with the latest update, it's possible to format arbitrary `aside` elements a
 
 > [!box small]
 > and a smaller text here
+
+> And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
+
+> [!source]
+> Anonymous
+
+And have some more text here.
