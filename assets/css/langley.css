@@ -156,11 +156,6 @@ h4 {
   line-height: var(--leading-sans);
 }
 
-table {
-  font-size: calc(var(--sans-ratio) * 1em);
-  display: inline-block;
-}
-
 summary {
   margin: .5em 0;
 }
@@ -500,7 +495,7 @@ footer {
 p {
   margin: 0;
 }
-p + p, p + .float + p, p + .pullquote + p {
+p + p, div + p, p + .float + p, p + .pullquote + p {
   margin-top: calc(.5em * var(--leading));
 }
 
@@ -767,22 +762,23 @@ article > ul {
   margin-bottom: calc(1em * var(--leading));
 }
 
+pre, code, kbd {
+  font-family: var(--font-family-mono);
+  font-style: normal !important;
+  font-weight: 400 !important;
+}
+
 pre {
   -ms-overflow-style: scrollbar;
   overflow: auto;
   padding: .5rem;
   border-radius: var(--border-radius);
   background-color: var(--neutralLighterAlt);
-}
-
-pre, code, kbd {
-  font-family: var(--font-family-mono);
-  font-size: calc(var(--mono-ratio) * 1em);
-  font-style: normal !important;
-  font-weight: 400 !important;
+  font-size: calc(var(--mono-ratio) * var(--size-s));
 }
 
 code, kbd {
+  font-size: calc(var(--mono-ratio) * 1em);
   padding: 0 .25em;
   margin: 0 .1em;
   border: var(--border);
@@ -790,8 +786,13 @@ code, kbd {
   background-color: var(--neutralLighter);
 }
 
-pre code {
+pre code,
+pre kbd {
   padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
   font-size: 1em;
 }
 
@@ -839,7 +840,10 @@ hr {
 /* Tables */
 
 table {
+  font-size: calc(var(--sans-ratio) * 1em);
+  display: inline-block;
   margin: calc(1em * var(--leading)) 0;
+  margin-top: calc(.5em * var(--leading));
   border-collapse: collapse;
   border-bottom:  1px solid var(--themeDarkAlt);
 }
@@ -918,8 +922,8 @@ div.stanza {
 }
 
 .sidenote .sidenote-self-link {
-  font-weight: 700;
-  color: var(--neutralTertiary);
+  font-weight: 600;
+  color: var(--neutralSecondary);
   margin: .2em 0 -.3em -.5em;
   width: 2em;
   height: 2em;
@@ -928,6 +932,10 @@ div.stanza {
   justify-content: center;
   transition: color var(--transition), background-color var(--transition);
   border-radius: 50%;
+}
+
+.sidenote .sidenote-self-link:hover {
+  color: var(--neutralPrimaryAlt);
 }
 
 .sidenote.highlighted .sidenote-self-link {

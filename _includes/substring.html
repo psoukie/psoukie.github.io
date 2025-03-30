@@ -12,7 +12,7 @@
   {%- capture start-new -%}{{nl}}{{include.start-new}}{%- endcapture -%}
   {%- capture end-new -%}{{include.end-new}}{{nl}}{%- endcapture -%}
 {% endif %}
-{%- assign fragments = content | split: start-old | shift -%}
+{%- assign fragments = output | split: start-old | shift -%}
 {%- for fragment in fragments -%}
   {%- assign snippet = fragment | split: end-old -%}
   {%- assign original = start-old | append: snippet[0] | append: end-old -%}

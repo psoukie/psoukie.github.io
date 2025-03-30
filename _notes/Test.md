@@ -197,21 +197,27 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 > And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
 
+Anonymous
+{: .source}
+
 No a quote anymore, but let's ==highlight== something.
 
 | Component  | Markdown | Rendered HTML               |
 | :--------  | :------- | :-------------------------- |
-| Pull quote | `> `     | But now with a table that won't fit on the screen, so what's up with that? |
+| Pull quote | `> {: .float}`     | `<aside class="pullquote">` |
 | Box        | `>> `    | `<div class="box">`         |
-| Factbox    | `>= `    | `<aside class="box">`       |
+| Factbox    | `> {: .float}`    | `<aside class="box">`       |
 | Quotation  | `>>> `   | `<blockquote>`              |
 
 Normal text again.
 
 Font size test: x**x**{: style="font-family: var(--font-family-sans); font-weight: 400; font-size: calc( var(--sans-ratio) * var(--font-size-m));"}
 
-````
-<html>   <body>     <header>	  <nav/> thous otshu thu aoeuh
+```html
+<html>
+  <body>
+	<header>	  
+		<nav/>
 	</header>
   	<main>
 	  <header>
@@ -219,10 +225,62 @@ Font size test: x**x**{: style="font-family: var(--font-family-sans); font-weigh
 		<nav />
 	  </header>
 	  <article>
-	    $content
+	    <p class="normal">Here is my text</p>
 	  </article>
 	  <footer />
 	</main>
   <footer>
 </html>
-````
+```
+
+## Update
+
+And with the latest update, it's possible to format arbitrary `aside` elements as follows:
+
+```markdown
+> [!aside pullquote]
+> This should be a pullquote.
+```
+
+> [!aside pullquote]
+> This should be a pullquote.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo[^4] consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+```markdown
+> [!box]
+> Contents of the box note
+```
+
+> [!box]
+> Contents of the box note
+
+```markdown
+> [!aside box float]
+> ## Factbox heading
+> 
+> Contents of the note.
+> with multiple lines.
+```
+
+> [!aside box float]
+> ## Factbox heading
+> 
+> Contents of the note.
+> with multiple lines.
+
+```markdown
+> [!box small]
+> and a smaller text here
+```
+
+> [!box small]
+> and a smaller text here
+
+> And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
+
+> [!source]
+> Anonymous
+
+And have some more text here.

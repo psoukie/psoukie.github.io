@@ -1,0 +1,112 @@
+{% capture nl %}
+{% endcapture %}
+{% assign html = include.html %}
+
+
+{% capture figure-callout-start %}<blockquote>{{nl}}  <p>[!figure {% endcapture %}
+{% capture figure-callout-end %}</p>{{nl}}</blockquote>{% endcapture %}
+
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old=figure-callout-start
+        end-old=']'
+        start-new='<figure class="'
+        end-new='%FIGURE-END-PLACEHOLDER%' %}
+{% endcapture %}
+
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old='%FIGURE-END-PLACEHOLDER%'
+        end-old='" />'
+        start-new='">'
+        end-new='%IMG-END-PLACEHOLDER%' %}
+{% endcapture %}
+
+{% assign img-end-simple = '%IMG-END-PLACEHOLDER%</p>' | append: nl | append: '</blockquote>' %}
+{% assign html = html | replace: img-end-simple, '" /></figure>' %}
+
+{% assign figure-end-complex = '</p>' | append: nl | append: '</blockquote>' %}
+
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old = '%IMG-END-PLACEHOLDER%'
+        end-old = figure-end-complex
+        start-new = '" /><figcaption>'
+        end-new = '</figcaption></figure>' %}
+{% endcapture %}
+
+
+{% capture aside-callout-start %}<blockquote>{{nl}}  <p>[!aside {% endcapture %}
+
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old=aside-callout-start
+        end-old=']'
+        start-new='<aside class="'
+        end-new='%ASIDE-END-PLACEHOLDER%' %}
+{% endcapture %}
+
+{% assign html = html | replace: '%ASIDE-END-PLACEHOLDER%</p>', '%ASIDE-END-PLACEHOLDER-SIMPLE%' %}
+
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old='%ASIDE-END-PLACEHOLDER%'
+        end-old='</blockquote>'
+        start-new='"><p>'
+        end-new='</aside>' %}
+{% endcapture %}
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old='%ASIDE-END-PLACEHOLDER-SIMPLE%'
+        end-old='</blockquote>'
+        start-new='">'
+        end-new='</aside>' %}
+{% endcapture %}
+
+
+{% capture div-callout-start %}<blockquote>{{nl}}  <p>[!{% endcapture %}
+
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old=div-callout-start
+        end-old=']'
+        start-new='<div class="'
+        end-new='%DIV-END-PLACEHOLDER%' %}
+{% endcapture %}
+
+{% assign html = html | replace: '%DIV-END-PLACEHOLDER%</p>', '%DIV-END-PLACEHOLDER-SIMPLE%' %}
+
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old='%DIV-END-PLACEHOLDER%'
+        end-old='</blockquote>'
+        start-new='"><p>'
+        end-new='</div>' %}
+{% endcapture %}
+{% capture html %}
+    {% include substring.html
+        html=html
+        inline = true
+        start-old='%DIV-END-PLACEHOLDER-SIMPLE%'
+        end-old='</blockquote>'
+        start-new='">'
+        end-new='</div>' %}
+{% endcapture %}
+
+{{ html }}
