@@ -156,11 +156,6 @@ h4 {
   line-height: var(--leading-sans);
 }
 
-table {
-  font-size: calc(var(--sans-ratio) * 1em);
-  display: inline-block;
-}
-
 summary {
   margin: .5em 0;
 }
@@ -500,7 +495,7 @@ footer {
 p {
   margin: 0;
 }
-p + p, p + .float + p, p + .pullquote + p {
+p + p, div + p, p + .float + p, p + .pullquote + p {
   margin-top: calc(.5em * var(--leading));
 }
 
@@ -845,7 +840,10 @@ hr {
 /* Tables */
 
 table {
+  font-size: calc(var(--sans-ratio) * 1em);
+  display: inline-block;
   margin: calc(1em * var(--leading)) 0;
+  margin-top: calc(.5em * var(--leading));
   border-collapse: collapse;
   border-bottom:  1px solid var(--themeDarkAlt);
 }
