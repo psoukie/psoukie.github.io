@@ -141,8 +141,15 @@ A typical ergonomic keyboard
 
 ![Remington 92 typewriter](/img/Remington92-n.jpg)
 Remington 92 typewriter, ca. 1929.  
-(Image by The National Museum of Finland)
+(Image by _The National Museum of Finland_)
 {: .float.edge}
+
+Which has an alternative syntax:
+
+> [!figure float edge]
+> ![Remington 92 typewriter](/img/Remington92-n.jpg)
+> Remington 92 typewriter, ca. 1929.
+> (Image by _The National Museum of Finland_)
 
 Incididunt in culpa cupidatat mollit cillum qui proident sit. In cillum aliquip incididunt voluptate magna amet cupidatat cillum pariatur sint aliqua est _enim **anim** voluptate_. Magna aliquip proident incididunt id duis pariatur eiusmod incididunt commodo culpa dolore sit. Culpa do nostrud elit ad exercitation anim pariatur non minim nisi **adipisicing sunt _officia_**. Do deserunt magna mollit Lorem commodo ipsum do cupidatat mollit enim ut elit veniam ea voluptate.
 
@@ -279,6 +286,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 > [!box small]
 > and a smaller text here
+
+
+```markdown
+> [!figure float edge]
+> ![Remington 92 typewriter](/img/Remington92-n.jpg)
+> Remington 92 typewriter, ca. 1929.
+> (Image by _The National Museum of Finland_)
+```
+
+> [!figure float edge]
+> ![Remington 92 typewriter](/img/Remington92-n.jpg)
+> Remington 92 typewriter, ca. 1929.
+> (Image by _The National Museum of Finland_)
 
 > And this is a quote. So let's make it longer. And this is a quote. So let's make it longer. And this is a quote. So let's make it longer.
 
